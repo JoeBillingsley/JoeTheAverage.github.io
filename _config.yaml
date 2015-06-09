@@ -1,0 +1,23 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        /blog/:year/:month/:day/:title.html
+
+
+# Setup
+
+title:            Joseph Billingsley
+tagline:          'A Personal Website'
+description:	  Software developer in progress
+url:              www.josephbillingsley.co.uk
+
+author:
+  name:           'Joseph Billingsley'
+  url:            https://twitter.com/josephbillingsley
+
+paginate:         3
+
+# Custom vars
+version:          0.0.1
