@@ -9,8 +9,8 @@ permalink:        /blog/:year/:month/:day/:title.html
 # Setup
 
 title:            Joseph Billingsley
-tagline:          'A Personal Website'
-description:	  Software developer in progress
+tagline:          Software developer in progress
+description:	    Website and blog of Joseph Billingsley
 url:              www.josephbillingsley.co.uk
 
 author:
