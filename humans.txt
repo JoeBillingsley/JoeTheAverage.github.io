@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Joseph Billingsley -- Developer -- @JosephBillingsley
 
 # THANKS
 
-    <name>
+    Mum!
 
 # TECHNOLOGY COLOPHON
 
