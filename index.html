@@ -1,6 +1,26 @@
 ---
 layout: default
 ---
-<div>
-	Hello!
+<div id="header-wrap">
+	<header>
+		<a title="Return to the homepage" href="http://www.josephbillingsley.co.uk" class="header-logo">
+			Joseph Billingsley
+		</a>
+		<h2>
+			Software Developer and 
+			{% for post in site.posts %}
+					{% if post.role != null %}
+						<a href='{{ post.url }}'>{{post.role}}</a>
+						{% break %}}
+					{% endif %}
+				{% endfor %}
+		</h2>
+		
+		<span class="navigate-down">
+			<i class="fa fa-lg fa-chevron-down"></i>
+		</span>
+	</header>
+</div>
+<div id="main-wrap">
+	
 </div>
