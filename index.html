@@ -1,11 +1,24 @@
 ---
 layout: default
 ---
+
+<div class="nav-wrap">
+		<ul class="main-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Experience</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">CV</a></li>
+			<li><a href="#">Blog</a></li>
+		</ul>
+</div>
+
 <div id="header-wrap">
-	<header>
+	<header>		
 		<a title="Return to the homepage" href="http://www.josephbillingsley.co.uk" class="header-logo">
 			Joseph Billingsley
 		</a>
+				
 		<h2>
 			Software Developer and 
 			{% for post in site.posts %}
@@ -16,11 +29,25 @@ layout: default
 				{% endfor %}
 		</h2>
 		
+		<button>Contact</button>
+		<button>CV</button>
+		
 		<span class="navigate-down">
 			<i class="fa fa-lg fa-chevron-down"></i>
 		</span>
 	</header>
 </div>
 <div id="main-wrap">
-	
+	<div class="about-me">
+		TODO: Produce a proper about me paragraph
+		Lorem ipsum dolor sit amet etc...
+	</div>
+	<div class="contact">
+		<!--Contact form forwarder provided by formspree-->
+		<form id="contact-form" method="POST">
+			<input type="text" name="name">
+			<input type="email" name="_replyto">
+			<input type="submit" value="Send">
+		</form>
+	</div>
 </div>
