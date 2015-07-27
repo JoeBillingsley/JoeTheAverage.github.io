@@ -4,7 +4,7 @@
 		"webpage": "countdown.rocks",
 		"github": "CountdownRocks",
 		"blog-post": "",
-		"image": "",
+		"image": "http://i.imgur.com/OvMZBs9.jpg",
 		"description": "A service that emails and tweets a randomly generated, solvable countdown number puzzle every day. Follow @CountdownNoBot for your daily distraction!",
 		"tags": ["Node.JS", "Countdown", "Twitter"]
 	}

@@ -2,24 +2,26 @@
 layout: default
 ---
 
-<div class="nav-wrap">
-		<ul class="main-nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Experience</a></li>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">CV</a></li>
-			<li><a href="#">Blog</a></li>
-		</ul>
-</div>
+<nav id="nav-wrap" role="navigation">
+	<ul id="main-nav">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Experience</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Blog</a></li>
+	</ul>
+</nav>
 
-<div id="header-wrap">
-	<header>		
-		<a title="Return to the homepage" href="http://www.josephbillingsley.co.uk" class="header-logo">
-			Joseph Billingsley
-		</a>
-				
-		<h2>
+<header>
+	<a title="Return to the homepage" href="http://www.josephbillingsley.co.uk" class="header-logo">
+		Joseph Billingsley
+	</a>
+</header>
+
+<main id="main-wrap" role="main">
+	
+	<div id="intro">
+		<h1>
 			Software Developer and 
 			{% for post in site.posts %}
 				{% if post.role != null %}
@@ -27,33 +29,44 @@ layout: default
 					{% break %}}
 				{% endif %}
 			{% endfor %}
-		</h2>
+		</h1>
 		
-		<p>We may have met at that event</p>
+		<!--<p>We may have met at that event</p>-->				
 		
 		<button>Contact</button>
-		<button>CV <i class="fa fa-download"></i></button>
-		
-		<span class="navigate-down">
-			<i class="fa fa-lg fa-chevron-down"></i>
-		</span>
-	</header>
-</div>
-<div id="main-wrap">
-	<div class="about-me">
-		TODO: Produce a proper about me paragraph
-		Lorem ipsum dolor sit amet etc...
+		<button>Blog</button>
 	</div>
 	
-	<div class="experience">
+	<div id="about-me">
+		<h3>About me</h3>
+		<div class="inset-text">
+			I'm always looking for new experiences so if you've got a job, idea or anything else you think I may be interested in <a>get in touch</a>
+		</div>
+	</div>
 		
-		<div class="featured-project">
+	<div id="experience">
+		
+		<div id="featured-project">
+			
+			<h3>Featured project</h3>
+			
 			{% assign featured_project = site.data.projects[0] %}			
-			<h3>{{featured_project.title}}</h3>
+			<h4>{{featured_project.title}}</h4>
 			
 			<!--TODO: Look at unveil.js library for lazy loading images-->
-			<img src="http://i.imgur.com/OvMZBs9.jpg"></img>
-			<div class="description">{{featured_project.description}}</div>
+			<img src="{{featured_project.image}}"></img>
+			<p>{{featured_project.description}}</p>
+			
+			<ul class="icon-links">
+				<li><a class="fa fa-github" href="#"></a></li>
+			</ul>
+		</div>
+		
+		<div role="search">
+			<!--http://jsfiddle.net/dargf/-->
+			<!--http://fortawesome.github.io/Font-Awesome/icons/-->
+			<label for="filter-projects"><i class="fa fa-search"></i></label>
+			<input id="filter-projects" type="search" placeholder="search projects"></input>
 		</div>
 		
 		<div class="projects-grid">
@@ -66,12 +79,51 @@ layout: default
 		</div>
 	</div>
 	
-	<div class="contact">
+	<div id="contact">
+		
+		<h3>Contact me</h3>
+		
 		<!--Contact form forwarder provided by formspree-->
-		<form id="contact-form" method="POST">
-			<input type="text" name="name">
-			<input type="email" name="_replyto">
-			<input type="submit" value="Send">
+		<form id="contact-form" method="POST" role="form">
+			<label for="name" class="required">Name</label>
+			<input type="text" id="name" placeholder="your name" name="name" required aria-required="true">
+			
+			<label for="email" class="required">Email</label>
+			<input type="email" id="email" placeholder="your@email.com" name="_replyto" required aria-required="true">
+			
+			<label for="phone-no">Phone No.</label>
+			<input type="tel" id="phone-no" placeholder="012345 678910" name="phone-no" aria-required="false" aria-label="phone number">
+			
+			<label for="company">Company</label>
+			<input type="text" id="company" placeholder="awesome company ltd" name="company" aria-required="false">
+			
+			<label for="message" class="required">Message</label>
+			<textarea type="text" id="message" placeholder="your message" name="message" aria-required="true"></textarea>
+			
+			<input type="submit" id="submit" value="Send">
 		</form>
+		
+		<div class="right">
+			
+			<div>
+				<div>Email me</div>
+				<div>jcb@JosephBillingsley.co.uk</div>
+			</div>
+			
+			<div>
+				<div>Twitter</div>
+				</div>@JosephBillingsley</div>
+			</div>
+			
+			<ul class="icon-links">
+				<li><a class="fa fa-linkedin-square" href="#" aria-label="linkedIn"></a></li>
+			</ul>
+			
+		</div>
 	</div>
-</div>
+
+	<footer role="contentinfo">
+		© {{ 'now' | date: "%Y" }} Joseph Billingsley
+	</footer>
+
+</main>

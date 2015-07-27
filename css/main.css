@@ -56,123 +56,27 @@ textarea {
    JosephBillingsley.co.uk Styles - Based on Initializr Styles
    ========================================================================== */
    
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body { 
     font: 16px/26px Helvetica, Helvetica Neue, Arial; 
 }
 
-/* ALL: IE Fixes */
-.ie7 .title {
-    padding-top: 20px;
-}
-
-/* ALL: Honeypot */
-#gotcha {
-    display: none;
-}
-
 /* MOBILE: Menu */
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
 
-nav ul li {
-    display: inline;
-}
-
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 /* MOBILE: Main */
-#header-wrap {
-    background-color: #80DE66;
-}
-
-header {
-    padding: 19% 0;
-    text-align: center;
-    color: white;
-}
-
-.navigate-down {
-    cursor: pointer;
-    padding: 1%;
-}
-
-
-#footer-container {
-    background: black;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-}
-
-#footer-container footer {
-    padding: 20px 0;
-}
 
 @media only screen and (min-width: 480px) {
     /* INTERMEDIATE: Menu */
-    nav a {
-        float: left;
-        margin: 0 1.7%;
-        padding: 25px 0%;
-        margin-bottom: 0;
-    }
-    
-    /* INTERMEDIATE: Main */
-    .wrapper {
-        margin: 0 5%;
-    }
-    
-    /* INTERMEDIATE: IE Fixes */
-    nav ul li {
-        display: inline;
-    }
-    
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
 }
 
 @media only screen and (min-width: 768px) {    
     /* WIDE: Menu */
-    .title {
-        float: left;
-    }
-    
-    nav {
-        float: right;
-        width: 30%;
-    }
      
     /* WIDE: Main */
-    .wrapper {
-        margin: 0 15%
-    }
 }
 
 @media only screen and (min-width: 1140px) {
     /* Max width */
-    .wrapper {
-        width: 718px; /* 1140 - 10% for margins */
-        margin: 0 auto; 
-    }
 }
 
 @media print,
