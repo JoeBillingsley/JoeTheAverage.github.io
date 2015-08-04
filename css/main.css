@@ -55,29 +55,119 @@ textarea {
 /* ==========================================================================
    JosephBillingsley.co.uk Styles - Based on Initializr Styles
    ========================================================================== */
-   
+
+* {
+    box-sizing: border-box;
+}   
+
 body { 
-    font: 16px/26px Helvetica, Helvetica Neue, Arial; 
+    font: 62.5% Helvetica, Helvetica Neue, Arial;
 }
 
-/* MOBILE: Menu */
-
-
-/* MOBILE: Main */
-
-@media only screen and (min-width: 480px) {
-    /* INTERMEDIATE: Menu */
+h1 { 
+    margin: 0 0;
+    font-size: 4.5em;
+    padding: 10px;
+    font-family: 'Merriweather', serif;
 }
 
-@media only screen and (min-width: 768px) {    
-    /* WIDE: Menu */
-     
-    /* WIDE: Main */
+h2 {
+    font-size: 2.5em;
 }
 
-@media only screen and (min-width: 1140px) {
-    /* Max width */
+h3 { 
+    font-size: 1.8em;
 }
+
+p {
+    font-size: 1.5em;
+}
+
+button {
+    font-family: monospace;
+    display: block;
+    width: 90%;
+    height: 3em;
+    font-size: 2em;
+    background: none;
+    margin: 1em auto;
+}
+
+#main-wrap {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    padding: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+.icon-links {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 1.8em;
+}
+
+.icon-links a {
+    text-decoration: none;
+}
+
+.fa-linkedin-square {
+    color: #0085AE;
+}
+
+.fa-github {
+    color: #070709;;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Intro */
+.grey{
+    opacity: 0.5;
+    background-color: black;
+}
+
+.hero-background {
+    background-image: url("/img/bg.jpg");
+    opacity: 1;
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+}
+
+#intro-headers {
+    color: white;
+    position:absolute;
+    top:5%;
+    height: 100%;
+    text-align:left;
+}
+
+.intro-links {
+    width:100%;
+}
+
+/* Featured project */
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
@@ -89,6 +179,15 @@ body {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
+.pull-right {
+    float: right;
+}
+
+.sit-down {
+    position: absolute;
+    bottom: 5%;
+}
 
 .hidden {
     display: none !important;

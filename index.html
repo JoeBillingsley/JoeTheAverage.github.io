@@ -2,45 +2,41 @@
 layout: default
 ---
 
-<nav id="nav-wrap" role="navigation">
-	<ul id="main-nav">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Experience</a></li>
-		<li><a href="#">Contact</a></li>
-		<li><a href="#">Blog</a></li>
-	</ul>
-</nav>
+{% for post in site.posts %}
+	{% if post.role != null %}
+		{% assign featured_role = post %}
+		{% break %}}
+	{% endif %}
+{% endfor %}
 
-<header>
-	<a title="Return to the homepage" href="http://www.josephbillingsley.co.uk" class="header-logo">
-		Joseph Billingsley
-	</a>
-</header>
-
-<main id="main-wrap" role="main">
+<div id="intro">
 	
-	<div id="intro">
+	<div class="grey">
+		<div class="hero-background"></div>
+	</div>
+		
+	<div id="intro-headers">
+	
+		<h1>Developer.</h1>
+		<h1>Student.</h1>
+	
 		<h1>
-			Software Developer and 
-			{% for post in site.posts %}
-				{% if post.role != null %}
-					<a href='{{post.url}}'>{{post.role}}</a>
-					{% break %}}
-				{% endif %}
-			{% endfor %}
+			<a href='{{featured_role.url}}'>{{featured_role.role}}</a>
 		</h1>
-		
-		<!--<p>We may have met at that event</p>-->				
-		
-		<button>Contact</button>
-		<button>Blog</button>
+	
+		<div class="intro-links sit-down">
+			<button>Contact</button>
+			<button>Blog</button>
+		</div>
 	</div>
 	
+</div>
+
+<main id="main-wrap">	
 	<div id="about-me">
-		<h3>About me</h3>
-		<div class="inset-text">
-			I'm always looking for new experiences so if you've got a job, idea or anything else you think I may be interested in <a>get in touch</a>
+		<h2>About me</h2>
+		<p class="inset">
+			I'm always looking for new experiences so if you've got a job, idea or anything else you think I may be interested in <a href="#contact">get in touch.</a>
 		</div>
 	</div>
 		
@@ -48,26 +44,28 @@ layout: default
 		
 		<div id="featured-project">
 			
-			<h3>Featured project</h3>
+			<h2>Featured project</h2>
 			
 			{% assign featured_project = site.data.projects[0] %}			
-			<h4>{{featured_project.title}}</h4>
+			<h3>{{featured_project.title}}</h3>
 			
 			<!--TODO: Look at unveil.js library for lazy loading images-->
 			<img src="{{featured_project.image}}"></img>
 			<p>{{featured_project.description}}</p>
 			
-			<ul class="icon-links">
-				<li><a class="fa fa-github" href="#"></a></li>
-			</ul>
+			<div class="icon-links">
+				<a class="fa fa-github" href="#"></a>
+			</div>
 		</div>
 		
-		<div role="search">
-			<!--http://jsfiddle.net/dargf/-->
-			<!--http://fortawesome.github.io/Font-Awesome/icons/-->
+		
+		<!--http://jsfiddle.net/dargf/-->
+		<!--http://fortawesome.github.io/Font-Awesome/icons/-->
+		
+		<!--<div role="search"
 			<label for="filter-projects"><i class="fa fa-search"></i></label>
 			<input id="filter-projects" type="search" placeholder="search projects"></input>
-		</div>
+		</div>-->
 		
 		<div class="projects-grid">
 			{% for project in site.data.projects %}
@@ -103,7 +101,7 @@ layout: default
 			<input type="submit" id="submit" value="Send">
 		</form>
 		
-		<div class="right">
+		<div id="alt-contact">
 			
 			<div>
 				<div>Email me</div>
@@ -116,14 +114,13 @@ layout: default
 			</div>
 			
 			<ul class="icon-links">
-				<li><a class="fa fa-linkedin-square" href="#" aria-label="linkedIn"></a></li>
+				<a class="fa fa-linkedin-square" href="#" aria-label="linkedIn"></a>
 			</ul>
 			
 		</div>
 	</div>
-
-	<footer role="contentinfo">
-		© {{ 'now' | date: "%Y" }} Joseph Billingsley
-	</footer>
-
 </main>
+
+<footer role="contentinfo">
+	© {{ 'now' | date: "%Y" }} Joseph Billingsley
+</footer>
