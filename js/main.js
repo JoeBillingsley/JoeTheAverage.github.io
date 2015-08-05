@@ -1,6 +1,13 @@
 /// <reference path="../typings/jquery/jquery.d.ts"/>
 $(document).ready(function () {
 
+	$('#people-quotes').owlCarousel({
+		navigation: true,
+		slideSpeed: 300,
+		paginationSpeed: 400,
+		items: 3
+	});
+
 	$('form').submit(function (event) {
 
 		var base64_email = 'amNiQGpvc2VwaGJpbGxpbmdzbGV5LmNvLnVr';
@@ -9,7 +16,7 @@ $(document).ready(function () {
 
 		alert(action);
 		alert($('input[name=name]').val());
-
+		
 		$.ajax({
 			url: action,
 			method: "POST",
