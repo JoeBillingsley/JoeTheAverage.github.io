@@ -1,3 +1,6 @@
+---
+---
+
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
@@ -51,36 +54,45 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ==========================================================================
    JosephBillingsley.co.uk Styles - Based on Initializr Styles
    ========================================================================== */
 
+/* SASS HELPERS */
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+
+}
 * {
     box-sizing: border-box;
 }   
 
-body { 
-    font: 62.5% Helvetica, Helvetica Neue, Arial;
+html {
+    font: 62.5% Helvetica, Helvetica Neue, Arial;    
 }
 
-h1 { 
+h1,
+h2 { 
     margin: 0 0;
-    font-size: 4.5em;
-    padding: 10px;
+    @include font-size(4.2);
     font-family: 'Merriweather', serif;
 }
 
-h2 {
-    font-size: 2.5em;
+h1 {
+    text-transform: uppercase;
 }
 
-h3 { 
-    font-size: 1.8em;
+h3 {
+   margin-top: 5px;
+   margin-bottom: 4px;
+   @include font-size(1.5);
+   text-transform: capitalize;
 }
 
 p {
-    font-size: 1.5em;
+    @include font-size(1.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 button {
@@ -93,7 +105,7 @@ button {
     margin: 1em auto;
 }
 
-#main-wrap {
+.main-wrap {
     width: 95%;
     margin-right: auto;
     margin-left: auto;
