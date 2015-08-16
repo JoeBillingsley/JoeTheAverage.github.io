@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
 {% for post in site.posts %}
 	{% if post.role != null %}
 		{% assign featured_role = post %}
@@ -145,10 +147,6 @@ layout: default
 		</div>
 	</div>
 </main>
-
-<footer role="contentinfo">
-	© {{ 'now' | date: "%Y" }} Joseph Billingsley
-</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
