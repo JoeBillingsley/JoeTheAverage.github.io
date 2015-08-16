@@ -1,9 +1,10 @@
 # Permalinks
 permalink:        /blog/:year/:month/:day/:title.html
-highlighter:      true
+
+# Highlighter
+highlighter:      pygments
 
 # Setup
-
 title:            Joseph Billingsley
 tagline:          Software developer in progress
 description:	    Website and blog of Joseph Billingsley
@@ -14,6 +15,9 @@ author:
   url:            https://twitter.com/josephbillingsley
 
 paginate:         3
+
+sass:
+  style: compressed
 
 # Custom vars
 version:          0.0.1
