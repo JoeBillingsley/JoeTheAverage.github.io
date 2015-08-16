@@ -18,6 +18,7 @@ paginate:         3
 
 sass:
   style: compressed
+  sass_dir: _sass
 
 # Custom vars
 version:          0.0.1
