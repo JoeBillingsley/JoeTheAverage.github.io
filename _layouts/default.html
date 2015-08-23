@@ -12,10 +12,17 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.min.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Merriweather' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Oleo+Script+Swash+Caps&text=JcB.' rel='stylesheet' type='text/css'>
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
+	<header>
+		<span class="logo">JcB.</span>
+		<nav>
+			<a href="#">About<a>
+			<a href="#">Blog</a>
+		</nav>
+	</header>
 	
 	<div class="content">
 		{{ content }}
@@ -38,7 +45,13 @@
 	</script>
 
 	<footer role="contentinfo">
-		© {{ 'now' | date: "%Y" }} Joseph Billingsley
+		<div>	
+			© {{ 'now' | date: "%Y" }} Joseph Billingsley
+		</div>
+		<div class="contact">
+			<a href="mailto:jb@josephbillingsley.co.uk">jb@josephbillingsley.co.uk</a>
+			<a href="twitter.com/josephbillingsley">@josephbillingsley</a>
+		</div>
 	</footer>
 	
 </body>
