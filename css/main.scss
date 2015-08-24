@@ -66,7 +66,6 @@ $standard-font: 'Open Sans', sans-serif;
 @mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
-  
 }
 
 * {
@@ -86,6 +85,10 @@ h1 {
     font-family: $feature-font;
     text-transform: uppercase;    
     margin: 10px 10px 10px 0;
+}
+
+h2 {
+    @include font-size(3.0);
 }
 
 h4 {
@@ -133,13 +136,7 @@ button {
 
 /* Header */
 header {
-    
-}
-
-.logo {
-    font-family: 'Oleo Script Swash Caps', cursive;
-    margin-left: 5%;
-    @include font-size(3);
+    border-bottom: 1px solid;
 }
 
 /* Navbar */
@@ -149,10 +146,9 @@ nav {
 }
 
 header nav a {
-    display: block;
     float:left;
     padding: 0 0.6em;
-    line-height: 3em;
+    line-height: 2em;
     text-decoration: none;
 }
 
@@ -209,24 +205,34 @@ input, textarea {
     background-color: black;
 }
 
-.hero-background {
-    background-image: url("/img/bg.jpg");
-    opacity: 1;
-    background-size: cover;
-    height: 100vh;
-    background-position: bottom;
+.hero {
+    background-color: purple;
+    padding: 10px 0px;
 }
 
-#intro-headers {
+.hero h2 {
     color: white;
-    position:absolute;
-    top:10%;
-    height: 100%;
-    text-align:left;
+    text-align: center;
+}
+
+.middle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%
 }
 
 .intro-links {
     width:100%;
+}
+
+/* Hero */
+#svg-placeholder {
+    height: 300px;
+}
+
+.hero h2 {
+    border: 1px solid white;
+    width: 90%;
 }
 
 /* Posts */

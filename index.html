@@ -19,32 +19,18 @@ layout: default
   {% endfor %}
 </ul>
 
-<div id="intro">
-	
-	<div class="grey">
-		<div class="hero-background"></div>
+<section class="hero">	
+	<div class="middle">
+		<div id="svg-placeholder">
+			<!-- TODO: SVG here -->		
+		</div>	
+		<h2 class="middle">Software developer and computer science student.</h2>
 	</div>
-		
-	<div id="intro-headers">
-	
-		<h1>Developer.</h1>
-		<h1>Student.</h1>
-		
-		<h1>
-			<a href='{{featured_role.url}}'>{{featured_role.role}}</a>
-		</h1>
-	
-		<div class="intro-links sit-down">
-			<button>Contact</button>
-			<button>Blog</button>
-		</div>
-	</div>
-	
-</div>
+</section>
 
 <main class="main-wrap">	
-	<div id="about-me">
-		<h2>Joseph Billingsley</h2>
+	<!-- About me -->
+	<section>
 		<p>
 			Joe is a Computer Science Student at the University of Birmingham. His ideal job would let him develop beautiful programs which make a positive impact on the world. If all goes to plan he will be graduating in 2016 with complete world domination planned for 2020. 
 		</p>
@@ -54,9 +40,10 @@ layout: default
 		<p>
 			When not programming he enjoys cooking, hiking and talking in the third person on the internet. He loves good food and big ideas; if you have either to share or anything else you'd like to talk about <a href="#contact">get in touch.</a>
 		</p>
-	</div>
+	</section>
 	
-	<div id="recommendations" class="owl-carousel">
+	<!-- Recommendations -->
+	<section class="owl-carousel">
 		<div>
 			Joseph is multi-talented, <ul>highly professional</ul> and a cut above peers. He worked to our brief with ease and his designs have had an extremely positive impact on our campaign.
 			<div>
@@ -65,47 +52,42 @@ layout: default
 				<time>January 14, 2014</time>
 			</div>
 		</div>
-	</div>
-			
-	<div id="experience">
+	</section>
+	
+	<!-- Featured projects -->
+	<section>
+		<h2>Featured project</h2>
 		
-		<div id="featured-project">
+		{% assign featured_project = site.data.projects[0] %}			
+		<h3>{{featured_project.title}}</h3>
 			
-			<h2>Featured project</h2>
+		<!--TODO: Look at unveil.js library for lazy loading images-->
+		<img src="{{featured_project.image}}"></img>
+		<p>{{featured_project.description}}</p>
 			
-			{% assign featured_project = site.data.projects[0] %}			
-			<h3>{{featured_project.title}}</h3>
-			
-			<!--TODO: Look at unveil.js library for lazy loading images-->
-			<img src="{{featured_project.image}}"></img>
-			<p>{{featured_project.description}}</p>
-			
-			<div class="icon-links">
-				<a class="fa fa-github" href="#"></a>
-			</div>
+		<div class="icon-links">
+			<a class="fa fa-github" href="#"></a>
 		</div>
+	</section>
+			
+	<!--http://jsfiddle.net/dargf/-->
+	<!--http://fortawesome.github.io/Font-Awesome/icons/-->
 		
+	<!--<div role="search"
+		<label for="filter-projects"><i class="fa fa-search"></i></label>
+		<input id="filter-projects" type="search" placeholder="search projects"></input>
+	</div>-->
 		
-		<!--http://jsfiddle.net/dargf/-->
-		<!--http://fortawesome.github.io/Font-Awesome/icons/-->
-		
-		<!--<div role="search"
-			<label for="filter-projects"><i class="fa fa-search"></i></label>
-			<input id="filter-projects" type="search" placeholder="search projects"></input>
-		</div>-->
-		
-		<div class="projects-grid">
-			{% for project in site.data.projects %}
+	<section class="projects-grid">
+		{% for project in site.data.projects %}
 			<div class="project">
 				<h4>{{project.title}}</h4>
 				<p>{{project.description}}</p>
 			</div>
-			{% endfor %}
-		</div>
-	</div>
+		{% endfor %}
+	</section>
 	
-	<div id="contact">
-		
+	<section>
 		<h3>Contact me</h3>
 		
 		<!--Contact form forwarder provided by formspree-->
@@ -145,7 +127,7 @@ layout: default
 			</ul>
 			
 		</div>
-	</div>
+	</section>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
