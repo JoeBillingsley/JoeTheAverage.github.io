@@ -74,13 +74,13 @@ $standard-font: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }   
 
-html {
-    font-size: 62.5%;
-}
-
 html, body {
     height: 100%;
     font-family: $standard-font;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 h1, h2 {
@@ -140,11 +140,16 @@ button {
     @include font-size(1.2);
 }
 
+.shadow {
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
 /* Header */
 header {
+    position: relative;
+    z-index: 1;
     padding: 12px 3%;
-    background-color: $offwhite;
-    border-bottom: 1px dashed $primary-colour-1;
+    background-color: white;
 }
 
 .logo {
@@ -160,11 +165,7 @@ header {
     }
     
     a:hover {
-        color: $primary-colour-0;   
-    }
-    
-    a:visited {
-        color: $primary-colour-0;
+        color: $primary-colour-3;
     }
 }
 
@@ -186,12 +187,7 @@ header nav {
     }
     
     a:hover {
-        color: $navbar-link-colour;
         border-bottom: 3px solid $primary-colour-0;
-    }
-    
-    a:visited {
-        color: $navbar-link-colour;
     }
 }
 
@@ -213,59 +209,11 @@ footer {
     padding: 10px;
 }
 
-img {
-    width: 100%;
-}
-
-.icon-links {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 10px;
-    font-size: 1.8em;
-}
-
-.icon-links a {
-    text-decoration: none;
-}
-
-.fa-linkedin-square {
-    color: #0085AE;
-}
-
-.fa-github {
-    color: #070709;;
-}
-
-input, textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
 /* Intro */
-.grey{
-    opacity: 0.5;
-    background-color: black;
-}
-
-.hero {
-    padding: 10px 0px;
-    background-color: $secondary-colour-1-0;
-}
-
-.hero h2 {
-    color: white;
-    text-align: center;
-}
-
 .middle {
     margin-left: auto;
     margin-right: auto;
     width: 90%
-}
-
-.intro-links {
-    width:100%;
 }
 
 /* Hero */
@@ -273,8 +221,36 @@ input, textarea {
     height: 400px;
 }
 
+.hero {
+    position: relative;
+    padding: 10px 0px;
+    background-color: $secondary-colour-1-0;
+}
+
+.hero-shadow {
+    position: absolute;
+	background: transparent;
+	width: 110%;
+    height: 5px;
+	content: '';
+	left: -5px;
+    box-shadow: 0px 0px 5px 0px #000;
+}
+
+.hero::before {
+    @extend .hero-shadow;
+    top: -5px;
+}
+
+.hero::after {
+    @extend .hero-shadow;
+	bottom: -5px;
+}
+
 .hero h2 {
-    border: 1px solid white;
+    color: white;
+    border: 5px double white;
+    text-align: center;
     width: 90%;
 }
 
