@@ -11,14 +11,6 @@ layout: default
 	{% endif %}
 {% endfor %}
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
 <section class="hero">	
 	<div class="middle">
 		<div id="svg-placeholder">
@@ -27,6 +19,14 @@ layout: default
 		<h2 class="middle">Software developer and computer science student.</h2>
 	</div>
 </section>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 <main class="main-wrap">	
 	<!-- About me -->

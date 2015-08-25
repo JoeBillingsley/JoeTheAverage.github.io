@@ -59,7 +59,7 @@ textarea {
    ========================================================================== */
 
 /* Variables */
-$feature-font: 'Merriweather', serif;
+$feature-font: 'Roboto Slab', serif;
 $standard-font: 'Open Sans', sans-serif;
 
 /* Mixins */
@@ -67,6 +67,8 @@ $standard-font: 'Open Sans', sans-serif;
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }
+
+@import "colours";
 
 * {
     box-sizing: border-box;
@@ -78,11 +80,15 @@ html {
 
 html, body {
     height: 100%;
+    font-family: $standard-font;
+}
+
+h1, h2 {
+    font-family: $feature-font;
 }
 
 h1 { 
     @include font-size(4.2);
-    font-family: $feature-font;
     text-transform: uppercase;    
     margin: 10px 10px 10px 0;
 }
@@ -103,12 +109,12 @@ ul {
 
 p {
     @include font-size(1.8);
-    font-family: $standard-font;
 }
 
 code {
     @include font-size(1.5);
     overflow: auto;
+    font-family: monospace !important;
 }
 
 button {
@@ -136,20 +142,57 @@ button {
 
 /* Header */
 header {
-    border-bottom: 1px solid;
+    padding: 12px 3%;
+    background-color: $offwhite;
+    border-bottom: 1px dashed $primary-colour-1;
+}
+
+.logo {
+    font-family: $feature-font;
+    @include font-size(2.5);
+    font-weight: bold;
+}
+
+.logo {
+    a {
+        text-decoration: none;
+        color: $primary-colour-0;
+    }
+    
+    a:hover {
+        color: $primary-colour-0;   
+    }
+    
+    a:visited {
+        color: $primary-colour-0;
+    }
 }
 
 /* Navbar */
 nav {
     float: right;
+    vertical-align: bottom;
     @include font-size(1.5);
 }
 
-header nav a {
-    float:left;
-    padding: 0 0.6em;
-    line-height: 2em;
-    text-decoration: none;
+header nav {
+    a {
+        font-family: $feature-font;
+        color: $navbar-link-colour;
+        line-height: 3em;
+        margin: 0 0.5em;
+        padding: 3px 0.1em;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: $navbar-link-colour;
+        border-bottom: 3px solid $primary-colour-0;
+    }
+    
+    a:visited {
+        color: $navbar-link-colour;
+    }
 }
 
 /* Content */
@@ -206,8 +249,8 @@ input, textarea {
 }
 
 .hero {
-    background-color: purple;
     padding: 10px 0px;
+    background-color: $secondary-colour-1-0;
 }
 
 .hero h2 {
@@ -227,7 +270,7 @@ input, textarea {
 
 /* Hero */
 #svg-placeholder {
-    height: 300px;
+    height: 400px;
 }
 
 .hero h2 {
