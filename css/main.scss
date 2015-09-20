@@ -83,6 +83,10 @@ html {
     font-size: 62.5%;
 }
 
+section {
+    @extend .top-shadow;
+}
+
 h1, h2 {
     font-family: $feature-font;
 }
@@ -95,6 +99,12 @@ h1 {
 
 h2 {
     @include font-size(3.0);
+}
+
+h3 {
+    @include font-size(2.0);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 h4 {
@@ -117,14 +127,14 @@ code {
     font-family: monospace !important;
 }
 
-button {
-    font-family: monospace;
+input, textarea, button {
+    @include font-size(1.8);
     display: block;
-    width: 90%;
-    height: 3em;
-    font-size: 2em;
-    background: none;
-    margin: 1em auto;
+    width: 100%;
+}
+
+label {
+    @include font-size(1.5);   
 }
 
 .main-wrap {
@@ -140,21 +150,26 @@ button {
     @include font-size(1.2);
 }
 
-.shadow {
-    box-shadow: 0px 0px 5px 0px #000;
+/* Shadow */
+.top-shadow {
+    box-shadow: inset  0  8px 8px -8px #000000;
+}
+
+.bottom-shadow {
+    box-shadow: inset  0 -8px 8px -8px #000000;
 }
 
 /* Header */
 header {
     position: relative;
     z-index: 1;
-    padding: 12px 3%;
+    padding: 1% 3%;
     background-color: white;
 }
 
 .logo {
+    @include font-size(4.2);
     font-family: $feature-font;
-    @include font-size(2.5);
     font-weight: bold;
 }
 
@@ -171,9 +186,10 @@ header {
 
 /* Navbar */
 nav {
+    @include font-size(2);
     float: right;
     vertical-align: bottom;
-    @include font-size(1.5);
+    text-transform: lowercase;
 }
 
 header nav {
@@ -227,31 +243,21 @@ footer {
     background-color: $secondary-colour-1-0;
 }
 
-.hero-shadow {
-    position: absolute;
-	background: transparent;
-	width: 110%;
-    height: 5px;
-	content: '';
-	left: -5px;
-    box-shadow: 0px 0px 5px 0px #000;
-}
-
-.hero::before {
-    @extend .hero-shadow;
-    top: -5px;
-}
-
-.hero::after {
-    @extend .hero-shadow;
-	bottom: -5px;
-}
-
 .hero h2 {
     color: white;
     border: 5px double white;
     text-align: center;
     width: 90%;
+}
+
+/* About */
+.about {
+    background-color: yellow;
+}
+
+/* Contact */
+.contact {
+    background-color: grey;
 }
 
 /* Posts */
