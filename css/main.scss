@@ -1,62 +1,8 @@
 ---
 ---
-
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   JosephBillingsley.co.uk Styles - Based on Initializr Styles
-   ========================================================================== */
+@import "html5bp";
+@import "colours";
+@import "syntax";
 
 /* Variables */
 $feature-font: 'Roboto Slab', serif;
@@ -68,10 +14,9 @@ $standard-font: 'Open Sans', sans-serif;
   font-size: $sizeValue + rem;
 }
 
-@import "colours";
-
 * {
     box-sizing: border-box;
+    margin: 0;
 }   
 
 html, body {
@@ -84,7 +29,7 @@ html {
 }
 
 section {
-    @extend .top-shadow;
+    padding: 20px 0;
 }
 
 h1, h2 {
@@ -109,7 +54,6 @@ h3 {
 
 h4 {
    @include font-size(1.5);
-   margin-bottom: 0px;
 }
 
 ul {
@@ -119,6 +63,7 @@ ul {
 
 p {
     @include font-size(1.8);
+    padding-bottom: 10px;   
 }
 
 code {
@@ -151,6 +96,11 @@ label {
 }
 
 /* Shadow */
+.vertical-shadow {
+    box-shadow: inset  0  8px 8px -8px #000,
+                inset  0 -8px 8px -8px #000
+}
+
 .top-shadow {
     box-shadow: inset  0  8px 8px -8px #000000;
 }
@@ -180,7 +130,7 @@ header {
     }
     
     a:hover {
-        color: $primary-colour-3;
+        color: $secondary-colour-1;
     }
 }
 
@@ -203,7 +153,7 @@ header nav {
     }
     
     a:hover {
-        border-bottom: 3px solid $primary-colour-0;
+        border-bottom: 3px solid $secondary-colour-1;
     }
 }
 
@@ -240,156 +190,31 @@ footer {
 .hero {
     position: relative;
     padding: 10px 0px;
-    background-color: $secondary-colour-1-0;
+    background-color: $complement-colour-0;
 }
 
 .hero h2 {
-    color: white;
-    border: 5px double white;
+    color: $primary-colour-0;
+    border: 5px double $primary-colour-0;
     text-align: center;
     width: 90%;
 }
 
 /* About */
 .about {
-    background-color: yellow;
+    background-color: $secondary-colour-0;
+}
+
+.about p {
+    color: $complement-colour-0;
 }
 
 /* Contact */
 .contact {
-    background-color: grey;
+    background-color: $secondary-colour-1;
 }
 
 /* Posts */
 .posts-header {
     background-color: yellow;   
-}
-
-@import "syntax";
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.pull-right {
-    float: right;
-}
-
-.sit-down {
-    position: absolute;
-    bottom: 5%;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
