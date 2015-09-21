@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg4405" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" viewBox="0 0 158.35 180" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs id="defs4407"></defs>
+ <metadata id="metadata4410">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(-205.71428,-538.0765)">
+  <path id="beakerOutline" stroke-linejoin="round" d="m324.92,543.9-12.222,0,0,66.389,42.027,78.172c7.3601,11.632,2.87,24.682-10.714,23.74l-102.09,0.021-16.157-0.021c-13.584,0.9416-18.074-12.108-10.714-23.74l42.027-78.172v-66.389h-12.222" stroke="#000" stroke-linecap="round" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="11.65" fill="none"/>
+  <path id="beakerLiquid" d="m231.25,699.21c-3.0919-1.4042-3.664-5.468-1.4182-10.075,0.53692-1.1013,21.385-39.897,15.559-29.08l14.583-27.077h24.916,24.916l14.115,26.227c-4.0109-7.4525,17.088,31.75,17.348,33.825,0.24421,1.9547-0.35405,4.3211-1.3224,5.2309-1.6844,1.5824,1.7722,1.4895-55.143,1.4827-50.48-0.01-52.434-0.025-53.554-0.534z" stroke="#1a1a1a" fill="#000"/>
+ </g>
+</svg>
