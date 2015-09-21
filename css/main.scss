@@ -121,20 +121,29 @@ header {
     background-color: complement-colour-1;
 }
 
-.logo {
+header {
+    img {
+        height: 40px;
+        width: 40px;
+        vertical-align: -40%;
+    }
+}
+
+
+.logo-text {
     @include font-size(4.2);
     font-weight: bold;
     font-family: $feature-font;
 }
 
-.logo {
+.logo-text {
     a {
         text-decoration: none;
         color: $primary-colour;
     }
 
     a:hover {
-        color: $secondary-colour-0;
+        color: $secondary-colour-0; 
     }
 }
 
@@ -157,7 +166,7 @@ header nav {
     }
 
     a:hover {
-        color: $seconday-colour-0;
+        color: $secondary-colour-0;
         border-bottom: 3px solid $secondary-colour-1;
     }
 }
@@ -170,21 +179,6 @@ $footer-height: 35px;
 	margin: 0 auto $footer-height * -1;
 }
 
-/* Footer */
-footer, .push {
-    height: $footer-height;
-}
-
-footer {
-    padding: 10px;
-    background-color: black;
-}
-
-.footer-info {
-    color: white;
-    float: right;
-}
-
 /* Intro */
 .middle {
     margin-left: auto;
@@ -193,17 +187,26 @@ footer {
 }
 
 /* Hero */
-#svg-placeholder {
-    height: 400px;
-}
-
 .hero {
     position: relative;
     padding: 10px 0px;
     background-color: $secondary-colour-1;
 }
 
+#beakerOutline {
+    stroke: #fff
+}
+
+#beakerLiquid {
+    fill: #fff;
+}
+
+.hero-feature {
+    padding: 20px 0;
+}
+
 .hero h2 {
+    padding: 5px;
     color: $complement-colour-0;
     border: 5px double $complement-colour-0;
     text-align: center;
@@ -219,6 +222,22 @@ footer {
 .contact {
     color: $complement-colour-1;
     background-color: $primary-colour;
+}
+
+/* Footer */
+footer, .push {
+    height: $footer-height;
+}
+
+footer {
+    padding: 10px;
+    border-top: 2px solid $secondary-colour-0;
+    background-color: black;
+}
+
+.footer-info {
+    color: white;
+    float: right;
 }
 
 /* Posts */
