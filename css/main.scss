@@ -121,15 +121,6 @@ header {
     background-color: complement-colour-1;
 }
 
-header {
-    img {
-        height: 40px;
-        width: 40px;
-        vertical-align: -40%;
-    }
-}
-
-
 .logo-text {
     @include font-size(4.2);
     font-weight: bold;
@@ -199,6 +190,34 @@ $footer-height: 35px;
 
 #beakerLiquid {
     fill: #fff;
+}
+
+.beaker-number {
+    animation: fade-in-rise-out 5s infinite;
+    opacity: 0;
+    fill: #fff;
+    &:nth-child(4) {
+        @include font-size(3);
+        animation-delay: 3s;
+    }
+    &:nth-child(5) {
+        @include font-size(2);
+        animation-delay: 5.2s;
+    }
+    &:nth-child(6) {
+        @include font-size(5);
+        animation-delay: 7.8s;
+    }
+}
+
+@keyframes fade-in-rise-out {
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
 }
 
 .hero-feature {
