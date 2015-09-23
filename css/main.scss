@@ -3,6 +3,7 @@
 @import "html5bp";
 @import "colours";
 @import "syntax";
+@import "helper";
 
 /* Variables */
 $feature-font: 'Roboto Slab', serif;
@@ -12,6 +13,14 @@ $standard-font: 'Open Sans', sans-serif;
 @mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
+}
+
+@mixin striped-colour($colour: black, $angle: 45deg, $amount: 1%) {
+    background: repeating-linear-gradient($angle,
+                                        $colour,
+                                        $colour 20px,
+                                        lighten($colour, $amount) 20px,
+                                        lighten($colour, $amount) 40px);
 }
 
 * {
@@ -26,6 +35,7 @@ html, body {
 
 html {
     font-size: 62.5%;
+    color: $dark-text-colour;
 }
 
 section {
@@ -40,7 +50,7 @@ h1, h2, h3 {
     font-family: $feature-font;
 }
 
-h1, h3, h4 {
+h1, h3 {
     text-transform: uppercase;
 }
 
@@ -56,11 +66,6 @@ h2 {
 h3 {
     @include font-size(4);
     text-align: left;
-}
-
-h4 {
-   @include font-size(1.5);
-   font-weight: bold;
 }
 
 ul {
@@ -105,10 +110,6 @@ label {
 
 /* Shadow */
 $colour-shadow: black;
-
-.background-shadow {
-    box-shadow: 2px 2px 5px 2px $colour-shadow;
-}
 
 .vertical-shadow {
     box-shadow: inset  0  8px 8px -8px $colour-shadow,
@@ -177,12 +178,8 @@ $footer-height: 35px;
 .hero {
     position: relative;
     padding: 10px 0px;
-    background: repeating-linear-gradient(45deg,
-                                        $secondary-colour,
-                                        $secondary-colour 20px,
-                                        lighten($secondary-colour, 1%) 20px,
-                                        lighten($secondary-colour, 1%) 40px);
-    height: 85vh
+    @include striped-colour($secondary-colour);
+    height: 85vh;
 }
 
 .hero-feature {
@@ -275,24 +272,35 @@ ol > li:before {
 } */
 
 /* Blog */
-section.blog {
-    padding: 0 0;
-}
-
 .post {
     position: relative;
     width: 100%;
     height: 500px;
     padding: 10px;
+    color: $light-text-colour;
 }
 
 .post h3 {
-    border-bottom: 2px solid $dark-text-colour;
+    border-bottom: 2px solid $light-text-colour;
     margin-bottom: 15px;
 }
 
-.post h4 {
-    border-bottom: 2px solid $dark-text-colour;
+.post .category {
+    float: right;
+}
+
+.category {
+    text-transform: uppercase;
+}
+
+.post-info {
+   @include font-size(1.5);
+   font-weight: bold;
+   border-bottom: 2px solid $light-text-colour;
+}
+
+section.blog {
+    padding: 0 0;
 }
 
 .bottom {
@@ -301,24 +309,24 @@ section.blog {
     right: 30px;
 }
 
-// .white-box {
-//     padding: 10px;
-//     border-radius: 10px;
-//     background: #fff;
-//     height: 100%;
-//     width: 100%;
-// }
-
-.orange {
-    background-color: $orange;
+.white-box {
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 2px $colour-shadow;
+    height: 100%;
+    width: 100%;
 }
 
-.blue {
-   background-color: $complement-colour-1
+.travel-colour { 
+    @include striped-colour($orange, 135deg);
+}
+.tech-colour {
+   @include striped-colour($blue, 135deg);
 }
 
-.green {
-    background-color: $complement-colour-0
+.food-colour {
+    @include striped-colour($red, 135deg);
 }
 
 /* Contact */
@@ -334,7 +342,8 @@ footer, .push {
 
 footer {
     padding: 10px;
-    background-color: black;
+    color: $dark-text-colour;
+    background-color: darken($primary-colour, 5%);
 }
 
 .footer-info {
