@@ -39,7 +39,7 @@ html {
 }
 
 section {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 a {
@@ -180,6 +180,12 @@ $footer-height: 35px;
     padding: 10px 0px;
     @include striped-colour($secondary-colour);
     height: 85vh;
+}
+
+.hero h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-feature {
