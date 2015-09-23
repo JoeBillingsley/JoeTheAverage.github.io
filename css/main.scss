@@ -326,7 +326,7 @@ section.blog {
 }
 
 .food-colour {
-    @include striped-colour($red, 135deg);
+    @include striped-colour($red, 135deg, 2%);
 }
 
 /* Contact */
@@ -341,14 +341,30 @@ footer, .push {
 }
 
 footer {
+    position: relative;
     padding: 10px;
-    color: $dark-text-colour;
+    vertical-align: bottom;
+    color: lighten($primary-colour, 20%);
     background-color: darken($primary-colour, 5%);
 }
 
-.footer-info {
-    color: white;
-    float: right;
+footer .social-links {
+    top: 10%;
+    right: 3%;
+    position: absolute;
+}
+
+.social-links svg {
+    width: 30px;
+    padding-right: 1%;
+}
+
+.social-links path {
+    fill: lighten($primary-colour, 20%);
+}
+
+.social-links svg:hover path {
+    fill: #fff;
 }
 
 @media (min-width: 750px) {

@@ -55,9 +55,24 @@
 	</script>
 
 	<footer role="contentinfo">
-		<span>	
+		<span class="">	
 			© {{ 'now' | date: "%Y" }} Joseph Billingsley
 		</span>
+			
+		<div class="social-links">
+			<a href="https://github.com/JoeTheAverage">
+				{% include github.svg %}
+			</a>
+			<a href="https://uk.linkedin.com/in/JosephBillingsley">
+				{% include linkedin.svg %}
+			</a>
+			<a href="http://devpost.com/JoeTheAverage">
+				{% include devpost.svg %}
+			</a>
+			<a href="www.twitter.com/JoeBillingsley">
+				{% include twitter.svg %}
+			</a>
+		</div>
 	</footer>
 	
 </body>
