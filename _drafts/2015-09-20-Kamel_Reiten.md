@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Camel riding
+category: travel
 ---
 
 In the first week before Gerda arrived it was difficult to find things to do in my free time. Camel poo does not have the right consistency for ball games, it can survive a good hit but refuses to bounce, and I had not thought to bring anything with me. There is a TV but it seemed silly to travel so far just to watch BBC1. Most afternoons I would follow the horses out into the deer park and rest and read. There were good books in my room left behind by other helpers and Heidi, Gerda's sister, had a large collection of English books which she lent me use of.
