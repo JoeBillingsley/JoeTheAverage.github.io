@@ -182,12 +182,6 @@ $footer-height: 35px;
     height: 85vh;
 }
 
-.hero h2 {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .hero-feature {
     padding: 20px 0;
     max-width: 200px;
@@ -325,10 +319,10 @@ section.blog {
 }
 
 .travel-colour { 
-    @include striped-colour($orange, 135deg);
+    @include striped-colour($orange, 135deg, 2%);
 }
 .tech-colour {
-   @include striped-colour($blue, 135deg);
+   @include striped-colour($blue, 135deg, 2%);
 }
 
 .food-colour {
