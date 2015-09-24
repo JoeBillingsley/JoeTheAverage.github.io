@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: A long test title
-category: Test
+category: tech
 tags: [test, test2, test3]
 location: Cheltenham, UK
 ---

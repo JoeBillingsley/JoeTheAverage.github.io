@@ -1,7 +1,7 @@
 --- 
 layout: post
 title: A test title
-category: Test
+category: travel
 tags: [test, test2, test3]
 location: Cheltenham, UK
 ---
