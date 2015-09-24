@@ -6,10 +6,8 @@ layout: default
 
 <section class="hero vertical-shadow">
 	<div class="middle">
-		<div class="hero-feature">
-			{% include beaker.svg %}
-		</div>
-		<h2>Computer Scientist</h2>
+		<h1>Joseph Billingsley</h1>
+		<h2>Software Developer and student studying <span id="evolutionary-computing">evolutionary computing</span></h2>
 	</div>
 </section>
 
@@ -44,7 +42,22 @@ layout: default
 	
 	<section class="blog">
 		<div class="clearfix">
-			<a>
+			{% for post in site.posts limit:3 %}
+				<a href="{{ post.url }}">
+					<div class="post {{ post.category | downcase }}-colour top-shadow">
+						<div class="post-info">
+							<time class="date">{{ post.date | date: "%m/%d/%Y" }}</time>
+							<span class="category">{{ post.category }}</span>
+						</div>
+						<h3>{{ post.title }}</h3>
+						{{ post.excerpt }}
+						<p class="bottom">Read more</p>
+					</div>
+				</a>
+			{% endfor %}
+			
+			
+<!--			<a>
 				<div class="post tech-colour top-shadow">
 					<div class="post-info">
 						<time class="date">01/02/03</time>
@@ -76,7 +89,7 @@ layout: default
 					<p>Lorem ipsum dolor sit amet...;</p>
 					<p class="bottom">Read more</p>
 				</div>
-			</a>
+			</a>-->
 		</div>
 	</section>
 	
