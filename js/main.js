@@ -1,14 +1,14 @@
 var evolvingElements = document.getElementsByClassName("evolve");
 
 var initialWait = 5;
-var maxWait = 150;
+var maxWait = 100;
 
 for(var i = 0; i < evolvingElements.length; i++) {	
-	evolveTo(evolvingElements[i].innerHTML, evolvingElements[i]);
+	evolveTo(evolvingElements[i].getAttribute("data-target"), evolvingElements[i]);
 }
 
 function evolveTo(target, element) {
-	var len = element.innerHTML.length;
+	var len = target.length;
 		
 	// Generate base with the same number of characters
 	var original = generateBase(len);
