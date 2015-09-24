@@ -2,31 +2,36 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-
 <section class="hero vertical-shadow">
 	<div class="middle">
-		<h1>Joseph Billingsley</h1>
-		<h2>Software Developer and student studying <span class="evolve">evolutionary</span> <span class="evolve">computing</span></h2>
+		
+		<div class="logo">
+			<h1>Joseph</h1>
+			<h1><b>Billingsley</b></h1>
+		</div>
+		
+		<h2>Programmer, student and 
+			<span class="roles" data-roles='"{"international spy", 
+											  "last of the time lords", 
+											  "camel poo shoveller"}"'>
+				...
+			</span>
+		</h2>
 	</div>
 </section>
 
 <main>	
 	<!-- About me -->
-	<!--<section class="about">
-		<ol class="middle">
-			<li>
-				Joe is a Computer Science Student at the University of Birmingham. His ideal job would let him develop beautiful programs which make a positive impact on the world. If all goes to plan he will be graduating in 2016 with complete world domination planned for 2020. 
-			</li>
-			<li>
-				He is committed to his learning and improving and is a keen adopter of technologies new and old. His programming tool kit boasts familiarity with Node.js, Android, C++ and AS3 plus two years of experience of Java and industrial experience of C# and the Microsoft stack.
-			</li>
-			<li>
-				When not programming he enjoys cooking, hiking and talking in the third person on the internet. He loves good food and big ideas; if you have either to share or anything else you'd like to talk about <a href="#contact">get in touch.</a>
-			</li>
-		</ol>
-	</section>-->
-	
+	<section class="about">
+		<div class="middle">
+			<h2><b>Hello!</b> I am a computer science student in the UK graduating 2016.</h2>			
+			
+			<p></p>
+			
+			<p>When I am not working towards beautiful code - I cook, ride horses and travel. You can read more about that on my blog, 10px down.</p>
+		</div>
+	</section>
+		
 	<section class="blog">
 		<div class="clearfix">
 			{% for post in site.posts limit:3 %}

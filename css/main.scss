@@ -24,6 +24,7 @@ $standard-font: 'Open Sans', sans-serif;
 }
 
 * {
+    font-weight: 400;
     box-sizing: border-box;
     margin: 0;
 }
@@ -55,8 +56,8 @@ h1, h3 {
 }
 
 h1 {
-    @include font-size(4.2);
-    margin: 10px 10px 10px 0;
+    @include font-size(4);
+    margin: 0;
 }
 
 h2 {
@@ -125,38 +126,28 @@ $colour-shadow: black;
 }
 
 /* Header */
-header {
-    position: relative;
-    z-index: 1;
+header {    
+    display: flex;
+    align-items: center;
+    height: 50px;
     padding: 0% 2%;
     background: $primary-colour;
     font-family: $feature-font;
 }
 
-header a {
-    color: $light-text-colour;
-}
-
-
-.logo-text {
-    @include font-size(4.2);
-    font-weight: bold;
-}
-
 /* Navbar */
 nav {
-    @include font-size(2);
-    float: right;
-    vertical-align: bottom;
-    text-transform: lowercase;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-header nav {
-    a {
-        line-height: 3em;
-        margin: 0 0.5em;
-        padding: 3px 0.1em;
-    }
+nav a {
+    @include font-size(2);
+    text-align: center;
+    text-transform: lowercase;
+    color: $light-text-colour;
+    flex-grow: 1;
 }
 
 /* Content */
@@ -180,6 +171,16 @@ $footer-height: 35px;
     padding: 10px 0px;
     @include striped-colour($secondary-colour);
     height: 85vh;
+}
+
+.hero .logo {
+    border-top: 2px solid $dark-text-colour;
+    border-bottom: 2px solid $dark-text-colour;
+    margin-bottom: 10px;
+}
+
+.js .hero .logo {
+    margin-top: 5px;
 }
 
 .hero-feature {
@@ -281,8 +282,11 @@ ol > li:before {
 }
 
 .post h3 {
+    border-top: 2px solid $light-text-colour;
     border-bottom: 2px solid $light-text-colour;
+    margin-top: 5px;
     margin-bottom: 15px;
+    vertical-align: center;
 }
 
 .post .category {
@@ -296,7 +300,6 @@ ol > li:before {
 .post-info {
    @include font-size(1.5);
    font-weight: bold;
-   border-bottom: 2px solid $light-text-colour;
 }
 
 section.blog {
