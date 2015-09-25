@@ -165,16 +165,6 @@ $footer-height: 35px;
     width: 90%
 }
 
-.btn-ghost {
-    display: inline-block;
-    width: 100%;
-    color: $dark-text-colour;
-    background-color: transparent;
-    border: 2px solid $dark-text-colour;
-    text-align: center;
-    outline: none;
-}
-
 /* Hero */
 .hero {
     position: relative;
@@ -182,20 +172,10 @@ $footer-height: 35px;
     @include striped-colour($secondary-colour);
     height: 85vh;
     
-    button {
-        @include font-size(2.0);
-    }
-    
     .logo {
         border-top: 2px solid $dark-text-colour;
         border-bottom: 2px solid $dark-text-colour;
         margin-bottom: 10px;
-    }
-    
-    .hero-buttons {
-        width: 90%;
-        position: absolute;
-        bottom: 10px;
     }
 }
 
