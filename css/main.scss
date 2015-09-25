@@ -86,6 +86,10 @@ code {
     font-family: monospace !important;
 }
 
+form {
+    max-width: 1000px;
+}
+
 input, textarea, button {
     @include font-size(1.8);
     font-family: $feature-font;
@@ -269,6 +273,11 @@ section.blog {
 .contact {
     background-color: $primary-colour;
     color: $light-text-colour;
+    
+    #submit {
+        width: 100%;
+        float: right;
+    }
 }
 
 /* Footer */
@@ -291,19 +300,19 @@ footer {
 }
 
 .social-links {
+    padding-right: 15px;
+    
+    svg {
+        width: 30px;
+    }
      
-     svg {
-         width: 30px;
-         padding-right: 1%;         
-     }
+    path {
+        fill: lighten($primary-colour, 20%);     
+    }
      
-     path {
-         fill: lighten($primary-colour, 20%);     
-     }
-     
-     svg:hover path {
-         fill: #fff;
-     }
+    svg:hover path {
+        fill: #fff;
+    }
 }
 
 
@@ -311,5 +320,9 @@ footer {
     .post {
         float: left;
         width: 33.33%;
+    }
+    
+    .contact #submit {
+        max-width: 350px;
     }
 }
