@@ -62,6 +62,7 @@ h1 {
 
 h2 {
     @include font-size(3.0);
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -158,11 +159,20 @@ $footer-height: 35px;
 	margin: 0 auto $footer-height * -1;
 }
 
-/* Intro */
 .middle {
     margin-left: auto;
     margin-right: auto;
     width: 90%
+}
+
+.btn-ghost {
+    display: inline-block;
+    width: 100%;
+    color: $dark-text-colour;
+    background-color: transparent;
+    border: 2px solid $dark-text-colour;
+    text-align: center;
+    outline: none;
 }
 
 /* Hero */
@@ -171,12 +181,22 @@ $footer-height: 35px;
     padding: 10px 0px;
     @include striped-colour($secondary-colour);
     height: 85vh;
-}
-
-.hero .logo {
-    border-top: 2px solid $dark-text-colour;
-    border-bottom: 2px solid $dark-text-colour;
-    margin-bottom: 10px;
+    
+    button {
+        @include font-size(2.0);
+    }
+    
+    .logo {
+        border-top: 2px solid $dark-text-colour;
+        border-bottom: 2px solid $dark-text-colour;
+        margin-bottom: 10px;
+    }
+    
+    .hero-buttons {
+        width: 90%;
+        position: absolute;
+        bottom: 10px;
+    }
 }
 
 .js .hero .logo {
@@ -304,6 +324,10 @@ ol > li:before {
 
 section.blog {
     padding: 0 0;
+    
+    h3 {
+        font-weight: bold;
+    }
 }
 
 .bottom {
@@ -322,14 +346,14 @@ section.blog {
 }
 
 .travel-colour { 
-    @include striped-colour($orange, 135deg, 2%);
+    @include striped-colour($orange, 135deg);
 }
 .tech-colour {
-   @include striped-colour($blue, 135deg, 2%);
+   @include striped-colour($blue, 135deg);
 }
 
 .food-colour {
-    @include striped-colour($red, 135deg, 2%);
+    @include striped-colour($red, 135deg);
 }
 
 /* Contact */

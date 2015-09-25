@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="hero vertical-shadow">
+<section id="hero" class="hero vertical-shadow">
 	<div class="middle">
 		
 		<div class="logo">
@@ -13,26 +13,32 @@ layout: default
 		<h2>Programmer, student and 
 			<span class="roles" data-roles='"{"international spy", 
 											  "last of the time lords", 
-											  "camel poo shoveller"}"'>
-				...
-			</span>
+											  "camel poo shoveller",
+											  "24601"}"'>
+				always learning</span>.
 		</h2>
+		
+		<div class="hero-buttons">
+			<button href class="btn-ghost">Blog</button>
+			<button class="btn-ghost">Contact</button>
+		</div>
+		
 	</div>
 </section>
 
-<main>	
+<main>
+	
 	<!-- About me -->
-	<section class="about">
+	<section id="about" class="about">
 		<div class="middle">
-			<h2><b>Hello!</b> I am a computer science student in the UK graduating 2016.</h2>			
-			
-			<p></p>
-			
-			<p>When I am not working towards beautiful code - I cook, ride horses and travel. You can read more about that on my blog, 10px down.</p>
+			<h2><b>Hello!</b> I am a computer science student in the UK graduating 2016.</h2>
+			<p>I have two years of experience with Java and industrial experience developing with C# and the Microsoft stack.</p>
+			<p>On side projects I work with cutting edge tech including Node.js and study web security.</p>
+			<p>When I am not working towards beautiful code, I cook, ride horses and travel. I love good food and big ideas. If you have either to share <a href="#contact">get in touch</a>.</p>
 		</div>
 	</section>
 		
-	<section class="blog">
+	<section id="blog" class="blog">
 		<div class="clearfix">
 			{% for post in site.posts limit:3 %}
 				<a href="{{ post.url }}">
@@ -50,7 +56,7 @@ layout: default
 		</div>
 	</section>
 	
-	<section class="contact top-shadow">
+	<section id ="contact" class="contact top-shadow">
 		<div class="middle">
 			<h2>Contact me</h2>
 			
