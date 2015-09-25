@@ -141,14 +141,14 @@ nav {
     display: flex;
     flex-direction: row;
     width: 100%;
-}
-
-nav a {
-    @include font-size(2);
-    text-align: center;
-    text-transform: lowercase;
-    color: $light-text-colour;
-    flex-grow: 1;
+    
+    a {
+        @include font-size(2);
+        text-align: center;
+        text-transform: lowercase;
+        color: $light-text-colour;
+        flex-grow: 1;
+    }
 }
 
 /* Content */
@@ -171,6 +171,7 @@ $footer-height: 35px;
     padding: 10px 0px;
     @include striped-colour($secondary-colour);
     height: 85vh;
+    max-height: 600px;
     
     .logo {
         border-top: 2px solid $dark-text-colour;
@@ -196,82 +197,10 @@ $footer-height: 35px;
     background-size: 100% 100%
 }
 
-/* Beaker */
-#beakerOutline {
-    stroke: #fff
-}
-
-#beakerLiquid {
-    fill: #fff;
-}
-
-.beaker-number {
-    animation: fade-in-rise-out 5s infinite;
-    opacity: 0;
-    fill: #fff;
-    &:nth-child(4) {
-        @include font-size(3);
-        animation-delay: 1s;
-    }
-    &:nth-child(5) {
-        @include font-size(3);
-        animation-delay: 3s;
-    }
-    &:nth-child(6) {
-        @include font-size(2);
-        animation-delay: 5.2s;
-    }
-    &:nth-child(7) {
-        @include font-size(5);
-        animation-delay: 7.8s;
-    }
-}
-
-@keyframes fade-in-rise-out {
-    50% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-60px);
-    }
-}
-
-
 /* About */
 .about {
     @include font-size(2);
 }
-
-ol {
-    counter-reset: li;
-    padding-left: 0.5em;
-}
-
-ol > li {
-    position: relative;
-    padding: 4px 8px;
-    list-style: none;
-}
-
-ol > li:before {
-    content: counter(li, decimal-leading-zero) ".";
-    counter-increment: li;
-    position: absolute;
-    left: -1.6em;
-    top: 0.1em;
-    width: 2em;
-    padding: 2px 0;
-    color: $dark-text-colour;
-    @include font-size(2);
-    font-weight: bold;
-    text-align: center;
-}
-
-/* ol ol li:last-child {
-    margin-bottom: 0;
-} */
-
 /* Blog */
 .post {
     position: relative;
@@ -279,14 +208,14 @@ ol > li:before {
     height: 500px;
     padding: 10px;
     color: $light-text-colour;
-}
 
-.post h3 {
-    border-top: 2px solid $light-text-colour;
-    border-bottom: 2px solid $light-text-colour;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    vertical-align: center;
+    h3 {
+        border-top: 2px solid $light-text-colour;
+        border-bottom: 2px solid $light-text-colour;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        vertical-align: center;
+    }
 }
 
 .post .category {
@@ -353,26 +282,30 @@ footer {
     vertical-align: bottom;
     color: lighten($primary-colour, 20%);
     background-color: darken($primary-colour, 5%);
+
+    .social-links {
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
 }
 
-footer .social-links {
-    top: 10%;
-    right: 3%;
-    position: absolute;
+.social-links {
+     
+     svg {
+         width: 30px;
+         padding-right: 1%;         
+     }
+     
+     path {
+         fill: lighten($primary-colour, 20%);     
+     }
+     
+     svg:hover path {
+         fill: #fff;
+     }
 }
 
-.social-links svg {
-    width: 30px;
-    padding-right: 1%;
-}
-
-.social-links path {
-    fill: lighten($primary-colour, 20%);
-}
-
-.social-links svg:hover path {
-    fill: #fff;
-}
 
 @media (min-width: 750px) {
     .post {
