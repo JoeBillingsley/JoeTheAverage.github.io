@@ -21,6 +21,7 @@
 		 Hello!
 		 
 		 Good to see someone else is interested in the structure of this webpage other than just me. 
+		 
 		 Let me know what you think; you can raise an issue on Github 'https://github.com/JoeTheAverage/JoeTheAverage.github.io' or use my contact details at the bottom of the page.
 		 
 		 Thanks,
@@ -54,7 +55,13 @@
 	</script>
 
 	<footer role="contentinfo">
-		<div class="middle">
+		
+		<div class="middle footer">
+		
+			<div class="copyright">
+				© Joseph Billingsley {{ site.time | date: '%Y' }}
+			</div>
+			
 			<div class="social-links">
 				<a href="https://github.com/JoeTheAverage">
 					{% include github.svg %}
@@ -69,7 +76,9 @@
 					{% include twitter.svg %}
 				</a>
 			</div>
+		
 		</div>
+		
 	</footer>
 	
 </body>

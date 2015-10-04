@@ -90,7 +90,7 @@ input, textarea, button {
     @include font-size(1.8);
     font-family: $feature-font;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: $dark-text-colour
 }
 
@@ -269,12 +269,7 @@ section.blog {
 /* Contact */
 .contact {
     background-color: $primary-colour;
-    color: $light-text-colour;
-    
-    #submit {
-        width: 100%;
-        float: right;
-    }
+    color: $light-text-colour;    
 }
 
 /* Footer */
@@ -290,18 +285,26 @@ footer {
     
     @include font-size(1.2);
 
-    .middle {
-        position: relative;
-        
-        .social-links {
-            position: absolute;
-            top: -7px;
-            right: 0;
-        }
+    .social-links {
+        float: right;
     }
+    
+}
+
+.footer {
+    position: relative;
+}
+
+footer .middle {
+    width:100%;
 }
 
 .social-links {
+    
+    position: absolute;
+    
+    top: -7px;
+    right: 0;
         
     svg {
         width: 30px;
