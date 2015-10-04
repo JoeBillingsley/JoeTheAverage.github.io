@@ -20,25 +20,53 @@ layout: default
 	</div>
 </section>
 
-<main>
+<main>	
+	<div class="full-row clearfix">
+		
+		<section class="work column">
+			<h3>Projects</h3>
 			
-	<section id="blog" class="blog">
-		<div class="clearfix">
-			{% for post in site.posts limit:3 %}
-				<a href="{{ post.url }}">
-					<div class="post {{ post.category | downcase }}-colour top-shadow">
-						<div class="post-info">
-							<time class="date">{{ post.date | date: "%m/%d/%Y" }}</time>
-							<span class="category">{{ post.category }}</span>
+			<div class="project feature-project">				
+				<img></img>
+				<h4>TITLE</h4>
+				<p>
+					Blah blah blah blah blah
+				</p>
+				<a class="more" href="">More</a>
+			</div>
+
+			<div class="middle">
+				<div class="project"></div>
+					
+				<div class="project"></div>
+				
+				<div class="project"></div>	
+			</div>
+			
+		</section>
+		
+		<section class="blog column">
+			<div class="middle">	
+				<h3>Blog</h3>
+				
+				{% for post in site.posts limit:3 %}
+					<a href="{{ post.url }}">
+						<div class="post {{ post.category | downcase }}-colour">
+							
+							<h4>{{ post.title }}</h4>
+							
+							{{ post.excerpt }}
+							
+							<div class="post-info">
+								<time class="date">{{ post.date | date: "%m/%d/%Y" }}</time>
+								<span class="category">{{ post.category }}</span>
+							</div>
 						</div>
-						<h3>{{ post.title }}</h3>
-						{{ post.excerpt }}
-						<p class="bottom">Read more</p>
-					</div>
-				</a>
-			{% endfor %}
-		</div>
-	</section>
+					</a>
+				{% endfor %}
+			</div>
+		</section>
+	</div>
 	
 	<section id ="contact" class="contact top-shadow">
 		<div class="middle">
