@@ -21,17 +21,7 @@ layout: default
 </section>
 
 <main>
-	
-	<!-- About me -->
-	<section id="about" class="about">
-		<div class="middle">
-			<h2><b>Hello!</b> I am a computer science student in the UK graduating 2016.</h2>
-			<p>I have two years of experience with Java and industrial experience developing with C# and the Microsoft stack.</p>
-			<p>On side projects I work with cutting edge tech including Node.js and study web security.</p>
-			<p>When I am not working towards beautiful code, I cook, ride horses and travel. I love good food and big ideas. If you have either to share <a href="#contact">get in touch</a>.</p>
-		</div>
-	</section>
-		
+			
 	<section id="blog" class="blog">
 		<div class="clearfix">
 			{% for post in site.posts limit:3 %}
@@ -54,19 +44,12 @@ layout: default
 		<div class="middle">
 			<h2>Contact me</h2>
 			
-			<!--Contact form forwarder provided by formspree-->
-			<form id="contact-form" class="clearfix" method="POST" role="form">
-				<label for="name" class="required">Your name</label>
-				<input type="text" id="name" name="name" required aria-required="true">
-				
-				<label for="email" class="required">Your email</label>
-				<input type="email" id="email" name="_replyto" required aria-required="true">
-				
-				<label for="message" class="required">Your message</label>
-				<textarea type="text" id="message" name="message" aria-required="true"></textarea>
-				
-				<input type="submit" id="submit" value="Send">
-			</form>
+			<p>
+				Hello! I am a computer science student in the UK graduating 2016.
+				I have two years of experience with Java and industrial experience developing with C# and the Microsoft stack.
+				On side projects I work with cutting edge tech including Node.js and study web security.
+				When I am not working towards beautiful code, I cook, ride horses and travel. I love good food and big ideas. If you have either to share, email me <a href="mailto:jb@josephbillingsley.co.uk">jb@josephbillingsley.co.uk</a>.
+			</p>						
 		</div>
 	</section>
 </main>

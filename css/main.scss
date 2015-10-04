@@ -43,10 +43,6 @@ section {
     padding: 10px 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 h1, h2, h3 {
     font-family: $feature-font;
 }
@@ -91,7 +87,7 @@ input, textarea, button {
     font-family: $feature-font;
     width: 100%;
     margin-bottom: 20px;
-    color: $dark-text-colour
+    color: $dark-text-colour;
 }
 
 label {
@@ -147,6 +143,7 @@ nav {
         text-align: center;
         text-transform: lowercase;
         color: $light-text-colour;
+        text-decoration: none;
         flex-grow: 1;
     }
 }
@@ -202,6 +199,7 @@ $footer-height: 35px;
 .about {
     @include font-size(2);
 }
+
 /* Blog */
 .post {
     position: relative;
@@ -270,6 +268,15 @@ section.blog {
 .contact {
     background-color: $primary-colour;
     color: $light-text-colour;    
+    
+    a {
+        color: darken($light-text-colour, 40%);
+    }
+    
+    a:hover {
+        color: #fff;
+    }
+    
 }
 
 /* Footer */
