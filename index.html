@@ -44,7 +44,7 @@ title: Joseph Billingsley
 <main>	
 	<section class="blog">
 		<div class="middle">	
-			{% for post in site.posts limit:7 %}
+			{% for post in paginator.posts %}
 				<div class="post {{ post.category | downcase }}-colour">
 					
 					<a href="{{ post.url }}">
@@ -64,6 +64,22 @@ title: Joseph Billingsley
 					</div>
 				</div>
 			{% endfor %}
+			
+			{% if paginator.total_pages > 1 %}
+				<div class="pagination">
+  					{% if paginator.previous_page %}
+    					<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  					{% else %}
+    					<span>&laquo; Prev</span>
+  					{% endif %}
+					  
+  					{% if paginator.next_page %}
+   						 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  					{% else %}
+    					<span>Next &raquo;</span>
+  					{% endif %}
+				</div>
+			{% endif %}
 		</div>
 	</section>
 </main>
