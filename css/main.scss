@@ -78,6 +78,11 @@ p {
     padding-bottom: 10px;
 }
 
+a {
+    color: $primary-colour;
+    text-decoration: none;
+}
+
 code {
     @include font-size(1.5);
     overflow: auto;
@@ -169,9 +174,9 @@ $footer-height: 35px;
 .hero {
     position: relative;
     padding: 10px 0px;
-    @include striped-colour($secondary-colour);
     height: 85vh;
     max-height: 600px;
+    @include striped-colour($secondary-colour);
     
     .logo {
         border-top: 2px solid $dark-text-colour;
@@ -198,10 +203,6 @@ $footer-height: 35px;
 }
 
 /* Blog */
-.column {
-    float: left;
-}
-
 $project-gutter: 10px;
 
 .project {
@@ -230,10 +231,9 @@ $project-gutter: 10px;
 }
 
 .post {
-    height: 150px;
     padding: $project-gutter;
     margin-bottom: 10px;
-    border: 2px solid darken($background-colour, 50%);
+    border-bottom: 1px solid $subtle;
 }
 
 .post-info {
@@ -273,11 +273,7 @@ footer {
     color: lighten($primary-colour, 20%);
     background-color: darken($primary-colour, 5%);
     
-    @include font-size(1.2);
-
-    .social-links {
-        float: right;
-    }   
+    @include font-size(1.2); 
 }
 
 .footer {
@@ -289,20 +285,25 @@ footer .middle {
 }
 
 .social-links {
-    position: absolute;
     
-    top: -7px;
-    right: 0;
-        
+    display: flex;
+    
+    > a {
+        flex-grow: 1;  
+    }
+    
     svg {
+        display: block;
         width: 30px;
+        margin-left: auto;
+        margin-right: auto;
     }
      
     path {
-        fill: lighten($primary-colour, 20%);     
+        fill: lighten($primary-colour, 20%);
     }
      
     svg:hover path {
-        fill: #fff;
+        fill: $secondary-colour;
     }
 }

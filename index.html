@@ -11,74 +11,54 @@ title: Joseph Billingsley
 			<h1><b>Billingsley</b></h1>
 		</div>
 		
-		<h2>Programmer, 
-			<span class="roles" data-roles='"{"international bright young thing", 
-											  "last of the time lords", 
-											  "camel poo shoveller",
-											  "24601"}"'>
+		<p class="opening-paragraph">Programmer, 
+			<span id="role-content" data-roles='"{"international bright young thing", 
+												  "last of the time lords",
+												  "camel poo shoveller",
+												  "24601"}"'>
 				student and _</span>
-		</h2>
+		</p>
+	</div>
+</section>
+
+<section class="contact clearfix">
+	<div class="social-links">
+		<a href="mailto:jb@josephbillingsley.co.uk">
+			{% include email.svg %}	
+		</a>
+		<a href="https://github.com/JoeTheAverage">
+			{% include github.svg %}
+		</a>
+		<a href="https://uk.linkedin.com/in/JosephBillingsley">
+			{% include linkedin.svg %}
+		</a>
+		<a href="http://devpost.com/JoeTheAverage">
+			{% include devpost.svg %}
+		</a>
+		<a href="http://www.twitter.com/JoeBillingsley">
+			{% include twitter.svg %}
+		</a>
 	</div>
 </section>
 
 <main>	
-	<div class="full-row clearfix">
-		
-		<section class="work column">
-			<h3>Projects</h3>
-			
-			<div class="project feature-project">				
-				<img></img>
-				<h4>TITLE</h4>
-				<p>
-					Blah blah blah blah blah
-				</p>
-				<a class="more" href="">More</a>
-			</div>
-
-			<div class="middle">
-				<div class="project"></div>
-					
-				<div class="project"></div>
-				
-				<div class="project"></div>	
-			</div>
-			
-		</section>
-		
-		<section class="blog column">
-			<div class="middle">	
-				<h3>Blog</h3>
-				
-				{% for post in site.posts limit:3 %}
-					<a href="{{ post.url }}">
-						<div class="post {{ post.category | downcase }}-colour">
+	<section class="blog">
+		<div class="middle">	
+			{% for post in site.posts limit:7 %}
+				<a href="{{ post.url }}">
+					<div class="post {{ post.category | downcase }}-colour">
+						
+						<h2>{{ post.title }}</h2>
+						
+						{{ post.excerpt }}
 							
-							<h4>{{ post.title }}</h4>
-							
-							{{ post.excerpt }}
-							
-							<div class="post-info">
-								<time class="date">{{ post.date | date: "%m/%d/%Y" }}</time>
-								<span class="category">{{ post.category }}</span>
-							</div>
+						<div class="post-info">
+							<time class="date">{{ post.date | date: "%m/%d/%Y" }}</time>
+							<span class="category">{{ post.category }}</span>
 						</div>
-					</a>
-				{% endfor %}
-			</div>
-		</section>
-	</div>
-	
-	<section id ="contact" class="contact top-shadow">
-		<div class="middle">
-			<h2>Contact me</h2>
-			
-			<p>
-				Hello! I am a computer science student in the UK graduating 2016.
-				I have two years of experience with Java and industrial experience developing with C# and the Microsoft stack.
-				On side projects I work with cutting edge tech including Node.js and study web security.
-				When I am not working towards beautiful code, I cook, ride horses and travel. I love good food and big ideas. If you have either to share, email me <a href="mailto:jb@josephbillingsley.co.uk">jb@josephbillingsley.co.uk</a>.
-			</p>						
+					</div>
+				</a>
+			{% endfor %}
 		</div>
 	</section>
 </main>
