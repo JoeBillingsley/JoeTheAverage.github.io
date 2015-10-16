@@ -62,6 +62,15 @@ h2 {
     margin-bottom: 10px;
 }
 
+a > h2 {
+    color: $primary-colour;
+}
+
+a:hover > h2 {
+    color: $secondary-colour;
+    text-decoration: underline;   
+}
+
 h3 {
     @include font-size(4);
     text-align: left;
@@ -79,8 +88,7 @@ p {
 }
 
 a {
-    color: $primary-colour;
-    text-decoration: none;
+    text-decoration: none;  
 }
 
 code {
@@ -137,22 +145,6 @@ header {
     padding: 0% 2%;
     background: $primary-colour;
     font-family: $feature-font;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    
-    a {
-        @include font-size(2);
-        text-align: center;
-        text-transform: lowercase;
-        color: $light-text-colour;
-        text-decoration: none;
-        flex-grow: 1;
-    }
 }
 
 /* Content */
@@ -232,6 +224,7 @@ $project-gutter: 10px;
 
 .post {
     padding: $project-gutter;
+    min-height: 150px;
     margin-bottom: 10px;
     border-bottom: 1px solid $subtle;
 }
@@ -239,6 +232,12 @@ $project-gutter: 10px;
 .post-info {
    @include font-size(1.5);
    font-weight: bold;
+}
+
+.tag {
+    background-color: black;
+    color: #fff;
+    padding: 0 2px;
 }
 
 .bottom {
