@@ -2,95 +2,74 @@
 layout: default
 title: Joseph Billingsley
 ---
-<section class="hero vertical-shadow">
-	<h2>
-		Featured post
-	</h2>
+<section class="hero submerged-shadow">
 	
-	<p>
-		A small amount of text which briefly outlines the content of the post...
-	</p>
+	<div class="logo">
+		Joseph Billingsley
+	</div>
 	
+	<div class="middle">
+		<h1>
+			Programmer & <span id="role-content">Student</span>
+		</h1>
+		
+		<p class="excerpt">
+			A small amount of text which briefly outlines the content of the post...
+		</p>
+		
+		<button>
+			Read Now
+		</button>
+	</div>
 </section>
 
-<section class="about">
-	<p class="opening-paragraph">Programmer, 
-		<span id="role-content" data-roles='"{"international bright young thing", 
-											  "last of the time lords",
-											  "camel poo shoveller",
-											  "24601"}"'>
-			student and _</span>
+<section class="about middle high-shadow">
+	<h2>
+		Hello! I'm Joseph Billingsley.
+	</h2>
+	<p class="opening-paragraph">Programmer, student and
 	</p>
 </section>
 		
-<section class="blog">
-	<div class="middle">	
-		{% for post in paginator.posts %}
-			<div class="post {{ post.category | downcase }}-colour">
-					
-				<div class="title">
-					<a href="{{ post.url }}">
-						<h2>{{ post.title }}</h2>
-					</a>
-				</div>
-					
-				<time datetime="{{ post.date | "%Y-%m-%d" }}">
-					{{ post.date | date: "%d %b %Y" | upcase }}
-				</time>
-									
-				<p>
-					{{ post.excerpt | remove: '<p>' | remove: '</p>'}}
-				</p>
-							
-				<div class="tags">
-					{% for tag in post.tags limit:3 %}
-						<span class="tag">{{ tag }}</span>
-					{% endfor %}
-				</div>
+<section class="blog middle">
+	{% for post in paginator.posts %}
+		<div class="post high-shadow">
+				
+			<div class="title">
+				<a href="{{ post.url }}">
+					<h2>{{ post.title }}</h2>
+				</a>
 			</div>
-		{% endfor %}
-			
-		{% if paginator.total_pages > 1 %}
-			<div class="pagination">
-  				{% if paginator.previous_page %}
-    				<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  				{% else %}
-    				<span>&laquo; Prev</span>
-  				{% endif %}		
-					  	  
-  				{% if paginator.next_page %}
-   					 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  				{% else %}
-    				<span>Next &raquo;</span>
-  				{% endif %}
+				
+			<time class="date" datetime="{{ post.date | "%Y-%m-%d" }}">
+				{{ post.date | date: "%d %b %Y" | upcase }}
+			</time>
+								
+			<p class="post-excerpt">
+				{{ post.excerpt | remove: '<p>' | remove: '</p>'}}
+			</p>
+						
+			<div class="tags">
+				{% for tag in post.tags limit:3 %}
+					<span class="tag">{{ tag }}</span>
+				{% endfor %}
 			</div>
-		{% endif %}
-	</div>
-</section>
-	
-<section class="contact clearfix">
-	<ul>	
-		<li class="name">Joseph Billingsley</li>
-		<li class="email">jb@josephbillingsley.co.uk</li>
-	</ul>
-		
-	<div class="copyright">© 2015 - {{ site.time | date: "%Y" }} Joseph Billingsley</div>
+		</div>
+	{% endfor %}
 			
-	<div class="social-links">
-		<a href="mailto:jb@josephbillingsley.co.uk">
-			{% include email.svg %}	
-		</a>
-		<a href="https://github.com/JoeTheAverage">
-			{% include github.svg %}
-		</a>
-		<a href="https://uk.linkedin.com/in/JosephBillingsley">
-			{% include linkedin.svg %}
-		</a>
-		<a href="http://devpost.com/JoeTheAverage">
-			{% include devpost.svg %}
-		</a>
-		<a href="http://www.twitter.com/JoeBillingsley">
-			{% include twitter.svg %}
-		</a>
-	</div>
+	{% if paginator.total_pages > 1 %}
+		<div class="pagination">
+  			{% if paginator.previous_page %}
+    			<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  			{% else %}
+    			<span>&laquo; Older</span>
+  			{% endif %}		
+				  	  
+  			{% if paginator.next_page %}
+   				 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  			{% else %}
+    			<span>Newer &raquo;</span>
+  			{% endif %}
+		</div>
+	{% endif %}
 </section>

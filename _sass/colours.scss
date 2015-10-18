@@ -1,16 +1,17 @@
-$primary-colour: #282C2B;// #225378;	// Main Primary color */
-$secondary-colour:#04BFBF;	// Main Secondary color (1) */
+// General purpose colours
+$primary-colour: #1b9aaa;
+$secondary-colour: #ffe900;
+$accent-colour: #e53d00;
+$dark: #282C2B;
+$light: #fefffe;
 
-$background-colour: white;
+// Status colours
+$success: #2BD000;
+$warning: #FD7400;
+$error: #FF0505;
+$information: #05BFFF;
+$muted: #ff00ff;
 
-$blue: #194FCA;
-$red: #FF0505;
-$orange: #FD7400;
-$yellow: #FFE11A;
-$green: #2BD000;
-
-$subtle: darken(#fff, 10%);
-
-$dark-text-colour: #181C22; //#222831;
-$light-text-colour: white;
-//$secondary-colour-1: #632770;	 Main Secondary color (2) */
+/* Thanks Travis.io!
+   http://travis.io/design-for-developers/how-to-choose-colors-for-an-application-or-website
+*/

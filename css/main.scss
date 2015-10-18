@@ -36,16 +36,20 @@ html, body {
 
 html {
     font-size: 62.5%;
-    color: $dark-text-colour;
-    background-color: $background-colour;
+    color: $dark;
+    background-color: lighten($dark, 10%);
 }
 
 section {
-    padding: 10px 0;
+    margin-bottom: 30px;
 }
 
 h1, h2, h3 {
     font-family: $feature-font;
+}
+
+span {
+    font-weight: inherit;
 }
 
 h1, h3 {
@@ -54,7 +58,8 @@ h1, h3 {
 
 h1 {
     @include font-size(4);
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -67,7 +72,7 @@ a > h2 {
 }
 
 a:hover > h2 {
-    color: $secondary-colour;
+    color: darken($primary-colour, 20%);
     text-decoration: underline;   
 }
 
@@ -79,7 +84,6 @@ h3 {
 
 ul {
     @include font-size(1.4);
-    padding-left: 20px;
 }
 
 p {
@@ -97,23 +101,31 @@ code {
     font-family: monospace !important;
 }
 
-input, textarea, button {
+button {
+    font-family: $standard-font;
     @include font-size(1.8);
-    font-family: $feature-font;
-    width: 100%;
+    padding: 8px;
     margin-bottom: 20px;
-    color: $dark-text-colour;
+    color: $dark;
+    background-color: transparent;
+    border: 1px solid $dark;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
 }
+
+button:hover {
+    background-color: transparentize($light, 0.2);
+}
+
 
 label {
     @include font-size(1.5);
 }
 
-.main-wrap {
-    width: 95%;
-    max-width: 800px;
-    margin-right: auto;
-    margin-left: auto;
+.date {
+    display: block;
+    margin-bottom: 10px;
 }
 
 .detail {
@@ -122,49 +134,28 @@ label {
 }
 
 /* Shadow */
-$colour-shadow: black;
+$colour-shadow: $dark;
 
-.vertical-shadow {
+.submerged-shadow {
     box-shadow: inset  0  8px 8px -8px $colour-shadow,
                 inset  0 -8px 8px -8px $colour-shadow;
 }
 
-.top-shadow {
-    box-shadow: inset  0  8px 8px -8px $colour-shadow;
-}
-
-.bottom-shadow {
-    box-shadow: inset  0 -8px 8px -8px $colour-shadow;
-}
-
-/* Content */
-$footer-height: 35px;
-
-.content {
-    min-height: 100%;
-	margin: 0 auto $footer-height * -1;
+.high-shadow {
+    box-shadow: 0px 0px 6px -2px $colour-shadow; 
 }
 
 .middle {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    width: 95%
+    width: 95%;
 }
 
-/* Hero */
-.hero {
-    position: relative;
-    padding: 10px 0px;
-    height: 85vh;
-    max-height: 600px;
-    @include striped-colour($secondary-colour);
-    
-    .logo {
-        border-top: 2px solid $dark-text-colour;
-        border-bottom: 2px solid $dark-text-colour;
-        margin-bottom: 10px;
-    }
+.list-no-style {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Background grid */
@@ -173,11 +164,75 @@ $footer-height: 35px;
     background-size: 100% 100%
 }
 
+/* Content */
+$footer-height: 120px;
+
+.content {
+    min-height: 100%;
+	margin: 0 auto $footer-height * -1;
+}
+
+/* Hero */
+$hero-theme : $light;
+
+.hero {
+    color: $hero-theme;
+    position: relative;
+    padding: 10px 0px;
+    @include striped-colour($primary-colour);    
+    
+    .excerpt {
+        margin-top: 70%;
+        margin-bottom: 10px
+    }
+    
+    button {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        
+        color: $hero-theme;
+        border-color: $hero-theme;
+        text-transform: uppercase;
+        @include font-size(1.5);
+    }
+    
+    button:hover {
+        background-color: transparentize($dark, 0.1)
+    }
+}
+
+.logo {
+    border-top: 2px solid $hero-theme;
+    border-bottom: 2px solid $hero-theme;
+    margin: 10px auto 20px auto;
+    text-align: center;
+    font-family: $feature-font;
+    text-transform: uppercase;
+    width: 250px;
+    
+    @include font-size(2);
+}
+
+/* About */
+.about {
+    padding: 10px;
+    background-color: $light;
+}
+
 .post {
-    min-height: 150px;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: 1px solid $subtle;
+    min-height: 200px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: $light;
+}
+
+.post .date {
+    margin-bottom: 10px;
+}
+
+.post-excerpt {
+    margin-bottom: 10px;
 }
 
 .post-info {
@@ -194,10 +249,10 @@ $footer-height: 35px;
 /* Contact */
 .contact {
     background-color: $primary-colour;
-    color: $light-text-colour;    
+    color: $light;    
     
     a {
-        color: darken($light-text-colour, 40%);
+        color: darken($light, 40%);
     }
     
     a:hover {
@@ -207,6 +262,8 @@ $footer-height: 35px;
 }
 
 /* Footer */
+$footer-colour : $dark;
+
 footer, .push {
     height: $footer-height;
 }
@@ -214,26 +271,33 @@ footer, .push {
 footer {
     padding: 10px;
     vertical-align: bottom;
-    color: lighten($primary-colour, 20%);
-    background-color: darken($primary-colour, 5%);
+    color: lighten($footer-colour, 20%);
+    background-color: darken($footer-colour, 5%);
+}
+
+.email {
+    color: inherit;
+}
+
+.email:hover {
+    color: $light;
+}
+
+.content-info {
+    text-align: center;
+    margin-bottom: 20px;
     
-    @include font-size(1.2); 
-}
-
-.footer {
-    position: relative;
-}
-
-footer .middle {
-    width:100%;
+    > * {
+        margin-bottom: 5px;  
+    }
 }
 
 .social-links {
     
     display: flex;
     
-    > a {
-        flex-grow: 1;  
+    .social {
+        flex-grow: 1;
     }
     
     svg {
@@ -244,10 +308,10 @@ footer .middle {
     }
      
     path {
-        fill: lighten($primary-colour, 20%);
+        fill: lighten($footer-colour, 20%);
     }
      
     svg:hover path {
-        fill: $secondary-colour;
+        fill: $light;
     }
 }

@@ -12,7 +12,7 @@
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.min.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400|Roboto+Slab:700,400' rel='stylesheet' type='text/css'>
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
@@ -27,14 +27,7 @@
 		 Thanks,
 		 Joe   
 	 -->
-	
-	<header>
-		<div class="logo">
-			<span>Joseph</span>
-			<span><b>Billingsley</b></span>
-		</div>
-	</header>
-	
+	 
 	<main class="content">
 		{{ content }}
 		<div class="push"></div>
@@ -52,12 +45,33 @@
 		            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 	</script>
 
-	<footer role="contentinfo">
-		<div class="middle footer">
-			<div class="copyright">
-				© Joseph Billingsley {{ site.time | date: '%Y' }}
-			</div>
+	<footer role="contentinfo">	
+		<ul class="list-no-style content-info">
+			<li class="copyright">
+				© 2015 - {{ site.time | date: "%Y" }} Joseph Billingsley
+			</li>
+			<li>
+				<a class="email" href="mailto:jb@josephbillingsley.co.uk"> 
+					jb@josephbillingsley.co.uk
+				</a>
+			<li>
+		</ul>
+		
+		<div class="social-links">
+			<a class="social social-github" href="https://github.com/JoeTheAverage">
+				{% include github.svg %}
+			</a>
+			<a class="social social-linkedin" href="https://uk.linkedin.com/in/JosephBillingsley">
+				{% include linkedin.svg %}
+			</a>
+			<a class="social social-devpost" href="http://devpost.com/JoeTheAverage">
+				{% include devpost.svg %}
+			</a>
+			<a class="social social-twitter" href="http://www.twitter.com/JoeBillingsley">
+				{% include twitter.svg %}
+			</a>
 		</div>
+		
 	</footer>
 	
 </body>
