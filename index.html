@@ -2,7 +2,7 @@
 layout: default
 title: Joseph Billingsley
 ---
-<section class="hero submerged-shadow">
+<section class="hero">
 	
 	<div class="logo">
 		Joseph Billingsley
@@ -10,7 +10,7 @@ title: Joseph Billingsley
 	
 	<div class="middle">
 		<h1>
-			Programmer & <span id="role-content">Student</span>
+			Programmer & <span class="role" id="role-content">Student</span>
 		</h1>
 		
 		<p class="excerpt">
@@ -23,17 +23,23 @@ title: Joseph Billingsley
 	</div>
 </section>
 
-<section class="about middle high-shadow">
-	<h2>
-		Hello! I'm Joseph Billingsley.
-	</h2>
-	<p class="opening-paragraph">Programmer, student and
-	</p>
+<section class="about sunken-shadow">
+	<div class="middle">
+		<p>
+			Hello! I'm <b>Joseph Billingsley</b>.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet. 
+			I forget what the rest of the text is but blah. 
+			Blah blah blah blah blah. 
+			<span class="information">I am available for work.</span>
+		</p>
+	</div>
 </section>
 		
-<section class="blog middle">
+<section class="blog middle">	
 	{% for post in paginator.posts %}
-		<div class="post high-shadow">
+		<div class="post">
 				
 			<div class="title">
 				<a href="{{ post.url }}">

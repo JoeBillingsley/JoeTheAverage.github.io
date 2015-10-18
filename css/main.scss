@@ -37,11 +37,11 @@ html, body {
 html {
     font-size: 62.5%;
     color: $dark;
-    background-color: lighten($dark, 10%);
+    background-color: $light;
 }
 
 section {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 h1, h2, h3 {
@@ -52,7 +52,7 @@ span {
     font-weight: inherit;
 }
 
-h1, h3 {
+h1, h2 {
     text-transform: uppercase;
 }
 
@@ -67,19 +67,18 @@ h2 {
     margin-bottom: 10px;
 }
 
-a > h2 {
+h3 {
+    @include font-size(3.0);
+    margin-bottom: 10px;
+}
+
+a > h3 {
     color: $primary-colour;
 }
 
-a:hover > h2 {
+a:hover > h3 {
     color: darken($primary-colour, 20%);
     text-decoration: underline;   
-}
-
-h3 {
-    @include font-size(4);
-    text-align: left;
-    padding-bottom: 15px;
 }
 
 ul {
@@ -115,7 +114,7 @@ button {
 }
 
 button:hover {
-    background-color: transparentize($light, 0.2);
+    background-color: $primary-colour;
 }
 
 
@@ -136,9 +135,9 @@ label {
 /* Shadow */
 $colour-shadow: $dark;
 
-.submerged-shadow {
-    box-shadow: inset  0  8px 8px -8px $colour-shadow,
-                inset  0 -8px 8px -8px $colour-shadow;
+.sunken-shadow {
+    box-shadow: inset  0  6px 6px -6px $colour-shadow,
+                inset  0 -6px 6px -6px $colour-shadow;
 }
 
 .high-shadow {
@@ -149,13 +148,17 @@ $colour-shadow: $dark;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    width: 95%;
+    width: 90%;
 }
 
 .list-no-style {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.information {
+    color: $information;
 }
 
 /* Background grid */
@@ -179,7 +182,8 @@ $hero-theme : $light;
     color: $hero-theme;
     position: relative;
     padding: 10px 0px;
-    @include striped-colour($primary-colour);    
+    
+    @include striped-colour(gray);
     
     .excerpt {
         margin-top: 70%;
@@ -194,12 +198,17 @@ $hero-theme : $light;
         color: $hero-theme;
         border-color: $hero-theme;
         text-transform: uppercase;
+        
         @include font-size(1.5);
     }
     
     button:hover {
-        background-color: transparentize($dark, 0.1)
+        background-color: $primary-colour;
     }
+}
+
+.role {
+    color: $primary-colour;
 }
 
 .logo {
@@ -210,21 +219,27 @@ $hero-theme : $light;
     font-family: $feature-font;
     text-transform: uppercase;
     width: 250px;
-    
+            
     @include font-size(2);
 }
 
 /* About */
 .about {
-    padding: 10px;
-    background-color: $light;
+    color: $light;
+    padding-top: 20px;
+    background: $secondary-colour; 
+    
+    p {
+        font-family: $feature-font;
+        @include font-size(3.0);
+    }
 }
 
 .post {
     min-height: 200px;
-    padding: 10px;
+    margin-top: 50px;
     margin-bottom: 30px;
-    background-color: $light;
+    border-bottom: 1px dashed $secondary-colour;
 }
 
 .post .date {
