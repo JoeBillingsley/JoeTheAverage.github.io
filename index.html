@@ -18,7 +18,7 @@ title: Joseph Billingsley
 		</p>
 		
 		<button>
-			Read Now
+			Read More
 		</button>
 	</div>
 </section>
@@ -37,13 +37,14 @@ title: Joseph Billingsley
 	</div>
 </section>
 		
-<section class="blog middle">	
+<section class="blog middle">
+	
 	{% for post in paginator.posts %}
 		<div class="post">
 				
 			<div class="title">
 				<a href="{{ post.url }}">
-					<h2>{{ post.title }}</h2>
+					<h3>{{ post.title }}</h3>
 				</a>
 			</div>
 				
@@ -54,12 +55,10 @@ title: Joseph Billingsley
 			<p class="post-excerpt">
 				{{ post.excerpt | remove: '<p>' | remove: '</p>'}}
 			</p>
-						
-			<div class="tags">
-				{% for tag in post.tags limit:3 %}
-					<span class="tag">{{ tag }}</span>
-				{% endfor %}
-			</div>
+			
+			<a href="{{ post.url }}" class="read-more">
+				Read More >
+			</a>
 		</div>
 	{% endfor %}
 			
