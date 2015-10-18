@@ -61,6 +61,7 @@ h1 {
     @include font-size(4);
     margin-top: 0;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 h2 {
@@ -74,7 +75,7 @@ h3 {
 }
 
 a {
-    color: $secondary-colour;
+    color: $primary-colour;
     text-decoration: none;
 }
 
@@ -115,7 +116,7 @@ button {
 }
 
 button:hover {
-    background-color: $primary-colour;
+    background-color: $secondary-colour;
 }
 
 
@@ -131,6 +132,16 @@ label {
 .detail {
     font-family: $feature-font;
     @include font-size(1.2);
+}
+
+
+.highlight {
+    color: $light;
+    background: $dark;
+}
+
+.role {
+    color: $secondary-colour;
 }
 
 /* Shadow */
@@ -202,14 +213,6 @@ $hero-theme : $light;
         
         @include font-size(1.5);
     }
-    
-    button:hover {
-        background-color: $primary-colour;
-    }
-}
-
-.role {
-    color: $primary-colour;
 }
 
 .logo {
@@ -228,7 +231,7 @@ $hero-theme : $light;
 .about {
     color: $light;
     padding-top: 20px;
-    background: $secondary-colour; 
+    background: $primary-colour; 
     
     p {
         font-family: $feature-font;
@@ -236,10 +239,11 @@ $hero-theme : $light;
     }
 }
 
+/* Blog */
 .post {
     margin-top: 20px;
     margin-bottom: 30px;
-    border-bottom: 1px dashed $secondary-colour;
+    border-bottom: 1px dashed lighten($dark, 50%);
 }
 
 .post .date {
@@ -260,21 +264,6 @@ $hero-theme : $light;
     text-align: right;
     margin-bottom: 10px;
     @include font-size(2);
-}
-
-/* Contact */
-.contact {
-    background-color: $primary-colour;
-    color: $light;    
-    
-    a {
-        color: darken($light, 40%);
-    }
-    
-    a:hover {
-        color: #fff;
-    }
-    
 }
 
 /* Footer */
