@@ -65,12 +65,12 @@ h1 {
 }
 
 h2 {
-    @include font-size(3.0);
+    @include font-size(4.0);
     margin-bottom: 10px;
 }
 
 h3 {
-    @include font-size(3.0);
+    @include font-size(3.5);
     margin-bottom: 10px;
 }
 
@@ -81,10 +81,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-a > h3 {
-    color: $primary-colour;
 }
 
 ul {
@@ -141,7 +137,7 @@ $colour-shadow: $dark;
 .middle {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 800px;
     width: 95%;
 }
 
@@ -243,12 +239,14 @@ $hero-height: 500px;
 }
 
 /* Blog */
-.post {
+.post {    
     margin-top: 20px;
     margin-bottom: 30px;
     border-bottom: 1px dashed lighten($dark, 50%);
     
-    max-width: 700px;
+    max-width: 800px;
+    
+    @include font-size(1.5);    
 }
 
 .post .date {
@@ -257,11 +255,6 @@ $hero-height: 500px;
 
 .post-excerpt {
     margin-bottom: 10px;
-}
-
-.post-info {
-   @include font-size(1.5);
-   font-weight: bold;
 }
 
 .read-more {
