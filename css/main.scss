@@ -102,24 +102,6 @@ code {
     font-family: monospace !important;
 }
 
-button {
-    font-family: $standard-font;
-    @include font-size(1.8);
-    padding: 8px;
-    margin-bottom: 20px;
-    color: $dark;
-    background-color: transparent;
-    border: 1px solid $dark;
-    text-align: center;
-    outline: none;
-    text-decoration: none;
-}
-
-button:hover {
-    background-color: $secondary-colour;
-}
-
-
 label {
     @include font-size(1.5);
 }
@@ -160,7 +142,7 @@ $colour-shadow: $dark;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    width: 90%;
+    width: 95%;
 }
 
 .list-no-style {
@@ -193,30 +175,47 @@ $footer-height: 120px;
 
 /* Hero */
 $hero-theme : $light;
+$hero-height: 500px;
 
 .hero {
     color: $hero-theme;
     position: relative;
-    padding: 10px 0px;
+    padding: 20px 0px;
+    
+    height: $hero-height;
+    
+    @media (min-height: 640px) {
+        height: $hero-height * 1.25;
+    }
+    
+    text-align: center;
     
     @include striped-colour(gray);
     
-    .excerpt {
-        margin-top: 70%;
-        margin-bottom: 10px
-    }
-    
-    button {
+    .find-out {
+        position: absolute;
+        
         margin-left: auto;
         margin-right: auto;
-        display: block;
-        
-        color: $hero-theme;
-        border-color: $hero-theme;
-        text-transform: uppercase;
-        
-        @include font-size(1.5);
+         
+        bottom: 30px;
+        left: 0;
+        right: 0;
     }
+}
+
+.btn {
+    padding: 2px 6px;
+    border: 1px solid $hero-theme;
+    color: $hero-theme;
+    text-align: center;
+    text-transform: uppercase;    
+    @include font-size(2);
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: $secondary-colour;
 }
 
 .logo {
@@ -248,6 +247,8 @@ $hero-theme : $light;
     margin-top: 20px;
     margin-bottom: 30px;
     border-bottom: 1px dashed lighten($dark, 50%);
+    
+    max-width: 700px;
 }
 
 .post .date {
@@ -324,4 +325,24 @@ footer {
     svg:hover path {
         fill: $light;
     }
+}
+
+@media (min-width : 450px) {
+    .content-info {
+        text-align: left;
+        float: left;
+    }
+    
+    .social-links {
+        float: right;
+    }
+    
+    .social { 
+        flex-grow: 0 !important;
+        padding-right: 5px;
+    }
+}
+
+@media (min-width: 700px) {
+    
 }
