@@ -173,6 +173,10 @@ $colour-shadow: $dark;
     color: $information;
 }
 
+.warning {
+    color: $warning
+}
+
 /* Background grid */
 .grid-lines {
     background-image: url("/img/gridlines.svg");
