@@ -53,7 +53,6 @@ span {
 }
 
 h1, h2 {
-    text-align: center;
     text-transform: uppercase;
 }
 
@@ -65,12 +64,12 @@ h1 {
 }
 
 h2 {
-    @include font-size(4.0);
+    @include font-size(3.8);
     margin-bottom: 10px;
 }
 
 h3 {
-    @include font-size(3.5);
+    @include font-size(3.4);
     margin-bottom: 10px;
 }
 
@@ -287,7 +286,7 @@ footer {
 }
 
 .content-info {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     
     > * {
@@ -334,8 +333,4 @@ footer {
         flex-grow: 0 !important;
         padding-right: 5px;
     }
-}
-
-@media (min-width: 700px) {
-    
 }
