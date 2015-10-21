@@ -101,6 +101,10 @@ label {
     @include font-size(1.5);
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 .date {
     display: block;
     margin-bottom: 10px;
@@ -318,11 +322,12 @@ footer {
     path {
         fill: lighten($footer-colour, 20%);
     }
-     
+    
     svg:hover path {
         fill: $light;
     }
 }
+
 
 @media (min-width : 450px) {
     .content-info {
