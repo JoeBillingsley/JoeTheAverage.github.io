@@ -208,9 +208,17 @@ $hero-height: 500px;
     @include font-size(2);
 }
 
+.btn-primary {
+    background-color: $secondary-colour;
+}
+
 .btn:hover {
     text-decoration: none;
     background-color: $secondary-colour;
+}
+
+.btn-primary:hover {
+    background-color: darken($secondary-colour, 5%);
 }
 
 .logo {
