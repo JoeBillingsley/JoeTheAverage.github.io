@@ -241,9 +241,14 @@ $hero-height: 500px;
     background: $primary-colour; 
     
     p {
+        margin-bottom: 10px;
         font-family: $feature-font;
         @include font-size(3.0);
     }
+}
+
+p.small {
+    @include font-size(2.0);
 }
 
 /* Blog */
