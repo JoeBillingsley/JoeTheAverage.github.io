@@ -52,18 +52,16 @@ title: Joseph Billingsley
 					</a>
 				</h2>
 			</div>
-				
+			
 			<time class="date" datetime="{{ post.date | "%Y-%m-%d" }}">
 				{{ post.date | date: "%d %b %Y" | upcase }}
 			</time>
-								
-			<p class="post-excerpt">
-				{{ post.excerpt | remove: '<p>' | remove: '</p>'}}
-			</p>
+							
+			{{ post.excerpt }}
 			
 			<div class="read-more">
 				<a href="{{ post.url }}">
-					Read More >
+					Read more >
 				</a>
 			</div>
 		</div>
