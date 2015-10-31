@@ -6,8 +6,19 @@
 @import "helper";
 
 /* Variables */
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/raleway-regular-webfont.eot');
+    src: url('/fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('/fonts/raleway-regular-webfont.woff') format('woff'),
+         url('/fonts/raleway-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$standard-font: 'Raleway', sans-serif;
 $feature-font: 'Roboto Slab', serif;
-$standard-font: 'Open Sans', sans-serif;
 
 /* Mixins */
 @mixin font-size($sizeValue: 1.6) {
@@ -44,10 +55,6 @@ html {
 
 section {
     padding-bottom: 20px;
-}
-
-h1, h2 {
-    font-family: $feature-font;
 }
 
 span {
@@ -122,9 +129,15 @@ article {
     margin-bottom: 60px;   
 }
 
+
+.feature {
+    font-family: $feature-font;
+}
+
 .excerpt {
     @include font-size(2);
     color: lighten($dark, 30%);
+    
     margin-top: 10px;
 }
 
@@ -139,7 +152,6 @@ article {
 }
 
 .detail {
-    font-family: $feature-font;
     @include font-size(1.2);
 }
 
@@ -152,6 +164,8 @@ article {
     color: $light;
     background: $dark;
     display: inline;
+    font-weight: bold;
+    font-family: $feature-font;
 }
 
 .role {
@@ -243,8 +257,15 @@ $hero-height: 500px;
     }
     
     .excerpt {
-        padding-top: 20px;    
-        color: $light;
+        margin-top: 30%;
+                        
+        @include font-size(2.2);
+        
+        @media (min-height: $breakpoint) {
+            @include font-size(3);
+        }      
+        
+        color: $light;  
     }
 }
 
@@ -267,7 +288,20 @@ $hero-height: 500px;
     margin-left: auto;
     margin-right: auto;
     
-    top: 20%;
+    top: 10%;
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .highlight:hover {
+        transition: all 0.2s ease 0s;
+        background-color: lighten($dark, 4%);
+    }
+    
+    .middle {
+        max-width: 600px;
+    }
 }
 
 
@@ -304,18 +338,6 @@ $hero-height: 500px;
     background-color: darken($secondary, 5%);
 }
 
-.logo {
-    border-top: 2px solid $hero-theme;
-    border-bottom: 2px solid $hero-theme;
-    margin: 10px auto 20px auto;
-    text-align: center;
-    font-family: $feature-font;
-    text-transform: uppercase;
-    width: 250px;
-            
-    @include font-size(2);
-}
-
 /* About */
 .about {
     color: $light;
@@ -323,8 +345,12 @@ $hero-height: 500px;
     background: $primary; 
     
     p {
+        @include font-size(2.5);
+    }
+    
+    .hello {
         font-family: $feature-font;
-        @include font-size(3.0);
+        @include font-size(3.5);
     }
 }
 

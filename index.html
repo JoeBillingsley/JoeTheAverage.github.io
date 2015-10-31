@@ -3,21 +3,17 @@ layout: default
 title: Joseph Billingsley
 ---
 <section class="hero">
-		
+	
 	<div class="hero-body">
 		<div class="middle">
-			<h4 class="front">
-				Achievement #1 
-			</h4>
-				
-			<h1 class="highlight front">
+			<h1 class="highlight front feature">
 				<a href="www.josephbillingsley.co.uk">
 					How to survive a <span class="information">3500ft</span> fall
 				</a>
 			</h1>
 			
 			<p class="excerpt front">
-				Adventures in skydiving and other antics
+				Adventures in skydiving at Langar, Nottingham
 			</p>
 		</div>
 	</div>
@@ -34,17 +30,15 @@ title: Joseph Billingsley
 
 <section class="about sunken-shadow">
 	<div class="middle">
-		<p>
+		<p class="hello">
 			Hello! I'm Joseph Billingsley.
 		</p>
 		<p>
 			I am a computer science student at the University of Birmingham experienced
 			in .NET and Java.
-			I also bake pies and jump out of planes<sup>*</sup>.
+			I also bake pies, ride horses and jump out of planes.
 			<span class="highlight">I am looking for work starting <span class="information">July 2016</span>.</span>
 		</p>
-		
-		<p class="small">* Not at the same time.</p>
 	</div>
 </section>
 		
@@ -53,13 +47,11 @@ title: Joseph Billingsley
 	{% for post in paginator.posts %}
 		<div class="post">
 				
-			<div class="title">
-				<h2>
-					<a href="{{ post.url }}">
-						{{ post.title }}
-					</a>
-				</h2>
-			</div>
+			<h2 class="feature">
+				<a href="{{ post.url }}">
+					{{ post.title }}
+				</a>
+			</h2>
 			
 			<time class="date" datetime="{{ post.date | "%Y-%m-%d" }}">
 				{{ post.date | date: "%d %b %Y" | upcase }}
