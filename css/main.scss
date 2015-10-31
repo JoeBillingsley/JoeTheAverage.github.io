@@ -137,7 +137,6 @@ article {
 .excerpt {
     @include font-size(2);
     color: lighten($dark, 30%);
-    
     margin-top: 10px;
 }
 
@@ -206,12 +205,20 @@ $colour-shadow: $dark;
     margin: 0;
 }
 
-.information {
+.primary {
+    color: $primary;
+}
+
+.secondary {
     color: $information;
 }
 
-.warning {
-    color: $warning
+.accent {
+    color: $accent
+}
+
+.text-shadow {
+    text-shadow: 0px 0px 3px $dark;
 }
 
 /* Background grid */
@@ -226,6 +233,33 @@ $footer-height: 120px;
 .content {
     min-height: 100%;
 	margin: 0 auto $footer-height * -1;
+}
+
+
+/* Logo */
+.logo {
+    display: block; 
+    @include font-size(3);
+    
+    text-align: center;
+       
+    @media (min-height: $breakpoint) {
+        margin-top: 1%;
+        margin-left: 4%;
+        text-align: left;
+        @include font-size(4);
+    }
+
+    a { 
+        border-radius: 50%;
+        padding: 10px 10px;
+        text-decoration: none;
+        transition: all 0.2s ease 0s;
+    }
+    
+    a:hover {
+        background-color: lighten($dark, 10%);
+    }
 }
 
 /* Hero */
@@ -257,10 +291,10 @@ $hero-height: 500px;
     }
     
     .excerpt {
-        margin-top: 30%;
-                        
+        margin-top: 25%;
+                      
         @include font-size(2.2);
-        
+                        
         @media (min-height: $breakpoint) {
             @include font-size(3);
         }      
@@ -288,7 +322,7 @@ $hero-height: 500px;
     margin-left: auto;
     margin-right: auto;
     
-    top: 10%;
+    top: 18%;
     
     a {
         text-decoration: none;
@@ -300,7 +334,8 @@ $hero-height: 500px;
     }
     
     .middle {
-        max-width: 600px;
+        max-width: 650px;
+        width: 100%;
     }
 }
 
