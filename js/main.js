@@ -1,5 +1,5 @@
 var src 
-	= "http://blog-pickcrew.s3.amazonaws.com/wp-content/uploads/2015/10/09171001/writing-retina.jpg";
+	= "/img/background.jpg";
 
 function onLoad() {
 	var hero = document.getElementById("hero-background");
