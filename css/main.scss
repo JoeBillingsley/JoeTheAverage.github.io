@@ -23,6 +23,8 @@ $standard-font: 'Open Sans', sans-serif;
                                         lighten($colour, $amount) 40px);
 }
 
+$breakpoint: 640px;
+
 * {
     font-weight: 400;
     box-sizing: border-box;
@@ -41,10 +43,10 @@ html {
 }
 
 section {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: $feature-font;
 }
 
@@ -52,28 +54,44 @@ span {
     font-weight: inherit;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     text-transform: uppercase;
 }
 
 h1 {
-    @include font-size(4);
+    @include font-size(3.5);
     margin-top: 0;
     margin-bottom: 0;
-    text-align: left;
+    text-align: center;
+    
+    @media (min-height: $breakpoint) {
+       @include font-size(4);
+    }
+    
 }
 
 h2 {
     @include font-size(3.6);
+    margin-top: 10px;
 }
 
 h3 {
-    @include font-size(3.4);
+    @include font-size(3);
     margin-bottom: 10px;
 }
 
+h4 {
+    @include font-size(2);
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+    @media (min-height: $breakpoint) {
+       @include font-size(2.5);
+    }
+}
+
 a {
-    color: $primary-colour;
+    color: $primary;
     text-decoration: none;
 }
 
@@ -107,7 +125,7 @@ article {
 .excerpt {
     @include font-size(2);
     color: lighten($dark, 30%);
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .underline {
@@ -125,7 +143,7 @@ article {
     @include font-size(1.2);
 }
 
-.front {
+.front {        
     position: relative;
     z-index: 9999;
 }
@@ -133,10 +151,11 @@ article {
 .highlight {
     color: $light;
     background: $dark;
+    display: inline;
 }
 
 .role {
-    color: $secondary-colour;
+    color: $secondary;
 }
 
 .fade-in {
@@ -206,7 +225,7 @@ $hero-height: 500px;
     
     height: $hero-height;
     
-    @media (min-height: 640px) {
+    @media (min-height: $breakpoint) {
         height: $hero-height * 1.25;
     }
     
@@ -214,17 +233,43 @@ $hero-height: 500px;
     
     @include striped-colour(gray);
     
-    .find-out {
-        position: absolute;
-        
-        margin-left: auto;
-        margin-right: auto;
-         
-        bottom: 30px;
-        left: 0;
-        right: 0;
+    a {
+        color: $light;
+    }
+    
+    h4 {
+        color: darken($light, 10%);
+        opacity: 0.7;
+    }
+    
+    .excerpt {
+        padding-top: 20px;    
+        color: $light;
     }
 }
+
+.find-out {
+    position: absolute;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    bottom: 10%;
+    left: 0;
+    right: 0;
+}
+
+.hero-body {
+    
+    width: 100%;
+    position: absolute;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    top: 20%;
+}
+
 
 #hero-background { 
     position: absolute;
@@ -240,22 +285,23 @@ $hero-height: 500px;
 }
 
 .btn {
-    padding: 2px 6px;
-    border: 1px solid $hero-theme;
+    padding: 10px 20px;
     color: $hero-theme;
+    background-color: $dark;
     text-align: center;
-    text-transform: uppercase;    
+    border-radius: 2px;  
     @include font-size(2);
+    transition: all 0.3s ease 0s;
 }
 
 .btn:hover {
     text-decoration: none;
-    background-color: $secondary-colour;
+    background-color: $secondary;
 }
 
 
 .btn-primary:hover {
-    background-color: darken($secondary-colour, 5%);
+    background-color: darken($secondary, 5%);
 }
 
 .logo {
@@ -274,10 +320,9 @@ $hero-height: 500px;
 .about {
     color: $light;
     padding-top: 20px;
-    background: $primary-colour; 
+    background: $primary; 
     
     p {
-        margin-bottom: 10px;
         font-family: $feature-font;
         @include font-size(3.0);
     }
@@ -288,9 +333,8 @@ p.small {
 }
 
 /* Blog */
-.post {    
-    margin-top: 20px;
-    margin-bottom: 30px;
+.post {
+    margin-bottom: 10px;
     border-bottom: 1px dashed lighten($dark, 50%);   
     max-width: 800px;   
 }
@@ -298,7 +342,7 @@ p.small {
 .read-more a {
     display: block;
     margin-bottom: 10px;
-    color: $secondary-colour;
+    color: $secondary;
     @include font-size(1.7);
 }
 
