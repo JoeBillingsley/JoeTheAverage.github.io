@@ -241,7 +241,6 @@ $footer-height: 120px;
 
 /* Logo */
 .logo {
-    
     position: absolute;
     
     top: 3%;
@@ -263,6 +262,14 @@ $footer-height: 120px;
             height: 80px;       
         }
     }
+    
+    svg path {
+        transition: all 0.2s ease 0s;
+    }
+    
+    svg:hover path {
+        fill: lighten($dark, 5%);
+    }
 
     a { 
         position: relative;
@@ -270,8 +277,7 @@ $footer-height: 120px;
         
         @media (min-height: $breakpoint) {
             left: 0;
-        }        
-        transition: all 0.2s ease 0s;
+        }
     }
 }
 
