@@ -21,5 +21,8 @@ sass:
   style: compressed
   sass_dir: _sass
 
+gems:
+  - jekyll-sitemap
+
 # Custom vars
 version:          0.0.2
