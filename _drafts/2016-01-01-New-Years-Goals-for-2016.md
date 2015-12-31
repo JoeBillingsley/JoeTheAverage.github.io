@@ -7,7 +7,7 @@ tags: [new years, 2016]
 I like lists and I like goals so I've made a list of my goals for 2016. I'm not sure it'll last me all of 2016 but it's a start!
 
 ### 1. Graduate with a first class degree
-First and most important - I've got to graduate and I can get a first so I've got to go for one.
+First and most important - I've got to graduate and I can get a first so I've got to go for one. If I can manage this it'll open a few doors.
 
 ### 2. Make and publish an app
 So far I've found app development to be a pain in the arse and as a result I've never finished any of the apps I've started. I have some ideas that should be simple enough to implement but we'll see how it goes.
