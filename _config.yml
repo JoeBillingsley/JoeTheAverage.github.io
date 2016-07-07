@@ -7,7 +7,7 @@ highlighter:      pygments
 # Setup
 title:            Joseph Billingsley
 tagline:          Software developer in progress
-description:	    Website and blog of Joseph Billingsley
+description:	  Website and blog of Joseph Billingsley
 url:              www.josephbillingsley.co.uk
 
 author:
@@ -22,7 +22,7 @@ sass:
   sass_dir: _sass
 
 gems:
-  - jekyll-sitemap
+  jekyll-paginate
 
 # Custom vars
 version:          0.0.2
