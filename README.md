@@ -1,2 +1,2 @@
-# JoeTheAverage.github.io
+# JoeBillingsley.github.io
 Personal website and CV.
