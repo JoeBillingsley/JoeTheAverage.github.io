@@ -48,7 +48,7 @@ html, body {
 }
 
 html {
-    font-size: 7pt;
+    font-size: 8pt;
     color: $dark;
     background-color: $light;
 }
@@ -71,33 +71,25 @@ h1 {
     margin-bottom: 0;
     
     font-family: $feature-font;
-    
-    @media (min-height: $breakpoint) {
-       @include font-size(4);
-    }
-    
 }
 
 h2 {
     @include font-size(3.2);
     font-family: $feature-font;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 h3 {
     @include font-size(2.2);
     font-family: $feature-font;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 h4 {
     @include font-size(2);
     margin-bottom: 5px;
     font-weight: bold;
-    
-    @media (min-height: $breakpoint) {
-       @include font-size(2.5);
-    }
 }
 
 a {
@@ -107,10 +99,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-ul {
-    @include font-size(1.4);
 }
 
 p {
@@ -124,21 +112,11 @@ code {
     font-family: monospace !important;
 }
 
-label {
-    @include font-size(1.5);
-}
-
-article {
-    margin-bottom: 60px;   
-}
-
-
 .feature {
     font-family: $feature-font;
 }
 
 .excerpt {
-    @include font-size(2);
     color: lighten($dark, 30%);
     margin-top: 10px;
 }
@@ -149,6 +127,7 @@ article {
 
 .date {
     display: block;
+    margin-top: 5px;
     margin-bottom: 10px;
     @include font-size(1.6);
 }
@@ -198,7 +177,7 @@ $colour-shadow: $dark;
 .middle {
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 1000px;
     width: 95%;
 }
 
@@ -206,6 +185,18 @@ $colour-shadow: $dark;
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+img {
+    
+    margin: 30px auto;
+    
+    max-width: 100%;
+    max-height: 350px;
+    
+    display: block;
+    
+    border-radius: 5px;
 }
 
 .primary {
@@ -231,7 +222,7 @@ $colour-shadow: $dark;
 }
 
 /* Content */
-$footer-height: 120px;
+$footer-height: 100px;
 
 .content {
     min-height: 100%;
@@ -243,24 +234,13 @@ $footer-height: 120px;
 .logo {
     position: absolute;
     
-    top: 3%;
-    left: 50%;
+    top: 10px;
     
     @include font-size(3);
-      
-    @media (min-height: $breakpoint) {
-        left: 4%;        
-        @include font-size(4);        
-    }
     
     svg {
-        width: 70px;
-        height: 70px;
-        
-        @media (min-height: $breakpoint) {
-            width: 80px;
-            height: 80px;       
-        }
+        width: 80px;
+        height: 80px;
     }
     
     svg path {
@@ -272,12 +252,8 @@ $footer-height: 120px;
     }
 
     a { 
-        position: relative;
+        position: absolute;
         left: -50%;
-        
-        @media (min-height: $breakpoint) {
-            left: 0;
-        }
     }
 }
 
@@ -418,17 +394,16 @@ p.small {
 
 /* Blog */
 .blog {
-    margin-top: 100px;
-    
-    @media (min-height: $breakpoint) {
-        margin-top: 30px;
-    }
+    margin-top: 125px;
 }
 
 .post {
     margin-bottom: 10px;
-    border-bottom: 1px dashed lighten($dark, 50%);   
-    max-width: 800px;   
+    border-bottom: 1px dashed lighten($dark, 50%); 
+    
+    h2 {
+        margin-top: 20px;
+    }
 }
 
 .read-more a {
