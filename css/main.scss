@@ -65,16 +65,16 @@ h1, h2, h3 {
 }
 
 h1 {
-    @include font-size(3.5);
-    margin-top: 75px;
+    @include font-size(4);
+    margin-top: 50px;
 }
 
 h2 {
-    @include font-size(3.2);
+    @include font-size(3.6);
 }
 
 h3 {
-    @include font-size(2.2);
+    @include font-size(3);
 }
 
 h4 {
@@ -83,7 +83,7 @@ h4 {
 }
 
 a {
-    color: $primary;
+    color: $dark;
     text-decoration: none;
 }
 
