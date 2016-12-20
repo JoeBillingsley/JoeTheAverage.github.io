@@ -34,17 +34,16 @@ $feature-font: 'Roboto Slab', serif;
                                         lighten($colour, $amount) 40px);
 }
 
-$breakpoint: 640px;
-
 * {
     font-weight: 400;
     box-sizing: border-box;
-    margin: 0;
+    
 }
 
 html, body {
     height: 100%;
     font-family: $standard-font;
+    line-height: 1.4;
 }
 
 html {
@@ -61,34 +60,25 @@ span {
     font-weight: inherit;
 }
 
-h1, h2, h3, h4 {
-    text-transform: uppercase;
+h1, h2, h3 {
+    font-family: $feature-font;
 }
 
 h1 {
     @include font-size(3.5);
-    margin-top: 0;
-    margin-bottom: 0;
-    
-    font-family: $feature-font;
+    margin-top: 75px;
 }
 
 h2 {
     @include font-size(3.2);
-    font-family: $feature-font;
-    margin-top: 50px;
 }
 
 h3 {
     @include font-size(2.2);
-    font-family: $feature-font;
-    margin-top: 30px;
-    margin-bottom: 15px;
 }
 
 h4 {
     @include font-size(2);
-    margin-bottom: 5px;
     font-weight: bold;
 }
 
@@ -112,24 +102,18 @@ code {
     font-family: monospace !important;
 }
 
+time {
+    display: block;
+    @include font-size(1.6);
+    margin-top: -20px;
+}
+
 .feature {
     font-family: $feature-font;
 }
 
-.excerpt {
-    color: lighten($dark, 30%);
-    margin-top: 10px;
-}
-
 .underline {
     text-decoration: underline;
-}
-
-.date {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    @include font-size(1.6);
 }
 
 .detail {
@@ -139,39 +123,6 @@ code {
 .front {        
     position: relative;
     z-index: 9999;
-}
-
-.highlight {
-    color: $light;
-    background: $dark;
-    display: inline;
-    font-weight: bold;
-    font-family: $feature-font;
-}
-
-.role {
-    color: $secondary;
-}
-
-.fade-in {
-    animation: fadein 1s; 
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Shadow */
-$colour-shadow: $dark;
-
-.sunken-shadow {
-    box-shadow: inset  0  6px 6px -6px $colour-shadow,
-                inset  0 -6px 6px -6px $colour-shadow;
-}
-
-.high-shadow {
-    box-shadow: 0px 0px 6px -2px $colour-shadow; 
 }
 
 .middle {
@@ -188,15 +139,8 @@ $colour-shadow: $dark;
 }
 
 img {
-    
-    margin: 30px auto;
-    
     max-width: 100%;
-    max-height: 350px;
-    
     display: block;
-    
-    border-radius: 5px;
 }
 
 .primary {
@@ -211,150 +155,42 @@ img {
     color: $accent
 }
 
+.center-text {
+    text-align: center;
+}
+
 .text-shadow {
     text-shadow: 0px 0px 3px $dark;
 }
 
-/* Background grid */
-.grid-lines {
-    background-image: url("/img/gridlines.svg");
-    background-size: 100% 100%
-}
 
 /* Content */
-$footer-height: 100px;
+$footer-height: 90px;
 
 .content {
     min-height: 100%;
 	margin: 0 auto $footer-height * -1;
 }
 
-
-/* Logo */
-.logo {
-    position: absolute;
-    
-    top: 10px;
-    
-    @include font-size(3);
-    
-    svg {
-        width: 80px;
-        height: 80px;
-    }
-    
-    svg path {
-        transition: all 0.2s ease 0s;
-    }
-    
-    svg:hover path {
-        fill: lighten($dark, 5%);
-    }
-
-    a { 
-        position: absolute;
-        left: -50%;
-    }
-}
-
-/* Hero */
-$hero-theme : $light;
-$hero-height: 500px;
-
-.hero {
-    color: $hero-theme;
+/* Header */
+.header {
     position: relative;
-    padding: 20px 0px;
+    height: 80px;
     
-    height: $hero-height;
-    
-    @media (min-height: $breakpoint) {
-        height: $hero-height * 1.25;
-    }
-    
-    text-align: center;
-    
-    @include striped-colour(gray);
-    
-    a {
-        color: $light;
-    }
-    
-    h4 {
-        color: darken($light, 10%);
-        opacity: 0.7;
-    }
-    
-    .excerpt {
-        margin-top: 25%;
-                      
-        @include font-size(2.2);
-                        
-        @media (min-height: $breakpoint) {
-            @include font-size(3);
-        }      
-        
-        color: $light;  
-    }
+    @include striped-colour(lighten($dark, 3%));
 }
 
-.find-out {
-    position: absolute;
-    
+$logo-width: 100px;
+
+.logo {
+    width: $logo-width;
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    bottom: 10%;
-    left: 0;
-    right: 0;
 }
 
-.hero-title {
-    text-align: center;
-}
-
-.hero-body {
-    
-    width: 100%;
-    position: absolute;
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-    top: 18%;
-    
-    a {
-        text-decoration: none;
-    }
-    
-    .highlight:hover {
-        transition: all 0.2s ease 0s;
-        background-color: lighten($dark, 4%);
-    }
-    
-    .middle {
-        max-width: 650px;
-        width: 100%;
-    }
-}
-
-
-#hero-background { 
-    position: absolute;
-    
-    top: 0;
-    left: 0;
-     
-    width: 100%;
-    height: 100%;
-    
-    background-position: center;
-    background-size: cover;
-}
-
-.btn {
+button {
     padding: 10px 20px;
-    color: $hero-theme;
     background-color: $dark;
     text-align: center;
     border-radius: 2px;  
@@ -362,48 +198,20 @@ $hero-height: 500px;
     transition: all 0.3s ease 0s;
 }
 
-.btn:hover {
+button:hover {
     text-decoration: none;
     background-color: $secondary;
 }
-
 
 .btn-primary:hover {
     background-color: darken($secondary, 5%);
 }
 
-/* About */
-.about {
-    color: $light;
-    padding-top: 20px;
-    background: $primary; 
-    
-    p {
-        @include font-size(2.5);
-    }
-    
-    .hello {
-        font-family: $feature-font;
-        @include font-size(3.5);
-    }
-}
-
-p.small {
-    @include font-size(2.0);
-}
 
 /* Blog */
-.blog {
-    margin-top: 125px;
-}
-
 .post {
     margin-bottom: 10px;
     border-bottom: 1px dashed lighten($dark, 50%); 
-    
-    h2 {
-        margin-top: 20px;
-    }
 }
 
 .read-more a {
@@ -414,17 +222,16 @@ p.small {
 }
 
 /* Footer */
-$footer-colour : $dark;
-
 footer, .push {
     height: $footer-height;
 }
 
 footer {
+    position: relative;
     padding: 10px;
     vertical-align: bottom;
-    color: lighten($footer-colour, 20%);
-    background-color: darken($footer-colour, 5%);
+    color: lighten($dark, 20%);
+    background-color: darken($dark, 5%);
 }
 
 .email {
@@ -437,51 +244,11 @@ footer {
 
 .content-info {
     text-align: left;
-    margin-bottom: 20px;
+    position: absolute;
+    bottom: 10px;
     
     > * {
-        margin-bottom: 5px; 
+        margin-bottom: 5px;
         @include font-size(1.5);
-    }
-}
-
-.social-links {
-    
-    display: flex;
-    
-    .social {
-        flex-grow: 1;
-    }
-    
-    svg {
-        display: block;
-        width: 30px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-     
-    path {
-        fill: lighten($footer-colour, 20%);
-    }
-    
-    svg:hover path {
-        fill: $light;
-    }
-}
-
-
-@media (min-width : 450px) {
-    .content-info {
-        text-align: left;
-        float: left;
-    }
-    
-    .social-links {
-        float: right;
-    }
-    
-    .social { 
-        flex-grow: 0 !important;
-        padding-right: 5px;
     }
 }

@@ -3,83 +3,61 @@ layout: default
 title: Joseph Billingsley
 ---
 
-<section class="hero">	
-	<div class="hero-body">
-		<div class="middle">
-			<h1 class="hero-title highlight front">
-				<a href="www.josephbillingsley.co.uk">
-					Work in progress
-				</a>
-			</h1>
-			
-			<p class="excerpt front text-shadow">
-				I'm still working on this site at the moment, check back soon!
-			</p>
-		</div>
-	</div>
-	
-	<!--<div class="find-out front">
-		<a class="btn" href="www.josephbillingsley.co.uk">
-			Read Now
-		</a>
-	</div>-->
-	
-	<div id="hero-background"></div>
-		
-</section>
-
-<section class="about sunken-shadow">
+<section class="about center-text">
 	<div class="middle">
-		<p class="hello text-shadow">
+		<h1>
 			Hello! I'm Joseph Billingsley.
-		</p>
+		</h1>
 		<p>
 			I am a computer science student at the University of Birmingham experienced
 			in .NET and Java.
 			I also bake pies, ride horses and jump out of planes.
-			<span class="highlight">I am looking for opportunities starting <span class="secondary">July 2016</span>.</span>
+			<span class="secondary">I am not looking for opportunities at the moment.</span>
 		</p>
 	</div>
 </section>
 		
-<section class= "middle">
+<section class="blog">
 	
-	{% for post in paginator.posts %}
-		<div class="post">
-				
-			<h2>
-				<a href="{{ post.url }}">
-					{{ post.title }}
-				</a>
-			</h2>
-			
-			<time class="date" datetime="{{ post.date | "%Y-%m-%d" }}">
-				{{ post.date | date: "%d %b %Y" | upcase }}
-			</time>
-							
-			<p>{{ post.excerpt }}</p>
-			
-			<div class="read-more">
-				<a href="{{ post.url }}">
-					Read more >
-				</a>
-			</div>
-		</div>
-	{% endfor %}
-				
-	{% if paginator.total_pages > 1 %}
-		<div class="pagination">
-  			{% if paginator.previous_page %}
-    			<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  			{% else %}
-    			<span>&laquo; Older</span>
-  			{% endif %}		
-				  	  
-  			{% if paginator.next_page %}
-   				 <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-  			{% else %}
-    			<span>Newer &raquo;</span>
-  			{% endif %}
-		</div>
-	{% endif %}
+    <div class="middle">        
+        {% for post in paginator.posts %}
+            <div class="post">
+                    
+                <h2>
+                    <a href="{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                
+                <time datetime="{{ post.date | "%Y-%m-%d" }}">
+                    {{ post.date | date: "%d %b %Y" | upcase }}
+                </time>
+                                
+                <p>{{ post.excerpt }}</p>
+                
+                <div class="read-more">
+                    <a href="{{ post.url }}">
+                        Read more >
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+                    
+        {% if paginator.total_pages > 1 %}
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+                {% else %}
+                    <span>&laquo; Older</span>
+                {% endif %}		
+                        
+                {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+                {% else %}
+                    <span>Newer &raquo;</span>
+                {% endif %}
+            </div>
+        {% endif %}
+    
+    </div>
 </section>

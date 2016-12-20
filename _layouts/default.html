@@ -42,11 +42,14 @@
 		 Thanks,
 		 Joe   
 	 -->
-     	 
+    <section class="header">
+        <a class="logo" href="http://{{site.url}}">
+            <img src="{{ site.baseurl }}/img/logo.png"></img>
+        </a>
+    </section>
+    
 	<main class="content">
-               
 		{{ content }}
-        
 		<div class="push"></div>
 	</main>
 	
@@ -65,7 +68,7 @@
 	<footer role="contentinfo">	
 		
 		<div class="middle">
-		
+            
 			<ul class="list-no-style content-info">
 				<li>
 					<a class="email" href="mailto:jb@josephbillingsley.co.uk"> 
@@ -76,22 +79,6 @@
 					© 2014 - {{ site.time | date: "%Y" }} Joseph Billingsley
 				</li>
 			</ul>
-			
-			<div class="social-links">
-				<a class="social social-github" href="https://github.com/JoeTheAverage">
-					{% include github.svg %}
-				</a>
-				<a class="social social-linkedin" href="https://uk.linkedin.com/in/JosephBillingsley">
-					{% include linkedin.svg %}
-				</a>
-				<a class="social social-devpost" href="http://devpost.com/JoeTheAverage">
-					{% include devpost.svg %}
-				</a>
-				<a class="social social-twitter" href="http://www.twitter.com/JoeBillingsley">
-					{% include twitter.svg %}
-				</a>
-			</div>
-		
 		</div>
 		
 	</footer>
