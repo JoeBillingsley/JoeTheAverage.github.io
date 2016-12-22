@@ -17,10 +17,9 @@ title: Joseph Billingsley
 	</div>
 </section>
 		
-<section class="blog">
+<section>
 	
     <div class="middle">
-        
         {% for post in paginator.posts %}
             <div class="post">
                     
@@ -36,29 +35,12 @@ title: Joseph Billingsley
                                 
                 <p>{{ post.excerpt }}</p>
                 
-                <div class="read-more">
-                    <a href="{{ post.url }}">
+                <div>
+                    <a class="read-more" href="{{ post.url }}">
                         Read more >
                     </a>
                 </div>
             </div>
         {% endfor %}
-                    
-        {% if paginator.total_pages > 1 %}
-            <div class="pagination">
-                {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-                {% else %}
-                    <span>&laquo; Older</span>
-                {% endif %}		
-                        
-                {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-                {% else %}
-                    <span>Newer &raquo;</span>
-                {% endif %}
-            </div>
-        {% endif %}
-    
     </div>
 </section>

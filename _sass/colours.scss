@@ -10,7 +10,7 @@ $success: #2bc016;
 $warning: #FD7400;
 $error: #FF0505;
 $information: #06A77D;
-$muted: #ff00ff;
+$muted: lighten($dark, 10%);
 
 /* Thanks Travis.io!
    http://travis.io/design-for-developers/how-to-choose-colors-for-an-application-or-website
