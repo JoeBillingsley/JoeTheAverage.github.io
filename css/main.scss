@@ -186,7 +186,7 @@ img {
 
 
 /* Content */
-$footer-height: 40px;
+$footer-height: 300px;
 
 .content {
     min-height: 100%;
@@ -251,6 +251,7 @@ button:hover {
 /* Blog */
 .post {
     margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px dashed lighten($dark, 50%); 
 }
 
@@ -259,25 +260,53 @@ footer, .push {
     height: $footer-height;
 }
 
+.read-more {
+    @include font-size(1.8);
+    color: $secondary;
+}
+
 footer {
     position: relative;
     padding: 10px;
     vertical-align: bottom;
-    color: lighten($dark, 20%);
+    color: lighten($dark, 30%);
     background-color: darken($dark, 5%);
     @include font-size(1.5);
-}
-
-.email {
-    color: inherit;
-}
-
-.email:hover {
-    color: $light;
-}
-
-.read-more {
-    margin-bottom: 10px;
-    @include font-size(1.8);
-    color: $secondary;
+    
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        
+        color: $light;
+    }
+    
+    svg {
+        width: 1.7em;
+        margin-right: 20px;
+        
+        path {
+            fill: lighten($dark, 30%);
+        }
+    }
+     
+    li:hover {
+        a {
+            color: $light;
+            text-decoration: underline;
+        }
+        
+        path {
+            fill: $light;
+        }
+    }
+    
+    li {
+        margin-left: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .copyright {
+        position: absolute;
+        bottom: 10px;
+    }
 }
