@@ -42,9 +42,9 @@
 		 Thanks,
 		 Joe   
 	 -->
-    <section class="header">
+    <section class="header high-shadow">
         <a class="logo" href="http://{{site.url}}">
-            <img src="{{ site.baseurl }}/img/logo.png"></img>
+            {% include logo.svg %}
         </a>
     </section>
     
@@ -74,7 +74,7 @@
 					<a class="email" href="mailto:jb@josephbillingsley.co.uk"> 
 						jb@josephbillingsley.co.uk
 					</a>
-				<li>
+				</li>
 				<li class="copyright">
 					© 2014 - {{ site.time | date: "%Y" }} Joseph Billingsley
 				</li>
