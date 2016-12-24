@@ -51,6 +51,9 @@ $feature-font: 'Roboto Slab', serif;
 html, body {
     height: 100%;
     font-family: $standard-font;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     line-height: 1.4;
 }
 
