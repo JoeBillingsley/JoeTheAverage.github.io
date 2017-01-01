@@ -7,7 +7,7 @@ tags: [new years, 2017]
 ---
 Last year I set myself four goals:
 
-1. ** Graduate with a first class degree**
+1. **Graduate with a first class degree**
 2. Make and publish an app
 3. Jump out a plane and reach terminal velocity.
 4. **Do something that I've never done before**
