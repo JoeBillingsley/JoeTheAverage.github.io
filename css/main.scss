@@ -120,6 +120,14 @@ p {
 }
 
 
+ul, ol {
+    @include font-size(1.8);
+}
+
+li {
+    font-size: inherit;
+}
+
 code {
     @include font-size(1.5);
     overflow: auto;
