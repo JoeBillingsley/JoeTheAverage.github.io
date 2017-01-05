@@ -6,46 +6,104 @@ category: travel
 tags: [travel, backpacking]
 ---
 
-Blah. Blah blah blah. Blah blah. Blah Blah blah blah. blah blahBlah. Blah blah blah. Blah blah. Blah Blah blah blah. blah blah. Blah. Blah blah blah. Blah blah. Blah Blah blah blah. blah blah Blah. Blah blah blah. Blah blah. Blah Blah blah blah. blah blah 
-Blah. Blah blah blah. Blah blah. Blah Blah blah blah. blah blah
-
 ## Bangkok
-We met 'Frank' smoking a cigarette under a bridge near a busy road. He was a short man with black hair and was dressed in a worn blue uniform. I was inclined to trust him. His uniform suggested he worked for the train company, he spoke English well and was carrying a map so I figured he must often deal with tourists. He was friendly, intensely friendly and asked a lot of questions. Where are you from? Is this your first day in Bangkok? Where are you staying? Within minutes of meeting him he'd mapped out our stay in Bangkok and onwards down to the full moon party in Koh Phangan. We were to rent a tuk-tuk to take us around the major attractions in the city and then speak to a travel information centre where the locals go who would help us organise a train in time for the party. He even waved down a passing tuk-tuk for us which kindly waited nearby. 
 
-We started to walk away then hit the road. Vehicles streamed relentlessly in front of us. Cars trudged onwards whilst mopeds nimbly changed lanes and cut through the traffic. It was a river of metal and if we wanted lunch we somehow had to cross it. After staring around for a bit looking for some way to dam the stream we asked our old friend Frank for help. Frank strode out in front and parted the waves by stepping out in front of a van and holding his hand out toward it. 
+### 'Frank'
+We stepped off the airconditioned carriage of the airport rail link into a wall of hot, clammy air. The platform looked out onto a mess of buildings, some oozing moss and cracking from disrepair. Air conditioning units were placed carefully on every floor of every building. Tall trees with masses of soft leaves and rough scaly bark burst through the concrete below. 
 
-Inside looked grim but smelt great. Fluorescent lights lit a wide room laid with a dirty concrete floor. A few stalls stood facing white plastic tables and chairs. Noodles sizzled and cracked across the room. Hot oil spat furiously at meat and noodles. Spatulas scratched on woks to get every ounce of flavour out of the pan and onto the plate. I stared some more - this time at the unfamiliar letters above the nearest stall. Frank saved us again, walked us to the nearest table and ordered us a tasty mess of soft noodles, ferociously spicy with an unexpectedly coarse texture - pad thai. Talking to Frank was less pleasant than adverts had described. He talked at us about his hobbies - drinking, smoking, gambling and late nights out clubbing. He was intimately familar with how much Thai prostitutes cost and was keen to share the information with us. He even taught us the Thai words for hello, thank you and big breasts.
+We met 'Frank' under the platform smoking a cigarette next to an impassibly busy road. He was a short man with black hair and was dressed in the worn blue uniform of a skytrain employee. He was intensely friendly and asked a lot of questions. Where are you from? Is this your first day in Bangkok? Where are you staying? Within minutes of meeting him he'd retrieved a map from his back pocket and planned out our stay in Bangkok and onwards down to the full moon party in Koh Phangan. He even waved down a passing tuk-tuk to take us on a tour around the city.
 
-About halfway through the meal Frank stopped us - 'How are you feeling? Do you feel ill?' he asked. I *was* feeling fine a moment ago, was that a little queasiness? Was I about to feel ill? Why would he even ask us that - wait had he put something in the food? I said I was feeling OK. 'Good' he said smiling, 'If you still feel OK in 30 minutes you will have a good time here. If you can eat street food, it will be very cheap'.
+He seemed dissapointed when we thanked him but declined the tour and asked if there was somewhere he would recommend for food at which he laughed and pointed across the road at a large open warehouse. Leaving Frank behind, we approached the river of metal three lanes wide that seperated us and a meal and waited for a clear moment to ford it.
 
-After the meal and some more chit chat we headed outside. Frank reminded us of the route he planned out and directed us to a tuk-tuk that had pulled over whilst we were talking. When we said that we would like to look around Bangkok ourselves first his demeanour cracked alarmingly. I pretended not to  otice and just smiled and thanked him and we walked away from the tuk tuk. Moments later we were lost.
+And waited. And looked around for a crossing point.
 
-The streets in Bangkok are wild and varied. Insulated wires hang like vines between concrete pylons in the street. Several lanes of colourful traffic pour down the wide roads and spill out onto the footpath. This is a city overgrown with people. Where it's left to grow wild I saw a market that disappeared down a train track. round roundabouts where the sprawl of the city has been held back to hold huge abstract sculptures.
+And waited. And we must be missing something surely? The traffic never stop coming!
 
-It's not hard to get about but it can be expensive at first until you work out how much a taxi journey should really cost. Tuk tuks are an excellent mode of transport. Your standard tuk tuk is cobbled together out of 3 wheels, a sheet metal body and a car battery welded by the drivers feet that makes a distinctive 'putt-putt' noise when it rus. Red and green lights above the driver convey some information for others to ignore as your driver forces their way through the traffic. An ornate grill seperates you and the driver where you sit on padded seats with a surprising amount of head room. It's an exciting way to get around and an appropriate way to see the city.
+And then I gave up and asked Frank to help us cross the road.
 
-When you find a clearing they feels artificial. The sprawl of the city has been pushed back often to craft a tourist trap. Perhaps a You feel even more exposed out here. Huge roundabouts with abstract statues on. 
+Frank strode us across the traffic and up to a table. Fluorescent lights lit a wide room laid with a dirty concrete floor. A few stalls stood opposite a collection of white plastic tables and chairs. Noodles sizzled and cracked across the room. Hot oil spat furiously at meat and noodles. Spatulas scratched sharply on woks working to get every ounce of flavour out of the pan. He bought us each a tasty mess of soft noodles, ferociously spicy with an unexpectedly coarse texture - Pad Thai. He spoke about his interests - drinking, smoking, gambling and late nights out clubbing. He told us about working in Ireland and how cheap Thai prostitutes are compared to European ones. He even taught us the Thai words for 'hello', 'thank you' and 'big breasts'. He struck me as rather lonely.
 
-The grand temples and palaces where more often flimsy relics of what they should be, the cultural or religious significance of the sites gutted by short sighted greed. The grand Wat Saket, a symbol of the city, houses a relic of the Buddha and has free high speed WiFi. The experience feels cheap and hollow. There is never any information to give depth to the structures and they are poorly treated.
+After the meal and some more talk we headed outside. Frank reminded us again of the route he had planned out and pointed us to another tuk-tuk that had pulled over whilst we were talking. When we thanked him for the meal but declined again his demeanour cracked alarmingly. Pretending not to notice I just smiled and thanked him again and we walked swiftly away. Moments later we were lost.
 
-Which meant the parts I enjoyed the most were the quiet backwaters where rivers snake through rows of houses and the frustrated traffic quietens down to a distant hum. Clumps of street food stalls are scattered about. Smoke billows out from simple charcoal bbqs cook meat pressed between two fine meshes. Whole flowery white fish are kept warm on long skewers next to rows of differently coloured sticky meat balls. People sat and talked to each other. Some played cards. No one really took any notice of you as you passed by. These places seemed more genuine and you could let your guard down for a little while. But you knew at the end of the road you'd meet another busy lane, soon another tourist trap and more people trying to seperate you from your money the best they can.
+TODO: Describe the trees, the heat and humidity, the concrete houses and geckos, towering buildings, always some level of hazy smog so that even when theres no cloud theres some shade. Own personal Gherkin behind an ornate mansionlike house
 
-People looked at you like a vending machine that might just drop two mars bars instead of one. Like you should pay more . There was a distance between . I understand where it came from. We're transient and we're priviliged. 
+River of metal.
+Cars trudged onwards whilst mopeds nimbly changed lanes and cut through the traffic.
 
-If you spoke to anyone in a hostel you would always describe yourselves as 'travellers' and the people who lived their as 'the locals'. There's a weirdly colonial feel about it.
+Understand
+    - I want people to understand the distance between a expat or traveller/tourist and the locals
+        - Language barrier but also most people who speaks English are not trustworthy
+        - People try and take advantage of you but they help their friends
+        - Your a source of income so your not seen as a person in the same way. Your beef not cow.
+        - Conflict with the people who do it. It's not in most peoples nature to be cruel so they abstract it out. 
+    - Feel like you always have to be on guard. Out of place
+        - If you stop for a moment to get your bearings or appreciate a view or even cross a road one of nearby drivers will notice and will pounce.
+        - People notice you everwhere you go and try to take advantage
+        - Overpriced 
+        - Never felt quite so out of place as in Bangkok
+    - How people further from the tourist trade do seem genuinely friendly
+        - Street food vendors, ordinary people who make money from other means
+        - And the people who see further and benefit from returning tourists
+            - Hostel owners and restaurant
 
-If Frank hadn't had taught us I wouldn't even be able to say 'hello' in Thai. But it was still unpleasent to be treated this way and as we retreated from the locals the gap grew ever wider.
+Frank
+    - Started off appearing friendly if a bit rough around the edges
+    -
 
-In short I didn't like Bangkok and I was glad to leave. Luckily the start turned out to be the low point of the trip and from there things began to improve.
+
+
+        - Around the market areas you can't glance around without being pressured to buy something. Often I didn't buy something I would have liked too because I couldn't be asked to haggle it down to something reasonable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Somewhere in Bangkok
+The streets were wild and varied. Insulated wires hung like vines between concrete pylons in the street. Lanes of colourful traffic poured down wide roads and spill out onto the footpath whilst the skytrain thundered overhead. It felt like the city had become overgrown with people.
+
+We eventually got our bearings and headed to the major tourist attractions nearby - Wat Saket, the Grand Palace and Wat Phra Kaew. Around here the sprawl had been held back creating areas that were organised and artificial. The first thing you see at the Grand Palace is the queue for tickets. From their signs will direct you to the foreigner or Thai queue where gates have been forced into an ornate arch. Inside certainly looked impressive. Buildings were elaborately tiled and gilded. But despite it's attempts to blind you with glitz it lacked any presence. It was hard to see anything past selfie sticks and people and cameras. No effort had been made to provide depth to the structures, to tell the story in anyway. The buildings were just a tool to churn people through, they'd been gutted and made into a theme park of Thai architecture to gawk at and then leave, gaining little but spending money. I left disillusioned and a little disappointed.
+
+Far from the tourist trap, where the city has been allowed to grow wild and the river snakes past rows of concrete houses stood like reeds and the frustrated traffic quietens down to a distant hum, there is something quiet but genuine. Here smoke billows down the street from scrappy wheeled bbqs serving flowery white fish on long skewers and rows of sticky meat balls. People sit by on plastic chairs, talking to each other and some play cards. Most won't take any notice of you as you pass by. Some will nod and smile.
+
+It's more than a tourist trap, it's a finely crafted machine for optimally seperating people from their money.
+There's no protection for tourists, your seen as a distinct entity something to try and get money out of. Your beef not cow.
+
 
 ## Koh Phangang
 We'd decided to follow some of Franks advice and head south to the Thai islands in time for the full moon party.
 
-After the first beer I took off my shoes. By the second beer I'd unzipped my trousers too shorts and at the fateful third or fourth I was shirtless. Being drunk and British I decided that the 20 degree weather and occasional sunshine of home had adequately prepared my skin for a 4 hour boat journey in 30 degree weather and blazing sunshine. Hey, if the black American and the tanned to a crisp French guy can get away with it surely so can I! So I bought a few more singhas of the toothless man at the counter and settled in for the long haul, firmly convinced that I would have developed a glowing tan by the time we made it to Koh Phangang. When we landed about six beers in I was considering stripping down to my boxers and felt tingling all over. 
+After the first beer I took off my shoes. By the second beer I'd unzipped my trousers too shorts and at the fateful third or fourth I was shirtless. Being drunk and British I decided that the 20 degree weather and occasional sunshine of home had adequately prepared my skin for a 4 hour boat journey in 30 degree weather and blazing sunshine. Hey, if the black American and the tanned to a crisp French guy can get away with it surely so can I! So I bought a few more singhas of the toothless man at the counter and settled in for the long haul, firmly convinced that I would have developed a glowing tan by the time we made it to Koh Phangang. When we landed about six beers in I was considering stripping down to my boxers and felt tingling all over.
 
 The ticket sellers tried to short me on the way in.
 
-Frank wasn't the only one who tried to take advantage of us. Sam was less trusting than me and his mistrust saved us from the first few we met. After a few attempts you stop trusting anyone. 
+Frank wasn't the only one who tried to take advantage of us. Sam was less trusting than me and his mistrust saved us from the first few we met. After a few attempts you stop trusting anyone.
+
+- The small restaurant we went to where they changed the football to have English subtitles, repositioned the TV and the air conditioning.
 
 ## Chang Mai
 The smaller temples are better. A temporary refuge from the city. They are quiet and calm places. You still feel the weight of propriety. And it's appropriate that you should feel a bit cautious about how you dress or act. If no one holds it in any esteem the Wat Saket is just a big hill with a weird shaped rock on the top.
@@ -59,3 +117,12 @@ TODO: Open and close with Frank. Reflect on Frank at the end.
 The big things stay the same. But all of the little things are different.
 
 Thai funeral
+
+
+It's not hard to get about but it can be expensive at first until you work out how much a taxi journey should really cost. Tuk tuks are an excellent mode of transport. Your standard tuk tuk is cobbled together out of 3 wheels, sheet metal and a car battery which is welded next the drivers feet and makes a distinctive 'putt-putt-putt' noise when it rus. Red and green lights above the driver convey some information that others ignore as your driver forces their way through the traffic. An ornate grill seperates you and the driver where you sit on padded seats with a surprising amount of head room. It's an exciting way to get around and an appropriate way to see the city.
+
+People looked at you like a vending machine that might just drop two mars bars instead of one. Like you should pay more . There was a distance between . I understand where it came from. We're transient and we're priviliged.
+
+We were frequently accosted by people trying to take us on 'tours' of the city and always they would ask is 'Is this your first day in the city'.
+
+If Frank hadn't had taught us I wouldn't even be able to say 'hello' in Thai. But it was still unpleasent to be treated this way and as we retreated from the locals the gap grew ever wider.
