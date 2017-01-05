@@ -5,19 +5,7 @@
 @import "syntax";
 @import "helper";
 
-/* Variables */
-@font-face {
-    font-family: 'Raleway';
-    src: url('/fonts/raleway-regular-webfont.eot');
-    src: url('/fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/raleway-regular-webfont.woff2') format('woff2'),
-         url('/fonts/raleway-regular-webfont.woff') format('woff'),
-         url('/fonts/raleway-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-$standard-font: 'Raleway', sans-serif;
+$standard-font: sans-serif;
 $feature-font: 'Roboto Slab', serif;
 
 /* Mixins */
