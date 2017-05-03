@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Thailand
+title: A Tour of Thailand
 excerpt: The start of a stint in South East Asia
 category: travel
 tags: [travel, backpacking]
 ---
 
 ## Bangkok
+
 ### 'Kev'
 The airport rail link rolled up to the platform. The doors opened and we stepped out from our airconditioned carriage into a wall of hot, clammy air. The platform looked out onto a mess of buildings, many oozing moss and cracking from disrepair. Tall and unfamiliar trees with masses of soft leaves were bursting through the concrete below and horns were blaring nearby from a busy road. I was sweaty, lost and excited. Me and my friend and travel companion Sam had just arrived in Bangkok.
 
@@ -96,6 +97,7 @@ As it turned out the deserted street before our hostel was actually the red ligh
 After a few days with the sunburn my legs began to swell so much that my feet would fill my boots if I stood for too long. My chest would slowly inflate as soon as I'd left the shower so that by the end of the day I'd usually developed a respectable pair of man boobs. If I'd done my hair right I may have even been able find employment in one of the cheaper bars but we were more pressed for time than money at this point and having run out of things to do at night on Koh Phangang we hid from the sun inside a boat to the mainland and flew north to Chiang Mai for a few days and then on over to Pai.
 
 ## Pai
+
 ### A Dirty Business
 There are two kinds of toilets in Thailand. There are your western style which is what we're used too. Big porcelain seat with a hole in the middle half filled with water. Then there are the squat toilets you get in Asia. These are flat blocks of porcelain with slightly curved sides and a drain at one end. It's a bit like a flattened bath but with no water. In South East Asia both types of toilets are  common and usually they feature toilet paper and an odd looking water pistol hanging on the wall. So far I'd figured that it was meant for cleaning the toilet. The toilets in Chiang Mai bus station are exclusively of the squat variety. Up to now I'd managed to avoid them but as we arrived I'd realised that the late night and curry the previous night had put my stomach into a state of distress not seen since the cold war and things could go nuclear at any time. Worse there was no toilet paper or any sign there had ever been any toilet paper. I left, did some frantic research and went back in. Crisis averted I reached for the water pistol, the bum gun, and squeezed the trigger tight. Water shot out at an alarming rate. A very gentle touch resulted in a more approachable water stream. I have to say it was an unusual experience but it's very effective especially at dealing with trapped chilli remnants.
 
