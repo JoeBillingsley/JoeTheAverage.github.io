@@ -1,0 +1,30 @@
+---
+layout: post
+title: Lost in Laos
+excerpt: The South East Asia stint continues...
+category: travel
+tags: [travel, backpacking]
+---
+
+### Laos
+
+Wide houses with long sloping roofs . Wooden shutters over the windows . National and communist flags sway gently from the eaves.
+
+## Route 13 - A dangerous road
+The next day we took a minibus from Luang Prabang to Vang Vieng. There are two options for public transport down this route. A minibus that goes directly to Vang Vieng winding over the mountain in between and a conventional bus that is too large to climb the mountain and works its way around. We'd been warned before that the minibus route although quicker, was far more dangerous. The road over the mountain winds sharply and very steeply. Some of the road was unfinished and most of what had been completed had cracked and slipped leading to 1/2 metre drops along the road to navigate. Littering the road were others failed efforts at traversing the road. We turned one corner and saw an overturned car that had somehow rolled down the steep road and luckily came to a rest at a safe corner. A woman nearby stared bewildered at us as we slowly drove on past her up the hill. A little further up we drove past a huge truck which had slipped into a ditch on the side of the road. I wouldn't be surprised if it's still there now.
+
+Towards the top grey smoke billowed out of a tyre at the entrance to a pitstop. At this height the temperature has dropped to that of a pleasant British summers day but cold enough for locals to be shivering. A little way further down the road we were motioned to pull over by a man with a machine gun. We were asked to step out and our passports where checked whilst our bus was searched. It was a pretty disconcerting experience helped a little that the bus drivers were so relaxed about it that they'd both gone for a wee behind a rock. 
+
+According to another traveller the road used to be even less safe. Before the Laos government set up patrols on the road a minibus like ours had gone down the route carrying locals and two tourists. Then too people with machine guns had pulled the bus over but rather than checking their passports they had instead shot everyone on board, killing 8. As we rolled on down the hill we passed through a small hill that had been cleared for the road. As we drove by a young boy watched from the side wearing shorts, a t-shirt and an AK-47 over his shoulder. 
+
+The road became straighter and better maintained as we came down the hill making it look alot safer. The minibus driver tried to make up for this by speeding down the hill, one hand on the wheel and one on his phone, honking relentlessly at anyone unfortunate enough to be in his path. 
+
+As the sun set I felt I was getting a glimpse of the real Laos. Wooden shacks shared the street with brick houses. Cows and water buffalo ambled lazily down the river. Kids cycled home from school and no one - apart from our manic driver - seemed to be in any kind of hurry. 
+
+Booming noise whilst we were cycling
+
+Vang Vieng is the best place I've ever been hungover. Just around the corner from were I was staying were two restaurants with large roll out matteresses and piles of soft pillows. Huge quantities of hot, cheap and pretty tasty food was available and they didn't mind you sleeping there for large portions of the day. 
+
+Plus you had the tremendous view of craggy limestone karsts jutting out from the ground to stare at in awe as you recover.
+
+Life clings to every surface of the rocks and more life clings on the plants that got there first.
