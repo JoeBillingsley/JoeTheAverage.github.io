@@ -17,9 +17,9 @@ The next morning Billy gave me some directions to explore the island before we s
 
 A little way across the top I found a valley that looked like it might be a safe path down. Streams ran down the hill and had worn deep groves into the earth which had since been populated by long thin plants. A red spongy vegetation covered most of the hill making it difficult to walk down at the best of the times and very slippy when wet. Eventually I saw the promising sign of sheep and knew there must be a route to the road this way. I later found out there are footpaths you can take up to the top and back again but my way is certainly more interesting.
 
-![A panoramic view of the island with Knockmore to the left]({{ site.baseurl }}/img/2016-04-15/IMG_20160413_192311370_HDR.jpg "A panormaic view of the island with Knockmore to the left")
+![A panoramic view of the island with Knockmore to the left]({{ site.baseurl }}/img/2016-04-15-Sheep-Farming-Ireland/IMG_20160413_192311370_HDR.jpg "A panormaic view of the island with Knockmore to the left")
 
-![A panoramic view of the island with Knockmore to the left]({{ site.baseurl }}/img/2016-04-15/IMG_20160413_191722797.jpg "A panormaic view of the island with Knockmore to the left")
+![A panoramic view of the island with Knockmore to the left]({{ site.baseurl }}/img/2016-04-15-Sheep-Farming-Ireland/IMG_20160413_191722797.jpg "A panormaic view of the island with Knockmore to the left")
 
 After the first day I settled into a healthy routine of helping around the farm in the morning whilst Billy prepared us lunch, followed by a little more work and then some free time spent exploring the island. The work was straightforward and satisfying; it felt good to be out and about and working with my hands again. Periodically throughout the day we would check on the sheep and note any new lambs. Once they'd had a little time to recover we would catch and mark them with spray paint in case they wandered off. I don't know if I really have the heart for sheep farming - I felt bad enough holding them still feeling their tiny hearts racing whilst we marked them. If I tried that line of business I think I would quickly end up with lots of sheep and no money! Other days I helped by painting, chopping and sawing wood into kindling or whatever else needed doing. We ended up spending a whole morning beating an old car with a lump hammer to try and remove enough rust just to be able to change the tyre!
 
@@ -33,4 +33,4 @@ Sometime around 3AM the now slightly inebriated Mr Mustard offered me and some o
 ### Leaving
 A few days later it was time for me to clear off. As the boat sailed us back to the mainland and I waved goodbye to Billy and the island I felt some trepidation about going home. In the short time I'd been there I'd grown used to the slower pace of life on the island. I knew though I could never stay there for long - there is much more in the world I want to see yet - but I hope I will make the time to go back again one day.
 
-![Boats in the dock waiting to take me home]({{ site.baseurl }}/img/2016-04-15/IMG_20160420_103519395.jpg "Boats in the dock waiting to take me home")
+![Boats in the dock waiting to take me home]({{ site.baseurl }}/img/2016-04-15-Sheep-Farming-Ireland/IMG_20160420_103519395.jpg "Boats in the dock waiting to take me home")
