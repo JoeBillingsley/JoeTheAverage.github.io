@@ -1,4 +1,5 @@
 ---
+title: Joe Billingsley - Equestrian CV
 layout: post
 category: cv
 excerpt: A summary of my horse riding ability
