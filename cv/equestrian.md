@@ -8,7 +8,7 @@ tags: [cv, equestrian, horses]
 ## Riding Experience
 <ul>
     <li>
-        Riding since September 2015. Since had weekly lessons at stables across the UK supported by work in stables around the world.
+        Riding since September 2014. Since had weekly lessons at stables across the UK supported by work in stables around the world.
     </li>
     <li>
         Comfortable at walk, trot and canter with or without stirrups.
