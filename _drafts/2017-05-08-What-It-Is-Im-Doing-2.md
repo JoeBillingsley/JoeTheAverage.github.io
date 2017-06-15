@@ -1,116 +1,140 @@
 ---
 layout: post
 title: The Budget Bookstore
-excerpt: An explanation of the problem I'm solving in my PhD through several silly analogies.
+excerpt: An explanation of the problem I'm solving in my PhD through silly analogies.
 category: research
 tags: [phd, research, plain english, nfv, sdn, nfv-ra]
 ---
 
-My thesis has a pretty scary title:
+My thesis has a scary title:
 
 **Dynamic Resource Management and Optimisation for SLA Guarantees in Hyperconverged Communication Infrastructures**
 
-When I tell that to people they usually switch off halfway through and then politely smile and motion that it's gone over their head. But it's really not that tricky to understand and if you hang around I think I can prove that to you.
+When I tell that to people they switch off halfway through and then politely smile and motion that it's gone over their head. The thing is it's really not that tricky to understand and if you hang around I think I can prove that to you.
 
-I'm working on the 'Network Function Virtualisation Resource Allocation' problem. I'm trying to find the best arrangement of 'virtual network functions' on a collection of servers so that everyone can get the services they want off of them. You can think of it a bit like putting books onto a shelf in a bookshop where you want to make sure that people can always find the books they want to buy.
+5G is on it's way. It's closer than you think but there's some tricky problems we've got to solve first. The problem I'm working on is called the 'Network Function Virtualisation Resource Allocation' problem or NFV-RA to it's friends.
 
-## A Series of Analagous Events: The Budget Bookshop
-Say one day you found yourself working in a bookshop. The bookshop has a very large amount of stock piled up but to keep costs low your boss, Mr Bossman, has mandated that there shall only be one shelf of books up in the store and the rest of the books are to be kept downstairs in the basement. Over the course of the day people will arrive looking to buy books. Your job is to make sure that they can find the books they're after.
+Every time you use a service provided by a telecommunications company, like ringing someone, sending a text or accessing the internet your sending a message out into the air. This message gets picked up by a cell tower and is sent over the telecommunications network to a building filled with loads of computers. Once your message arrives here we have to work out where it's supposed to go and how we're going to get it there. 
 
-At 6AM you open the bookshop. You head down to the basement where your surrounded stacks by stacks of musty books. In the corner, buried under a fallen pile of unsold '50 Shades' novels you find a wooden desk with a single drawer. Inside that drawer is a piece of paper with crude illustrations of people and underneath lists of books you've seen in the storeroom. Along the bottom someone has scrawled: 'Good luck'.
+We often have to do clever things to the messages to make them fast enough. For example when your watching a video a lot of information is being sent over the network. It can be difficult to send it over the network fast enough that it doesn't buffer and stutter. To make it easier the message gets compressed. It's like if you could squish all the parcels in the sorting office, then the postman could carry more at once. Once it gets to you, you can uncompress it and you get back the original message. Most messages get compressed but we can't use the same techniques on all the messages.
 
-[Diagram of people]
+As well as that not all services are made equal. You could hardly have a conversation on the phone if it took 5 seconds for your friend to hear what you were saying - but would you even notice if it took a text that long to arrive?
 
-Upstairs you hear the bell above the door ring. You rush up the stairs to see a woman walking in with a large red cross on her apron. Very concious that the bookshelf is empty you rush back to the basement, on a whim you grab the books the paper lists for her illustration and throw them on the shelf before she reaches it. Seemingly having not noticed your frantic stacking she picks out each of the books in sequence, flicks through them for a bit, places them back, turns on the spot and abruptly leaves.
+When these systems were first the designers decided to split each service into lots of little parts. Then they built specialised computers which each solved part of the problem. Finally they wired them together. Then when a message arrived into the datacentre it would be examined to work out what kind of message it was then passed into the first computer who would do their bit before passing it the next before it left and went off to whomever it was intended for. These computers are commonly called network functions and when connected together they become a service chain.
 
-'That was odd.' you think to yourself.
+This approach worked very well for a long time but not it's starting to reach the end of it's life. Before the 90s telecommunications companies only had to worry about phone calls for the most part. With 2G now people could send texts and photos and later primitive internet access. To provide all these new services telecommunications companies had to invest in more network functions, more space to keep them in and had to pay more in energy to keep them running. 3G and 4G introduced ever more sophisticated services leading to ever more complex - and expensive - service chains.
 
--
+5G will pave the way for some major technological developments. For a population with an insatiable appetite for internet access and with self driving cars, smart homes and the Internet of Things on the horizon 5G is looking very exciting - and from the telecommunications point of view *very expensive indeed*.
 
-What I'm doing is very similar to arranging books in a shelf only instead of books and a shelf we've got 'virtual network functions' and a server. A virtual network function is just a computer program. Like most programs they take in a piece of data, make some change and feed it back out. By connecting several virtual network functions together you can provide a useful service, things like accessing the internet or making a phone call, and then it's important that they run in the correct order.
+Classic network functions have two big problems:
+1. There expensive. 
+2. There inflexible.
 
-You can think of them like machines on a conveyor belt. Say for example you wanted to make clay plates. At one end of the belt someone would dump some clay, and the belt would push that clay to a machine that flattens it out, another machine would cut it and another machine would fire it and at the end you'd have a plate. If you did things in the wrong sequence, like fired the clay before you cut it, then you'd just get garbage out at the other end.
+Classic network functions are designed to do single task very well. 
 
-Virtual network functions are a fairly recent development. Before 'virtual network functions' we just had plain old 'network functions'. These are powerful, specialised computers that can do a single function very well but only that function. To create a new service we just had to connect several of these together. Then we have to buy enough of each machines to make sure we could handle the busiest times, when lots of people want to use our service at the same time. Though most of the time few people might be using the service,  we are still paying to run lots of computers that are usually not doing very much work.
+Because of this we had to make sure that the computers had enough resources that they could cope with the busiest periods. This meant most of the time we were powering lots of computers that were not doing very much work. 
 
-Think of classic network functions like a shelf that could only hold one kind of book. Most of the time one or two copies of a book would be enough to keep everyone happy but at the busiest time though you may need ten or twenty copies of the most popular books. If we built our shelf to hold twenty books then most of the time it'll have more books on it that we need and we'll be wasting loads of space.
+I think of it like trying to find the best way of putting series of books onto shelves.
 
-Clever IT people noticed this and started using general purpose computers and virtual network functions. Each virtual network function might not be as good as the specialised computers but now each computer can run any virtual network function fairly well and can run several different network functions at once. This is like a normal bookshelf. You can put whatever books you want on it just so long as they can all fit on the shelf together.
+## A Series of Analogous Events: The Budget Bookshop
+Say one day you found yourself on your first day of working in a bookshop. The bookshop has a very large stock piled up but to keep costs low your boss has mandated that there shall be only two shelves of books up in the store and the rest of the books are to be kept downstairs in the basement. Over the course of the day people arrive looking to buy series of books. Your job is to make sure that they can find the series they are after.
 
-Now you know the background we can make things a little more interesting.
+At 6AM you open the bookshop. You head down to the basement where your surrounded by stacks of musty books. In one corner buried under a fallen pile of unsold '50 Shades' novels is a wooden desk with a single drawer. Inside you find a piece of paper with crude illustrations of people with series of books underneath. At the bottom someone has scrawled 'Good luck'.
 
--
+<div class="inset row">
+    <div class="column">
+        <img src="{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/g12659.png" alt="That's a nurse apparently. You can tell by the red cross">
+    </div>
+    <div class="column">
+        <img src="{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/g12573.png" alt="I think that's supposed to be a businessman?">
+    </div>
+    <div class="column">
+        <img src="{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/g12297.png" alt="And a priest.. who drew these??">
+    </div>
+</div>
 
-Some time pases.
+Upstairs you hear the shop bell ring as the front door swings open. You rush up the stairs to see a woman with a large red cross on her apron walking towards the empty shelf. You grab the books that match her drawing and throw them on the top shelf just as she reaches it. It wobbles under the load, but holds. Seemingly having not noticed your frantic stacking she picks up the first book in the series. You stand awkwardly for a moment and then sit back at your desk.
 
-Your slouching in your chair playing with your pencil when the bell rings and another nurse heads in. You leap out of your seat so fast you fall into your desk. By the time you've recovered the nurse is already contentedly flicking through the books you'd left on the shelf from before. You breath a sigh of relief, *phew.*
+<hr>
+
+Some time passes and the nurse is still reading the book.
+
+Your leaning backwards in your chair playing with a pencil when the bell rings and another nurse identical to the first heads in. You tip backwards in surprise and land in a heap on the floor. Once you've seperated yourself from your seat you see the nurse clone looking rather displeased at the shelves. You scramble downstairs and grab another copy of each of the books in the nurses series and add them to the shelf. The nurse clone begins to read the series but she does not look amused.
 
 [Diagram of current set of books]
 
 The bell rings again.
 
-A man steps through, fedora on his head and bull whip in hand, and strides over towards the shelf. You dart downstairs, grab his books and throw them on the next shelf down faster than a crack of a whip. The archaeologist surveys the books you've shelved and seems pleased. He begins to work his way through.
+A priest strides through. You go back downstairs, grab his books and put them on to the bottom shelf. He surveys the series briefly and begins to work his way through.
 
 [Diagram of two shelves of books]
 
 The bell rings again.
 
-Another man appears with a stiff black leather briefcase at his side and an iI wanted this to make sense to everyone including my Grandma's so it's a bit longer than it would be if I got technical.rritated expression so well set it may have been chiseled into his head. He paces towards the shelf as you sprint downstairs once more and return with one huge book. You go to place it on the shelf when tragedy strikes.
+Yet another man appears. He walks in wielding a stiff black leather briefcase and an expression so stern it must have been etched on with a chisel. He paces towards the shelf. You dart downstairs yet again and return lugging just one huge book up with you. You heave it to your chest and your about to place it on the shelf when:
 
 [Diagram of two shelves of books where not every book can fit]
 
-You stare at the shelf for a moment in horror. With the way you've got the books arranged, there's no space on either space big enough to fit the book in. The businessmans expression somehow turning sourer by the second without moving a muscle.
+You stare at the shelf in horror. With the way the books are there's no space on either shelf big enough to fit the book anymore. The businessmans expression turns sterner still. 
 
-Thinking quickly, you rearrange the books to try and make as much space on the first shelf as you can. Now everyone has noticed you and no one is happy you have disrupted their reading. 
-
-After trying a few different combinations you manage to make a big enough space and you squeeze the book into the second shelf. Still glaring, he reaches out towards the book you've just placed. 
+Thinking quickly, you rearrange the books to make as much space on the first shelf as you can. All eyes are on you but no one is happy you've disrupted their reading. After a few different combinations you just manage to squeeze the massive book into the second shelf. Still glaring, the businessman reaches out towards the book you've just placed.
 
 *beep beep. beep beep. beep beep.*
 
-His watch is beeping - your time is up. He turns and storms away.
+It's his watch beeping. He glares at you, turns and storms away.
 
-- 
+-
 
-This is the core of the problem: we have a limited amount of shelf space and we have to make sure that the right books are available when they're needed to keep everyone happy. Or in telecommunications terms, we have a limited number of computers and we have to make sure that the right virtual network functions are available when they're needed to keep people from complaining.
+[TODO: Explanation of 
+ Books - VNF
+ Series - Services
+ Time - Time sensitive services]
 
-This is made difficult because most services are time sensitive, you need a response in a certain amount of time. Imagine if you made a call and there was a 5 second delay in between you saying something and the other person hearing it. It wouldn't make for much of a conversation. This applies to pretty much all services we use - we expect a website to download quickly, videos not to stutter, texts to send instantly...
+What I'm doing is very similar to this only instead of books and a shelf we've got 'virtual network functions' and computers. A virtual network function is a just a computer program. 
+
+Like most programs they take in some information, make some change to it and feed it back out. Each individual virtual network function isn't very useful by itself but by connecting several of them together we can build a useful service. In my research a service is anything we do that relies on the telephone or internet network like sending a text, ringing someone, accessing a webpage or streaming a video. It's important we connect them in the right order though or everything falls apart.
+
+You can think of a virtual network function like a machine in a factory and a service would be several machines on a conveyor belt. Say for example you wanted to make clay plates. At one end of the belt someone would dump some clay, and the belt would push that clay to a machine that flattens it out, another machine would cut it and another machine would fire it and at the end you'd have a plate. If you did things in the wrong sequence, like fired the clay before you cut it, then you'd just get garbage out at the other end.
+
+Now you know the background we can make things a little more interesting.
+
+We had a configuration of books that worked well at first 
+
+This is the core of the problem I'm trying to solve. Without getting too technical we have a limited amount of resources and we have to make sure that everyone gets the service they came looking for. 
+
+
+This is made difficult because for most services you need a response in a certain amount of time. Imagine if you made a call and it took 10 seconds from you saying something to the other person hearing it. It wouldn't make for much of a conversation! So we have to make sure that 
+
+It's commonly called the Network Function Virtualisation Resource Allocation problem or just NFV-RA to it's friends.
 
 We can reorder the books/virtual network functions to make sure we use all of our shelves/computers but this can only take us so far. If in our example another customer turned up before the others had left there would simply be no more space to display books. The next step is clear. More shelves!
 
 As it turns out this makes things **a lot** more difficult.
 
+Silly question. What would have happened if another nurse walked in whilst the first one was still reading the first book? She'd have had to wait to read the book. In the real problem there's usually always a lot of people using a service but at some times there are more people using it than others. We need enough copies of each service
+
 - 
 
-You put the phone down, your ears still ringing from Mr Bossmans relaying the businessman's complaints. He made it very clear that you would not still be working here if it weren't World Book Day tomorrow. You'd tried to explain that you'll need more space if your expecting more customers but it fell on deaf ears. 
+You put the phone down, your ears still ringing from your bosses complaints. He'd made it very clear that you would not still be working here if he weren't expecting such a busy day tomorrow. Your arguments that you'd need more space if there were to be more people... were not popular.
 
-It's the end of the day so you lock up and walk home, thinking on whether you should come back. 
-
-You arrive the next day to see the shop has tripled in size. Two more rooms have been added each with two more wobbly shelfs. Each room is lit by a single naked bulb. A letter is stapled to your till:
-
-The electricity bill will be coming out of your paycheque. Happy now?
-
-Bossman
+You arrive the next day to see the shop has tripled in size. Two more rooms have been added each with two more wobbly shelfs. Each room is lit by a single naked bulb. A letter is stapled to your till explaining that the electricity bill will be coming out of your paycheque.
 
 You turn off all the lights.
 
-Sitting in the darkness you get to thinking. It's going to be a busy day and you now have three rooms to worry about so your going to need a plan. You write down your two objectives:
+In the darkness you start. It's going to be a busy day and you have three rooms to manage. Your going to need a plan. You write down your two objectives:
 
 1. Make sure everyone can ~~buy~~ read the books they want in the time they have
 2. Keep the lights off as long as possible
 
-You know that different types of visitor read different books and in a particular order:
-
-[Diagram of forward graph]
-
 Each individual objective is easy enough. You could keep your energy bill down if you just used the one room and kept the other lights turned off. You draw a diagram, with the shelf on it's sides to save space.
 
-[Diagram of single servers]
+[Diagram of single server]
 
 But you could quickly run out of space when things got busy if you just had the two shelves. If you just wanted to make sure everyone had the books they wanted you would fill up all of the shelves.
 
 [Diagram with multiple servers]
 
-Deciding what books you'd put up is still tricky though. If you have several customers wanting to read the same series of books then there should be the same number of books available. There's nowhere near enough space to keep multiple copies of all of the books that everyone will need so your still going to be running around swapping books about. And you'll also want to place the books so that you use all the available space as you go.
+Deciding what books you'd put up is still tricky though. If you have several customers wanting to read the same series of books then there should be the same number of books available. There's nowhere near enough space to keep multiple copies of all of the books that everyone will need so you'll still have to swap books about. And you also have to place the books so that you use all the available space as you go.
 
 Then you remember how wobbly the shelves are. If one collapsed then all of the people who were reading those books would go to the other shelves to finish their reading. The safest thing to do would be to put multiple copies of the books on different shelves.
 
@@ -118,7 +142,7 @@ Then you remember how wobbly the shelves are. If one collapsed then all of the p
 
 But that uses up precious space, and on books which might not even get looked at!
 
-This **is** a hard problem. You lean back in your chair and stare up at the ceiling and bemoan the twisted path that brought you here in the first place. 
+This **is** a hard problem. You lean back in your chair and stare up at the ceiling. You just need a moment to think... 
 
 The bell rings again.
 
@@ -156,3 +180,15 @@ And if we have more books then we have to make more decisions.
 At each step we have the number of shelves times as many timelines. Or alternatively put:
 
     number of possible configurations = number of shelves ^ number of books.
+
+
+
+
+
+I'm trying to find the best arrangement of 'virtual network functions' on a collection of computers so that everyone can get the service they're looking for. In particular I'm doing this for telecommunications networks so a service could be anything from accessing the internet to making a phone call.
+
+Virtual network functions are a fairly recent development. Before 'virtual network functions' we just had plain old 'network functions'. These are powerful, specialised computers that can do a single function very well but only that function. To create a new service we just had to connect several of these together. Then we have to buy enough of each machines to make sure we could handle the busiest times, when lots of people want to use our service at the same time. Though most of the time few people might be using the service, we are still paying to run lots of computers that are usually not doing very much work.
+
+Think of classic network functions like a shelf that could only hold one kind of book. Most of the time one or two copies of a book would be enough to keep everyone happy but at the busiest time though you may need ten or twenty copies of the most popular books. If we built our shelf to hold twenty books then most of the time it'll have more books on it that we need and we'll be wasting loads of space.
+
+Clever IT people noticed this and started using general purpose computers and virtual network functions. Each virtual network function might not be as good as the specialised computers but now each computer can run any virtual network function fairly well and can run several different network functions at once. This is like a normal bookshelf. You can put whatever books you want on it just so long as they can all fit on the shelf together.
