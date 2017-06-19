@@ -14,27 +14,99 @@ When I tell that to people they switch off halfway through and then politely smi
 
 5G is on it's way. It's closer than you think but there's some tricky problems we've got to solve first. The problem I'm working on is called the 'Network Function Virtualisation Resource Allocation' problem or NFV-RA to it's friends.
 
-Every time you use a service provided by a telecommunications company, like ringing someone, sending a text or accessing the internet your sending a message out into the air. This message gets picked up by a cell tower and is sent over the telecommunications network to a building filled with loads of computers. Once your message arrives here we have to work out where it's supposed to go and how we're going to get it there. 
+Every time you use a service provided by a telecommunications company, like ringing someone, sending a text or accessing the internet your sending a message out into the air. This message gets picked up by a cell tower and is sent over the telecommunications network to a building filled with loads of computers. Once your message arrives here we have to work out 
+where it's supposed to go and how we're going to get it there. 
 
-We often have to do clever things to the messages to make them fast enough. For example when your watching a video a lot of information is being sent over the network. It can be difficult to send it over the network fast enough that it doesn't buffer and stutter. To make it easier the message gets compressed. It's like if you could squish all the parcels in the sorting office, then the postman could carry more at once. Once it gets to you, you can uncompress it and you get back the original message. Most messages get compressed but we can't use the same techniques on all the messages.
+TODO: Check this bit is accurate. Is this really why we have different services? It's all packets now, what are we really gaining from splitting it out? Is it just billing?
 
-As well as that not all services are made equal. You could hardly have a conversation on the phone if it took 5 seconds for your friend to hear what you were saying - but would you even notice if it took a text that long to arrive?
+We can't handle all messages in the same way because different services have different requirements. You could hardly have a conversation on the phone if it took 5 seconds for your friend to hear what you were saying - but would you even notice if it took a text that long to arrive? Likewise if you were watching a video you might never notice if the occasional frame went missing but if you'd notice if some characters were out of place in a text message.
 
-When these systems were first the designers decided to split each service into lots of little parts. Then they built specialised computers which each solved part of the problem. Finally they wired them together. Then when a message arrived into the datacentre it would be examined to work out what kind of message it was then passed into the first computer who would do their bit before passing it the next before it left and went off to whomever it was intended for. These computers are commonly called network functions and when connected together they become a service chain.
+We also often have to do clever things to the messages to make them fast enough. For example when your watching a video a lot of information is being sent over the network. It can be difficult to send it over the network fast enough that it doesn't buffer and stutter. To make it easier the message gets compressed. It's like if you could squish all the parcels in the sorting office, then the postman could carry more at once. Once it gets to you, you can uncompress it and you get back the original message. Most messages get compressed but we can't use the same techniques on all the messages.
 
-This approach worked very well for a long time but not it's starting to reach the end of it's life. Before the 90s telecommunications companies only had to worry about phone calls for the most part. With 2G now people could send texts and photos and later primitive internet access. To provide all these new services telecommunications companies had to invest in more network functions, more space to keep them in and had to pay more in energy to keep them running. 3G and 4G introduced ever more sophisticated services leading to ever more complex - and expensive - service chains.
+When these systems were first the designers decided to split each service into lots of little parts. Then they built specialised computers which each solved part of the problem. Finally they wired these computers together to form different services. Then when a message arrived into the datacentre it would be examined to work out what kind of message it was then passed into the first computer who would do their bit before passing it the next, and the next before it reached the end of the chain and was sent off to whomever it was intended for. These computers are commonly called network functions and when connected together they become a service chain.
+ 
+This approach worked very well for a long time but now it's starting to reach the end of it's life. Before the 90s telecommunications companies only had to worry about phone calls for the most part. With 2G now people could send texts and photos and later primitive internet access. To provide all these new services telecommunications companies had to invest in more network functions, more space to keep them in and overall higher running costs. 3G and 4G introduced ever more sophisticated services leading to ever more complex - and expensive - service chains.
 
 5G will pave the way for some major technological developments. For a population with an insatiable appetite for internet access and with self driving cars, smart homes and the Internet of Things on the horizon 5G is looking very exciting - and from the telecommunications point of view *very expensive indeed*.
 
-Classic network functions have two big problems:
-1. There expensive. 
-2. There inflexible.
+You can think of network functions like a bookshelf that can only hold one kind of book. If we're a library then we have to make sure there are enough copies of the book that all of our users can have a copy at once. Over the course of a day we'll have busy periods where lots of people want to read a certain book and quiet periods when only a few do. The problem is we have to build our shelf big enough, or build enough shelves, that we have enough space for the busiest parts of the day. The rest of the time we're using far more space than we need.
 
-Classic network functions are designed to do single task very well. 
+**Virtual** Network Functions (VNFs) were invented to avoid some of the limitations of traditional network functions. Rather than being very specialised computers virtual network functions are computer programs that run on general purpose computers. These computers can run any number of virtual network functions. If a physical network function is a bookshelf that can only hold one kind of book a general purpose computer is a bookshelf that can hold any kind of books but maybe not quite as many of them.
 
-Because of this we had to make sure that the computers had enough resources that they could cope with the busiest periods. This meant most of the time we were powering lots of computers that were not doing very much work. 
+Like before we need to make sure we have enough books on our shelves that everyone can access what they need to but now we can place any combination of books we'd like on there.
 
-I think of it like trying to find the best way of putting series of books onto shelves.
+This introduces a new set of problems. Say we were to lay out the books as follows:
+
+We've managed to fit everything on so far but we've not used up all of the space across the two shelves. If one huge book turned up that would take up all of the remaning space we'd have no where to put it. Sometimes we can rearrange the books to make space:
+
+I mentioned before that over the course of the day different numbers of people would turn up at different times. If we knew exactly who was going to turn up and when then it would be easy to make sure that we'd allocated enough resources to keep everyone happy. But people can be strange and unpredictable so whilst we can make an informed guess based on what we've seen before we can't tell for certain. The easiest thing to do is to use all of the computing resources we can find.
+
+Sticking to the shelf analogy, say we had 5 shelves. We could fill up all of the shelves proportionally based on how many people we expect will need them. That way we're almost guaranteed to have enough books available at the busiest times. Shown here drawn on their side to save space and in blocks because I'm lazy.
+
+[Image of packed servers]
+
+But running all the computers at full power all of the time will use a lot of energy. If we were being really tight we might try and use as few computers as we can and then just allocate the maximum resources we think we'll need **most** of the time.
+
+[Image of empty servers]
+
+But wait - what if one of the computers crashed/set on fire/became self aware? All of the resources that we'd put on that computer would no longer be available. By spreading out the resources we can make sure that most of each service will survive but a service won't work if there's a missing link in the chain. The sensible thing to do is to have multiple copies of the same VNFs so that there's no single point of failure.
+
+[Image of replicated servers]
+
+This is the Network Function Virtualisation - Resource Allocation (NFV-RA) problem. We have a limited amount of resources and so we need to allocate them to different services to meet some objectives. 
+
+Here we've considered three objectives: 'performance', 'robustness' and 'energy efficiency'. You might have noticed that these objectives are at odds with each other. The most performant solution is far from the one that uses the least energy for example. As it turns out there is no single best solution but a set of equally good solutions that all compromise on the objectives to different amounts. At the end we can still only use one solution so we'll also need someway of picking our 'best' solution out of the lot*. 
+
+This is made trickier because the number of people that use the services will change over the course of the day and so the set of equally good solutions will also be changing too. This means we can't just pick one good solution and be done with it because what was good in the morning might be useless by the afternoon. So unless you want to spend your whole day picking out solutions we're going to want to teach a computer how to do it.
+
+So how do we find the set of good solutions and how do we decide on a 'best' solution out of them?
+
+Well I don't know. Not yet anyway, but I encourage you to think on it yourself and I'll let you know my answers - just as soon as I've got some.
+
+</hr>
+</hr>
+
+*One last thing. Some of you may be thinking that this doesn't seem like that hard a problem at all. After all there's a limited number of different combinations so why can't we just try them all and then pick the combination we like the most? Well the problem is the number of possible combinations increases rapidly as we increase the number of books or shelves. 
+
+As a very informal example, imagine that each shelf could take as many books as we want. For this problem we're not worried about different combinations of books on the same shelf. 
+So where do those numbers come from and how do I know there right?
+
+
+
+Imagine you had 1 book and 2 shelves, which we'll call shelf A and shelf B. How many different combinations are there if we're not bothered about the order? Just 2. The book could go on shelf A or shelf B. 
+
+[Graph of shelf A and shelf B]
+
+What about if we had 2 books and 2 shelves. Now we end up with 4 combinations. Both books on either shelf, and each book on a different shelf.
+
+Here's another way to look at this. Say that every time we make a decision about where to put a book we spawn an alternate timeline where we made all other decisions. So when we decided where to place the first book we spawned another timeline. And then when we decided to place the second book we spawned another one again.
+
+
+If we have more shelves then each time we create more timelines every time we make a decision.
+
+
+And if we have more books then we have to make more decisions.
+
+
+At each step we have the number of shelves times as many timelines. Or alternatively put:
+
+    number of possible configurations = number of shelves ^ number of books.
+
+If we plug some numbers into this we can see the problem.
+
+5 books and 1 shelf   = 1^5 = 1
+5 books and 2 shelves = 2^5 = 32
+5 books and 3 shelves = 3^5 = 243
+
+10 books and 1 shelf   = 1^10 = 1
+10 books and 2 shelves = 2^10 = 1024
+10 books and 3 shelves = 3^10 = 59049
+
+15 books and 1 shelf   = 15^1 = 1
+15 books and 2 shelves = 15^2 = 32768
+15 books and 3 shelves = 15^3 = 14348907
+
+With just 15 books and 3 shelves we already have more than 10 million combinations to try. That's not completely infeasible for a computer but when you consider that real world problems could have the equivalent of thousands of shelves, and at least the same number of books it gets alot more tricky.
 
 ## A Series of Analogous Events: The Budget Bookshop
 Say one day you found yourself on your first day of working in a bookshop. The bookshop has a very large stock piled up but to keep costs low your boss has mandated that there shall be only two shelves of books up in the store and the rest of the books are to be kept downstairs in the basement. Over the course of the day people arrive looking to buy series of books. Your job is to make sure that they can find the series they are after.
