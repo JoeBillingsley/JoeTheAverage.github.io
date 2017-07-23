@@ -61,6 +61,10 @@ span {
 
 h1, h2, h3 {
     font-family: $feature-font;
+    
+    a {
+        color: $dark;
+    }
 }
 
 h1 {
@@ -87,7 +91,7 @@ h4 {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: $secondary;;
 }
 
 a:hover {
@@ -152,6 +156,11 @@ time {
     width: 95%;
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .list-no-style {
     list-style-type: none;
     padding: 0;
@@ -161,6 +170,16 @@ time {
 img {
     max-width: 100%;
     display: block;
+}
+
+.small-img {
+    @media only screen and (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .primary {
@@ -177,6 +196,14 @@ img {
 
 .center-text {
     text-align: center;
+}
+
+.tab {
+    margin-left: 5%;
+}
+
+.math {
+    font-family:  Courier New, Courier, monospace;
 }
 
 .text-shadow {
@@ -272,6 +299,23 @@ button:hover {
     border-bottom: 1px dashed lighten($dark, 50%); 
 }
 
+hr { 
+    border-top: 1px dashed;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Row of content */
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
 /* Footer */
 footer, .push {
     height: $footer-height;
@@ -279,7 +323,6 @@ footer, .push {
 
 .read-more {
     @include font-size(1.8);
-    color: $secondary;
 }
 
 footer {
@@ -290,6 +333,10 @@ footer {
     background-color: darken($dark, 5%);
     @include font-size(1.5);
     
+    a {
+        color: lighten($dark, 30%);
+    }
+
     h2 {
         margin-top: 5px;
         margin-bottom: 20px;
