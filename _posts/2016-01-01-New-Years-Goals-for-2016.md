@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New Years goals for 2016
+title: New Years Goals for 2016
 category: me
 excerpt: I like lists and I like goals so I've made a list of my goals for 2016. I'm not sure it'll last me all of 2016 but it's a start!
 tags: [new years, 2016]

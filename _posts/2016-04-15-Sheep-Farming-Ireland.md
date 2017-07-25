@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sheep farming on Clare Island
+title: Sheep Farming on Clare Island
 excerpt: A little way off the west cost of County Mayo, rests a little island where people live happily away from the rest of the world. I was lucky enough to live and work in this place for a few weeks this year.
 category: travel
 tags: [travel, wwoof, farming, sheep]

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: SLAs, NFV, HCI and my PhD
-excerpt: My PhD in plain english, or how I wish someone had explained it to me when I started.
+title: HCI, NFV, and SLAs - My PhD in Plain English
+excerpt: ...or how I wish someone had explained it when I started.
 category: research
 tags: [phd, research, plain-english, nfv, nfv-ra]
 ---
 
-I started a PhD recently. It's currently titled:
+I started a PhD recently. It's titled:
 
 **Dynamic Resource Management and Optimisation for SLA Guarantees in Hyperconverged Communication Infrastructures**
 
-It's particularly descriptive but not particularly clear, which is a shame because the ideas behind it are actually rather simple. In short I'm working on one of the technologies that will underpin next generation telecommunications networks. 
+Unless you've studied networking that was gibberish which is a shame because the ideas behind it are actually rather simple. In short I'm working on one of the technologies that will underpin next generation telecommunications networks. 
 
 The internet is already integrated deeply into all our lives but soon it will be so common it will be invisible. The next generation of telecommunications networks will make internet access even more available, energy efficient, faster and all at lower cost. It will be the backbone supporting the next exciting developments in technology: the internet of things, smart factories, biosensors, machine to machine communication, self driving cars... and many other developments that will have a major impact on our lives in the next decade.
 

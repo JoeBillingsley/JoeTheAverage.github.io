@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New Years goals for 2017
+title: New Years Goals for 2017
 category: me
 excerpt: Another year another list.
 tags: [new years, 2017]
@@ -27,7 +27,7 @@ Right onto the list. It's a mix of things I can complete all in one go and those
 I'm a slow writer but I'd like to improve. I have a backlog of travel stories to catch up on at the moment and I'd like to be able to write about some other bits I have been working on. I'm aiming for one post a month at first and we'll see how that goes. 
 
 ### 2. Beat Legend of Zelda: Ocarina of Time
-We had this game on the Nintendo 64 and I got stuck trying to carry a lost princess out of a giant whale. It's  been bugging me for nearly **eighteen years** now. I've played a lot of games in the interim and I must be more capable than my six/seven year old self so I'm making this the year I finally escape that damn whale. Ideally I'll get a RetroPie setup and will be able to beat it on a proper TV.
+We had this game on the Nintendo 64 and I got stuck trying to carry a lost princess out of a giant whale. Its been bugging me for nearly **eighteen years** now. I've played a lot of games in the interim and I must be more capable than my six/seven year old self so I'm making this the year I finally escape that damn whale. Ideally I'll get a RetroPie setup and will be able to beat it on a proper TV.
 
 ### 3. Go full speed on a racehorse
 I don't know if I'll be able to manage to do this safely *just* yet and I'd definitely like to get some more practice before I try. Mostly this year I'll be improving my position, particularly in two point and learning more about stable management so that I'll have a better chance of convincing someone I know what I'm doing.

@@ -1,34 +1,40 @@
 ---
 layout: post
-title: NVF - Why it's Difficult
+title: NFV - Why It's Tricky
 excerpt: Turns out automating a telecommunications network is not as easy as it sounds... 
 category: research
 series: network function virtualisation for normal people
 tags: [phd, research, plain-english, nfv, nfv-ra, moo]
 ---
 
-In [my last post](Network-Function-Virtualisation-for-Normal-People) I explained what it is I am doing for my PhD. Ultimately it comes down to finding the right configuration of virtual network functions on a group of servers. The problem is very similar to placing books on a shelf in a library where you want to put enough books on the shelves that everyone can find the books they want, whilst minimising the number of shelves we use.
+In [my last post](Network-Function-Virtualisation-for-Normal-People) I explained what network function virtualisation is and how it relates to my PhD. Ultimately it comes down to finding the best configuration of virtual network functions on a group of servers. I described it like placing books on a shelf in a library where we want everyone to find the books they want, whilst minimising the number of shelves we use.
 
-[IMAGE ONE - Books on a shelf]
+<img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/books_full.png" alt = "A diagram of a book shelf filled with books">
 
-At first glance it might not seem like a particularly difficult problem. After all, all we really have to do is to look at all of the possible placements of virtual network functions and decide which one is the best. So to justify why I'm going to need three or more years to work on it I want to point out three things that make the problem tricky: the number of choices, the short time we're allowed to find them and the difficult of defining 'best'.
+At first glance it might not seem like a particularly difficult problem. There are a limited number of different configurations. All we really have to do is to look at all of the possible of virtual network functions and decide which one is the best. Doesn't seem like it should really take three or more years to solve.
+
+So before people ~~realise~~ think I'm just going to be lounging around for the next few years I want to explain the three things that make the problem tricky: the number of choices, the short time we're allowed to find them and the difficult of defining 'best'.
 
 ### Combinatorial Explosion
-Say we were trying to find the best configuration of books on a shelf and we'd decided to try and look at all of the possible configurations. If we had 1 book and 2 shelves then how many different configurations of books on shelves are there?
+Say we wanted to find the best configuration of those books on a shelf by looking at all of the possible configurations. If we had 1 book and 2 shelves then how many different configurations of books on shelves are there?
 
 [One book, 1 shelf]
 
-Two. The book could go on either shelf. So what about if we had two books and two shelves? 
+Two. The book could go on either shelf. And for two books and two shelves:
 
 [Two book, two shelves case]
 
-Now we end up with eight combinations. Both books on either shelf or each book on a different shelf. 
+Four. Both books on either shelf or each book on a different shelf.
 
-Here's another way to look at this. Say that every time we make a decision about where to put a book an alternate timeline spawns for each of the other options. So when we decided where to place the first book we spawned another timeline where we made the other decisions and then when we decided to place the second book we spawned two more again.
+Simple enough when they are only a few books or shelves to consider but what about for any number of books or shelves?
 
-[Graph of timelines]
+Here's another way to look at this. Say that every time we make a decision about where to put a book an alternate timeline spawns where we made each of the other choices.
 
-We can see that over all of the timelines we have reached all of the configurations. If we have more shelves then each time we make a decision we create more timelines, one for placing the book on each shelf and one for not placing a book at all. And if we have more books then we have to make more decisions. Each time we make a decision, the number of timelines or configurations is multiplied by the number of shelves. More formally:
+For three books and two shelves this would look like:
+
+[Two book two shelves case]
+
+We can see that over all of the timelines we have reached all of the configurations. If we have more shelves then we have more options at each step. And if we have more books then we have to make more decisions. Each time we make a decision, the number of timelines or configurations is multiplied by the number of shelves. More formally:
 
 <p class="tab math">number of configurations = number of shelves ^ number of books</p>
 

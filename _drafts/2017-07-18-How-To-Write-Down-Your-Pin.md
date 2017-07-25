@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: How To Write Down Your Pin 
 excerpt: 
 category: ideas
 tags: [idea, thoughts, quick]
