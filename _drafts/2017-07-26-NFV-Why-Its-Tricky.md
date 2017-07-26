@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NFV - Why It's Tricky
-excerpt: Turns out automating a telecommunications network is not as easy as it sounds.
+excerpt: Why automating a telecommunications network is not as easy as it sounds.
 category: research
 series: network function virtualisation for normal people
 tags: [phd, research, plain-english, nfv, nfv-ra, moo]
