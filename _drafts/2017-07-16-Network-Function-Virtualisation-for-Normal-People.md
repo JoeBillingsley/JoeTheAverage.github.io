@@ -71,24 +71,22 @@ If we track not just which books were taken off the shelf but when it happened a
 
 Of course our predictions could be wrong. So we'll still need to ask each customer what books they are after on the way in but most of the time the books should already be ready for them so we don't have to wait for them to be shelved. Any time we get something wrong we've learnt something that we can use to improve our estimates.
 
-With virtual network functions we can do the same thing. If we monitor when people use a service and how long they usually use it for. We can use this information to try and predict how much a service will be being used at a time in the future and make informed decisions. If our decisions then turn out to be wrong we have to be able to reconfigure the different services and update our estimates.
+With virtual network functions we can do the same thing. If we monitor when people use a service and how long they usually use it for we can use this information to try and predict how much a service will be being used at a time in the future and make informed decisions. If our decisions then turn out to be wrong we have to be able to reconfigure the different services and update our estimates.
 
 This is called 'dynamic resource allocation'. Because we're relying on predictions and averages it can be pretty risky. For example if we were to predict low demand for a night but did not realise it was New Years eve then the network might be overwhelmed at midnight. We can account for the uncertainty in our prediction by allocating more resources than we need for each service but obviously this means using more energy and resources that might be better spent elsewhere.
 
-In my opinion that means we have three objectives to consider. We need it to provide a good quality of service, to use very little of energy and to be robust against unexpected events. It's a challenging problem* and there are a great number of researchers working on solving it with so far no definitive solution. For the next few years I'll be working to help crack this and related problems. I'll let you know how it goes.
+In my opinion that means we have three objectives to consider. We need it to provide a good quality of service, to use very little of energy and to be robust against unexpected events. It's a challenging problem and there are a great number of researchers working on solving it with so far no definitive solution. For the next few years I'll be working to help crack this and related problems. I'll let you know how it goes.
 
 <hr>
 
-*If your not convinced it really is a challenging problem I address that here
-
 <p id="Greenemeier_ScientificAmerican">
-[1] Greenemeier, L. (2010). *Can the World's Telecoms Slash Their Energy Consumption 1,000-Fold?*. Scientific American. Available at: <a href="https://www.scientificamerican.com/article/green-touch-launch/">https://www.scientificamerican.com/article/green-touch-launch/</a> [Accessed 16/07/2017]
+[1] Greenemeier, L. (2010). <i>Can the World's Telecoms Slash Their Energy Consumption 1,000-Fold?</i>. Scientific American. Available at: <a href="https://www.scientificamerican.com/article/green-touch-launch/">https://www.scientificamerican.com/article/green-touch-launch/</a> [Accessed 16/07/2017]
 </p>
 
 <p id="Andrews_IEEE">
-[2] Andrews, G.J. *et al*. (2014). *What Will 5G Be?*. IEEE Journal on Selected Areas in Communications. Available at: <a href="http://ieeexplore.ieee.org/document/6824752/">http://ieeexplore.ieee.org/document/6824752/</a> [Accessed 16/07/2017] 
+[2] Andrews, G.J. *et al*. (2014). <i>What Will 5G Be?</i>. IEEE Journal on Selected Areas in Communications. Available at: <a href="http://ieeexplore.ieee.org/document/6824752/">http://ieeexplore.ieee.org/document/6824752/</a> [Accessed 16/07/2017] 
 </p>
 
 <p id="Voelcker_GreenCarReports">
-[3] Voelcker, J. (2014). *1.2 Billion Vehicles On World's Roads Now, 2 Billion By 2035: Report*. Green Car Reports. Available at: <a href="http://www.greencarreports.com/news/1093560_1-2-billion-vehicles-on-worlds-roads-now-2-billion-by-2035-report">http://www.greencarreports.com/news/1093560_1-2-billion-vehicles-on-worlds-roads-now-2-billion-by-2035-report</a> [Accessed 16/07/2017]
+[3] Voelcker, J. (2014). <i>1.2 Billion Vehicles On World's Roads Now, 2 Billion By 2035: Report</i>. Green Car Reports. Available at: <a href="http://www.greencarreports.com/news/1093560_1-2-billion-vehicles-on-worlds-roads-now-2-billion-by-2035-report">http://www.greencarreports.com/news/1093560_1-2-billion-vehicles-on-worlds-roads-now-2-billion-by-2035-report</a> [Accessed 16/07/2017]
 </p>
