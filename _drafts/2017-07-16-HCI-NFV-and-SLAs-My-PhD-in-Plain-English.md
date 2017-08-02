@@ -51,11 +51,23 @@ It'll also help reduce the impact of telecommunications on the environment. Tele
 There's widespread consensus that virtual network functions are the way forward for telecommunications networks. The big question now is how do we manage them? To get the most out of virtual network functions we should be reallocating resources on the fly to make sure everyone get's a good quality of service whilst using as little energy as possible. This is the problem at the heart of my research and it's called the 'Network Function Virtualisation Resource Allocation' problem or NFV-RA to its friends.
 
 ### How do you solve a problem like NFV-RA?
-As we talked about earlier we can run the same virtual network function on lots of different computers. We can then build a service by connecting these computers together. Each computer has a certain amount of computing resources. The more computers we have running the more resources there are available. Each virtual network function a computer runs uses some of it's resources. If we don't give enough resources to a network function it will run slowly and the quality of the service will suffer. If we're running more computers than we need we're wasting energy. The challenge is to find the minimum amount of resources we must use to provide a good service.
+As we talked about earlier we can run the same virtual network function on lots of different computers. We can then build a service by connecting these computers together. Each computer has a certain amount of computing resources. The more computers we have running the more resources there are available. Each virtual network function a computer runs uses some of it's resources. If we don't give enough resources to a network function it will run slowly and the quality of the service will suffer. If we're running more computers than we need we're wasting energy. The challenge then is to find the minimum amount of resources we must use to provide a good service.
 
-I think of it like stacking bookshelves in a library. We have books (i.e. network functions) that we need to make available. Every shelf (i.e. computer) gives us a certain amount of space to place these books. When there are less people in the library we want to be using less shelves. People using the library want to be able to find their books as quickly as possible.
+I think of it like stacking bookshelves in a library. We have books (i.e. network functions) that we need to make available. Every shelf (i.e. computer) gives us a certain amount of space to place these books. People using the library want to be able to find their books as quickly as possible whilst for some reason we want to use as few shelves as possible.
 
-The easiest thing to do would be to monitor which books get read and then it's easy to work out what books are the most popular. We could then fill all of the shelves up by the popularity of each series.
+The first thing we have to do then is to make sure that we use all of the space we can. Books come in different same shapes and sizes. If we just place the books on the shelves in any old order:
+
+<img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/books_bad_config.png" alt = "A diagram of a book shelf filled with books but arranged so that not all of the space is being used">
+
+Then we'll end up with lots of little space on each shelf that we're not using. When we've got lots of shelves, all of that little space adds up. If we can find a configuration that uses all of the shelf space then we'll be able to fit more books on the same number of shelves.
+
+<img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/books_good_config.png" alt = "A diagram of a book shelf filled with books arrange so that all of the space is being used">
+
+It's the same thing services and computer resources if a little more complicated. Network functions have a fixed minimum amount of resources but we can give them more resources than they need if we want to. There are also some tricks we can use to make the network functions use *less* resources than normal if we can arrange things correctly. Plus we have to consider the effect that one network function has on the next ones in the sequence. There's no point having one very fast network function followed by a very slow one for example.
+
+There are lots of things to consider and lots of options but we have to be able to keep up with the changing demand. We can give ourselves more time to find a good configuration if we can predict what services people are going to need at different times so we can work some out in advance.
+
+With the library example the easiest thing to do would be to monitor which books get read and then it's easy to work out what books are the most popular. We could then fill all of the shelves up by the popularity of each series.
 
 <img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/books_full.png" alt = "A diagram of a book shelf filled with books">
 
