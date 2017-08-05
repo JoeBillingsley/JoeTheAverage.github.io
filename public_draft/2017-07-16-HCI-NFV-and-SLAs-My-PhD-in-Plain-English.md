@@ -10,7 +10,7 @@ I started a PhD recently. It's titled:
 
 **Dynamic Resource Management and Optimisation for SLA Guarantees in Hyperconverged Communication Infrastructures**
 
-Unless you've studied networking then that was gibberish, which is a shame because the ideas behind it are actually rather simple. In short I'm working on one of the technologies that will underpin next generation telecommunications networks. 
+Unless you've studied networking then that was gibberish which is a shame because the ideas behind it are actually rather simple. In short I'm working on one of the technologies that will underpin next generation telecommunications networks. 
 
 The internet is already integrated deeply into all our lives but soon it will be so common it will be invisible. The next generation of telecommunications networks will make internet access even more available, energy efficient, faster and all at lower cost. It will be the backbone supporting the next exciting developments in technology: the internet of things, smart factories, biosensors, machine to machine communication, self driving cars and many more developments that will have a major impact on our lives in the next decade.
 
@@ -25,16 +25,16 @@ When you make a request for a service, like make a call or send a text, your req
 
 Each network function can only process so many requests at a time. After that new requests are placed in a queue where they wait to be processed in the order that they arrived. So we can often make a service faster by connecting more of the same network functions in parallel. It's just like having more tills open at a supermarket. The more tills that are open, the less time you spend queuing. Similarly the more network functions that are available, the less time a request spends waiting to be processed.
 
-Over the course of a day the number of people who want to use a service changes. After a particularly exciting episode of Game of Thrones, Love Island or Eastenders there might be thousands more phone calls being made than average.In order to provide a consistent service telecommunications companies have to buy enough physical network functions to handle even the busiest times.
+Over the course of a day the number of people who want to use a service changes. After a particularly exciting episode of Game of Thrones, Love Island or Eastenders there might be thousands more phone calls being made than average. In order to provide a consistent service telecommunications companies have to buy enough physical network functions to handle even the busiest times.
 
 If a company provides lots of services they have to make sure that each service can handle the busiest times. Different services might be busy at different times. Ideally when one service wasn't being used as much we could use the spare network functions for another service. With physical network functions this is not usually possible or convenient. Instead for every service we have to buy enough network functions for the busiest times of every service. But more physical network functions means higher operating costs in electricity, space, maintenance, cooling - all things telecommunication companies aren't keen on.
 
 From the manufacturer perspective designing a new physical network function is a huge investment both in time and money. Whilst companies want to provide new services to differentiate themselves, manufacturers don't want to develop new network functions for a service that doesn't have widespread appeal. As a result innovation in this area has historically been very low.
 
-But technology as a whole has been developing tremendously quickly and more and more of these new developments are dependant on access to the internet. The network that provides this access has started to fall behind. Physical network functions have been slowing things down. If telecommunications networks are going to catch up, physical network functions are going to have to go.
+But technology as a whole has been developing tremendously quickly and more and more of these new developments are dependant on access to the internet. The network that provides this access has started to fall behind. Physical network functions have been slowing things down amd if telecommunications networks are going to catch up they're are going to have to go.
 
 ### Virtual Network Functions
-This is where *Virtual network functions* come in. They do exactly the same thing that a physical network function does only with software. Virtual network functions, being virtual, need to run on a computer. Unlike physical network functions, virtual network functions don't need specialised computers. Instead we can run them on cheap, ordinary general purpose computers - just like the computer your reading this on only much, much more powerful. If we replace all of the specialised computers in the network with general purpose ones then we get a *hyperconverged communications infrastructure*.
+This is where *virtual network functions* come in. They do exactly the same thing that a physical network function does only with software. Virtual network functions, being virtual, need to run on a computer. Unlike physical network functions, virtual network functions don't need specialised computers. Instead we can run them on cheap, ordinary general purpose computers - just like the computer your reading this on only much, much more powerful. If we replace all of the specialised computers in the network with general purpose ones then we get a *hyperconverged communications infrastructure*.
 
 If we want to deploy a service on a hyperconverged infrastructure we first have to install the different network functions on some of the computers. Each computer could have lots of network functions running on it. We need to instruct each computer how much of it's *resources* it should spend on each one. A resource is anything the computer has a limited amount of. So a resource could be how much of each second a computer should spend running a network function or more tangible things like storage space. To build a service we then just need to tell each computer how it should handle a request and where to send it next.
 
@@ -55,7 +55,7 @@ As we discussed earlier we can run the same virtual network function on lots of 
 
 I think of it like stacking bookshelves in a library. We have books (network functions) that we need to make available. Every shelf (computer) gives us a certain amount of space to place these books. People using the library want to be able to find their books as quickly as possible whilst we want to use as few shelves as possible.
 
-The first thing we have to do then is to make sure that we use all of the space we can. Books come in different same shapes and sizes. If we just place the books on the shelves in any old order:
+The first thing we have to do then is to make sure that we use all of the space we can. Books come in different shapes and sizes. If we just place the books on the shelves in any old order:
 
 <img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/books_bad_config.png" alt = "A diagram of a book shelf filled with books but arranged so that not all of the space is being used">
 
@@ -67,7 +67,7 @@ It's the same thing services and computer resources if a little more complicated
 
 There are lots of things to consider and lots of options but we have to be able to keep up with the changing demand. We can give ourselves more time to find a good configuration if we can predict what services people are going to need at different times so we can work things out in advance.
 
-With the library example the easiest thing to do would be to monitor which books get read and then it's easy to work out what books are the most popular. We could then fill all of the shelves up by the popularity of each series.
+With the library example the easiest thing to do would be to monitor which books get read and then it's easy to work out what books are the most popular. We could then fill all of the shelves so that there is more of the most popular books.
 
 <img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/books_full.png" alt = "A diagram of a book shelf filled with books">
 
@@ -77,11 +77,11 @@ This is fine when the library is busy but most of the time we're using more shel
 
 This way we are only using the space we need to. Unfortunately it also mean it takes people longer to get their books because they have to wait for them to be shelved. Ideally we'd be able to predict the books customers are going to want in advance.
 
-If we track not just which books were taken off the shelf but when it happened and how long they take to read we may be able to predict when as well as which books will be needed. We can then stack the shelves in advance according to our predictions. When people come in, if our predictions were accurate, we can direct them straight to the books they are after.
+If we track not just which books were taken off the shelf but when it happened and how long they take to read we may be able to predict when as well as which books will be needed. We can then stack the shelves ahead of time according to our predictions. When people come in, if our predictions were accurate, we can direct them straight to the books they are after.
 
 <img class="center small-img" src = "{{ site.baseurl }}/img/2017-05-08-What-It-Is-Im-Doing/book_times.png" alt = "A diagram of a portion of two book shelves and a time above each">
 
-Of course our predictions could be wrong and if so customers will still have to wait whilst our colleague prepares the shelf but any time we get something wrong we've learnt something that we can use to improve our estimates.
+Of course our predictions could be wrong. When that happens customers will still have to wait whilst our colleague prepares the shelf but any time we get something wrong we've learnt something that we can use to improve our estimates.
 
 With virtual network functions we can do the same thing. If we monitor when people use a service and how long they usually use it for we can use this information to try and predict how much a service will be being used at a time in the future and make informed decisions. If our decisions then turn out to be wrong we have to be able to reconfigure the different services and update our estimates.
 
