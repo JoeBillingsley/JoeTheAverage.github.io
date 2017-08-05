@@ -2,7 +2,7 @@
 permalink:        /blog/:year/:month/:day/:title
 
 # Highlighter
-highlighter:      pygments
+highlighter:      rogue
 
 # Setup
 title:            Joseph Billingsley
