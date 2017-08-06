@@ -36,4 +36,4 @@ Simple. To get your pin back just mentally cross of the first number and the num
     <span class="muted">3</span> 2 6 <span class="muted">2</span> 5 9
 </p>
 
-This works so long as you don't need to write down for than 9 digits. For numbers longer than that you just can use the first two digits. So 13242... would mean remove the 13th number. Alternatively you could bounce along. So the first number you choose would point to another number which would point to another until you land on a zero. You can make it as complicated as you want but I'd keep just make sure you remember your method!
+This works so long as you don't need to write down for than 9 digits. For numbers longer than that you just can use the first two digits. So 13242... would mean remove the 13th number. Alternatively you could bounce along. So the first number you choose would point to another number which would point to another until you land on a zero. You can make it as complicated as you want so long as you remember your method!
