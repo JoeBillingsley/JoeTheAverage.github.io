@@ -10,9 +10,7 @@ Around the start of this year I was in a pub a few pints down and had just order
 
 Now if I'd had my pin written down somewhere this wouldn't have been a problem but that would mean writing down a rather important number where anyone could find it.
 
-I was thinking about this recently and came up with a very easy way to write down short numbers that keeps them hidden.
-
-It's very simple. The first digit tells you what number to remove. Cross off both of those and then whatevers left is your secret number.
+I was thinking about this recently and came up with a very easy way to write down short numbers that keeps them hidden. It's very simple. The first digit tells you what number to remove. Cross off both of those and then whatevers left is your secret number.
 
 Say you had a 4 digit PIN number you wanted to remember. Say, 2659. First think of a number from 1 to the length of your secret plus 1. In this case that's 1 to 5. Write it down first:
 
