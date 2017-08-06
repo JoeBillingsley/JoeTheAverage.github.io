@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How To Write Down Your Pin 
-excerpt: 
+excerpt: For people who can't remember 4 digit numbers
 category: ideas
 tags: [idea, thoughts, quick]
 ---
