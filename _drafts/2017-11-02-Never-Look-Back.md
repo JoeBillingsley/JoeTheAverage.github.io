@@ -1,4 +1,4 @@
-A man walks down a quiet road. His heavy boots beat a hurried metronome. It is not a night to be out. Even the moon and stars have hidden behind thick cloud. The dim light of his phone barely revealing a metre ahead serves only to light his wisps of breath in the cold night. Behind something rustles in the hedgerow. He glances back to see.
+A man walks down a quiet road. His heavy boots beat a hurried metronome. It is not a night to be out. Even the moon and stars have hidden behind thick cloud. The dim light of his phone barely revealing a metre ahead serves only to light his wisps of breath in the cold night. Behind something rustles in the hedgerow. He glances back to see...
 
 *nothing.*
 

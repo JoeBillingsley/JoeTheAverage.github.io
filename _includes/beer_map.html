@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+crossorigin=""></script>
+
+<style>#beer_map { height: 400px;}</style>
+
+<div id="beer_map"></div>
+
+<script>
+    var beer_map = L.map('beer_map').setView([54.428845, -3.727167], 5);
+
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 16,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1Ijoiam9lYmlsbGluZ3NsZXkiLCJhIjoiY2o5djYzdDNnMWhxMjJ2cG9iYzZmZzl5MyJ9.hOoHCtzze8-YCBodh8tkFQ'
+    }).addTo(beer_map);
+
+    var src = "http://localhost:4000/public_data/beer.json";
+
+    function onEachFeature(feature, layer) {
+        if (feature.properties) {
+            layer.bindPopup(feature.properties.name);
+        }
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET",src,true);
+    xhr.onload = function(e) {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var beers = JSON.parse(xhr.responseText);
+                L.geoJSON(beers,{
+                    onEachFeature: onEachFeature
+                }).addTo(beer_map);
+            } else {
+                console.error(xhr.statusText);
+            }
+        }
+    }
+
+    xhr.send(null);
+</script>
