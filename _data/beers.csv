@@ -1,41 +1,43 @@
-Brewery,Latitude,Longitude
-Guinness,-6.2867093,53.341874
-Bath Ales,-2.5561088,51.4244533
-Brewdog,-2.048320,57.371728
-Black Sheep,-1.6583111,54.2249784
-Crabbies,-3.188522,55.963619
-Thornbridge,-1.6854224,53.2197633
-Wild Beer Company,-2.4683796,51.1487491
-Harviestoun Brewery,-4.7695783,55.6027951
-Fullers,-0.6321623,51.373998
-Tiny Rebel,-3.0539846,51.5905827
-Sharp's Brewery,-4.8912969,50.551845
-Hogs Back Brewery,-0.732317,51.229026
-St Austell Brewery,-4.787767,50.342191
-Weird Beard Beer Co.,-0.3382236,51.4974218
-Belhaven Brewery,-2.538869,55.987010
-Wychwood Brewery,-1.488323,51.783015
-Butcombe Brewery,-2.761441,51.354703
-Greene King,0.717456,52.240894
-Shepherd Neame Brewery,0.891689,51.316711
-Newcastle Brown,-1.7969253,55.0022917
-Courage,-0.986148,51.454911
-McEwan's,-3.239283,55.934081
-Timothy Taylors,-1.9270604,53.8657172
-Innis and Gunn,-4.4438246,55.6181218
-Otter Brewery,-3.1660269,50.8646002
-Boyne Brewhouse,-6.3696619,53.6940349
-Smithwicks Brewery,-7.2684283,52.6473578
-Camden Town Brewery,-0.161562,51.547927
-Gipsy Hill,-0.089409,51.428647
-The Orkney Brewery,-3.335818,59.064292
-Hall and Woodhouse,-2.9525979,50.7897282
-Morland,0.6993711,52.2399723
-Station Works Brewery,-6.255,54.0483108
-McGargles,-6.522238,53.341028
-Ram Brewery,-0.178524,51.440374
-Banks's,-2.139065,52.5848608
-Dartmoor Brewery,-3.998031,50.5444345
-Carlow Brewing Company,-6.976297,52.697154
-Hope Brewery,-6.154304,53.390972
-Meantime Brewing Company,0.0075363,51.4894766
+Brewery,Longitude,Latitude
+Guinness,53.341874,-6.2867093
+Bath Ales,51.4244533,-2.5561088
+Brewdog,57.371728,-2.048320
+Black Sheep,54.2249784,-1.6583111
+Crabbies,55.963619,-3.188522
+Thornbridge,53.2197633,-1.6854224
+Wild Beer Company,51.1487491,-2.4683796
+Harviestoun Brewery,55.6027951,-4.7695783
+Fullers,51.373998,-0.6321623
+Tiny Rebel,51.5905827,-3.0539846
+Sharp's Brewery,50.551845,-4.8912969
+Hogs Back Brewery,51.229026,-0.732317
+St Austell Brewery,50.342191,-4.787767
+Weird Beard Beer Co.,51.4974218,-0.3382236
+Belhaven Brewery,55.987010,-2.538869
+Wychwood Brewery,51.783015,-1.488323
+Butcombe Brewery,51.354703,-2.761441
+Greene King,52.240894,0.717456
+Shepherd Neame Brewery,51.316711,0.891689
+Newcastle Brown,55.0022917,-1.7969253
+Courage,51.454911,-0.986148
+McEwan's,55.934081,-3.239283
+Timothy Taylors,53.8657172,-1.9270604
+Innis and Gunn,55.6181218,-4.4438246
+Otter Brewery,50.8646002,-3.1660269
+Boyne Brewhouse,53.6940349,-6.3696619
+Smithwicks Brewery,52.6473578,-7.2684283
+Camden Town Brewery,51.547927,-0.161562
+Gipsy Hill,51.428647,-0.089409
+The Orkney Brewery,59.064292,-3.335818
+Hall and Woodhouse,50.7897282,-2.9525979
+Morland,52.2399723,0.6993711
+Station Works Brewery,54.0483108,-6.255
+McGargles,53.341028,-6.522238
+Ram Brewery,51.440374,-0.178524
+Banks's,52.5848608,-2.139065
+Dartmoor Brewery,50.5444345,-3.998031
+Carlow Brewing Company,52.697154,-6.976297
+Hope Brewery,53.390972,-6.154304
+Meantime Brewing Company,51.4894766,0.0075363
+Adnams,52.3225989,1.6549623
+St Peters Brewery,52.3496763,1.2413367
