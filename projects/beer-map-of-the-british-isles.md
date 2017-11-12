@@ -1,12 +1,12 @@
 ---
 layout: project
-title: Make a beer map of Britain
+title: Make a beer map of the British Isles
 category: me
-description: Create a map of britain using bottle caps from regional beers
+description: Create a map of the British Isles using bottle caps from regional beers
 tags: [beer]
 ---
 ### The Project
-I'm working (if it can be called working) to create a map of britain using bottle caps from regional beers. That mainly involves getting obscure beers from across the country and drinking them. There are a few rules:
+I'm working (if it can be called working) to create a map of the British Isles using bottle caps from regional beers. That mainly involves getting obscure beers from across the country and drinking them. There are a few rules:
 
 <ol>
     <li>Only one beer from each brewery</li>
