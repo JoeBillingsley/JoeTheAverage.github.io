@@ -1,0 +1,25 @@
+--- 
+layout: default 
+---
+
+<div class="middle">
+
+<section class="blog">	
+	<div>
+		<h1>{{ page.title }}</h1>	
+		Started <time class="date" datetime="{{ page.date | '%Y-%m-%d' }}">
+			{{ page.date | date: "%d %b %Y" | upcase }}
+		</time>
+    </div>
+
+    <div>
+        <h2>The Project</h2> 
+        {{ page.description }}
+    </div>
+
+	<article>
+		{{ content }}
+	</article>
+</section>
+
+</div>
