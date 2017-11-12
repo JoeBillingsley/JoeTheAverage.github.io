@@ -23,7 +23,8 @@ So far I've managed to get beers from {{ site.data.beers | size }} different bre
 
 The list contains a couple of beers as well as different breweries. This is because smaller breweries are always being bought up by bigger companies, particular in the last 20 years or so, but the beers seem too important to exclude. Currently I've got bottle caps from:
 <ul>
-    {% for beer in site.data.beers %}
+    {% assign beers = site.data.beers | sort: 'Brewery' %}
+    {% for beer in beers %}
         <li>{{ beer.Brewery}}</li>
     {% endfor %}
 </ul>
