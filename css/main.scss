@@ -175,6 +175,22 @@ time {
     margin: 0;
 }
 
+.split-list {
+    list-style-type: disc;
+
+    @media only screen and (min-width: 768px) {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+    }
+
+    @media only screen and (max-width: 767px) {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+    }
+}
+
 img {
     max-width: 100%;
     display: block;
