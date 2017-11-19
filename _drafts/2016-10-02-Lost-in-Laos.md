@@ -26,16 +26,14 @@ Once there it is rather peaceful. The engine rumbles gently, the water stroking 
 
 ![Looking down river]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161002_152234835.jpg "Looking down river")
 
-![Yet more river]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161003_115713034.jpg "Yet more river")
-
 After 4 hours of stunning scenery and with no end in sight I was thoroughly bored of looking out the window of a boat. Luckily the state owned brewery produces a surprisingly good beer (one point for communism) and after a few Beerlao's the hours just sailed by.
-
-![The halfway village where we stopped for the night]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161003_084000297_HDR.jpg "The halfway village where we stopped for the night")
 
 ## Luang Prabang
 
 ### Arrival
 Two days later, including a nights rest at a purpose built village halfway, we were finally approaching our destination. The boat stopped at a makeshift dock just outside of town where tuk tuks wait to transport (and charge) people the last mile.
+
+![The halfway village where we stopped for the night]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161003_084000297_HDR.jpg "The halfway village where we stopped for the night")
 
 The river itself winds all the way through Luang Prabang and we soon found ourselves walking along it as the sun started to set. It's a confusing place at times, full of winding roads and ever changing architecture. National and communist flags sway gently from the eaves of stern French colonial buildings. The regular measured designs of the European buildings in stark contrast to the flowing shapes of the many temples.
 
@@ -125,8 +123,6 @@ The sun was threatening to set on us on the return leg of the cycle. Shortly aft
 
 ### Leaving
 The day we left I was up once more. I headed to the morning market as usual. The frogs were still looking well but the snake was especially still today having had it's head removed. I picked up some of the coconut puffs. Everything was going well. Usually at this point I'd head back to the hostel to sleep or into town to walk and, well, sleep but today we had a bus to catch so there was no sense heading to a restaurant. In front of me I saw a sign that I thought read 'Pad Kapow - 5000'. It sounded a bit made up but it was cheap, I was curious and the stall hadn't let me down so far so I went for it.
-
-![The fateful meal]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161010_085031677.jpg "The fateful meal")
 
 Back at the hostel I pried open the styrofoam box containing my mysterious meal. Inside lay a mound of sticky rice and a glorious pile of meat and chilli. Lots of chilli. We'd eaten a lot of hot food on our travels so far but this one was dangerously hot. Worse beneath all that chilli was quite possibly the best meal I've eaten. Definitely for the trip. Possibly ever.
 
