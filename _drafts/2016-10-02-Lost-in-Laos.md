@@ -33,9 +33,9 @@ After 4 hours of stunning scenery and with no end in sight I was thoroughly bore
 ### Arrival
 Two days later, including a nights rest at a purpose built village halfway, we were finally approaching our destination. The boat stopped at a makeshift dock just outside of town where tuk tuks wait to transport (and charge) people the last mile.
 
-![The halfway village where we stopped for the night]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161003_084000297_HDR.jpg "The halfway village where we stopped for the night")
-
 The river itself winds all the way through Luang Prabang and we soon found ourselves walking along it as the sun started to set. It's a confusing place at times, full of winding roads and ever changing architecture. National and communist flags sway gently from the eaves of stern French colonial buildings. The regular measured designs of the European buildings in stark contrast to the flowing shapes of the many temples.
+
+![Local monks building a boat for a river festival]({{ site.baseurl }}/img/2016-10-02-Lost-in-Laos/IMG_20161004_164327565.jpg "Local monks building a boat for a river festival")
 
 We eventually found a guesthouse halfway down a wide and winding alley. More traditionally it would have been a road but both sides of it were lined with stalls leaving barely enough space for foot traffic. At this time of night the alley is full of food to suit any appetite whether you want something BBQ'd black or prefer your dinner still wriggling. Nestled under a small arch was a small mountain of food: bowls of rice the size of a car wheel, heaps of fresh BBQ'd meat, spicy sauces - and a splash of vegetables for decoration. I didn't recognise half of what ended up on my plate but it all tasted excellent.
 
