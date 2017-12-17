@@ -30,7 +30,7 @@ He paces. Faster now. The weight grows heavier. Hands on his shoulders. Ice form
 
 Ahead the safety of street lights. The promise of people pulling him in. Faster, faster out of the night. 
 
-He barges through the wooden gate. It squeels in protest as it swings back and goes silent suddenly. The weight is a vice now. Pressing down, following the ice into his chest. Hands down his throat. Trying to force him to his knees. 
+He barges through the wooden gate. It squeels in protest as it swings back and goes silent suddenly. The weight is a vice now. Pressing down. Following the ice into his chest, down his throat. Trying to force him to his knees.
 
 To break. To scream. To look. 
 
