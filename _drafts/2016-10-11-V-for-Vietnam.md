@@ -6,6 +6,17 @@ category: travel
 tags: [travel, backpacking]
 ---
 
+## Vietnam
+Bear Grylls analogy. What Bear Grylls would throw together if he was lost in a city.
+
+Crossing the road in Vietnam is like walking through a flock of birds. 
+
+The sky cracked open and rain poured out. When the lightning struck it sounded like concrete snapping, like a building being broken clean in half.
+
+A gecko crawled up the wall. 
+
+We'd missed the flights and now I had the shits. Only then did I realise how much I was looking forward to getting back. I'd really enjoyed the trip and there was a lot I was leaving behind but I missed a lot of home too. I missed safe roads, cheddar, good Indian curry, wearing jumpers, crappy TV and poo's that didn't come out like herbal tea. I missed cold air and the way your breath frosts on cold nights. I missed home and my family.
+
 ## Hanoi
 
 ### Lego-land

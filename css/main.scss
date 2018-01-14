@@ -144,6 +144,10 @@ time {
     @include font-size(1.2);
 }
 
+.float-right {
+    float: right;
+}
+
 .front {        
     position: relative;
     z-index: 9999;
@@ -335,6 +339,14 @@ hr {
     border-top: 1px dashed;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.map {
+    height: 400px;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide {
+    display: none;
 }
 
 /* Row of content */
