@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Metaheuristics by Example - An Introduction
+title: Modern Metaheuristics - An Introduction
 excerpt: An introduction to my favourite topic in computer science
 category: travel
 tags: [metaheuristics, practical, example]
@@ -8,11 +8,15 @@ include_leaflet: true
 include_leaflet_routing: true
 ---
 
-If you've not studied computer science you probably won't have heard of metaheuristics. They're currently sitting in relative obscurity like machine learning was till recently. Metaheuristics are a tool for solving hard and hard to define problems. They've been used to solve some incredibly complex problems in [space](https://www.nasa.gov/centers/ames/research/technology-onepagers/evolvable_systems.html), [robotics](https://hackaday.com/2016/03/14/making-dumb-robots-evolve/), [timetabling](https://arxiv.org/pdf/cs/0510091.pdf) - I'm using them now for solving a very large telecommunications problem.
+Metaheuristics are a tool for solving hard and hard to define problems. They've been used to solve some incredibly complex problems in [space](https://www.nasa.gov/centers/ames/research/technology-onepagers/evolvable_systems.html), [robotics](https://hackaday.com/2016/03/14/making-dumb-robots-evolve/), [timetabling](https://arxiv.org/pdf/cs/0510091.pdf) - I'm using them now for solving a very large telecommunications problem, but so far they have not been adopted widely outside of academia and so the majority of work on this topic has sat in relative obscurity.
 
-Recently there has been renewed interest in their potential for tuning machine learning algorithms. The most famous of which is probably a method Google is investigating for [training deep mind](https://deepmind.com/blog/population-based-training-neural-networks/). Like machine learning, metaheuristics have been around since the 1960s and just like machine learning we've not even begun to realise their potential. I have money on them being the 'Next Big Thing' which is why I'm studying them, and if you want to get out in front then so should you.
+Recently there has been renewed interest in their potential for [tuning machine learning algorithms](https://deepmind.com/blog/population-based-training-neural-networks). This is the kind of problem that metaheuristics really excel at solving and stands to bring them back into the spotlight.
 
-My main research interest is in a subfield of metaheuristics called evolutionary algorithms but we can't jump into those without providing some background first. These first few posts are intended to be a primer on the most important concepts common across the metaheuristics field and then we'll branch out from there to all sorts of cool places.
+In this series of posts I'd like to provide a practical guide for a newcomer to metaheuristics of all kinds. To that extent wherever we can we will be solving real problems which really demonstrate the utility of metaheuristics. It also means being clear on the limits of these algorithms as much as their potential, and illuminating hidden assumptions and potential pitfalls wherever we find them. 
+
+More than this though I want to help you develop a intuition of how these algorithms because until you can 'see' the algorithms play out in your head so that you can understand, reason and predict their behaviour then you cannot get the best from them.
+
+These first few posts are intended to be a primer on the most important concepts common across the metaheuristics field and then from there we can work towards some really fascinating areas.
 
 If you've read any of the rest of my blog you'll probably have gathered that I like beer. For a long time I've been meaning to build a tool to combine two of my passions and produce a pub crawl planner. In the first part of this series that dream will finally be realised. In computer science this is called the 'travelling salesman problem' but I think this particular variant is probably better described as the 'shambling student problem'
 
