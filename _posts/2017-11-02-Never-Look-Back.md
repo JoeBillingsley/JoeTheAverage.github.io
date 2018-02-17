@@ -34,7 +34,7 @@ He barges through the wooden gate. It squeels in protest as it swings back and g
 
 To break. To scream. To look. 
 
-The blare of a horn cuts the night air and the pressure eases. The train rumbles past and with the screech of breaks it slows down. A few bored faces slide by. The door opens agonisingly slowly. He steps inside and feels the weight evaporate from his shoulders. He shakes his head loose and catches a glimpse of a girl and a smile as the doors shut tight behind him. The carriage shudders as the train takes off and he turns to face the way he had come. 
+The blare of a horn cuts the night air and the pressure eases. The train rumbles past and with the screech of brakes it slows down. A few bored faces slide by. The door opens agonisingly slowly. He steps inside and feels the weight evaporate from his shoulders. He shakes his head loose and catches a glimpse of a girl and a smile as the doors shut tight behind him. The carriage shudders as the train takes off and he turns to face the way he had come. 
 
 <br>
 <br>
