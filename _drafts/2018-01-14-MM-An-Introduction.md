@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modern Metaheuristics - An Introduction
+title: An Introduction to Modern Metaheuristics
 excerpt: An introduction to my favourite topic in computer science
 category: travel
 tags: [metaheuristics, practical, example]
@@ -8,36 +8,48 @@ include_leaflet: true
 include_leaflet_routing: true
 ---
 
-Metaheuristics are a tool for solving hard and hard to define problems. They've been used to solve some incredibly complex problems in [space](https://www.nasa.gov/centers/ames/research/technology-onepagers/evolvable_systems.html), [robotics](https://hackaday.com/2016/03/14/making-dumb-robots-evolve/), [timetabling](https://arxiv.org/pdf/cs/0510091.pdf) - I'm using them now for solving a very large telecommunications problem, but so far they have not been adopted widely outside of academia and so the majority of work on this topic has sat in relative obscurity.
+Metaheuristics are a tool for solving hard and hard to define problems. They've been used to solve complex problems in [space](https://www.nasa.gov/centers/ames/research/technology-onepagers/evolvable_systems.html), [robotics](https://hackaday.com/2016/03/14/making-dumb-robots-evolve/) and [machine learning](https://deepmind.com/blog/population-based-training-neural-networks). **A good metaheuristics can find near optimal solutions to any problem you can throw at it**.
 
-Recently there has been renewed interest in their potential for [tuning machine learning algorithms](https://deepmind.com/blog/population-based-training-neural-networks). This is the kind of problem that metaheuristics really excel at solving and stands to bring them back into the spotlight.
-
-In this series of posts I'd like to provide a practical guide for a newcomer to metaheuristics of all kinds. To that extent wherever we can we will be solving real problems which really demonstrate the utility of metaheuristics. It also means being clear on the limits of these algorithms as much as their potential, and illuminating hidden assumptions and potential pitfalls wherever we find them. 
-
-More than this though I want to help you develop a intuition of how these algorithms because until you can 'see' the algorithms play out in your head so that you can understand, reason and predict their behaviour then you cannot get the best from them.
-
-These first few posts are intended to be a primer on the most important concepts common across the metaheuristics field and then from there we can work towards some really fascinating areas.
-
-If you've read any of the rest of my blog you'll probably have gathered that I like beer. For a long time I've been meaning to build a tool to combine two of my passions and produce a pub crawl planner. In the first part of this series that dream will finally be realised. In computer science this is called the 'travelling salesman problem' but I think this particular variant is probably better described as the 'shambling student problem'
-
-Below is a map with all the best pubs in Exeter marked onto it. Your task is to find the shortest route that stops at every pub, starting from a pub of your choosing. 
-
-*Click to select a pub, click again to path to it.*
+This series of posts is intended to introduce you to the fundamentals of this powerful tool. I want to provide a simple foundation that we can build on in future posts, exploring more complex parts of this fascinating topic. We'll also be laying out the many caveats to that bold statement I made a moment ago. Most importantly though we'll be applying these algorithms to real world problems wherever possible. In this first post we'll be discussing the most important property of metaheuristics: their complete *apathy* about your problems.
 
 <hr>
+
+We'll start with the most important real world problem I can think of. For a long time I've been meaning to build a tool to combine two of my passions and produce a pub crawl planner. In the first part of this series that dream will finally be realised. In computer science this is called the 'travelling salesman problem' but I think this particular variant is probably better described as the 'stumbling student problem'
+
+Below is a map with all the best pubs in Exeter marked onto it. Your task is to find the shortest route that stops at every pub, starting from a pub of your choosing.
+
+*Click to select a pub, click another to path to it.*
+
 <p>
     Distance walked <span id="dist"></span> metres
 </p>
 <div class="map hide_routes" id="exeter_pub_map"></div>
 
 <input type="Button" onclick="reset()" value="Reset">
-<hr>
 
 <script>
     var pub_map = L.map('exeter_pub_map', {
         maxZoom: 20,
         minZoom: 14
     })
+
+    var defaultIcon = new L.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    var usedIcon = new L.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
     pub_map.setView([50.726774,-3.528914], 15);
 
@@ -93,50 +105,11 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
         }
     ]
 
-    pubs = [
-        {
-            title: "The Imperial",
-            coordinates: L.latLng(50.7302616, -3.5420546),
-        },
-        {
-            title: "Mill on the Exe",
-            coordinates: L.latLng(50.7220074,-3.5404234),
-        },
-        {
-            title: "The Chevalier Inn",
-            coordinates: L.latLng(50.7226647,-3.5350497),
-        },
-        {
-            title: "The Angel",
-            coordinates: L.latLng(50.7247973,-3.5341429),
-        },
-        {
-            title: "Black Horse",
-            coordinates: L.latLng(50.7252184,-3.5315411)
-        },
-        {
-            title: "The Globe",
-            coordinates: L.latLng(50.7288359,-3.5279128)
-        },
-        {
-            title: "Stoke Arms",
-            coordinates: L.latLng(50.7310101,-3.5279378)
-        },
-        {
-            title: "Ram Bar",
-            coordinates: L.latLng(50.735416,-3.536568)
-        },
-        {
-            title: "Victoria Inn",
-            coordinates: L.latLng(50.7334461,-3.5246085)
-        }
-    ]
-
-    reset();
-
     var osrm = L.Routing.osrmv1();
     var path_markers = []
     var route; 
+
+    var placed_markers = [];
 
     for (var i = 0; i < pubs.length; i++) {
         var marker = L.marker(pubs[i].coordinates);
@@ -146,8 +119,10 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
         marker.on('click', function(e) {
             var pub = pubs[this.id];
 
-            if(pub.selected) 
+            if(pub.selected)
                 return;
+
+            this.setIcon(usedIcon);
 
             var waypoint = new L.Routing.Waypoint(pubs[this.id].coordinates);
             path_markers.push(waypoint);
@@ -170,12 +145,15 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
         });
 
         marker.addTo(pub_map);
+        placed_markers.push(marker);
     }
 
     function reset() {
         for (var i = 0; i < pubs.length; i++) {
             pubs[i].selected = false;
             path_markers = [];
+
+            placed_markers[i].setIcon(defaultIcon);
 
             if(pub_map.hasLayer(route))
                 pub_map.removeLayer(route);
