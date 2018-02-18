@@ -105,7 +105,11 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
         }
     ]
 
-    var osrm = L.Routing.osrmv1();
+    var osrm = L.Routing.osrmv1({
+            serviceUrl: 'http://159.65.31.150/exeter/route/v1',
+            profile: "walking"
+        });
+
     var path_markers = []
     var route; 
 
