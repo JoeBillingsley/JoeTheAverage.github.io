@@ -111,7 +111,7 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
         });
 
     var path_markers = []
-    var route; 
+    var route;
 
     var placed_markers = [];
 
@@ -135,7 +135,7 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
                 if(routes == null)
                     return
 
-                document.getElementById("dist").textContent 
+                document.getElementById("dist").textContent
                     = Math.round(routes[0].summary.totalDistance);
 
                 if(pub_map.hasLayer(route))
@@ -167,19 +167,20 @@ Below is a map with all the best pubs in Exeter marked onto it. Your task is to 
     }
 </script>
 
-I'm going to guess that you tried one of three things just now:
+I expect you found it fairly easy to find a good solution... but how confident are you that you found the best solution? The easiest way to know for sure would be to try every possible sequence of pubs. We can write a simple algorithm to iterate over all of the possible combinations.
 
-1. You randomly connected a bunch of pubs
-2. You picked the closest next pub each time
-3. You tried every possible combination of pubs
+[]
+ 
+There are 9! or 362880 unique sequences of pubs for this small example (9 pubs initially, 8 after the first decision and so on). A pretty hefty number for a human but nothing for a modern PC. My 5 year old laptop churned out this optimal solution in around _ minutes:
 
-I sincerely hope you didn't try option 3 as by my calculations there is 362880 different combinations even for this simple problem. For a computer thats not too bad and we can evaluate all of the different combinations fairly quickly.
-
-
+[]
 
 But Exeter is a pretty boozy town and there's around 60 places you can get a drink within reasonable walking distance of the town centre. That works out at about 8.3x10<supscript>81</supscript> (or 8 followed by 81 zeros) different combinations. Maybe a supercomputer could calculate that in an acceptable amount of time but on my old laptop we'd be waiting a lifetime.
 
-A good idea would be to think of some sensible process of choosing the pubs. In computer science this is called a heuristic. It's a way of solving a particular problem that gives us a sufficiently good solution, if not an optimal one, fast. The most obvious heuristic is to go to the nearest pub from the previous one. Running this on the full platter of pubs gives us a decent result within _ % of the optimal solution:
+The thing is we probably don't really need the best possible route for our pub crawl. All we're really interested in is the best solution we can get in a reasonable time.
+
+This is where heuristics come in. A heuristic is any algorithm that employs a method of finding a solution that whilst not necessarily optimal, is sufficient for our needs. In this case our 'needs' are a decent pub crawl route that doesn't feel silly and maybe a kebab after.
+
 
 
 The problem is there's no guarantee that such a simple algorithm will find the true best solution, or even a particularly good one. As an example consider this theoretical layout of pubs:
