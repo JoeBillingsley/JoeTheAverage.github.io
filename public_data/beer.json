@@ -3,7 +3,7 @@
 {
     "type": "FeatureCollection",
     "features": [
-    {% for beers in site.data.beers %}
+    {% for beers in site.data.aqcuired_beers %}
         { 
             "type": "Feature",
             "properties": {
