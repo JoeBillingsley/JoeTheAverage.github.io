@@ -21,9 +21,19 @@ So far I've managed to get beers from {{ site.data.beers | size }} different bre
 
 {% include beer_map.html %}
 
-The list contains a couple of beers as well as different breweries. This is because smaller breweries are always being bought up by bigger companies, particular in the last 20 years or so, but the beers seem too important to exclude. Currently I've got bottle caps from:
+The list contains a couple of beers as well as different breweries. This is because smaller breweries are always being bought up by bigger companies but these beers seem too important to exclude. Currently I've got bottle caps from:
 <ul class="split-list">
     {% assign beers = site.data.acquired_beers | sort: 'Brewery' %}
+    {% for beer in beers %}
+        <li>{{ beer.Brewery}}</li>
+    {% endfor %}
+</ul>
+
+### Wish List
+There are also a tonne of beers I'm still after. The following are all ones I'm fairly confident have custom bottlecaps:
+
+<ul class="split-list">
+    {% assign beers = site.data.wish_list_beers | sort: 'Brewery' %}
     {% for beer in beers %}
         <li>{{ beer.Brewery}}</li>
     {% endfor %}
