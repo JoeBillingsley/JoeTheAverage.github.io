@@ -17,7 +17,7 @@ I'm working (if it can be called working) to create a map of the British Isles u
 The first two rules are make sure the map looks interesting. The last one is because I like beer.
 
 ### Progress
-So far I've managed to get beers from {{ site.data.beers | size }} different breweries. A bit of rough maths puts the target at either 150 to to make an A3 sized map of britain or 300 for an A2 sized one.
+So far I've managed to get beers from {{ site.data.acquired_beers | size }} different breweries. A bit of rough maths puts the target at either 150 to to make an A3 sized map of britain or 300 for an A2 sized one.
 
 {% include beer_map.html %}
 
