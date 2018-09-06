@@ -11,7 +11,7 @@ I'm working (if it can be called working) to create a map of the British Isles u
 <ol>
     <li>Only one beer from each brewery</li>
     <li>The beer must have an interesting bottlecap</li>
-    <li>I have to have actually drunk the beer the cap comes froms</li>
+    <li>I have to have actually drunk the beer the cap comes from</li>
 </ol>
 
 The first two rules are make sure the map looks interesting. The last one is because I like beer.
