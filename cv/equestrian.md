@@ -18,7 +18,7 @@ tags: [cv, equestrian, horses]
         Hold riding insurance through the BHS.
     </li>
     <li>
-        Looking to explore opportunities outside of traditional dressage.
+        Looking to develop overall horsemanship and knowledge of care and riding.
     </li>
     <li>
         Currently in Ipswich working with BT to develop novel algorithms for computer resource management in next generation telecommunications networks.
