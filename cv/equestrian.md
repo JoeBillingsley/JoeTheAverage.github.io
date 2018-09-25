@@ -12,7 +12,7 @@ tags: [cv, equestrian, horses]
         Started riding in September 2014. Since had weekly lessons at stables across the UK supported by work in stables around the world.
     </li>
     <li>
-        Comfortable at walk, trot and canter. Ridden young and spooky horses and on all terrains including gallops.
+        Comfortable at all paces. Ridden young and spooky horses and on all terrains including gallops.
     </li>
     <li>
         Hold riding insurance through the BHS.
