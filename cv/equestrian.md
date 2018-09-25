@@ -29,15 +29,21 @@ tags: [cv, equestrian, horses]
 <ul class="jobs">
 
 <li class="job-item">
-    <h3 class="job-title">???</h3>
+    <h3 class="job-title">Sharer</h3>
     <time datetime="2017-07-27">27.07.17</time> - <time datetime="2018-09-20">20.09.18</time>
     <span class="job-location">University of Exeter, Devon, England</span>
     <p class="job-description">
-        ???
+        Shared a Connemara mare, hacking out twice a week for over a year to keep her fit for the owner competing at ODEs. 
     </p>
     <ul>
         <li>
-            ???
+            Took responsibility for the care and well being of the mare including mucking out regularly over winter.
+        </li>
+        <li>
+            Hacked out safely on busy roads and trails in all weathers.
+        </li>
+        <li>
+            Competed a dressage prelim test 60+.
         </li>
     </ul>
 </li>
