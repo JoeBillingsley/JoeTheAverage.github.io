@@ -21,7 +21,7 @@ tags: [cv, equestrian, horses]
         Committed to improving. Always seeking opportunities to develop.
     </li>
     <li>
-        Current in Ipswich working with BT to develop novel algorithms for computer resource management in next generation telecommunications networks.
+        Currently in Ipswich working with BT to develop novel algorithms for computer resource management in next generation telecommunications networks.
     </li>
 </ul>
 
