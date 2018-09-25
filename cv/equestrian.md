@@ -6,7 +6,7 @@ excerpt: A summary of my horse riding ability
 tags: [cv, equestrian, horses]
 ---
 
-### Summary
+## Summary
 <ul>
     <li>
         Started riding in September 2014. Since had weekly lessons at stables across the UK supported by work in stables around the world.
@@ -24,22 +24,22 @@ tags: [cv, equestrian, horses]
     </li>
 </ul>
 
-### Experience
+## Experience
 <ul class="jobs">
 
 <li class="job-item">
-    <div class="job-title">PhD Student</div>
+    <h3 class="job-title">PhD Student</h3>
     <time datetime="2018-04-03">03.04.18</time> - <time>Now (Graduating 2021)</time>
-    <div class="job-location">University of Exeter, Devon, England</div>
+    <span class="job-location">University of Exeter, Devon, England</span>
     <p class="job-description">
         Working with BT to develop novel algorithms for computer resource management in next generation telecommunications networks.
     </p>
 </li>
 
 <li class="job-item">
-    <div class="job-title">Volunteer Stable Hand</div>
+    <h3 class="job-title">Volunteer Stable Hand</h3>
     <time datetime="2017-02-06">06.02.17</time> - <time datetime="2017-03-08">08.03.2017</time>
-    <div class="job-location">Rathturtin Stud, Co Wexford, Ireland</div>
+    <span class="job-location">Rathturtin Stud, Co Wexford, Ireland</span>
     <p class="job-description">
         Working with BT to develop novel algorithms for computer resource management in next generation telecommunications networks.
     </p>
@@ -63,9 +63,9 @@ tags: [cv, equestrian, horses]
 </li>
 
 <li class="job-item">
-    <div class="job-title">Volunteer Stable Hand</div>
+    <h3 class="job-title">Volunteer Stable Hand</h3>
     <time datetime="2016-11-16">16.11.16</time> - <time datetime="2016-12-14">14.12.16</time>
-    <div class="job-location">Siberian Adventures Northern Sweden, Järvsand, Sweden</div>
+    <span class="job-location">Siberian Adventures Northern Sweden, Järvsand, Sweden</span>
     <p class="job-description">
         1 month residential work assisting in caring for several horses, including Icelandic ponies, and 75 sled dogs. 
     </p>
@@ -80,12 +80,12 @@ tags: [cv, equestrian, horses]
             Mucked out pasture and shelters.
         </li>
     </ul>
-<li>
+</li>
 
 <li class="job-item">
-    <div class="job-title">Volunteer Stable Hand</div>
+    <h3 class="job-title">Volunteer Stable Hand</h3>
     <time datetime="2015-08-26">26.08.15</time> - <time datetime="2015-09-17">17.09.15</time>
-    <div class="job-location">Kamelreiten, Eitental, Austria.</div>
+    <span class="job-location">Kamelreiten, Eitental, Austria.</span>
     <p class="job-description">
         3 week residential work caring for several horses and ponies, several camels and a flock of rhea birds.
     </p>
