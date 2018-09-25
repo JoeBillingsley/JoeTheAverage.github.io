@@ -43,7 +43,7 @@ tags: [cv, equestrian, horses]
             Hacked out safely on busy roads and trails in all weathers.
         </li>
         <li>
-            Competed a dressage prelim test 60+.
+            In our first ever dressage outing we received 60+% in the Intro A test.
         </li>
     </ul>
 </li>
