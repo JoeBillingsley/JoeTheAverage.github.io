@@ -1,0 +1,19 @@
+---
+---
+{
+    "type": "FeatureCollection",
+    "features": [
+    {% for beers in site.data.acquired_beers_100 %}
+        { 
+            "type": "Feature",
+            "properties": {
+                "name":"{{beers.Brewery}}"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [{{beers.Latitude}}, {{beers.Longitude}}]
+            }
+        }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+    ]
+}
