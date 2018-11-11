@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 100/300
+title: 100 Bottlecaps Collected!
 category: me
 description: Beers to celebrate!
 tags: [beer, map]
@@ -159,3 +159,6 @@ We don't do many fruit beers in this country but <b>Samuel Smith's</b> do a few 
 
 #### Best Beer?
 Don't make me choose. Maybe when we get to 300. Maybe.
+
+## 100 down. 200 to go
+I've got a long way to go to make this map a reality and it's only going to get more difficult from here. If you know of any beers that I'm missing or you can help in some other way - please get in touch! My contact details should be just down there &darr;&darr;&darr;
