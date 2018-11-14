@@ -5,7 +5,7 @@ category: me
 description: Beers to celebrate!
 tags: [beer, map]
 ---
-In this historic moment, surely to be met with celebrations around the globe - I've collected roughly a third of the material needed to build a map of the British Isles out of beer bottle caps. Now seems a good a time as any to have a quick look the progress that has been made over the last year and a half (-ish).
+As of one beer ago, I've now collected roughly a third of the material needed to build a map of the British Isles out of beer bottle caps. Now seems a good a time as any to have a quick look the progress that has been made over the last year and a half (-ish).
 
 ## The Map
 <!-- Beer map  -->
