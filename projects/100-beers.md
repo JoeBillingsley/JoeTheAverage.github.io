@@ -156,7 +156,7 @@ This one really took me by surprise. Hidden away in a narrow shelf next to the c
 If I really had to choose just the one beer to have for ever more, it would be have to one of the Adnams Brewery beers. I know it's not particularly exciting as far as beer goes but I could drink Ghost Ship for days and never get tired of it.
 
 #### &#9733; Most Unusual
-We don't do many fruit beers in this country but Samuel Smith's do a few fruit beers that are nice to mix things up - especially if you're not a typical beer drinker or don't like something too bitter. They can be a bit tricky to come across here but are apparently pretty well known up north. Maybe it's not as grim up there as I've been told...
+We don't do many fruit beers in this country but Samuel Smith's do a few very good ones that are nice to mix things up. They can be a bit tricky to come across here but are apparently pretty well known up north. Maybe it's not as grim up there as I've been told...
 
 #### &#9733; Best with Mint Ice Cream
 Cheddar Brewery. Just trust me with this one. I think mine was Gorge Best but I'm not 100% sure about that. If you get the opportunity just buy a bunch of their beer and ice cream. Honestly, even if they weren't such a good match that'll never be a bad decision.
