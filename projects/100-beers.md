@@ -5,7 +5,7 @@ category: me
 description: Beers to celebrate!
 tags: [beer, map]
 ---
-In a historic moment which will surely be met with celebrations over the globe - I've collected roughly a third of the material needed to build a map of the British Isles out of beer bottle caps. Now seems a good a time as any to have a quick look the progress that has been made over the last year and a half (-ish).
+In this historic moment, surely to be met with celebrations around the globe - I've collected roughly a third of the material needed to build a map of the British Isles out of beer bottle caps. Now seems a good a time as any to have a quick look the progress that has been made over the last year and a half (-ish).
 
 ## The Map
 <!-- Beer map  -->
@@ -55,7 +55,7 @@ crossorigin=""></script>
 </script>
 <!-- /Beer map  -->
 
-Overall the map is looking diverse with caps from all over the place. I was worried that there would be a bit of a bias towards the south (since that's where I've been living) and while that is present it doesn't look like it'll be too much of an issue. A bigger problem is that (surprisingly enough) breweries tend to congregate near large population centres. So whilst I've got far too many bottlecaps from London already (13% are in greater London) it's looking like getting caps from the Scottish highlands may be a bit of a challenge.
+Overall the map is looking diverse with caps from all over the place. I was worried that there would be a bit of a bias towards the south (since that's where I've been living) and while that is present it doesn't look like it'll be too much of an issue. A bigger problem is that (surprisingly enough) breweries tend to congregate near large population centres  so whilst I've got far too many bottlecaps from London already getting beers from the Scottish highlands is proving a bit of a challenge.
 
 ## The Progress
 I've been tracking the progress of this map on github which means I can look at the revision history and see what beers I drank and when. Unfortunately I didn't think to start documenting everything properly until I was about 40 beers. Anyway, here's a graph: 
@@ -108,6 +108,7 @@ var myChart = new Chart(ctx, {
                     {x: new Date(2018, 10, 09), y: 96},
                     {x: new Date(2018, 10, 21), y: 98},
                     {x: new Date(2018, 10, 24), y: 99},
+                    {x: new Date(2018, 11, 14), y: 100},
             ],
             backgroundColor: [
                 'rgba(54, 162, 235, 0.2)'
@@ -142,22 +143,25 @@ var myChart = new Chart(ctx, {
 ## Awards
 I don't believe in bad beer but there are certainly some that are more excellent than others. So despite me being vastly underqualified for the position - it's time for the 1st Official Billingsley Beer Awards!
 
-#### Best Caps
-There's a lot of good caps in this list but to my mind there's only two real contenders here: <b>Robinsons</b> their collection of Iron Maiden caps, and <b>Weird Beard</b> who have some crazy looking things. Weird Beard wins out for me just because of the madness of the designs (and I like their beers more).
+#### &#9733; 100th Beer
+Also the winner of the questionably prestigious <i>Most Expensive</i> beer award, this one goes to Beavertown and their Tempus Project beer Metamorph. At around £24 a litre (~£8 for 330ml bottle) it's probably the most expensive drink I've bought sober. That said it was very good - perhaps not £8 a bottle good - but very good.
 
-#### Best Hidden
-This one really took me by surprise. Hidden away in a narrow shelf next to the counter of  Hopsters bottleshop in Ipswich, was a fairly generic looking traditional ale from <b>Old Chimney's</b>. More knowledgeable drinkers than me will know that this isn't any ordinary brewery. It turns out the Old Chimneys stout currently tops the RateBeer rankings for England and was at one time the only British beer in the top 50 worldwide. Turns out it's just particularly difficult to get hold of since, as far as I can tell, it's a one man passion project in a small town north of Ipswich. It deserves an honourary mention for 'best cap' too - from what I can tell the caps are all standard black caps with a sticker put on each and every one.
+#### &#9733; Best Caps
+There's a lot of good caps in this list but to my mind there's only two real contenders here: Robinsons with their collection of Iron Maiden caps, and Weird Beard who have some crazy but clever designs. Weird Beard wins out for me just because of the madness of the designs (and I like their beers more).
 
-#### Desert Island Beer
-If I really had to choose just the one beer to have for ever more, it would be have to one of the <b>Adnams Brewery</b> beers. I know there not particularly exciting as far as beer goes, but I could drink Ghost Ship for days and never get tired of it.
+#### &#9733; Best Hidden
+This one really took me by surprise. Hidden away in a narrow shelf next to the counter of  Hopsters bottleshop in Ipswich, was a fairly generic looking traditional ale from Old Chimney's. More knowledgeable drinkers than me might know that this isn't any ordinary brewery. The Old Chimneys stout currently tops the RateBeer rankings for England and was at one time the only British beer in the top 50 worldwide. The beers are apparently particularly tricky to get hold of as, as far as I can tell, it's a one man passion project in a small town north of Ipswich. It deserves an honourary mention for <i>best cap</i> too - someone has put a sticker on by hand on each and every one.
 
-#### Most Different
-We don't do many fruit beers in this country but <b>Samuel Smith's</b> do a few fruit beers that are nice to mix things up - especially if you're not a typical beer drinker or don't like something too bitter. They can be a bit tricky to come across here but are apparently pretty well known up north. Maybe it's not as grim up there as we've been told...
+#### &#9733; Desert Island Beer
+If I really had to choose just the one beer to have for ever more, it would be have to one of the Adnams Brewery beers. I know it's not particularly exciting as far as beer goes but I could drink Ghost Ship for days and never get tired of it.
 
-#### Best with Mint Ice Cream
-<b>Cheddar Brewery</b>. Just trust me with this one. I think mine was Gorge Best but I'm not 100% sure about t hat. If you get the opportunity just buy a bunch of their beer and ice cream. Honestly even if they weren't such a good match that'll never be a bad decision. 
+#### &#9733; Most Unusual
+We don't do many fruit beers in this country but Samuel Smith's do a few fruit beers that are nice to mix things up - especially if you're not a typical beer drinker or don't like something too bitter. They can be a bit tricky to come across here but are apparently pretty well known up north. Maybe it's not as grim up there as I've been told...
 
-#### Best Beer?
+#### &#9733; Best with Mint Ice Cream
+Cheddar Brewery. Just trust me with this one. I think mine was Gorge Best but I'm not 100% sure about that. If you get the opportunity just buy a bunch of their beer and ice cream. Honestly, even if they weren't such a good match that'll never be a bad decision.
+
+#### &#9733; Best Beer?
 Don't make me choose. Maybe when we get to 300. Maybe.
 
 ## 100 down. 200 to go
