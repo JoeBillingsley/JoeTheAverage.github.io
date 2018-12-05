@@ -1,36 +1,57 @@
-Recently I've been working on developing a mathematical model of a datacentre network with the help of Wang Miao. The idea is you can say how you would configure the network and the model will tell you how it would perform. This model is a small part of a larger solution to a huge problem. The grand goal of this particular line of work is to develop a fast model of a telecommunications network that spans across the whole of the UK. I want to build a model that we will be able to chuck into a supercomputer to try out thousands of different configurations of the network in a blink of an eye. That will give everyone a whole lot more freedom towards how we find the best configuration of the network. Whether that is possible or not - well we'll see.
+TODO: Move bit explaining NFV elsewhere possibly
+      Possibly need to introduce VMs
+      Move long/many services and other extensions elsewhere
+      Move SDN elsewhere
+      Add figures
+      Write it from the perspective of something I've researched not as teaching material
 
-Why is this important? Well we don't have the resources to run networks like we used to. It's hard to pin down exactly how much energy telecommunications networks and connected devices use but estimates have put it anywhere from [1.8% of world energy consumption in 2012](http://www.internet-science.eu/sites/eins/files/biblio/oe-20-26-B513.pdf) growing to from [23% to 53% depending on how efficient we can make them](http://www.mdpi.com/2078-1547/6/1/117/htm). There is a trade off of the amount of energy a network uses and the performance it provide. Future models will be able to help us find the solutions that balance these trade offs, providing the best performance we can whilst minimising the energy consumption.
+It's hard to pin down exactly how much energy, modern communication uses but we know it's a lot. Best estimates put it at around [\_% of world energy consumption in 2012](http://www.internet-science.eu/sites/eins/files/biblio/oe-20-26-B513.pdf), looking ahead it'll probably be somewhere between [_ - _% by 2030](http://www.mdpi.com/2078-1547/6/1/117/htm) depending on how efficient we can make our devices and the infrastructure that supports them.
+
+Unfortunately it's not easy to make things more efficient. There tends to be a trade off of the amount of energy something uses and how well it works. Think about how you're phone changes when you put it in power saver mode. Phone designers could make you're phones battery last forever if they wanted too - a tap on power saver would turn the phone off. Job done. Instead they opt to remove unnecessary animations and limiting the speed of you're phone. Each of these decisions allow for a longer battery life at some small or large expense. Turning off animations is an aesthetic loss but saves a fair bit of power. Slowing the phone down could be more of a problem and leads to a further question - how much energy can we save before the phone is too slow to use?
+
+Phones use a portion of that energy listed above but as far as devices go there pretty small and low power. The real costs is in the manufacturing of communication equipment and the infrastructure that is needed to carry the myriad ways we communicate with each other. And that's the key thing here - when we talk about communication we don't just mean calls and texts. It's webpages, tv shows, podcasts, Snapchat, Messenger, WhatsApp, TODO: and calls and texts. The common link between the dominant forms of communication is the internet and underneath that the connections of light and metal that now connect almost any two people in the world. Improving the efficiency of this infrastructure, even a little, can make a huge impact. But just like with phones there are trade offs to be made and again we have to ask - how much energy can we afford to save? 
+
+The easiest way of solving this problem is to try stuff and see what happens. The cheapest way of answering this problem is by building an accurate model. Guess what we'll be doing?
 
 ## Background
-Before we dive into the model there are a few concepts I need to introduce:
+From what I've seen and read, when given a difficult problem smart people tend to try and understand it. Hopefully if we mimic them, some of it might rub off. First I will introduce some background material then we will work through a initial model I developed to help me get my head around things.
 
-Packets - In modern telecommunications networks everything that goes over the network from phone calls to webpages gets digitised and broken down into small parcels of data called 'packets'. Each packet is labelled with it's destination in the network:
+Years and years of development and investment (or lack thereof) have made modern communications network pretty complex, with a whole mess of technologies doing their best to coexist. However in the abstract it's pretty straightforward:
 
-[FigurFinallye of packet. Destiation Address. Other Stuff. Data]
+[Network figure]
+[TODO: Check Network POP definition]
 
-Network Function Virtualisation (NFV) - Network functions are a part of the network that perform a particular task. An example is a firewall which deletes packets that have destination addresses that they should not be allowed into. The 'virtual' refers to them being implemented in software rather than in hardware. Network functions are often connected in a sequence like so:
+At the 'edge' of the network is you. Your phone, computer, TV, fridge - whatever internet enabled device you are using. Your devices communicate with nearby 'cells'. These can be large cell towers that can support hundreds of users at a time or more commonly now, small cells that have a much smaller range and are meant for 10's of users in very densely populated areas. Further along still you reach network points of presence where networks owned by different mobile or internet providers will meet to allow sharing of information and sometimes resources. Finally at the heart of the thing you have your datacentres - big rooms stacked high with computers that can provide an almost unlimited supply of computing power.
 
-[Figure of service chain]
+Over this network goes all of the information that needs to be transmitted. As the network needs to carry lots of different kinds of information, everything gets broken down into many *packets* of data that all have the same structure:
 
-The Network - In this work we modelled a particular kind of network. An *SDN and NFV Enabled Datacentre Communications Network*. Unfortunately, everything in my field has long names but it's not that complicated. First, here is an example of the complete network:
+[Packets figure]
+
+Each packet is labelled with an address so that the network knows where to send it, the payload - the raw data itself, and some information about ordering to help put everything back together again when it arrives. For example if you send a long text the payload of each packet might contain several characters. Then when it arrives at the edge of the network, all of these packets can be put in order and the text can be reconstructed.
+
+Depending on the service you are using, there may be some important tasks that need to be done as the packet goes over the network. If you send a text we need to check if you have enough credit, people are very sensitive to voices so calls need special handling, once you open something up to the internet you need some basic protections and of course for anything you do we need to be work out where we are meant to send these packets to make sure they end up in the right place. These little tasks are called 'network functions'. To provide some service, such as texting, we break down the service into it's individual functions (charging, routing, etc) and connect them altogether.
+
+Traditionally network functions have been provided by very fast, purpose built computers that can process lots of packets in a very short amount of time. However these are expensive, and inflexible. For example if you find that you didn't buy enough of one computer to meet demand for some new service, well you're stuck until more are delivered and meanwhile you're providing a poor quality service and presumably getting lots of complaints.
+
+The alternative option then is to 'virtualise' these network functions - that is principally, to provide them using software rather than special hardware. Rather than running them on purpose built computers you can run them on *relatively* cheap industry standard pieces. Now if you find your new service has unexpectedly high demand you can take resources from elsewhere in the datacentre by launching more copies of your network functions on other servers.
+
+So finally we need to talk a little about how a datacentre is wired up. Datacentres have thousands of servers, to keep things organised and make sure that routing (the process of getting a message from one server to another) is efficient, it helps to have a well defined structure. One common structure is called a **fat tree**, for this work we've augmented this structure a bit to look like this:
 
 [fig:network]
 
-The network is constructed from *switches* and *servers*. Each switch has a number of ports that allow it to connect to other devices in the network. Switches look at each packets destination and decide which port to send them out of. Servers run our network functions. Each server can run any number of these network functions. The job of the network is to get packets to the network functions, in the correct order, as quickly as possible. 
+Datacentre networks are constructed from *switches* and *servers*. Each switch has a number of ports that allow it to connect to other devices in the network. Switches look at each packets destination and decide which port to send them out of. Servers run our network functions. Each server can run any number of these network functions - provided it has enough resources. The job of the network is to get packets to the network functions, in the correct order, as quickly as possible. 
 
 The network is split into several layers:
 
-Core/Aggregate/Edge - These aren't particular exciting layers. These simply push packets to servers or to another switch, closer to the server. Take note of how the switches are arranged - this will be important later. 
+Core/Aggregate/Edge - These aren't particular exciting layers. These simply push packets to servers or to another switch, closer to the server.
 
-Server/Virtual Switch - In a NFV enabled network each server can run several network functions. As a result the server needs a switch of it's own, to make sure that the packets it receives go to the right network function. This important job falls to a virtual switch which runs on the same server as the network functions.
+Server/Virtual Switch - In a NFV enabled network each server can run several network functions. As a result the server needs a switch of its own, to make sure that the packets it receives go to the right network function. The virtual switch is run on the same server as the VNFs.
 
 Virtual Network Functions - Finally we have the network functions themselves running on the servers.
 
-Software Defined Networking (SDN) - Right last one. Sitting next to the network and connected to all of the servers is the SDN controller. The SDN controller gives network engineers more control over how packets move through the network. Most importantly it lets them decide on the destination of different packets. This particular layout is just one flavour of SDN and it's a little similar to how [VMware NSX](https://www.vmware.com/uk/products/nsx.html) looks.
+Software Defined Networking (SDN) - Sitting next to the network and connected to all of the servers is the SDN controller. The SDN controller knows where all of the network functions are and gives instructions to the switches to ensure that packets arrive in the right place.
 
-## A little maths
-The network is laid out in a very particular way. If we assume that all of the physical switches have *k* ports then:
+Fat tree networks can be defined If we assume that all of the switches have *k* ports then:
 
 - There are (k/2)<sup>2</sup> core switches. 
 - Each core switch connects to one switch in each of the k pods. 
@@ -41,39 +62,33 @@ The network is laid out in a very particular way. If we assume that all of the p
 
 We'll call the total number of network functions, *n*. If you work it through it turns out n = (k<sup>3</sup> / 4) * k.
 
-As an example, in the network above k = 4. So that means we should have 4 core switches, connected to one switch in each pod. Each pod should have 2 aggregate switches and 2 edge switches which are fully connected to each other. Each edge switch is connected to 2 servers and each of those contains 2 more virtual switches.
+As an example, in the network above k = 4. So that means we should have 4 core switches, connected to one switch in each pod. Each pod should have 2 aggregate switches and 2 edge switches which are fully connected to each other. Each edge switch is connected to 2 servers and each of those contains 2 more virtual switches. Following our equation this would give us n = 64 network functions.
 
-This brings us to a grand total of 64 network functions and everything lines up.
+The structure of a Fat Tree network makes it very easy to route packets. We can also see from the figure that there are several different ways of getting through the network. In general we want to minimise the number of switches we have to visit, we will refer to this as taking an efficient path. At the aggregation and core layers we will also want to distribute packets over as many switches as is reasonable so that the work of handling the packets is balanced.
 
-## ...and a lot of assumptions
-In this model we just want to calculate one property of the network: the average latency. That is the average time it takes for a message to get from it's source to it's destination.
+## Modelling the network
+To get to grips with things at first we will just calculate the average latency of the network. That is the average time it takes for a packet to get from its source to its destination.
 
-There are several assumptions we have to make about how packets are going to get sent around to do this. Some of these might not make sense at first but I'll explain them all in a sec:
+An important property of models is that they are simplifications. If a model is not a simplification then it's not a model - it's just the real thing. For this model we're going to pretend we have no idea on which servers the network functions are placed. Therefore we have to assume that the network functions are placed *on every server*. This isn't a realistic assumption to make but the resulting model can still provide some useful information.  
 
-1. Each VNF generates packets according to an independant Poisson process with a mean rate of &lambda; packets a cycle
-2. Each network component services packets according to an independant Poisson process with a mean rate of &mu; packets a cycle
-3. Queues at each network component have infinite capacity
-4. Packets take the shortest path between two destinations and are evenly distributed over the network
-5. Packets **leaving** a server may need to visit the SDN controller with probability p_sdn_root 
+Similarily, switches and servers can be pretty complicated. However they tend to process packets as they arrive and usually at a fairly consistent rate. Hence we can just pretend that each switch and server is a first in first out queue where the service time for each packet is independent of the previous packets. We will say that each switch services packets at some mean rate $lambda_{sw}$. Also, as we don't know where the VNFs are placed, we can say that each VNF processes packets at a mean rate of $lambda_{sw}$; and that packets are produced from each VNF at a mean rate &mu;
 
-So assumptions 1 and 2 sound fairly complicated but they just mean that packets arrive at a predictable rate (assumption 1) and take a predictable amount of time to get processed (assumption 2) at each server/switch. Modelling the network with Poisson processes just simplifies calculating the waiting time. With assumptions 1 - 3, a packet will on average take:
+Finally as memory is very cheap it's not unreasonable to assume that queues at a switch/server can be infinitely long. 
+
+These assumptions let us build a pretty good model. Since we've modelled the network as a queue we can use formula from *queuing theory*. Further the other assumptions (formally: independant Poisson processes for arrival and service rates, infinite length queues) we can model each switch and server as an M/M/1 queue. Queueing theory tells us that the average waiting time, the time spent in the queue plus the time spent being serviced, is given by:
 
 wait_time(λ, μ) = 1 / (μ - λ)
 
-I won't go into how that's derived here but if you want to find out more you can look up [Queueing Theory](https://en.wikipedia.org/wiki/Queueing_theory#Queueing_networks). 
-
 Something to note: the model will only work when the arrival rate (λ) is less than the service rate (μ). Equation 1 gives us the *average* waiting time. If messages arrive faster than they can be serviced then the queue will grow infinitely large and the waiting time will approach infinity as well.
 
-Now we've got everything we need to calculate the latency in the network. If you want to have a crack at this yourself first then scroll no further! It's spoilers from here on out now.
+Now we've got everything we need to calculate the latency in the network. If you want to have a crack at this yourself first then scroll no further!
 
 ## Calculating the latency
-Given that we know from assumption 4 that messages will take the shortest path they can, we can calculate the average time taken to go down each path and the probability of a message going down that path and then calculate the expectation.
+Calculating the latency isn't too tricky. We've assumed that a packet could be emitted from any virtual machine and that it could end up at any other virtual machine. As packets will take efficient paths, not all packets will visit every level. Therefore it makes sense that switches at different levels of switches will have different arrival rates and hence different waiting times. Further as all of the virtual machines are acting the same way, all switches on a given level will have the same arrival rate.
 
-For example consider the following case where the source and destination VNF are on the same server:
+Looking at the fat tree graph again we can see there are only four different paths from any VM to any other:
 
-In this case the shortest path the packet can take means it has to wait twice, once at the virtual switch and then at the destination VNF. If the destination is under the same edge switch, in the same pod but a different server or a different pod entirely then it would have to go through more switches:
-
-The latency for a path is just the sum of the waiting time. To calculate the average latency considering each possible path we have to consider the probability of taking that path. The expectated latency is given by:
+The latency for a path is just the sum of the waiting time at each switch on the path. To calculate the average latency considering each possible path we have to consider the probability of taking that path. The expectated latency is given by:
 
 Latency(\beta, μ) = 
   (wvnf + wvsw) · pvsw
@@ -81,18 +96,18 @@ Latency(\beta, μ) =
 + (wvnf + wsdn + 2wvsw + 2wedge + wagg) · pagg
 + (wvnf + wsdn + 2wvsw + 2wedge + 2wagg + wcore) · pcore
 
-Where w_vnf, w_vsw, w_sdn, w_edge, w_agg and w_core are the waiting times at a VNF, virtual switch, root SDN, edge switch, aggregate switch and core switch respectively. Similarily p_vsw, p_edge, p_agg and p_core are the probabilities that the highest level switch that a packet will visit is a virtual, edge, core or aggregate switch respectively.
+Where w_vnf, w_vsw, w_sdn, w_edge, w_agg and w_core are the waiting times at a VNF, virtual switch, SDN controller, edge switch, aggregate switch and core switch respectively. Similarily p_vsw, p_edge, p_agg and p_core are the probabilities that the highest level switch that a packet will visit is a virtual, edge, core or aggregate switch respectively.
 
 ## Probabilities
-Now we need to calculate the probability of a packet taking a path and the average waiting time at each part of the network.
+Now we need to calculate the probability of a packet taking any of these paths. Once again from the figure we can see that every time we go up a level we can visit many more VNFs:
 
-In order to get from the source to the destination efficiently a packet has to travel to the lowest level switch that they both share. For example here's the shortest path from VNF 0 to all other destinations:
+[Figure of different paths]
 
-So if the message goes no higher than the virtual switch then the source and destination share the virtual switch. Only k VNFs can be on under a virtual switch and 1 of those is the source. The probability of the destination being under the same virtual switch is then:
+The probability of visiting a level of switches then is the portion of VNFs that we can't visit via a more efficient route. For example the shortest route we can take is if the source and destination share the same virtual switch. Only k VNFs can be on under a virtual switch and 1 of those is the source. The probability of the destination being under the same virtual switch is then:
 
 p_vsw = (k - 1) / (n - 1)
 
-Similarily if a packet has to go no higher than the edge switch then the source and destination VNFs must share an edge switch. We know from the definition of the network that the edge switch has k/2 * k VNFs but we also have to remember not to count the VNFs that could take a shorter path.
+We can do the same thing if the source and destination VNFs share an edge switch. From the definition of the network, we know that the edge switch has k/2 * k VNFs under it but we also have to remember not to count the VNFs that could take a shorter path:
 
 p_edge = ((k/2) * k - k) / (n - 1)
 
@@ -117,18 +132,16 @@ wait_time(λ, μ) = 1 / (μ - λ)
 
 can give us the waiting time at each switch. We specify the service rates (μ) and the production rate (\beta) ourselves when we use the model. In order to calculating the waiting time we need to calculate the arrival rates (λ) for each of the network components.
 
-First it's important to understand that as the arrival rate is less than the service rate then the production rate from a switch will be the same as the arrival rate.
+First it's important to understand that as the arrival rate is less than the service rate then packets will leave from a switch at the same rate as they arrive.
 
 ### Server
-Since packets are evenly distributed over the VNFs then to calculate the arrival rate at each VNF, λ_vnf, we only need to calculate the arrival rate for a single VNF.
-
-On average (n-1) VNFs will be sending 1/(n-1) * λ of a packet to our VNF each cycle so:
+Since packets are evenly distributed over the VNFs the arrival rate at each VNF, λ_vnf, will be the same. On average (n-1) VNFs will be sending 1/(n-1) * λ of a packet to our VNF each cycle so:
 
 λvnf = (λ · (n − 1)) / (n − 1)
      = λ
 
 ### Virtual switch
-The next level up, the virtual switch, is a bit more interesting. There are three places the virtual switch can receive packets from. 
+The next level up, the virtual switch, is a bit more interesting. There are three places the virtual switch can receive packets from.
 
 1. It'll get all of the packets sent by the VNFs in the server. There are k VNFs in the server each sending λ messages.
 
@@ -229,24 +242,8 @@ Latency = latency_base(\beta_eff, \mu_vnf, \mu_vsw, \mu_sdn) * \sum_i length(i) 
 Nice.
 
 ## It works!
-That was a long read. If you've made it this far you might like to see some proof that this is actually correct. In this field they tend to do this by building simulations of the network, using the same assumptions as we defined earlier, and measuring the average latency in the simulation. If the model is accurate then the simulation and model should be fairly similar. 
+We can test the model by implementing it and comparing the results to a simulation that uses the same assumptions. The simulation works by modelling each event e.g. when a packet arrives at a switch and when it leaves. Since the model is just maths it can be implemented in about 8 lines of code and runs very fast whilst the simulation is a bit trickier and you need to run it for a while until it stabilises. For this work I used Matlab to program the model and OMNeT++, a network emulation tool, to build the simulation. Finally we can track the expected and actual latency and compare the results:
 
-As it turns out the model and simulation produce almost exactly the same results:
+The match is pretty much perfect which is a very good sign. For the model, I've only plotted the points where it is stable - that is where the arrival rate is less than the service rate as past this point the queue will grow infinitely long. All we can really say in this case is that the latency is unbounded.
 
-
-That is a very good sign that we didn't miss anything which is good because this post is long enough already. For the model, I've only plotted the points where it is stable - that is where the arrival rate is less than the service rate. If the average arrival rate is more than the service rate then the size of the queues at each component will grow larger and larger forever. The only useful thing to say when the arrival rate is consistently more than the service rate and the queue is unbounded, is that the latency is infinite.
-
-Knowing that we can see spot some interesting things by looking at these graphs. All of the lines eventually rise very steeply. This is the region where the arrival rate is starting to approach the service rate. As there are many different components in our network, each with different arrival rates and service rates, it is interesting to see which ones get overloaded first.
-
-It turns out that the edge switches have the highest arrival rates on average. This seems reasonable since they have the most VNFs underneath them and can't share the load with any other switches. More problematicaly though as the length of the service chain increases the effective production rate rapidly increases. Despite all switches receiving proportionaly the same traffic, edge switches can get overloaded very early in the presence of long services - even when other switches have lots of spare capacity.
-
-## Conclusions
-So that is how you calculate the average latency of NFV and SDN enabled datacentre with a fat tree interconnection topolgy. We could of course have just used the simulation in the first place and skipped all this hassle. The problem with these simulations is there slow. On average I'd say the simulation takes ~100 seconds on my work PC to get accurate measurements for latency. The model is around 8 lines of code all implemented and could run in under a millisecond on a calculator.
-
-There is still more work to do of course. There are three more problems I'd like to fix in future models:
-
-1. Whilst the model is a good match for the simulation, it won't match with the real world. We made too many simplifying assumptions at the start. The big ones are number 1 and 2 where we assume the packets are produced in a very particular way that's not a good match with reality. There are more accurate ways of calculating the waiting time for this kind of system but the maths is tricky and I need to get my head around it first.
-2. Another assumption we made at the beginning is that packets are sent to all VNFs evenly. In practice it seems sensible to put VNFs that are part of the same service chain near to each other so that there is less load on the switches higher up in the network. The next model I make will consider the placement (it's actually really easy, I've done it already).
-3. Last but certainly not least we've got some fairly boring VNFs in this model which just forward on the traffic they receive. Real world VNFs affect the production rate in more interesting ways. Filtering VNFs like firewalls reduce the effective production rate. Other VNFs like video decoders can increase it. It turns out that whilst it's very easy to accurately model filtering VNFs, encoding ones are much more tricky.
-
-I'll be working my way through that list along with a few other things that are in the pipeline. Watch this space.
+However there is more work to do. So far our model only considers the case where packets make one traversal through the network, that is where the service only has a length of two. However we know that NFV chains can be arbitrarily long. Also our VNFs are pretty uninspiring and don't have any impact on the amount of data that is arriving or leaving either. We'll fix these issues - and look at some additional objectives in the next post.
