@@ -1,41 +1,18 @@
-TODO: Move bit explaining NFV elsewhere possibly
-      Possibly need to introduce VMs
-      Move long/many services and other extensions elsewhere
-      Move SDN elsewhere
-      Add figures
-      Write it from the perspective of something I've researched not as teaching material
+TODO: Add figures
+      Add mathjax
 
-It's hard to pin down exactly how much energy, modern communication uses but we know it's a lot. Best estimates put it at around [\_% of world energy consumption in 2012](http://www.internet-science.eu/sites/eins/files/biblio/oe-20-26-B513.pdf), looking ahead it'll probably be somewhere between [_ - _% by 2030](http://www.mdpi.com/2078-1547/6/1/117/htm) depending on how efficient we can make our devices and the infrastructure that supports them.
+TLDR: We built a mathematical model of a modern datacentre that can tell you interesting things about performance under different configurations.
 
-Unfortunately it's not easy to make things more efficient. There tends to be a trade off of the amount of energy something uses and how well it works. Think about how you're phone changes when you put it in power saver mode. Phone designers could make you're phones battery last forever if they wanted too - a tap on power saver would turn the phone off. Job done. Instead they opt to remove unnecessary animations and limiting the speed of you're phone. Each of these decisions allow for a longer battery life at some small or large expense. Turning off animations is an aesthetic loss but saves a fair bit of power. Slowing the phone down could be more of a problem and leads to a further question - how much energy can we save before the phone is too slow to use?
+In this post I am going to explain in detail the logic behind a model of virtual network placement in modern datacentres. This model doesn't consider the actual placements like later models will but it can still provide some useful insights and more importantly some intuition about the problem. First I will provide some basic background about the particulars of the problem, then we will solve it and finally show it works and draw some insights.
 
-Phones use a portion of that energy listed above but as far as devices go there pretty small and low power. The real costs is in the manufacturing of communication equipment and the infrastructure that is needed to carry the myriad ways we communicate with each other. And that's the key thing here - when we talk about communication we don't just mean calls and texts. It's webpages, tv shows, podcasts, Snapchat, Messenger, WhatsApp, TODO: and calls and texts. The common link between the dominant forms of communication is the internet and underneath that the connections of light and metal that now connect almost any two people in the world. Improving the efficiency of this infrastructure, even a little, can make a huge impact. But just like with phones there are trade offs to be made and again we have to ask - how much energy can we afford to save? 
+I've written a much more detailed explanation of the virtual network function (VNF) placement problem before over here but as a quick summary:
+- In modern networks, services are provided by chaining together sequences of 'network functions' e.g. firewalls, encoding, quality of service management etc.
+- Previously, these network functions where provided by purpose built computers but increasingly it is preferable to run these network functions in software in virtual machines to create: virtual network functions
+- Now the challenge becomes how we allocate resources (processor time, memory, storage space etc) to these virtual machines so as to provide a good quality of service 
 
-The easiest way of solving this problem is to try stuff and see what happens. The cheapest way of answering this problem is by building an accurate model. Guess what we'll be doing?
+If you are familiar with it this will sound similar to the issues when managing a cloud computing environment and in many ways it is very similar. In cloud computing the challenge is similar, people pay you to be able to provide a certain amount of computing resource whenever you need it. So for example if you need a server that has 16 processors in it, Amazon will happily rent you one from one of their datacentres. With cloud computing we don't generally have to worry about where in the datacentre we place the network functions because we are just selling resources. However when we're placing VNFs we are not usually selling resources but selling a certain quality of service. So instead of buying a server your buying a guarantee that the service you are providing will have low latency, high throughput and 99.99999% uptime. This moves the hard decision of choosing how much resources are needed from the consumer to the service provider. Now to make these decisions at a huge scale we need to move this intelligent decision making from humans to computers. And the first step to doing this, in my mind at least, is to model it and to really understand how the problem fits together.
 
-## Background
-From what I've seen and read, when given a difficult problem smart people tend to try and understand it. Hopefully if we mimic them, some of it might rub off. First I will introduce some background material then we will work through a initial model I developed to help me get my head around things.
-
-Years and years of development and investment (or lack thereof) have made modern communications network pretty complex, with a whole mess of technologies doing their best to coexist. However in the abstract it's pretty straightforward:
-
-[Network figure]
-[TODO: Check Network POP definition]
-
-At the 'edge' of the network is you. Your phone, computer, TV, fridge - whatever internet enabled device you are using. Your devices communicate with nearby 'cells'. These can be large cell towers that can support hundreds of users at a time or more commonly now, small cells that have a much smaller range and are meant for 10's of users in very densely populated areas. Further along still you reach network points of presence where networks owned by different mobile or internet providers will meet to allow sharing of information and sometimes resources. Finally at the heart of the thing you have your datacentres - big rooms stacked high with computers that can provide an almost unlimited supply of computing power.
-
-Over this network goes all of the information that needs to be transmitted. As the network needs to carry lots of different kinds of information, everything gets broken down into many *packets* of data that all have the same structure:
-
-[Packets figure]
-
-Each packet is labelled with an address so that the network knows where to send it, the payload - the raw data itself, and some information about ordering to help put everything back together again when it arrives. For example if you send a long text the payload of each packet might contain several characters. Then when it arrives at the edge of the network, all of these packets can be put in order and the text can be reconstructed.
-
-Depending on the service you are using, there may be some important tasks that need to be done as the packet goes over the network. If you send a text we need to check if you have enough credit, people are very sensitive to voices so calls need special handling, once you open something up to the internet you need some basic protections and of course for anything you do we need to be work out where we are meant to send these packets to make sure they end up in the right place. These little tasks are called 'network functions'. To provide some service, such as texting, we break down the service into it's individual functions (charging, routing, etc) and connect them altogether.
-
-Traditionally network functions have been provided by very fast, purpose built computers that can process lots of packets in a very short amount of time. However these are expensive, and inflexible. For example if you find that you didn't buy enough of one computer to meet demand for some new service, well you're stuck until more are delivered and meanwhile you're providing a poor quality service and presumably getting lots of complaints.
-
-The alternative option then is to 'virtualise' these network functions - that is principally, to provide them using software rather than special hardware. Rather than running them on purpose built computers you can run them on *relatively* cheap industry standard pieces. Now if you find your new service has unexpectedly high demand you can take resources from elsewhere in the datacentre by launching more copies of your network functions on other servers.
-
-So finally we need to talk a little about how a datacentre is wired up. Datacentres have thousands of servers, to keep things organised and make sure that routing (the process of getting a message from one server to another) is efficient, it helps to have a well defined structure. One common structure is called a **fat tree**, for this work we've augmented this structure a bit to look like this:
+So finally we need to talk a little about how a datacentre is wired up. Datacentres have thousands of servers, to keep things organised and make sure that routing (the process of getting a message from one server to another) is efficient, it helps to have a well defined structure. One very common structure is called a **fat tree**, for this work we've augmented this structure a bit to look like this:
 
 [fig:network]
 
@@ -48,8 +25,6 @@ Core/Aggregate/Edge - These aren't particular exciting layers. These simply push
 Server/Virtual Switch - In a NFV enabled network each server can run several network functions. As a result the server needs a switch of its own, to make sure that the packets it receives go to the right network function. The virtual switch is run on the same server as the VNFs.
 
 Virtual Network Functions - Finally we have the network functions themselves running on the servers.
-
-Software Defined Networking (SDN) - Sitting next to the network and connected to all of the servers is the SDN controller. The SDN controller knows where all of the network functions are and gives instructions to the switches to ensure that packets arrive in the right place.
 
 Fat tree networks can be defined If we assume that all of the switches have *k* ports then:
 
@@ -64,7 +39,7 @@ We'll call the total number of network functions, *n*. If you work it through it
 
 As an example, in the network above k = 4. So that means we should have 4 core switches, connected to one switch in each pod. Each pod should have 2 aggregate switches and 2 edge switches which are fully connected to each other. Each edge switch is connected to 2 servers and each of those contains 2 more virtual switches. Following our equation this would give us n = 64 network functions.
 
-The structure of a Fat Tree network makes it very easy to route packets. We can also see from the figure that there are several different ways of getting through the network. In general we want to minimise the number of switches we have to visit, we will refer to this as taking an efficient path. At the aggregation and core layers we will also want to distribute packets over as many switches as is reasonable so that the work of handling the packets is balanced.
+The structure of a Fat Tree network makes it very easy to route packets. We can also see from the figure that there are several different ways of getting through the network. In general we want to minimise the number of switches we have to visit; we will refer to this as taking an efficient path. At the aggregation and core layers we will also want to distribute packets over as many switches as is reasonable so that the work of handling the packets is balanced.
 
 ## Modelling the network
 To get to grips with things at first we will just calculate the average latency of the network. That is the average time it takes for a packet to get from its source to its destination.
@@ -207,39 +182,6 @@ For the SDN we have to account for the additional time spent waiting at the virt
 w_sdn = (MM1(μ, λ_sdn ) + w_vsw ) · p_sdn
 
 Substitute that all back into equation 2 and it's done.
-
-## Long and Many Services
-Equation 2 only gives us the waiting time for chains where only one pass through the network is required i.e. a service with only two network functions. It can't tell us anything about services with several network functions and, more than likely, that's what we're going to see in reality.
-
-The first difference that this makes is that packets will have to make more than one pass through the network. We already calculated the latency for a single pass through the network with equation 2. If one pass takes that long, several passes should just be that times the number of passes. As packets start at a VNF the number of passes is given by:
-
-
-
-However longer services also means that packets stay in the network for longer. This also affects the arrival rate at each of the components. Imagine for a moment that all of the VNFs send a packet to another VNF every cycle. Imagine also that these packets have to visit two VNFs in order to complete the service:
-
-
-After the first cycle all of the VNFs would have sent and received one packet:
-
-
-At the second cycle they would all send two packets. One new packet, and one that they received before
-
-
-At the third cycle they would all send two packets again. One new packet and one that they received in the second cycle. The packet from the first cycle will have visited three VNFs and will not be forwarded any further.
-
-
-So the longer the service the more packets are being produced. From this example it seems to make sense that the *effective production rate* is increased the longer the service is. More precisely the effective production rate is given by the number of passes through the network a service requires.
-
-
-What about if we have multiple services of different lengths in the same network? Imagine if half of the VNFs produced packets that belonged to a service that was two long and half that was three long. After the first cycle all of the VNFs would have sent and received one packet. But after the second cycle half of the VNFs would send two packets and half of them would only send one. The average effective production rate would be 1.5 packets per cycle.
-
-If we say that when a packet is first produced it has probability p(service_i) of belonging to service i, the average effective production rate is dependant on the expected number of passes through the network. More formally:
-
-
-Like the effective production rate, the average latency is dependant on the average number of passes through the network. Bringing everything together we get the average latency for one or more services of varying lengths with an SDN controller in the mix as:
-
-Latency = latency_base(\beta_eff, \mu_vnf, \mu_vsw, \mu_sdn) * \sum_i length(i) * p_(service_i)
-
-Nice.
 
 ## It works!
 We can test the model by implementing it and comparing the results to a simulation that uses the same assumptions. The simulation works by modelling each event e.g. when a packet arrives at a switch and when it leaves. Since the model is just maths it can be implemented in about 8 lines of code and runs very fast whilst the simulation is a bit trickier and you need to run it for a while until it stabilises. For this work I used Matlab to program the model and OMNeT++, a network emulation tool, to build the simulation. Finally we can track the expected and actual latency and compare the results:
