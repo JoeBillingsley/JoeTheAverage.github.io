@@ -1,4 +1,13 @@
-TLDR: We can't afford to run communication networks like we used to. We can make them more efficient by building accurate models and simulations and using these to optimise the configuration of networks.
+TODO: This is too much information up front. Need to point out what we're doing differently and then can push some of the information too later on.
+
+Structure could be: 1. Engaging intro post. Introduces abstract problem in a simplified way but
+                    still provides **essential** information. Think similar content as current 
+                    but less cruft
+                    2. Need to discuss different metrics we need to use for both optimisation and modelling
+                    3. Informative post providing general knowledge about switches and servers more detail
+                    4. Informative post providing general knowledge about virtual machines and containers
+
+TLDR: We can't afford to run communication networks like we used to. People are trying to make them more efficient. We think we can do it better by building accurate models and using these to optimise the configuration of networks.
 
 It's hard to pin down exactly how much energy, modern communications uses but we know it's a lot. Best estimates put it at around [\_% of world energy consumption in 2012](http://www.internet-science.eu/sites/eins/files/biblio/oe-20-26-B513.pdf), looking ahead it'll probably be somewhere between [_ - _% by 2030](http://www.mdpi.com/2078-1547/6/1/117/htm) depending on how efficient we can make our devices and the infrastructure that supports them.
 
@@ -27,34 +36,36 @@ Packets are a fairly abstract idea but it's easiest just to imagine as chunks of
 
 Depending on the service you are using, there may be some important tasks that need to be done as the packet goes over the network. If you send a text we need to check if you have enough credit, people are very sensitive to voices so calls need special handling, once you open something up to the internet you need some basic protections and of course for anything you do we need to be work out where we are meant to send these packets to make sure they end up in the right place. These tasks are called 'network functions'. To provide some service, such as texting, we break down the service into it's individual functions (charging, routing, etc) and connect them altogether.
 
-Each of these services also have different needs that need to be met. If your talking on a phone then the time taken between you speaking and the person hearing you needs to be very low - even a few seconds delay would be enough to ruin a conversation. Compare that to  sending a text. How long is too long to wait for a text?
+Each of these services also have different needs that need to be met. If your talking on a phone then the time taken between you speaking and the person hearing you needs to be very low - even a few seconds delay would be enough to ruin a conversation. Compare that to sending a text. How long is too long to wait for a text?
 
-So clearly different services have different requirements and we can generally make a service better and faster by throwing money at the problem and making more resources available. In the past this had to be planned out well in advance. Traditionally, network functions were provided by very fast, purpose built machines that can process a certain number packets of packets in a short amount of time. However these are expensive - and inflexible. For example if you find that you didn't buy enough of one computer to meet demand for some new service, then you're stuck until you can get more delivered.
+So clearly different services have different requirements. From the service providers perspective there are only a few important service qualities that matter:
+
+- **Latency** The time it takes for the sent packets to arrive. The speed of the road. 
+- **Throughput** The amount of packets we can send in a second. The width of the road.
+- **Packet Loss** The number of packets that are damaged/lost in transit. The number of car crashes that happen on a road. Like with a car crash, packet loss can have a major impact on a services latency and throughput.
+- **Availability** The amount of time the service is available for.
+- **Cost** The initial and running costs of deploying a service from a network. Practically this is set by the energy cost of running the servers being used. This is good news for us! The short term incentives of saving money and the longer term incentive of not wiping out the species from climate change line up nicely.
+
+So clearly different services have different requirements and we can generally make a service better and faster by throwing money at the problem and making more resources available. In the past this had to be planned out well in advance. Traditionally, network functions were provided by very fast, purpose built machines that can process a certain number of packets in a short amount of time. However these are expensive - and inflexible. For example if you find that you didn't buy enough of one computer to meet demand for some new service, then you're stuck until you can get more delivered.
 
 The alternative option then is to 'virtualise' these network functions - that is principally, to provide them using software rather than special hardware. Rather than running them on purpose built computers you can run them on *relatively* cheap industry standard pieces. Now if you find your new service has unexpectedly high demand you can take resources from elsewhere in the datacentre by launching more copies of your network functions on other servers.
 
 ## Tradeoffs
-Now obviously this is no magic bullet - I mean theres still half a page to go and even I can't waffle on that long about nothing. First we need to understand exactly what we mean by 'resources'.
+Now obviously this is no magic bullet. To see the challenge we first need to understand exactly what we mean by 'resources'.
 
-Here I'll describe the resources available in a datacentre but the idea applies at all levels in our network. Datacentres are typically made up of 10s of thousands of servers. Each server has two key resources: processor time and memory space. The important part for now is that typically the more of these resources we give to a VNF, the faster it will run.
+Here I'll describe the resources available in a datacentre but the idea applies at all levels in our network. Datacentres are typically made up of 10s of thousands of servers. Each server has two key resources: processor time and memory space. The important part for now is that typically the more of these resources we give to a VNF, the faster it will run. These servers are connected by a network of their own. The network has a critical resource of its own called bandwidth: the number of packets that can go between two servers in a second. If you give a service more bandwidth, it's like widening the road so that the cars/packets can get to their destination quicker.
 
-These servers are connected by a network of their own. There are a whole variety of different network topologies (layouts) but a particularly popular one is the fat tree:
+The catch is that all of these resources are limited. Each server has a limited amount of processing power and memory space; the network has a limited amount of bandwidth. To construct a service we have to decide how much of each of server and each switch's resource is allocated to each service.
 
-[Fat Tree]
+If you are familiar with it this will sound similar to the issues when managing a cloud computing environment and in many ways it is very similar. In cloud computing the challenge is similar, people pay you to be able to provide a certain amount of computing resource whenever you need it. So for example if you need a server that has 16 processors in it, Amazon will happily rent you one from one of their datacentres. If you need more, you just ask.
 
-The network is made up of servers, connected to each other through a tonne of switches. By following the connections between the switches, each server can send a message to any other server. The network has a critical resource of its own called bandwidth: the number of packets that can go between a server or switch a second. If you give a service more bandwidth, it's like widening the road so that the cars/packets can get to their destination quicker.
+The catch with this problem is that we must place sequences of VNFs and we must consider how all of these different VNFs will interact with each other. Plus we must consider how to use the wider network and what VNFs are worth placing at the edge of the network. PLUS we have constraints to worry about such as traditional network functions that cannot be moved but are as essential as the more modern equipment. 
 
-The catch is that all of these resources are limited. Each server has a limited amount of processing power and memory space; each switch has a limited amount of bandwidth. To construct a service we have to decide how much of each of server and each switch's resource is allocated to each service.
+Finally because that was apparently not enough, we are building a system that can make intelligent decisions about how many VNFs you need based on your particular requirements. That is that rather than buying a server like in traditional cloud computing, you buy a guarantee that the service you are providing will have low latency, high throughput and 99.99999% uptime. This moves the hard decision of choosing how much resources are needed from the consumer to the service provider. Now to make these decisions at a huge scale we need to move this intelligent decision making from humans to computers.
 
-Plus we can't forget that our services are made up of *chains* of network functions. That means we not only have to consider the amount of resources we allocate to each VNF but also their placement with respect to each other and the cost of the path that a packet must take to get from one VNF to the next.
+My research has two key parts. First is the development of mathematical models that provide insights into the VNF placement problem. The second is the usage of these models to develop state of the art optimisation algorithms that can solve it. 
 
-*PLUS* there are many constraints that we have to consider when looking for a solution. For example some network functions might require special hardware thats not found on every server, or we might want to keep some network functions apart, such as those providing critical infrastructure and those we are hosting for Joe Bloggs or Spyware Inc.
-
-These are tricky problems but the real meat of the issue is the scale and dynamicity of the problem. Your average datacentre may have on the order of 10s of thousands of servers and the solution will need lightning fast reactions to be able to keep up with the constant, and often unpredictable, changes in demand.
-
-This problem in its totality is called the *virtual network function placement problem*. My research has two key parts. First is the development of mathematical models that provide insights into the VNF placement problem. The second is the usage of these models to develop state of the art optimisation algorithms that can solve it. 
-
-At this point this series turns into a choose your own adventure book. If you have some time on your hands then you could read all of these posts in chronological order starting from this next post where we'll get into the real gritty details of how modern networks work servers and switches to virtual machines and containers.
+At this point this series turns into a bit of a choose your own adventure book. If you have some time on your hands then you could read all of these posts in chronological order starting from this next post where we'll get into the real gritty details of how modern networks work, from servers and switches to virtual machines, containers, Software Defined Networking and all sorts of fun stuff.
 
 If you are more interested in the development of cool mathematical models you should head over here.
 

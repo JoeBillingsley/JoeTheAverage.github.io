@@ -1,0 +1,61 @@
+- Build TODO app
+    - Build TODO list bit
+        - Require deadline + estimate of time to complete
+        - Would be good to record when task is actually completed also
+        - Useful to store notes too
+        - Store dependencies too
+            - Splitting tasks into smaller tasks and connecting them together
+            - Blob metaphor
+    - Build calendar
+        - Requires ability to block out time for different places/fixed tasks e.g. work is a place, picking up kids/getting flights could be 'tasks'
+        - Merge calendar and TODO parts together for day view?
+        - Current task, plan and current task notes?
+    - Build heuristic/metaheuristic to optimise tasks into calendar
+        - Place some small tasks in the morning?
+        - Probably needs to be some kind of preference incorporation technique
+            - Ask people to rank and learn?
+            - Maybe something more manual
+    - Technology
+        - VueJS front end
+        - DigitalOcean host will probably be fine
+        - Github hooks for building
+        - Postgres
+        - ASP.NET
+
+- Build website
+    - Finalise design
+        - Particularly front page
+            - Decide on layout of blog parts
+            - Joe Blogs title
+    - Build project page template
+    - Could split website into projects/posts
+        - Where does travel posts fit into this?
+        - Projects: beer, PhD, metaheuristics, goals?
+    - Maybe better to split by series/projects/posts
+        - Series: Taught material. PhD or metaheuristics. Actually have some value to others. Promotional material. Case studies?
+        - Projects: Goals that I need help with. Hope to get back some of the value given out in the series's.
+        - Posts: Just for me/family. Meant to entertain/inform/just exist. Kind of just whats left over.
+    - Move to Hugo
+    - Move to Netlify
+    - Probably create new repo and delete old one
+    - Copy over decent posts
+
+- Business Cards
+    - Have to get done before going to America
+    - Something simple but in keeping with design of website
+    - Might help to get a smaller domain too e.g. 'joebillingsley.co.uk' or something smarter
+
+- Writing up PhD research
+    - Background
+        - Problem
+            - Needs a few figures
+            - Need to finish draft
+        - VNF and SDN
+    - Modelling NFV Networks
+        - Introduce Background
+            - Why a Model
+            - Different types of Model
+            - Introduce idea of queues
+
+        - A Simple Model
+            - Introduce network in a bit more detail

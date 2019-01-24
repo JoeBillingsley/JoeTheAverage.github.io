@@ -1,0 +1,82 @@
+Imagine I handed you a scratch card with a 10x10 grid on it. Behind each cell in the grid is some amount of money. We make a deal that you can scratch away 5 cells and you get to take home the largest amount of money you find. How do you decide which boxes to scratch?
+
+If we look at this problem more formally we only have a few components:
+
+1. A problem: Find the maximum amount of money.
+2. A solution representation: In this case we could represent a solution by the coordinates of the cell which has the money e.g. (x, y).
+3. An evaluation function: When we scratch a cell off we find out how much it was worth. We may be able to use this information to find better cells. 
+4. Some constraints: There are 10 cells in each row and column and we can only evaluate 5 cells
+
+This is an interesting problem because it's so simple but so general. How many problems can you think of that can be formulated in such a way? If we had an algorithm that could solve any problem in this format then we could certainly find the fastest way of getting from A to B to C to D. We could use it to plan out a timetable for classes in universities [https://orca-mwe.cf.ac.uk/13966/1/LewisTTSurvey2007.pdf] or to make factories more efficient. Maybe we could use it design antennas for spacecraft or make telecommunications networks more efficient. In fact I would argue that if we could solve this problem, we could solve *every* problem. It's not surprising then that a lot of research has gone into this area. 
+
+To make things a little clearer we'll look at a much more concrete problem: the travelling salesman problem. In the traditional travelling salesman problem you need to visit a set of cities in turn whilst minimising the total travel time. Most people don't know anything about travelling between cities, so we'll replace those cities with pubs but you can imagine it as shops/restaurants/whatever. We could call it the stumbling student problem.
+
+In a given city, you may have a set of pubs like this:
+
+
+
+And we want to find the shortest path that visits every pub. You can start from anywhere you like and visit them in any order. Once you've got your solution you can compare with the correct answer below:
+
+
+
+Did you get it? Get near? I found this answer by brute forcing it on my computer. In order to do so it had to consider _ different orderings. Humans tend to be very good at this and can find pretty good solutions, very quickly.
+
+Now try this one:
+
+
+
+I don't expect you to try that one. I'm not even going to ask my computer to try it. With _ pubs we've reached _ different combinations. Still maybe there's an especially thirsty student out there that needs to visit all of these pubs and we need to find them a good solution. As we can't try every single combination we can't be sure that we will have found the best solution \footnote{There are variants of TSP where you can know you've got the optimal solution without considering every combination but those are not particularly interesting or practical}.
+
+We can use some of our knowledge of pubs and cities to write a *heuristic* - an algorithm that will give us an approximate solution to the problem. If you've spent much time in pubs you'll know that they often end up on the same street. The shortest path to every pub on the same street can be found by picking the next closest one. Applying this heuristic to both datasets we get these result:
+
+
+
+Good but not perfect. One interesting issue we run into is it's sometimes the case that we need to make a temporarily worse decision to get a better overall solution. Consider this case:
+
+
+
+Clearly this isn't ideal as we have to go miles out of our way to finish off our trip. We call this a greedy heuristic since it prioritises short term gains. If we use the first letter from each pub as a reference we can represent the current and obviously better configuration with two strings:
+
+
+Plus we can now fit the problem to our framework:
+
+1. Problem: Find the shortest overall path
+2. Solution Representation: A string of references to pubs
+3. Evaluation Function: The length of a given path
+4. Constraints: We must visit each pub exactly once
+
+If we look again at the current and best path we can see that there is currently only one pub out of place. To generalise this we could see if we get a better solution when putting each pub in each spot like so:
+
+But this leads to a lot of comparisons. Looking closer it turns out that for this problem there is just two swaps that go to a better position: the swap which immediately steps the pub to the right place and the one that swaps the out of the way pub with it's neighbour.
+
+
+If we take option two and swap with the neighbour then the next solution also only has two improving swaps, and then that solution only has two improving swaps. We can follow this sequence all the way to the point that we only have one improving move: the swap that leads us to the best solution.
+
+Our algorithm can be stated as follows:
+1. Start at a random pub
+2. Greedily choose the next nearest pub until all pubs are selected
+3. Make a new solution by swapping each pub with it's neighbour
+4. If any of these solutions are better, go back to step 3
+
+This idea, of evaluating nearby solutions and taking the best one is called *local search*. The idea is so general we can apply it to any given problem and is our first *metaheuristic*. We could apply the same idea to the scratch card problem. If I was a generous game player I might lay out the money so that the values behind each cell increases the closer you get to the maximum amount. If this were the case, local search would be a perfect algorithm.
+
+
+
+Then again I might also be deceitful and make it so that it just looks like it's an easy problem and the real maximum amount is hidden elsewhere...
+
+
+
+And this simple idea, shatters all of our dreams of ever finding a single algorithm that can solve all problems. For any set of problems that your algorithm works well on, I can find a counter problem on which it will fail miserably. This is a very important part of metaheuristics and leads to a foundational idea in the field: the better an algorithm works on one problem, the worse it must work on some other. This is called the 'no free lunch theorem'. It has some caveats but it is an essential thing to keep in mind when working with metaheuristics. 
+
+This doesn't mean that it's not worth pursuing this problem \footnote{At some point I will do a series of posts on the fascinating work that is going into working around the NFL theorem and finding an approach that can generalise more widely}. The many hours that have been spent developing different metaheuristics has given us a set of algorithmic tools that can be applied to a range of problems. When used well, and when well aware of their limits, these tools can be very effective when solving very hard problems. In this series I want to introduce some tools and perspectives that I've found helpful when unpicking problems of this sort. 
+
+Whilst doing so, I hope to lay a solid foundation that can help when reading further into this area and that we can build on with more advanced topics from the cutting edge of research in metaheuristics. To do so we're going to need to look at a bunch of different algorithms and extract the key ideas from each. When we look at this algorithms it's essential to keep in mind this core idea of the 'no free lunch theorem' and always be asking 'Why does this work?' and 'Where does it fail?'. Eventually we will look at this theorem in much more detail, but first we need to introduce some key concepts and terminology which you can find right here.
+
+Since these are mental tools rather than physical things you'll need to build them for yourself. At the end of each of these posts will be some exercises to stretch your brain a little:
+
+Exercise
+The proposed local search algorithm is far from perfect. I want you to think about how you could make it better. First answer these questions with the assumption that most pubs can be found on only a small number of streets and then try without:
+
+1. Think of a layout of pubs that would cause the greedy + local search algorithm to find a less than optimal solution. What is the worst configuration you can find? Why?
+2. The local search algorithm can only work from the greedy searches starting point. Can you think of a better method of starting?
+3. Both of the local search suggestions are very simple. How else could perform a local search? How about the greedy search?
