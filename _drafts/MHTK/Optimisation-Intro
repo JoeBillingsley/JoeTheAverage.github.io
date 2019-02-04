@@ -1,4 +1,19 @@
-Imagine I handed you a scratch card with a 10x10 grid on it. Behind each cell in the grid is some amount of money. We make a deal that you can scratch away 5 cells and you get to take home the largest amount of money you find. How do you decide which boxes to scratch?
+TODO: Might it be better as a 10x10 set of boxes?
+TODO: Explain that metaheuristics win against heuristics when the objective function can change e.g. when a minimisation problem becomes a maximisation one
+
+This series is for people with problems. In particular people with 'optimisation' problems, the kind of problems were you want to find the best route/timetable/layout/cpu design/brewing process - actually pretty much any problem since almost any problem can be cast as find the best *something* within some constraints. In this series we will look at the tools of the trade of metaheuristics, very general algorithms that have been regularly shown to get excellent results on some of the hardest and biggest problems. They can be effortlessly parallelised, easily generalise, and are all round good guys but - 
+
+First a few disclaimers:
+
+1. Metaheuristics might not be the best solution to your problem. The more you know about the problem the better you can solve it. If you know your problem is convex or can be described with a linear equation and some linear constraints, you probably want to read about classical optimisation techniques. If the problem is simple enough or you are smart enough to form a very good heuristic for the problem you probably want to use that. For everything else, there's metaheuristics.
+2. This is an old field but is an evolving one. It took hundreds of years for classical optimisation techniques to be fully understood. Much of the real hard mathematical groundwork is still being laid. There will be many cases where I cannot give a complete answer as to why and where some algorithm will perform well because we simply do not know. That said these algorithms have been used and are in use solving all sorts of practical problems. The intuition for many of these algorithms is much easier to grasp than they are to prove.
+3. I'm still learning about this field. I'll try my best not to get anything wrong and I'll include references for anything that I think is non-obvious but if something really goes against your intuition then email me, it may be a mistake.
+
+With that said let's get on with it.
+
+<hr>
+
+Imagine I handed you a scratch card with a 10x10 grid on it. The numbers 1-100 are hidden behind the cell in the grid. We make a deal that you can scratch away 5 cells and you get to take home the largest number you find in thousands of pounds/dollars/yen. How do you decide which boxes to scratch?
 
 If we look at this problem more formally we only have a few components:
 
@@ -7,9 +22,9 @@ If we look at this problem more formally we only have a few components:
 3. An evaluation function: When we scratch a cell off we find out how much it was worth. We may be able to use this information to find better cells. 
 4. Some constraints: There are 10 cells in each row and column and we can only evaluate 5 cells
 
-This is an interesting problem because it's so simple but so general. How many problems can you think of that can be formulated in such a way? If we had an algorithm that could solve any problem in this format then we could certainly find the fastest way of getting from A to B to C to D. We could use it to plan out a timetable for classes in universities [https://orca-mwe.cf.ac.uk/13966/1/LewisTTSurvey2007.pdf] or to make factories more efficient. Maybe we could use it design antennas for spacecraft or make telecommunications networks more efficient. In fact I would argue that if we could solve this problem, we could solve *every* problem. It's not surprising then that a lot of research has gone into this area. 
+This is an interesting problem because it's so simple but so general with enough boxes we could represent any possible optimisation problem. Any insights we get from this problem can be applied to optimisation as a whole. 
 
-To make things a little clearer we'll look at a much more concrete problem: the travelling salesman problem. In the traditional travelling salesman problem you need to visit a set of cities in turn whilst minimising the total travel time. Most people don't know anything about travelling between cities, so we'll replace those cities with pubs but you can imagine it as shops/restaurants/whatever. We could call it the stumbling student problem.
+This is a very abstract problem though so first let's look at the something with a few more constraints: the travelling salesman problem. In the traditional travelling salesman problem you need to visit a set of cities in turn whilst minimising the total travel time. Most people don't know anything about travelling between cities, so we'll replace those cities with pubs but you can imagine it as shops/restaurants/whatever. We could call it the stumbling student problem.
 
 In a given city, you may have a set of pubs like this:
 
@@ -66,7 +81,7 @@ Then again I might also be deceitful and make it so that it just looks like it's
 
 
 
-And this simple idea, shatters all of our dreams of ever finding a single algorithm that can solve all problems. For any set of problems that your algorithm works well on, I can find a counter problem on which it will fail miserably. This is a very important part of metaheuristics and leads to a foundational idea in the field: the better an algorithm works on one problem, the worse it must work on some other. This is called the 'no free lunch theorem'. It has some caveats but it is an essential thing to keep in mind when working with metaheuristics. 
+And this simple idea shatters all of our dreams of ever finding a single algorithm that can solve all problems. For any set of problems that your algorithm works well on, I can find a counter problem on which it will fail. This is a very important part of metaheuristics and leads to a foundational idea in the field. Very loosely the better an algorithm works on one problem, the worse it must work on some other. This is called the 'no free lunch theorem'. It has some caveats but it is an essential thing to keep in mind when working with metaheuristics. 
 
 This doesn't mean that it's not worth pursuing this problem \footnote{At some point I will do a series of posts on the fascinating work that is going into working around the NFL theorem and finding an approach that can generalise more widely}. The many hours that have been spent developing different metaheuristics has given us a set of algorithmic tools that can be applied to a range of problems. When used well, and when well aware of their limits, these tools can be very effective when solving very hard problems. In this series I want to introduce some tools and perspectives that I've found helpful when unpicking problems of this sort. 
 
