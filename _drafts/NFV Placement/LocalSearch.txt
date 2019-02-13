@@ -1,0 +1,52 @@
+TODO: This is a good opportunity to introduce some different problem representations
+      Could also introduce the basic maths terminology: real numbers, integers, sets, vectors
+
+Last post I briefly introduced the idea of 'local search'. This time round I want to formalise this idea and introduce many important concepts in metaheuristics as we do so.
+
+Loosely defined a local search algorithm can find a solution where there are no better solutions in its neighbourhood. A solution that meets this criteria is called a local optima so it is the same thing to say that local search algorithms guarantee to find local optima.
+
+To formalise this we need to introduce the concept of spaces. A 'space' in mathematics is all of the different values a set of variables can take. For example the space of positive integers is the space of all whole numbers greater than 0 i.e. 0, 1, 2, 3... In optimisation the 'decision space' is the space formed from all of the variables we must consider. So for example in the previous post we introduced a problem where we had a 10x10 grid of boxes and we wanted to find the box worth the most money. In this problem we had two positive integer variables that must be less than 10. Our decision space is therefore all of the combinations of each variable i.e. (0,0), (0, 1), ... (10, 10).
+
+For problems with only 1 or 2 variables we can easily see how the fitness of solutions varies as we move through the decision space. For example if we had a problem with only 1 variable where each variable was a postive integer we might get a plot like this:
+
+
+From looking at this plot we can pretty easily see that each of the peaks represents a local optima. Likewise for this problem there is an intuitive idea of what counts as the 'neighbourhood'. It is the solutions that are only +/- 1 from the current solution. Similarily for a problem with two variables the intuitive neighbourhood of a solution (x, y) is the set of solutions: (x+1, y), (x-1, y), (x, y+1), (x, y-1), (x+1, y+1), (x-1, y-1), (x+1, y-1), (x-1, y+1). 
+
+How about for the travelling salesman problem we introduced earlier? For that problem we defined a solution as a string of cities: i.e. [A, B, C, D] means visit City A then City B... What constitutes a neighbourhood now? In fact it seems like there are lots of ways of defining a neighbourhood for this problem. We could say the neighbourhood is all of the solutions where one city has been rotated with its neighbour e.g. [A, C, B, D] and [A, B, C, D] are neighbours as only B and C have been swapped.
+
+We can get a better understanding of what is going on by considering how the neighbourhood looks in the decision space. Say we had some fixed point in the decision space we will call A. Given another set of points in the same space, how do we find the closest point to A? We'd need to define some distance metric. For example if our decision space was some string of integer or real numbers then we could use the euclidean distance. If our decision space was some set of items, such as strings of cities then we might need to define a distance based on the permutations we need to make to get from one solution to the other. In this context our neighbourhood is the set of solutions that are less than some distance away.
+
+## Local Search
+
+Given a neighbourhood it seems fairly obvious how we would find a local optima. Assuming we don't have any better knowledge on where to start:
+
+1. Choose a random initial solution
+2. Evaluate all solutions in the neighbourhood
+3. If a neighbouring solution is better, move to that solution and goto 2
+
+Going back to our simple problem from earlier we can see how effective such a simple algorithm can be. For a maximisation problem we start at some point in the decision space and we rapidly work our way up to the top of the nearest hill, hence these algorithms are often called hill climbers.
+
+However hopefully you can also see some of the many ways this algorithm will fall down. The most obvious way things can go wrong is if the shape of the problem, the way the fitness of solutions changes over the decision space is not amenable to a simple local search algorithm. For example the local optima from a given start point may not be the global optima. For example consider this particularly bumpy problem:
+
+
+This problem is multi-modal as it has many local optima. A similar issue occurs when the problem has flat regions where function evaluations of nearby solutions don't give us any information we can use to improve:
+
+Whilst the algorithm may have technically succeded here (it has found a local optimum) we should really aim for more. In fact the only problems where a simple local search is guaranteed to work are unimodal problems where there is a single optima so the locally optimal solution is also the global optimal solution:
+
+## Mutation
+
+So far we've only considered integer and ordinal problems where the neighbourhood can be easily described and - more importantly is finite. Now think about how you would define a neighbourhood for a real number variable. Following from our definition of a neighbourhood earlier, one way of defining the neighbourhood would be to consider all those numbers that are less than some distance away. A common distance metric for real numbers is the euclidean distance. With integers this worked just fine but unfortunately the set of real numbers is uncountably infinite \footnote{There is an infinite number of real numbers between any two numbers} and so an exhaustive evaluation of the neighbourhood is impossible \footnote{Technically it's sort of possible if only because computers can't represent numbers to an infinite degree of precision but even then you would have to crazy/stupid to try}.
+
+We could define a neighbourhood which contains a finite number of real numbers but this is only really pushing the issue further way. Consider how earlier we were already seeing an explosive growth in the size of our neighbourhood even for a simple integer string, certainly we need some way of considering larger neighbourhoods.
+
+Well if we can't evaluate the whole neighbourhood we can only evaluate some of it. And if we don't have any better knowledge about which parts to evaluate then we may as well pick some points at random. For the real valued space this could mean we add a random number in the range [-dist, dist] to our current position. With a vector of cities this could be swapping two random cities to make a new solution.
+
+These operations would more commonly be called mutation operators. If the threshold distance is low we can see this as a form of stochastic local search. As we cannot exhaustively search the neighbourhood we also require a different stopping condition. An appropriate one for most cases in the number of function evaluations as it allows us to run the algorithm for only as long as we can wait. Our updated algorithm now looks like:
+
+
+This algorithm is very simple but widely applicable. If you are content to find a local optima either of the two algorithms on this page will suit the bill and you can stop reading now. But we can aspire to be better than that. What we really want is the global optima, the best possible solution from the whole decision space. That it is where things start to get interesting and we will start to fix this algorithms shortcomings in the next post, here.
+
+Exercises:
+1. We've already described some distance metrics for real valued numbers and integers. How might one look for binary strings? For matrices? For a graph?
+2. There is a simple solution to the problem of plateaus in local search for problems with only 1 variable. What is it? Why doesn't this work for problems with more variables?
+3. The stochastic local search algorithm has some interesting properties. Whilst we can never be 100% sure that we have found a local optima without evaluating the whole neighbourhood, the more evaluations we perform without finding an improving solution the more confident we become. Suggest an improvement that may find better final solutions.
