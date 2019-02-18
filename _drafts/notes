@@ -14,3 +14,10 @@ On the other hand if we decide the value of the boxes based on the difference be
         - Many of these algorithms have particular quirks/naming structures. For the most part you can ignore these details. The important part is to have a good general idea about different approaches that might fit your problem so you have a starting point for further research. 
 
 For more complex problems with many more variables it's much harder to visualise the objective space in this way but the same properties still keep emerging. One way of thinking about complex problems is in terms of the *neighbours*. A neighbouring solution is usually defined as a solution that is one step away from some other solution and is determined partly by the choice of the solution representation.
+
+There are a few factors we can consider when deciding when to use an algorithm:
+1. The first is whether the algorithm re-evaluates solutions in the decision space. Of these Tabu search is the only approach that considers this explicity but at the cost of maintaining some memory about previously visited solutions. This isn't necessarily that important. As the number of variables you are consider increases, the decision space oftens grows exponentially. To some extent this negates issues of reevaluating solutions.
+
+2. A more important point is how well the algorithm uses the information it has already discovered. Almost all metaheuristic algorithms assume there is some kind of information that can be revealed by using the previous solutions in some way. Random restart is fairly weak in this regard as after each run it approaches the problem with a clean slate. However it is easy to think of a problem were this could be the best we could do. In practice though if you come across a problem where random restart is the best that can be done almost any metaheuristic will perform poorly.
+
+3. The main factor to consider when deciding what algorithm to use is how well the algorithm suits the problem and the problem specific knowledge that you have available. If you think the problem looks like a series of progressively rising hills, try ILS. If you have a great way 

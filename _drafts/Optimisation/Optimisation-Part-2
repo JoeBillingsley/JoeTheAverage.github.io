@@ -1,0 +1,80 @@
+When we finished off the last post we talked a little about mutation and this idea of stochastically exploring a neighbourhood. This time round we are going to take that idea further and see what happens when we explore outside of that neighbourhood in search of global optima.
+
+Previously we described a neighbourhood as being all of the solutions that are some distance away according to some distance metric that makes sense for the solution representation we are using. So for example if we are solving a problem that is a string of real numbers we might consider all of the numbers that are less than some distance away. Then as there is an infinite number of these numbers we have to randomly sample some solutions in this region and hope that we find an improving solution. The problem we ran into was that we should get stuck in some local optima so on a problem like this for example we could have some issues:
+
+Take a moment to think about ways around this problem. There are a fair few and almost every way of solving this problem leads to an interesting subfield of metaheuristics so it's worth thinking about for a moment.
+
+Done? Here's what I've got:
+
+## Random Restart
+The first thing you might have thought of would be to just try again from a new random spot. This is called random restart. The hope here is that we might get lucky enough to start on a part of the decision space that leads to the global optimum rather than a local optimum. The probability of that happening depends on how much of the decision space could lead to the global optimum as opposed to a local optimum. Consider the two minimisation problems (i.e. we're trying to find the lowest point) in Figure 2:
+
+
+
+Which is the easier problem to solve? If you chose a random number to start at and performed local search you're far more likely to get to the global optimum for problem B) than problem A) since the probability of choosing a number that will eventually lead to the global optimum is much greater on problem B than A. We call the part of the decision space where you can end up at a optimum, local or otherwise, the optimum's *basin of attraction* \footnote{That's your useless tidbit for the day}. For problems where the global optimum has a large basin of attraction, random restart could work very effectively.
+
+When using this approach the main decision we have to make is when to restart. We can take advantage of the fact that the more we evaluate the neighbourhood around a solution the more confident we can be that we have found a local optima. Using this idea the simplest implementation performs a fixed number of function evaluations in the neighbourhood and then if it fails to find a better solution, restarts from a new point.
+
+However a naive random restart can be a bit wasteful. Over a large number of runs random restart will probably cover a decision space evenly. However there's always the possibility that it will decide to restart in the same broad area for most of the runs and in doing so wasting a lot of time. At the same time even if we use a different starting point there is the risk that we are actually still in the basin of attraction of an optimum that we found earlier. This can particularly be a problem for problems such as problem B in figure 1 where most of the decision space is taken up by a small number of optimum.
+
+## Tabu Search
+One way around this is to introduce some memory into the algorithm. In the simplest iteration of this we could record all of the points we evaluated. If we end up in the neighbourhood of a solution we've seen before we can assume that we've already explored that area. The algorithm is still fairly simple:
+
+TODO: This is incomplete
+
+while num_evaluations < max_evaluations {
+
+    let best_local = Solution::new_random();
+    let is_new = true;
+
+    for solution in memory {
+        if distance(best_solution, solution) < neighbourhood_size {
+            is_new = false;  
+            break;
+        }  
+    }
+
+    if !is_new { continue; }
+
+    memory.push(solution);
+
+    # Perform local search
+    for solution in best_local.neighbourhood() {
+
+        num_evaluations ++;
+
+        if fitness(solution) > fitness(best_local) {
+            best_local = solution;
+        }
+    }
+}
+
+The downside to this approach is that our 'tabu list' can get very large. There are a lot of different ideas when it comes to deciding what solutions to keep and what to chuck.
+TODO: Discuss more. Hint at exploration vs exploitation tradeoff?
+
+## Iterated Local Search
+Tabu search solves one issue of random restart but RR is wasteful in another way too - it throws away all of the information about the local optima every run. Last post we discussed how some neighbourhoods could be larger than others. If a small neighbourhood promotes local search it makes sense that a large neighbourhood would promote global search. One thing we could do is to run the algorithm performing small mutations until we believe we've reached a local optima and then we could try a larger mutation operator to see if we can land in a new basin of attraction. 
+
+TODO: algorithm
+
+This works really well for problems like Figure 1 where we have a sequence of local optima tending towards a global optima. When implementing this algorithm we need to decide how exactly we're going to update the mutation rate at each step. We can take advantage of the fact that the more we evaluate the neighbourhood around a solution the more confident we can be that we have found a local optima. We could use a fixed setting for both mutation rates. We could use a small mutation rate by default and then jump up to the bigger rate if we don't find a better solution in a certain number of function evaluations. This approach also has its issues. If we ended up at an isolated local optima even our larger mutation rate may not be able to help us.
+
+So for example we could use an update mechanism where every time we fail to find a better solution we increase the mutation rate and reset it when we find a better solution. If you use this implementation there is the risk that a sequence of unlucky mutations may increase the mutation rate too high too quickly. If the mutation rate is very high, the operation can be very destructive and you are effectively performing random search. We could decide to cap our mutation rate at a certain point but then we run into the same issue of isolated local optima as before.
+
+## Annealing
+Right one more way of doing this. What happens if we flip iterated local search on its head. Rather than increasing the mutation rate when we converge, what happens if we decrease the mutation rate over time? We could start off with a high mutation rate and then progressively lower the mutation rate over time. The idea here is that we first explore the decision space by using a high mutation rate and hope to land in a good basin of attraction. Then over time the lower mutation rate allows us to exploit our current position and find the best solution nearby. Intuitively this algorithm does a more thorough initial sweep of the decision space than ILS before settling on an area to exploit.
+
+However like with ILS we have to decide on a means of updating the mutation rate. Now however the mutation rate is dependent on the number of evaluations we have made rather than the implied quality of the solution. We have the same challenge of deciding when to update the mutation rate as in ILS only in reverse - if we set the mutation rate too low too soon we might settle on a local optima; too fast and we'll never make the most of the basin we're in.
+
+## Exploration vs Exploitation
+If we look at our algorithms in the context of this exploration and exploitation ideas a clear pattern emerges. In each case we have some mechanism that determines how many of our limited function evaluations we use on *exploring*, searching for the best region of the decision space overall vs *exploiting* finding the very best solution nearby. This is the fundamental challenge off with global search algorithms called the exploration vs exploitation tradeoff. If we consider all possible problems there is nothing we can do about this tradeoff. The art of optimisation is in finding the best way of solving a particular problem, or set of problems, based on whatever insight you can acquire. 
+
+That said there are some things that are good to look for when picking an algorithm:
+
+1. Will the algorithm re-evaluate solutions? Unless the fitness of a solution is going to change over time there is no point checking in the same place twice \footnote{For reasons unknown this doesn't seem to apply when searching for keys or other lost items.}. This may not be a problem. As the number of variables you are consider increases, the decision space oftens grows exponentially. To some extent this negates the issue of reevaluating solutions but still worth keeping in mind.
+
+2. How does the algorithm use the information it has uncovered? As we evaluate solutions we are very slowly illuminating the decision space. An algorithm like random restart throws away most of that information whereas an algorithm like tabu search hangs on to everything. The correct approach depends on the exact problem you are solving but generally it should be more of a question of *how* can we use this information than *should* we use it.
+
+3. How well does the algorithm fit the problem? In this post we've been looking at these problems from the perspective of a problem that can be represented as a string of real numbers, that was because it's really easy to define all of the concepts we needed neighbourhoods, mutation, mutation rates etc. for that representation. Depending on the problem you are working with this isn't always the case. On the flip side there are some problems which an algorithm meshes really well with. Maybe you have a great way of deciding which solutions to evict from the tabu list or you think the problem is particularly tight and hilly and may be a great fit for ILS. As we introduce ever more specialised algorithms this will become a more and more important part of the design process.
+
+In the next post we are going to be looking further into this idea of reusing information as we start thinking about the possibilities presented by populations of solutions.
