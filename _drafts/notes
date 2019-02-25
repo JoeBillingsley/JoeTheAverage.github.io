@@ -21,3 +21,34 @@ There are a few factors we can consider when deciding when to use an algorithm:
 2. A more important point is how well the algorithm uses the information it has already discovered. Almost all metaheuristic algorithms assume there is some kind of information that can be revealed by using the previous solutions in some way. Random restart is fairly weak in this regard as after each run it approaches the problem with a clean slate. However it is easy to think of a problem were this could be the best we could do. In practice though if you come across a problem where random restart is the best that can be done almost any metaheuristic will perform poorly.
 
 3. The main factor to consider when deciding what algorithm to use is how well the algorithm suits the problem and the problem specific knowledge that you have available. If you think the problem looks like a series of progressively rising hills, try ILS. If you have a great way 
+
+TODO: Talk about swarm optimisation algorithms
+
+Last post we extended our local search algorithm and in the process developed some global search algorithms. In that post we started to think about how we could use and re-use information over the course of a run. In the next few posts we are going to dive deeper into this idea.
+
+In the last post we pointed out that some algorithms re-use information better than others. For example random restart doesn't consider previously discovered local optima after a restart whereas iterated local search starts from there and tabu search can be designed to consider all previous solutions. This seems like some kind of progress but we can take the idea further. What happens if instead of consider a single solution at a time, we considered multiple?
+
+We could apply this algorithm to most any metaheuristic algorithm to some degree but for simplicities sake I'm going to introduce (another!) new algorithm that thinks about things a little differently.
+
+## Heavy Ball
+The last few algorithms we looked at showed us it was very easy to find the bottom or top of some given hill but things get trickier as soon as the 
+
+-> Genetic Algorithm / Differential Evolution? 
+-> Evolution Strategies 
+    - Self adaptive
+    - Mutation + Crossover + Self adaptive
+    - http://www.cs.bham.ac.uk/~pxt/NIL/es.pdf
+-> PSO / Swarm optimisation algorithms (Through crossover operator) 
+-> A brief interlude: constraints 
+    - Discuss constraints before talking about probability
+-> Probability Based Approachs
+    - Population based methods clustering around regions where we are expecting better solutions
+    - Provide insight into metaheuristics as a probabilistic technique
+    - Ant Colony Optimisation
+    - Generative probabilistic based Approachs
+-> No Free Lunch
+-> Conclusions
+    - Multiobjective Optimisation
+    - Subpopulations
+    - Genetic Programming
+    - Further reading

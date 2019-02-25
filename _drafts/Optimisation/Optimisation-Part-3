@@ -1,0 +1,18 @@
+Genetic algorithm
+
+Last time we made a few extensions to our local search algorithms to try and make them search a wider part of the space. So far we've limited ourselves to just considering one solution at a time. They are certainly very easy to implement but multiple solution approaches can be very easy also. Imagine we initialise a whole set of solutions to a problem as in Figure 1. We've talked previously about the idea of mutation as hill climbing but this problem becomes more interesting in the presence of multiple solutions. With multiple solutions we can search multiple basins of attraction but with a limited number of function evaluations we need to decide which areas we want to concentrate on. 
+
+For example, we could iterate over all of the solutions in the population and mutate each one. If the new solution is better than the parent solution, we replace the parent with it \footnote{Algorithms which only replace one solution at a time are typically called **steady state** algorithms}. This approach balances the function evaluations evenly over the solutions in the population. We could see this as an approach that favours exploration over exploitation. If we change the algorithm slightly so that the new solution replaces the worst solution in the whole population we get a very different dynamic. Now at each iteration we will stop searching in part of the space and focus more effort on a more promising area. Given enough iterations, all solutions will end up concentrated on a small number of equally good regions. 
+
+[Example with both algorithms on a problem with many local optima trending towards a single global optima in the middle]
+
+For reasons that may become clearer soon, we wouldn't usually just make the one new solution each time but generate some multiple of the original population. Often this is done by iterating over a whole population and generating at least one new solution for each existing one. This frees us up to allow multiple solutions to focus in on one area each iteration or something something tired.
+
+There are many approaches to selection that strike a balance between exploration and exploitation. We will quickly discuss some here:
+
+TODO:
+*Parent* The first one we introduced
+*Hard?* The second one we introduced
+*Roulette Wheel/Fitness Proportional Selection*
+*Stochastic Universal Sampling*
+**

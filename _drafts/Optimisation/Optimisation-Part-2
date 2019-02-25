@@ -18,6 +18,8 @@ When using this approach the main decision we have to make is when to restart. W
 However a naive random restart can be a bit wasteful. Over a large number of runs random restart will probably cover a decision space evenly. However there's always the possibility that it will decide to restart in the same broad area for most of the runs and in doing so wasting a lot of time. At the same time even if we use a different starting point there is the risk that we are actually still in the basin of attraction of an optimum that we found earlier. This can particularly be a problem for problems such as problem B in figure 1 where most of the decision space is taken up by a small number of optimum.
 
 ## Tabu Search
+TODO: If we go to the top of a hill, we can't stay there as we've already explored that region
+
 One way around this is to introduce some memory into the algorithm. In the simplest iteration of this we could record all of the points we evaluated. If we end up in the neighbourhood of a solution we've seen before we can assume that we've already explored that area. The algorithm is still fairly simple:
 
 TODO: This is incomplete
@@ -62,6 +64,9 @@ This works really well for problems like Figure 1 where we have a sequence of lo
 So for example we could use an update mechanism where every time we fail to find a better solution we increase the mutation rate and reset it when we find a better solution. If you use this implementation there is the risk that a sequence of unlucky mutations may increase the mutation rate too high too quickly. If the mutation rate is very high, the operation can be very destructive and you are effectively performing random search. We could decide to cap our mutation rate at a certain point but then we run into the same issue of isolated local optima as before.
 
 ## Annealing
+
+TODO: This is not Simulated Annealing apparentlyy
+
 Right one more way of doing this. What happens if we flip iterated local search on its head. Rather than increasing the mutation rate when we converge, what happens if we decrease the mutation rate over time? We could start off with a high mutation rate and then progressively lower the mutation rate over time. The idea here is that we first explore the decision space by using a high mutation rate and hope to land in a good basin of attraction. Then over time the lower mutation rate allows us to exploit our current position and find the best solution nearby. Intuitively this algorithm does a more thorough initial sweep of the decision space than ILS before settling on an area to exploit.
 
 However like with ILS we have to decide on a means of updating the mutation rate. Now however the mutation rate is dependent on the number of evaluations we have made rather than the implied quality of the solution. We have the same challenge of deciding when to update the mutation rate as in ILS only in reverse - if we set the mutation rate too low too soon we might settle on a local optima; too fast and we'll never make the most of the basin we're in.
@@ -77,4 +82,6 @@ That said there are some things that are good to look for when picking an algori
 
 3. How well does the algorithm fit the problem? In this post we've been looking at these problems from the perspective of a problem that can be represented as a string of real numbers, that was because it's really easy to define all of the concepts we needed neighbourhoods, mutation, mutation rates etc. for that representation. Depending on the problem you are working with this isn't always the case. On the flip side there are some problems which an algorithm meshes really well with. Maybe you have a great way of deciding which solutions to evict from the tabu list or you think the problem is particularly tight and hilly and may be a great fit for ILS. As we introduce ever more specialised algorithms this will become a more and more important part of the design process.
 
-In the next post we are going to be looking further into this idea of reusing information as we start thinking about the possibilities presented by populations of solutions.
+We've introduced some core ideas of the field here: memory, annealing and the exploration vs exploitation trade off. In the next post we are going to be looking further into this idea of reusing information as we start thinking about the possibilities presented by populations of solutions.
+
+Exercises:
