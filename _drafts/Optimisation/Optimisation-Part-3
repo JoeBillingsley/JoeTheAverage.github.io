@@ -1,18 +1,39 @@
-Genetic algorithm
+Last time we made a few extensions to our local search algorithms to try and make them search a wider part of the space. So far we've limited ourselves to just considering one solution at a time. In this post we will investigate what happens when we remove this limitation.
 
-Last time we made a few extensions to our local search algorithms to try and make them search a wider part of the space. So far we've limited ourselves to just considering one solution at a time. They are certainly very easy to implement but multiple solution approaches can be very easy also. Imagine we initialise a whole set of solutions to a problem as in Figure 1. We've talked previously about the idea of mutation as hill climbing but this problem becomes more interesting in the presence of multiple solutions. With multiple solutions we can search multiple basins of attraction but with a limited number of function evaluations we need to decide which areas we want to concentrate on. 
+Imagine we initialise a population of say 100 solutions to a problem as in Figure 1. Going over what we've already studied we could perform some hill climbing algorithm independantly on each of these solutions and in doing so search multiple basins of attraction. The simplest way to do this would be to iterate over all of the solutions in sequence and perform some mutation operator, possibly one that selects the best neighbouring solution. If the new solution is better than the parent then we replace it, \footnote{Of course we could generate more than one solution and end up with something more akin to a steepest slope hill climbing algorithm}. However in doing this we haven't really gained over performing a set of hill climbing algorithms in sequence and worse, if we assume we have some limited number of function evalations then we may now be wasting function evaluations on solutions that have likely converged to a local optima that is worse than that of another solution - it would be better if we could spend these function evaluations on another region.
 
-For example, we could iterate over all of the solutions in the population and mutate each one. If the new solution is better than the parent solution, we replace the parent with it \footnote{Algorithms which only replace one solution at a time are typically called **steady state** algorithms}. This approach balances the function evaluations evenly over the solutions in the population. We could see this as an approach that favours exploration over exploitation. If we change the algorithm slightly so that the new solution replaces the worst solution in the whole population we get a very different dynamic. Now at each iteration we will stop searching in part of the space and focus more effort on a more promising area. Given enough iterations, all solutions will end up concentrated on a small number of equally good regions. 
+If we change the algorithm slightly so that the new solution replaces the worst solution in the whole population we get a very different dynamic. Now at each iteration we will stop searching in part of the space and focus more effort on a more promising area. Given enough iterations, all solutions will end up concentrated on a small number of equally good regions. This swings the algorithm far further in favour of explotation over exploration.
 
 [Example with both algorithms on a problem with many local optima trending towards a single global optima in the middle]
 
-For reasons that may become clearer soon, we wouldn't usually just make the one new solution each time but generate some multiple of the original population. Often this is done by iterating over a whole population and generating at least one new solution for each existing one. This frees us up to allow multiple solutions to focus in on one area each iteration or something something tired.
+It's easier to balance between these two extremes if we consider more solutions at a time. Lets say we generate N initial solutions and perform some operation on them to generate another N solutions. In optimisation terminology we may refer to these as the parent and children populations \footnote{These names will make more sense after the next entry}. Now we have 2N solutions to consider and typically we want to select N solutions from the combined population \footnote{We will also look at some reasons why you might not want to do this in a later entry} so that we can repeat this process for as long as we want without our population size increasing out of control. The process we use to decide which solutions to keep into the next iteration are called our selection algorithms. The exploration/exploitation tradeoff means it is not necessarily enough to just select the best solutions but if we do not have any opinion about which solutions to keep we degenerate into random search. Selection algorithms differentiate themselves by how much selection pressure they apply, the degree to which they favour good solutions over worse ones, and the methods they allow to control this pressure. Fortunately none of the common techniques are complicated so we will blitz through some now and then you can try them out at the end. 
 
-There are many approaches to selection that strike a balance between exploration and exploitation. We will quickly discuss some here:
+TODO: Check this is actually what truncation selection is
+## Truncation selection
+The most obvious approach is to rank all of our solutions by fitness and take the top N. With a little more nuance we could take the top X percent of the solutions, where X <= 50, and take N/X solutions copies of each solution. 
 
-TODO:
-*Parent* The first one we introduced
-*Hard?* The second one we introduced
-*Roulette Wheel/Fitness Proportional Selection*
-*Stochastic Universal Sampling*
-**
+[PSEUDOCODE]
+
+The threshold X allows us some ability to control the selection pressure e.g. at 50% we will take the top N solutions once each whilst at 25% we will take two copies. This is an *elitist* selection method as the best solutions will always make it to the next generation. This is generally a good thing as it means we never lose the information about our fittest solutions. However this can also lead to the algorithm quickly converging on a local optima as it is never able to accept worse solutions. Truncation selection does not provide the tools to balance these two factors.
+
+## Fitness Proportional Selection
+A more nuanced strategy assigns each individual some probability of being selected based in some way on their fitness so that we are more likely to select better solutions but still have a chance of selecting others. Roulette wheel selection does this based entirely on the fitness of each solution. You can think of it like assigning space on a roulette wheel so that it is more likely to land on fitter solutions. 
+
+[PSEUDOCODE]
+
+The next population is determined by spinning this wheel N times. In the standard linear roulette wheel selection the probability of selecting a solution is given by:
+
+We can modify this function to allow us to increase the selection pressure. A common variant is exponential roulette wheel selection:
+
+One downside of this approach is that selection pressure decreases as the difference between their fitnesses decreases which can cause the selection pressure to decrease over the course of a run. This can slow down convergence on good solutions, making it more difficult to find the best solution in the neighbourhood. An alternative approach is *rank selection*. With rank selection we again sort our population as in truncation selection, but now use their ranks to determine the probability of the each solution being selected. This maintains the selection pressure throughout the run at the cost of disconnecting the probability of selecting a solution from it's true fitness.
+
+Finally there is also stochastic universal sampling. Take the roulette wheel from before but rather than spinning it, place N markers at equal distances from each other and take the solution pointed to by each of those markers. This has the advantage of 1. Ensuring that you take the expected number of each solution e.g. if a fitness had a 25% probability of being selected it will be selected N/4 times and 2. Ensuring you do not select a solution any more times than this. A subtle issue in both rank and roulette wheel selection strategies is that we can potentially select the same solution every time \footnote{We could remove a solution from the wheel when we select it but this is not common.}. Stochastic universal sampling neatly avoids this issue, maintains the best solutions in the population and has a constant selection pressure throughout. 
+
+## Tournament Selection
+The last selection algorithm we will discuss today is tournament selection. Another bio-inspired algorithm, the idea here is we take some number of solutions and make them fight to the death with the fittest solution going on to enter the next population. A common method of implementing this is to choose two random solutions from the population (so called binary tournament selection) and put the one with the better fitness into the next generation. This is very easy to implement, is elitist but allows for all but the worst solution to have a chance of entering the next population and all comparisons can be done in parallel. We can also increase the selection pressure by increasing the size of each tournament ensuring that enough solutions are returned to the population to ensure it is possible to finish the selection process.
+
+[PSEUDOCODE]
+
+[VISUALISER OF DIFFERENT SELECTION METHODS]
+
+Here we have covered the selection algorithms you are most likely to come across in your own work or research. Hopefully you can also see how by considering populations of solutions we have been able to elegantly allocate our limited resources more efficiently. In the next post in this series we will take this idea a step further and look at how we can share information between different solutions to escape local optima and devise more intelligent algorithms.  
