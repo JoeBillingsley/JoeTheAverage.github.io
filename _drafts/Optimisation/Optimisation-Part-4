@@ -1,58 +1,68 @@
 Once we start considering populations of solutions we can also consider how we can share information between succesful solutions. To illustrate this lets look back at our pub crawl problem again. Consider these two solutions and their representations: 
 
-Both solutions have managed to solve one half of the problem; by sharing information between them we could generate a better solution. Of course you can't expect to get something this convenient very often but similar situations are very common. The key idea here is that good solutions are constructed from good building blocks, components that work together for whatever reason and that with crossover we want to share these building blocks between solutions to try and construct better solutions. There is an underlying assumption here that these building blocks are compatible with each other. We call problems with this property separable whilst problems that aren't are non-separable. Figure _ illustrates this property using the original 10x10 block problem.
+Both solutions have managed to solve one half of the problem; by sharing information between them we could generate a better solution. Of course you can't expect to get something this convenient very often but similar situations are very common. The key idea here is that good solutions are constructed from good building blocks, components that work together for whatever reason and that with crossover we want to share these building blocks between solutions to try and construct better solutions.
 
+We can use crossover to generate a new population similarily to how we used mutation before however now we need to select at least two solutions to exchange information from. Commonly we will choose two 'parents' from the current population to generate one or more 'child' solutions. To do so we can use any of the selection methods we discussed in the previous post to find two solutions. For example we could use tournament selection, allow two or more solutions to enter the tournament, keep the winner as one of the parents and repeat the process for the second parent.
+
+[Figure of selection and crossover process / GA process]
+
+Looking at our string from before we can see that there are building blocks we want to include but it is not clear where we want them to be placed. We could design an operator that could work on any string. For example in *uniform crossover* we simply iterate over both parents. For each variable we flip a coin to decide whether to decide which parent to take the variable from. We can create another child at the same time from the parts that were not selected.
+
+[Animation/Figure of uniform crossover]
+
+Whilst this crossover operator could work on any string we are not taking advantage of our particular problems characteristics. From our knowledge of pubs we know that they often end up on the same street. Hence good solutions probably have sections where nearby pubs are near to each other in the string. Therefore it makes sense to try and share contigous blocks of pubs. To do so we can use another very common and general purpose operator called N-Point Crossover. Here we make N random cuts along the string and exchange the variables in these regions to make one or two children.
+
+[Animation/Figure of N-Point Crossover]
+[Include in figure: Common settings are 1 or 2 cuts.]
+
+So far we've ignored the key constraint of the pub crawl problem: we must visit every pub exactly once. With the N-Point and unifrom crossover operators we can easily break this constraint.
+
+[Figure of constraint violation?]
+
+With this in mind we can design a better operator for this particular problem. Position Based Crossover tries to preserve the position of cities over the two strings as much as possible whilst ensuring no variable is repeated twice. TODO: Position based crossover algorithm
+
+[Pseudocode]
+
+[Figure]
+
+Position based crossover is a serious step up as we are now able to reliably generate child solutions but we can still do better. So far we have been thinking in terms of the position of cities in a string but that isn't the fundamental building block here. In fact we don't mind where in a string cities are, we are interested in the relationship between them - in particular the order in which each city appears relative to each other. This insight leads to Order Based Crossover and a collection of similar algorithms that aim to preserve as much about the order of cities in relation to each other as possible.
+
+[Pseudocode]
+[Figure]
 
 However just because a problem may have some dependencies between components doesn't mean we can't share useful information between solutions. Looking at the pub crawl problem again we could see that we need to visit the pubs in the right order. Hence we could design a crossover operator that swaps the position of pubs in a string. There are a few common techniques for sharing information between two strings we could use:
 
-Uniform Crossover
 
-One/Two/N Point Crossover
+Finally we may be able to find a better solution if we change our thinking entirely. TODO: The one where the representation is different so we can use conventional crossover operators.
 
-Another One
+Whether this particular case is a good idea or not is up for debate. The advantage of this representation is that it allows us to use standard generic crossover operators again. But this new representation does not necessarily encode information about the placement of pubs in relation to each other - something which we identified earlier as a key building block.
 
-There are certain cases where these crossover algorithms **could** work, such as the example above, but in the vast majority of cases these algorithms are going to produce worse solutions than either of the two we started with. The problem is we are only considering the position of the solutions and not the number of them hence we are violating the implicit constraint of the problem: visit everywhere exactly once.
+- 
 
-If we thought about this problem for a long old while we might derive an ingenious crossover approach that didn't violate this constraint. Fortunately we don't have too as people already have:
+Before we continue we should briefly mention the idea of **seperability**. This is the notion that some problems can be solved by finding the correct solution to each variable in turn. Consider the very simple problem OneMax for example:
 
-Position Based Crossover
-Tries to preserve the position of cities over the two strings
+\Sum_{i=0}^n X[i] where X \in {0,1}^n
 
-Now this is some kind of progress and PBS is a very clever crossover algorithm. However we can get more insightful. So far we have been thinking in terms of the position of cities in a string but that isn't the fundamental building block here. In fact we don't mind where in a string cities are, we are interested in the relationship between them - in particular the order in which each city appears relative to each other. This insight leads to a collection of algorithms that aim to preserve as much as possible about the order of cities in relation to each other as possible:
+In this problem, we want to turn a binary string into a string of 1's. This is clearly a separable problem as no variable has any dependency on any other. If we change a variable to 1, the fitness of the whole solution goes up. Happy days!
 
-Order Crossover
+However with a problem like our pub crawl problem above, or the original travelling salesman problem or indeed most problems worth solving there are some interactions between the variables. In combinatorial problems these effects may be non-obvious such as the above the placement of objects/destinations relative to each other is important. In numerical optimisation problems it is usually a little clearer as you can see all the parts. For example we can introduce some degree of non-seperability into the OneMax problem if we wanted:
 
-The One Where The Representation Is Different
 
-Right thats enough about crossover operators.
+The degree of seperability is an important concern when designing or evaluating crossover operators. If a problem is seperable, any generic crossover operator such as uniform or k-point crossover could work. If the problem is partly-seperable, that is you are able to identify some groups of variables that must be considered, then you should take advantage of this as it may greatly simplify your problem. Finally if the problem seems strictly non-seperable such as TSP then you will want to design a clever crossover operator that uses what insight you can gleam from the problem else your solutions children will be doomed to suffer poor fitness and short lives.
+
+-
 
 TODO: Double check difference between genetic algorithm/evolutionary algorithm
 
 The Genetic Algorithm
-Now let's combine everything we have learnt so far into one algorithm. If you've ever read about metaheuristics before you'll have come across the Genetic Algorithm \footnote{Usually with some unhelpful story about how it was inspired by the process of evolution.} at this point you should be in a position to get a bit more insight into whats really happening.
+Finally then we can combine everything we have learntso far into one algorithm. If you've ever read about metaheuristics before you'll have come across the Genetic Algorithm before, usually with some unhelpful story about how it was inspired by the process of evolution.
 
 The genetic algorithm is very simple:
 
 PSEUDOCODE
 
-This is a pretty simple algorithm, it might be very similar to what you would have devised if you have a good understanding of the material so why is it so succesful? Well apart from being one of the earliest metaheuristics proposed back in the 60's, the GA is very flexible. We've got a lot of levers we can pull here and many, many papers have been written that present different mutation, crossover and selection algorithms for particular problems or purposes. On the plus side this means you won't have to look far for ideas when you are facing a new problem. The flip side of this is that you could spend your whole working life on one problem and never be confident you'd found the best possible solution \footnote{Arguably another plus if you're after job security}.
+This is a pretty simple algorithm, I expect any one could have devised it with a good understanding of the material so far. In fact it is so simple I don't think there is anything more I can say about it. If you understand the parts then you should understand the system, at least intuitively.
 
-TODO: Research best practices
+What is worth pointing out though is the process. Selection, variation, evaluation, repeat. The GA makes the pipeline explicit but in one way or another this process has been an integral part of all of the metaheuristics we have studied so far. Once you know to look for this you see this process *everywhere*. This unconcious process decides who gets elected, how birds move, whether your ill or healthy, which ideas spread and which ones founder and of course it was a critical part in shaping life on earth. If you look into any system of enough complexity you will find this simple loop of selection, variation and evaluation.
 
-Despite being simple there are a few things worth pointing out. First of all we can see there are two selection steps: first we select who generates offspring and then we select who survives. We've already discussed the impact of the later selection but the selection for crossover deserves some thought. Intuitively this makes sense, if we are using crossover to learn from good solutions why bother performing crossover with the worse solutions? There is some truth to this but the risk here is one of early convergence and ending up on a local optima. Hence quite often this selection step will be performed using a flexible selection method whilst the selection step may use a more exploitative operator such as the tournament selection and _ selection used in the original proposal.
-
-Another interesting point is the combination of crossover and mutation. We've discussed previously how a small mutation rate can be used to perform a form of local search however here we are mutating a solution produced by an earlier crossover operator. The worry is that our mutation operator might randomly undo some improvement that the crossover operator did. It would be like we found two matching pieces of our jigsaw and then our mutation operator cut one of the tabs off. So why bother having the mutation operator at all? 
-
-We discussed previously how the mutation operator can perform a form of local search if used carefully and here that still applies. Even if our mutation operator does bugger up a crossover at some point, over a large number of function evaluations we are likely to perform a crossover between two very similar solutions if not the same two solutions several times or the population may move on to the point that the better solution from before has been surpassed by even the worse solutions in the population. So the mutation operator doesn't necessarily do any harm but what benefit does it add? To explain that we'll need to talk a little about the theoretical basis of crossover operators:
-
-There are two kinds of crossover operator: _ or _. A crossover operator is called _ if the solutions that a crossover operator performs are always _ over the space of all problems. A crossover operator is called _ if this is not true for at least one problem.
-
-[Figure demonstrating different kind of crossover operators]
-
-The idea of a crossover operator applying to the space of all problems is a little bit of an odd one. A helpful way of thinking about it is ...
-
-A lot of crossover operators are _. An important property of these operators is that given enough generations they will necessarily converge to a certain point in the decision space \footnote{If the problem is real valued and the solution is an irrational number this would theoretically take an infinite number of generations but in practice floating point representations of numbers in computers can only be so precise so you'll converge much faster than forever.}. This is a pro and a con. On the one hand this means your algorithm will provably converge to a local optima and possibly a global one. But this also means that the algorithm can never search anything outside the limit of it's intial population. So if you imagine we stretched a rubber band over all of the initial solutions we will never be able to find a solution outside of this region. Plus if we get unlucky and the global optima escapes this region at any point then we have no chance of finding it.
-
-The mutation operator allows us a way out of this trap by giving us a chance to search at least the region around current solutions as we converge or even better in the case of some mutation operators such as the additive gaussian operator and _ we discussed previously, still give us a chance to search the whole decision space such that given enough generations we will eventually find the global optima.
-
-Hopefully at this point you have a deeper understanding of the fundamentals of metaheuristics. In the next chapter we are going to start extending your perspective by examining several algorithms that think about problems from some very different perspectives. 
+Over the remainder of this series we will be taking this idea seeded by GA and stretching it as far as we can, looking at some of the weird and wonderful algorithms people have come up with. Past this point you may find it harder to say what problems an algorithm will be suitable for or why but that is not the aim here. Instead each algorithm that is presented will have one or two key ideas that have since spread through the literature. Where appropriate I will try and include some more in depth discussion about the theory in additional bonus posts, starting with this one here about why maybe the genetic algorithm isn't quite as simple as I've let on.

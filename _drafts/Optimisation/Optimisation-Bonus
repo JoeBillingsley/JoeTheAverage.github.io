@@ -1,0 +1,23 @@
+So far we've been looking at these crossover operators in terms of the solutions they produce but we can get some deeper insight if we look into how solutions are moving about  the decision space. This section may get a little technical Representing the 
+
+Consider the solutions in figure X where we have randomly initialise a bunch of solutions.
+
+TODO
+
+For the purposes of this lecture we can group crossover operators into being either _ or _. A crossover operator is called _ if the solutions that a crossover operator performs are always _ over the space of all problems. A crossover operator is called _ if this is not true for at least one problem.
+
+Despite being simple there are a few things worth pointing out. First of all we can see there are two selection steps: first we select who generates offspring and then we select who survives. We've already discussed the impact of the later selection but the selection for crossover deserves some thought. Intuitively this makes sense, if we are using crossover to learn from good solutions why bother performing crossover with the worse solutions? There is some truth to this but the risk here is one of early convergence and ending up on a local optima. Hence quite often this selection step will be performed using a flexible selection method whilst the selection step may use a more exploitative operator such as the tournament selection and _ selection used in the original proposal.
+
+Another interesting point is the combination of crossover and mutation. We've discussed previously how a small mutation rate can be used to perform a form of local search however here we are mutating a solution produced by an earlier crossover operator. The worry is that our mutation operator might randomly undo some improvement that the crossover operator did. It would be like we found two matching pieces of our jigsaw and then our mutation operator cut one of the tabs off. So why bother having the mutation operator at all? 
+
+We discussed previously how the mutation operator can perform a form of local search if used carefully and here that still applies. Even if our mutation operator does bugger up a crossover at some point, over a large number of function evaluations we are likely to perform a crossover between two very similar solutions if not the same two solutions several times or the population may move on to the point that the better solution from before has been surpassed by even the worse solutions in the population. So the mutation operator doesn't necessarily do any harm but what benefit does it add? To explain that we'll need to talk a little about the theoretical basis of crossover operators:
+
+[Figure demonstrating different kind of crossover operators]
+
+The idea of a crossover operator applying to the space of all problems is a little bit of an odd one. A helpful way of thinking about it is ...
+
+A lot of crossover operators are _. An important property of these operators is that given enough generations they will necessarily converge to a certain point in the decision space \footnote{If the problem is real valued and the solution is an irrational number this would theoretically take an infinite number of generations but in practice floating point representations of numbers in computers can only be so precise so you'll converge much faster than forever.}. This is a pro and a con. On the one hand this means your algorithm will provably converge to a local optima and possibly a global one. But this also means that the algorithm can never search anything outside the limit of it's intial population. So if you imagine we stretched a rubber band over all of the initial solutions we will never be able to find a solution outside of this region. Plus if we get unlucky and the global optima escapes this region at any point then we have no chance of finding it.
+
+The mutation operator allows us a way out of this trap by giving us a chance to search at least the region around current solutions as we converge or even better in the case of some mutation operators such as the additive gaussian operator and _ we discussed previously, still give us a chance to search the whole decision space such that given enough generations we will eventually find the global optima.
+
+Hopefully at this point you have a deeper understanding of the fundamentals of metaheuristics. In the next chapter we are going to start extending your perspective by examining several algorithms that think about problems from some very different perspectives. 
