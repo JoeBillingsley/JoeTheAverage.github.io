@@ -30,7 +30,7 @@ The list contains a couple of beers as well as different breweries. This is beca
 </ul>
 
 ### Wish List
-There are also a tonne of beers I'm still after. Big thanks to AndyCapper from BeerAdvocate for greatly extending this list. The following are all ones I'm fairly confident have custom bottlecaps:
+There are also a tonne of beers I'm still after. Big thanks to AndyCapper from BeerAdvocate for greatly extending this list. The following {{ site.data.wish_list_beers | size }} are all ones I'm fairly confident have custom bottlecaps:
 
 <ul class="split-list">
     {% assign beers = site.data.wish_list_beers | sort: 'Brewery' %}
