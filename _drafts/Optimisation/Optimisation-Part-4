@@ -67,3 +67,8 @@ This is a pretty simple algorithm, I expect any one could have devised it with a
 What is worth pointing out though is the process. Selection, variation, evaluation, repeat. If you look closely you can find this process at the heart of any complex competitive system - whether thats the metaheuristics we've looked at so far such as hill climbing, tabu search, simulated annealing etc or real world systems: politics, fashion, the spread of ideas\cite{Darwin struck on this idea at about the same time as he figured out evolution. The idea is that knowledge, behaviour and ideas is shared amongst a culture and faces the same selective pressure as humans and animals. Richard Dawkins coined the term 'memes' for the idea and it stuck. Sometime later on internet memes started to spread...} and diseases and of course the evolution of species.
 
 Over the remainder of this series we will be taking this idea seeded by GA and stretching it as far as we can, looking at some of the weird and wonderful algorithms people have come up with. Past this point you may find it harder to say what problems an algorithm will be suitable for or why but that is not the aim here. Instead each algorithm that is presented will have one or two key ideas that have since spread through the literature. Where appropriate I will try and include some more in depth discussion about the theory in additional bonus posts, starting with this one here about why maybe the genetic algorithm isn't quite as simple as I've let on.
+
+Exercises
+1. ?
+2. Crossover between multiple solutions.
+3. 

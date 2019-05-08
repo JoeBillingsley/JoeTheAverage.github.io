@@ -1,0 +1,36 @@
+We looked up at birds last week, this time round we're going to look down at something much easier to miss that can give us some more inspiration. 
+
+Ants have a simple foraging procedure. First, a bunch of foragers head off mostly randomly away from the colony in hopes of stumbling on food to bring home. On their way back they'll leave a pheremone trail behind as they head back to the colony. The amount of pheremones they leave behind corresponding roughly to the quality of what they've found. Other ants can see these trails and pick one to follow exactly and when they return they also mark the trail, strengthening it even further. Once the food is exhausted the ants will stop leaving the pheremones and the trail will slowly evaporate. It's a simple process but very efficient - as you'll know if you've ever seen anything sweet left outside for any length of time.
+
+We could easily adapt this process to our purposes but unfortunately someone already has. It's called Ant Colony Optimisation and the process is very simple. 
+
+Step 1.
+Design a graph for the ants to walk over. The idea here is to form the graph such that any path over the graph is a possible solution to the problem. For example say we had a binary string:
+
+[Image of binary string with simple arcs]
+
+It's easy enough to think of the same kind of thing for other solution representations \footnote{Continuous optimisation problems are a little harder, see the exercises for that.}. 
+
+Step 2. Initialise the pheremones
+Initialise the pheremones along this graph. Typically this just means setting the pheremones so that each path has an equal amount of pheremones/is equally smelly.
+
+Step 3.
+Release the ants. We could use real ants for this but it's probably faster to simulate their simple behaviours. Our ant starts at the first node in the graph. We want the ant to prefer the stronger paths but if we only go down the strongest path then our algorithm will converge in a few iterations. A simple approach is to normalise the pheremone weights between 0 and 1 such that the pheremone values give the probability of choosing that node from the current position. We can simply repeat this process until we have a complete path for as many ants as we want.
+
+Step 4. 
+Finally, we update the pheremones. You can do this 
+
+- Introduce as good counterpoint to PSO
+    - Both cooperative algorithms
+    - One works on continuous spaces mostly, the other a good fit for combinatorial optimisation
+
+Basic Structure
+- Define a graph such that any path over this graph forms a solution
+- 
+
+Exploration vs Exploitation
+- Talk a little about evaporation schemes?
+- Talk a little about fitness update?
+
+
+Want to lead into probability based approaches

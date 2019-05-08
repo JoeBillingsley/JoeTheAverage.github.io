@@ -1,0 +1,116 @@
+TODO: Discuss neighbourhood methods
+
+In the last post I made some grandiose statements about how you can see the core loop of metaheuristics in most competitive systems. This time round I want to flip that idea on it's head and see what we can learn and apply from cooperative systems. In a competitive system we want our offspring to inherit our best traits so that they have the best chance to survive but in a cooperative one we want the whole group to do well so we can afford to share information with the whole population. We could do this by exclusively performing crossover with the best solution but we would expect this to converge very quickly. As it turns out nature can once again offer us a more elegant solution.
+
+In the 80's a clever man named Craig Reynolds was staring at flocks of birds and realised that their complex movements could be described with a couple of simple rules: steer to avoid local birds, steer in the average direction of local birds, steer towards the average position of the flock. With just these three rules flocks of hundreds to thousands of birds manage to fly about each other without colliding \footnote{Or at least we can simulate their movement in this way and get these results. In practice it's a little more complicated as it seems birds are able to anticipate movements of the flock as well. You can read more about that here but we shouldn't let little details like 'facts' getting in the way of a good story.}. Some time later two more researchers, Kennedy and Eberhart, were working on modelling a similar social system when they stumbled on something interesting. Their system used similar rules to Reynolds work on boids but additionally considered the potential for certain regions to be more attractive to the birds (e.g. areas containing food or fresly cleaned cars), and a means of communicating this information back to the rest of the flock. They quickly realised they'd accidentally created a very efficient optimisation algorithm.
+
+Particle Swarm Optimisation (PSO) as it came to be known seems to operate very differently to the genetic algorithm or other metaheuristics we've looked at. In PSO each individual in our population has a position and a velocity. To start with we give every individual a random position and velocity. Then at each step we update these two values according to a simple function:
+
+
+
+
+This has the effect of solutions gliding through the decision space hopefully passing through good regions on the way and progressively converging towards them. We can visualise this with a 2 dimensional real valued problem and the result is pretty fascinating to watch:
+
+
+Although this algorithm came about pretty much by accident we can still unpick it and see what it's doing. The first thing to note is the global component. Just like we described at the start this component accelerates all of the solutions towards the best solution in the population. This is very similar to performing crossover between each solution and the best solution but since it is one sided it is usually considered as a form of *directed mutation*. 
+
+The local component finesses this idea a bit more. Remember that at the start of the algorithm, the 'previous best' point is the starting point. That means that at the initial step, the distance to the previous best is zero and hence this component has no impact on the velocity. If after we update our position we find a new better point then the previous best will again be zero and will have no impact on the velocity. So as long as we are making improving steps the 'previous best' component has no impact. As soon as we fly into a region that is worse than one we have previously seen, this component will act as a moderating influence accelerating the solution back towards the known good region.
+
+This is where the inertia component comes in handy. Imagine we had a situation like in figure _ where we had just started and had been so far found that this direction had led to improving solutions. Without an inertia component we would slow down drastically as soon as we flew into a region of lower fitness. However with an inertia component we have momentum and our solution will continue in this direction until we either reach a higher fitness region and start accelerating again or run out of steam and begin searching between the previous and global best positions \footnote{Because of this momentum component I usually think of the individuals more like satellites orbiting planets than birds flying around fields but find what works for you.}. This is a very neat mutation operator. The more improving steps we make, the more confident we are that this is a good direction to take, the larger jumps through the space we make and the longer we will permit low fitness regions before reconsidering our direction.
+
+Finally so far our algorithm has just been searching between it's starting point and the best starting point. Unless the global optima happens to be along one of these vectors we have no means of finding it. The final key component here is the random velocity at the start of the run. This gives each individual some ability to search the regions around these vectors in a bit of a drunken walk \footnote{This is a real thing in maths btw. It actually gives us a means of describing the motion of these solutions through space which we will get to in a moment.}.
+
+There are a some significant advantages to this approach (on top of being awesome to watch). First of all it is very simple to use and implement. In particular we've only got to decide on a couple of parameters: TODO. Compare this to the GA where we need to decide parameters for the core algorithm, then the genetic operators we will use and then the parameters for those operators. The trade off is in flexibility. Though the PSO has been shown to work on a whole load of problem over the last 30 something years, it is naturally a better fit for numerical optimisation problems due to the design of it's update function. It is possible to make the algorithm work on combinatorial optimisation problems - by either designing custom operators for add and multiply or by mapping a solution to the problem into the space of real number but doing so can be tricky.
+
+The algorithm can outperform GA by some measures as well. In general, PSO will find a near optimal solution faster than GA but then is less effective at exploiting these solutions to find better solutions. This can be very useful if you just need a good solution and can't be waiting for the best solution. There is also the potential to speed up PSO even further with parallel computing. Since each agent is effectively performing it's own thing most of the time it is very easy to parallelise most of the actions. The limiting factor is the communication of the shared value Pg. Different strategies for communicating this value were explored in [2] but the best implementation appears to be problem dependent. Major speedups are possible though - TODO: Look at recent research on parallel PSO
+
+Sadly you never get anything for free in metaheuristics.
+
+# Swarm Explosion
+The velocity update mechanism of PSO causes some unique problems. In a basic implementation of PSO there is no cap on the maximum velocity of a particle or on the position. The random component on PSO allows for a situation to occur where a particles velocity will tend towards infinity as it races past it's target, continuously accelerating. 
+
+TODO: Why is swarm explosion a thing? Shouldn't it be as likely to be slowed down as accelerated?
+
+Likewise unless your solving a very strange problem, positive or negative infinity isn't usually a useful value. We start to fix both these problems by capping the range of both the velocity and position variables so that they do not exceed some limit, commonly this is the also the range of the variable. Unfortunately this doesn't really correct the fundamental problem. If you make this change alone there's a chance your solutions will spend a long time 'searching' along the edge of the decision space as there velocity is still directing them outside of the search space. 
+
+If you remember, we said it is the initial shove that allows us to explore more of the space. So if we wanted solutions to converge, one simple thing we could do is add some damping component to this velocity so that overtime we would tend towards our previous or global best position. The problem with this approach is that this velocity component is also what gives us the momentum to escape local optima. We can use a technique very similar to simulated annealing and decrease this damping component over time to allow us to give us a greater chance of escaping local optima initially whilst aiming to converge towards the end of the run.
+
+- Constriction to help with convergence
+
+# Swarm Stagnation
+Between these two techniques, swarm explosion is (more or less) a solved problem. However like all metaheuristics PSO has to manage the trade off between exploration and exploitation. On this spectrum your typical PSO tips more towards the exploitation end, at least initially. This leads to an issue known to PSO researchers as 'swarm stagnation' or early convergence to everyone else. 
+
+One of the reasons for this is that we are sharing information about the global optima with every solution and hence our solutions are always pulled a little towards a singular region i.e. pressured to converge. We could reduce this pressure by sharing information with fewer solutions for example by only considering the best solution in our neighbourhood e.g. the nearest $k$ solutions. To visualise this consider the case where $k = 1$ and we have a continuous string from the best solution to every other solution. For simplicity, pretend also that we are only considering the 'social' aspect of PSO and all solutions are initially stationary. The best solution will not move but the second solution will move towards it, the third solution will start moving at the next iteration and so on. The whole process should contract like a snake sliding down a hole. This is a very different movement from what we'd expect if we used a neighbourhood consisting of all solutions where all of the solutions would immediately approach the best solution and hence converge very quickly. This extra time is significant when the other aspects are reintroduced and solutions can explore far more widely.
+
+Along the same lines we get fully informed and 'species' based variants of PSO. In a fully informed algorithm we consider the fitness of all solutions in some neighborhood and use this information 
+    https://annals-csis.org/proceedings/2014/pliks/377.pdf
+
+In contrast in a species based PSO we split the initial solutions into groups and only allow information to be shared inside those groups. The original species based PSO \cite{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.4527&rep=rep1&type=pdf} _ and _. The aim here is to find and exploit multiple local optima rather than searching for a single global optima. 
+
+Finally whilst these earlier options focus on information exchange, we also have the nuclear option of just forcing solutions away from each other. 
+    - Predator prey
+        https://www.researchgate.net/profile/Ernesto_Costa/publication/228881089_Chasing_the_Swarm_A_Predator_Prey_Approach_to_Function_Optimisation/links/09e4150885cfcadcbc000000/Chasing-the-Swarm-A-Predator-Prey-Approach-to-Function-Optimisation.pdf
+    - Convergence reset
+        ???
+
+Both of these approaches introduce new complexity into the problem. If we introduce neighborhoods we have to make a decisions about the size and structure of our neighborhoods. With _ we have to consider ... Neither of these are easy to tune and the effects of any decision are not obvious. But one of the things that drew us to this algorithm, is it's simplicity. Hence you'll find most times that PSO is being used to solve some practical problem the prototypical GBEST + Damping/Constriction will be used. 
+
+# Cooperative vs Competitive
+On the surface PSO and GA are very different algorithms but if we don't think of it as swarm intelligence vs evolution but instead solutions in a decision space then we can see the exact same pattern of selection, variation and evaluation we've seen in every other metaheuristic. The key thing to notice here is that here, the 'offspring' or mutated solutions always replace their parents. With that in mind it's not surprising that tools such as crossover and mutation have found their way into state of the art PSO variants or 'hybrids' as they are often called. Perhaps more suprisingly, the key mechanic in PSO - small, frequent and directed mutations - hasn't made it back in a recognisable form into the GA field \footnote{At least to the best of my knowledge. As to why this is, I'm really not sure. I can think of a few reasons but it's worth thinking over yourself.}. Regardless, hopefully PSO opened your mind to a new way of thinking about the decision and objective spaces. By sheer coincidence the next algorithm that's we'll talk about is also based on another swarm of sorts that work together in a very different way.
+
+Exercises:
+
+2. Design an operator that could allow PSO to work on:
+A) Binary Strings
+B) The Travelling Salesman problem
+C) The Travelling Salesman problem but ensure all solutions are feasible
+
+Notes:
+Comparisons with GA?
+- Crossover acts as means of communication, swarm optimisation uses group knowledge of best position
+    - May want to rephrase introduction in this way
+        - In a competitive system we want our offspring to do well so that they survive 
+        - In a cooperative one we want the whole group to do well and so we can share information with the whole group
+        - We could do this by exclusively performing crossover with the best solution but we would expect this to converge very quickly
+        - As it turns out nature can once again offer us a more elegant solution 
+        - Then lead into PSO
+        - PSO bits
+        - Finish by talking about how GA and PSO are still using the same process of selection, modification, evaluation, repeat only now we always select the children
+
+
+## General points
+
+Particle Swarm Optimisation is closer to erdoic
+https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=934374
+
+Reduce weighting from 0.9 to 0.4 over time to promote convergence
+https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=785511
+
+Very simple. Emulates simple nature of boids/birds flocking.
+Naturally a good fit for real valued optimisation problems. Can be made to work on combinatorial optimisation problems.
+
+Tends to find close to optimal solutions quicker than GA but then doesn't exploit solutions as effectively
+More prone to early convergence due to the possibility of an overwhelmingly good solution discovered early in the run
+https://link.springer.com/content/pdf/10.1007%2Fs11047-007-9049-5.pdf
+
+## Swarm Explosion
+
+Apparently velocity control can allow the particles to escape the decision space still
+https://ieeexplore.ieee.org/abstract/document/4616910
+
+Discussion of inertia vs constriction method
+https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=870279
+
+## Swarm Stagnation
+Different topologies are better suited to different problems. Limiting communication can help with multimodal optimisation problems.
+https://ieeexplore.ieee.org/document/1004493
+
+Why is fast convergence bad on multimodal problems?
+    Fast convergence is an issue on any problem that requires more exploration such as multimodal or deceptive or large problems
+
+Parallel swarm optimisation
+A parallel particle swarm optimization algorithm with communication strategies
+Wouldn't it make sense to do writes asynchronously? Not necessarily important to have the most up to date value immediately as the position is dependant on velocity anyway and it is going to take a while to update. Should be possible to put this on a GPU.
+
+Exercises
+2. Propose a method of mapping the TSP problem into the space of real numbers and back so that it could be used with PSO. For bonus points find a mapping that will always produce feasible solutions.
