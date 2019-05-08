@@ -18,19 +18,30 @@ Step 3.
 Release the ants. We could use real ants for this but it's probably faster to simulate their simple behaviours. Our ant starts at the first node in the graph. We want the ant to prefer the stronger paths but if we only go down the strongest path then our algorithm will converge in a few iterations. A simple approach is to normalise the pheremone weights between 0 and 1 such that the pheremone values give the probability of choosing that node from the current position. We can simply repeat this process until we have a complete path for as many ants as we want.
 
 Step 4. 
-Finally, we update the pheremones. You can do this 
+Finally, we update the pheremones. We want to make fitter solutions more desirable and we can do the same as the ants do and put more pheremones on the stronger paths. At the same time we don't want these pheremone values increasing towards infinity, computers don't tend to like that. To keep things simple, it's common just to normalise the pheremone values connecting a node to the next so that they are between 0 and 1. This also simplifies the decision making process at Step 3.
 
-- Introduce as good counterpoint to PSO
-    - Both cooperative algorithms
-    - One works on continuous spaces mostly, the other a good fit for combinatorial optimisation
+Then, goto Step 3. Repeat till you want to finish.
 
-Basic Structure
-- Define a graph such that any path over this graph forms a solution
-- 
+-
 
-Exploration vs Exploitation
-- Talk a little about evaporation schemes?
-- Talk a little about fitness update?
+Ant colony optimisation is an elegant algorithm and most of the tradeoffs are pretty clear. If you want to favour exploration, update the weights slower, for exploitation you do the opposite. There are many more nuances to this algorithm that I'll cover one day but there's some things that are much more interesting to talk about.
+
+## Graphs and Statistics
+
+Ok, from the title this may not sound quite as interesting as ants solving problems but bare with me. 
+
+The graph structure in ACO is very powerful. The above example is just a simple sequence:
+
+In this sequence the probability of us taking any path is not dependent on the decisions we made at any earlier stage. This is pretty much how all of our metaheuristics have operated so far, the likelihood of any decision variable taking a value has not depended on any other decision variables. More formally:
+
+that is all of the variables are independent of each other.
+
+But is this what we really want? Cast your mind back a few posts to Part 4 and seperable and non-seperable problems. Most interesting problems are non-seperable, this means that some variables need to vary with each other to get good solutions. For example ... We can change our graph to consider that some of these variables may want to alter with each other:
 
 
-Want to lead into probability based approaches
+
+This is a far more complicated graph and also a much larger search space than before. At each step we have another k possible branches, so even for a small problem we will end up with _ possible nodes. It's probably going to take a lot of time and effort to find a good solution in this space. The interesting thing here though is that ACO has managed to learn the dependencies between the different variables. ACO throws away most of this information and ends up with just one solution. But it is an interesting prospect, what would happen if rather than just searching for a single good solution, we tried to learn a model that shows us *why* it is a good solution?
+
+
+Exercises:
+1. Something about prior probability distributions.
