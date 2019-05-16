@@ -1,0 +1,33 @@
+---
+---
+{
+    "type": "FeatureCollection",
+    "features": [
+    {% for beers in site.data.acquired_beers %}
+        { 
+            "type": "Feature",
+            "properties": {
+                "name":"{{beers.Brewery}}",
+                "status":"got"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [{{beers.Latitude}}, {{beers.Longitude}}]
+            }
+        },
+    {% endfor %}
+    {% for beers in site.data.wish_list_beers %}
+    { 
+        "type": "Feature",
+        "properties": {
+            "name":"{{beers.Brewery}}",
+            "status":"need"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [{{beers.Latitude}}, {{beers.Longitude}}]
+        }
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+    ]
+}

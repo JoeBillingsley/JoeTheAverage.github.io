@@ -17,7 +17,7 @@ crossorigin=""></script>
         accessToken: 'pk.eyJ1Ijoiam9lYmlsbGluZ3NsZXkiLCJhIjoiY2o5djYzdDNnMWhxMjJ2cG9iYzZmZzl5MyJ9.hOoHCtzze8-YCBodh8tkFQ'
     }).addTo(beer_map);
 
-    var srcs = ["http://www.josephbillingsley.co.uk/public_data/beer_got.json", "http://www.josephbillingsley.co.uk/public_data/beer_need.json"];
+    var src = "http://www.josephbillingsley.co.uk/public_data/beer.json";
 
     function onEachFeature(feature, layer) {
         if (feature.properties) {
@@ -25,12 +25,18 @@ crossorigin=""></script>
         }
     }
 
-    for (var i = 0, len = srcs.length; i < len; i++) {
-        src = srcs[i];
+    var needIcon = new L.Icon({
+        iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET",src,true);
-        xhr.onload = function(e) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET",src,true);
+    xhr.onload = function(e) {    
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var beers = JSON.parse(xhr.responseText);
@@ -41,8 +47,6 @@ crossorigin=""></script>
                 console.error(xhr.statusText);
             }
         }
+        xhr.send(null);
     }
-
-    xhr.send(null);
-    } 
 </script>
