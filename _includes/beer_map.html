@@ -17,7 +17,7 @@ crossorigin=""></script>
         accessToken: 'pk.eyJ1Ijoiam9lYmlsbGluZ3NsZXkiLCJhIjoiY2o5djYzdDNnMWhxMjJ2cG9iYzZmZzl5MyJ9.hOoHCtzze8-YCBodh8tkFQ'
     }).addTo(beer_map);
 
-    var src = "http://www.josephbillingsley.co.uk/public_data/beer.json";
+    var srcs = ["http://www.josephbillingsley.co.uk/public_data/beer_got.json", "http://www.josephbillingsley.co.uk/public_data/beer_need.json"];
 
     function onEachFeature(feature, layer) {
         if (feature.properties) {
@@ -25,9 +25,12 @@ crossorigin=""></script>
         }
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET",src,true);
-    xhr.onload = function(e) {
+    for (var i = 0, len = srcs.length; i < len; i++) {
+        src = srcs[i];
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET",src,true);
+        xhr.onload = function(e) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var beers = JSON.parse(xhr.responseText);
@@ -41,4 +44,5 @@ crossorigin=""></script>
     }
 
     xhr.send(null);
+    } 
 </script>
