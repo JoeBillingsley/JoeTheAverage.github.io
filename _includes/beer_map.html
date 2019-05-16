@@ -44,8 +44,8 @@ crossorigin=""></script>
                     onEachFeature: onEachFeature,
                     pointToLayer: function (feature, latlng) {
                         switch (feature.properties.status) {
-                            case "got": return L.Marker(latlng);
-                            case "need": return L.Marker(latlng, {icon: needIcon});
+                            case "got": return L.marker(latlng);
+                            case "need": return L.marker(latlng, {icon: needIcon});
                         }
                     }
                 }).addTo(beer_map);
