@@ -25,8 +25,6 @@ crossorigin=""></script>
         }
     }
 
-    var gotIcon = L.Icon.Default;
-
     var needIcon = new L.Icon({
         iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -46,7 +44,7 @@ crossorigin=""></script>
                     onEachFeature: onEachFeature,
                     pointToLayer: function (feature, latlng) {
                         switch (feature.properties.status) {
-                            case "got": return L.Marker(latlng, {icon: gotIcon});
+                            case "got": return L.Marker(latlng);
                             case "need": return L.Marker(latlng, {icon: needIcon});
                         }
                     }
