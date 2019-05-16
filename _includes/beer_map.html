@@ -54,7 +54,7 @@ crossorigin=""></script>
                     style: function(feature) {
                         switch (feature.properties.status) {
                             case 'got': return {icon: gotIcon};
-                            case 'need':   return {icon: needIcon};
+                            case 'need': return {icon: needIcon};
                         }
                     }
                 }).addTo(beer_map);
