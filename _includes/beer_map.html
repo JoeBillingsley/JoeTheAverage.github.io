@@ -44,10 +44,10 @@ crossorigin=""></script>
                 var beers = JSON.parse(xhr.responseText);
                 L.geoJSON(beers,{
                     onEachFeature: onEachFeature,
-                    style: function(feature) {
+                    pointToLayer: function(feature) {
                         switch (feature.properties.status) {
-                            case "got": return {icon: gotIcon};
-                            case "need": return {icon: needIcon};
+                            case "got": return L.Marker(latlng, {icon: gotIcon});
+                            case "need": return L.Marker(latlng, {icon: needIcon});
                         }
                     }
                 }).addTo(beer_map);
