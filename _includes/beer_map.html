@@ -64,9 +64,10 @@ crossorigin=""></script>
                 var overlayMaps = {
                     "Got": got,
                     "Need": need,
+                    "Both": [got, need]
                 };
 
-                L.control.layers(null, overlayMaps).addTo(beer_map);
+                L.control.layers(overlayMaps).addTo(beer_map);
             } else {
                 console.error(xhr.statusText);
             }
