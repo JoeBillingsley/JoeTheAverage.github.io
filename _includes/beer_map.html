@@ -10,7 +10,7 @@ crossorigin=""></script>
 <script>
 
     var bounds = new L.LatLngBounds(new L.LatLng(62.817051, -18.191596), new L.LatLng(49.954767, 4.1683453))
-    var beer_map = L.Map('beer_map', {
+    var beer_map = new L.Map('beer_map', {
         center: [54.428845, -3.727167],
         zoom: 5,
         maxBounds: bounds,
