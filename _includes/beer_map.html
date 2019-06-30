@@ -10,9 +10,16 @@ crossorigin=""></script>
 <script>
     var beer_map = L.map('beer_map').setView([54.428845, -3.727167], 5);
 
+    // var bounds = [
+    //     [54.428845, -3.727167], // Southwest coordinates
+    //     [54.428845, -3.727167]  // Northeast coordinates
+    // ];
+
+    // beer_map.setMaxBounds(bounds);
+
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        maxZoom: 16,
+        maxZoom: 8,
         id: 'mapbox.streets',
         accessToken: 'pk.eyJ1Ijoiam9lYmlsbGluZ3NsZXkiLCJhIjoiY2o5djYzdDNnMWhxMjJ2cG9iYzZmZzl5MyJ9.hOoHCtzze8-YCBodh8tkFQ'
     }).addTo(beer_map);
@@ -43,6 +50,12 @@ crossorigin=""></script>
 
                 var all = L.geoJSON(beers, {
                     onEachFeature: onEachFeature,
+                    pointToLayer: function(feature, latlng) {
+                        switch (feature.properties.status) {
+                            case "got": return L.marker(latlng);
+                            case "need": return L.marker(latlng, {icon: needIcon});
+                        }
+                    }
                 });
 
                 var got = L.geoJSON(beers, {
@@ -50,12 +63,6 @@ crossorigin=""></script>
                     filter: function (feature) {
                         return feature.properties.status == "got";
                     },
-                    pointToLayer: function(feature, latlng) {
-                        switch (feature.properties.status) {
-                            case "got": return L.marker(latlng);
-                            case "need": return L.marker(latlng, {icon: needIcon});
-                        }
-                    }
                 });
 
                 var need = L.geoJSON(beers, {
