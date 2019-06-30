@@ -40,15 +40,43 @@ crossorigin=""></script>
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var beers = JSON.parse(xhr.responseText);
-                L.geoJSON(beers,{
+
+                var got = L.geoJSON(beers, {
                     onEachFeature: onEachFeature,
-                    pointToLayer: function (feature, latlng) {
-                        switch (feature.properties.status) {
-                            case "got": return L.marker(latlng);
-                            case "need": return L.marker(latlng, {icon: needIcon});
-                        }
+                    filter: function (feature) {
+                        return feature.properties.status == "got";
                     }
-                }).addTo(beer_map);
+                });
+
+                var need = L.geoJSON(beers, {
+                    onEachFeature: onEachFeature,
+                    filter: function (feature) {
+                        return feature.properties.status == "need";
+                    },
+                    pointToLayer: function(feature, latlng) {
+                        return L.marker(latlng, {icon: needIcon});
+                    }
+                });
+
+                beer_map.addLayer(got);
+                beer_map.addLayer(need);
+
+                var overlayMaps = {
+                    "Got": got,
+                    "Need": need,
+                };
+
+                L.control.layers(overlayMaps).addTo(map);
+
+                // L.geoJSON(beers,{
+                //     onEachFeature: onEachFeature,
+                //     pointToLayer: function (feature, latlng) {
+                //         switch (feature.properties.status) {
+                //             case "got": return L.marker(latlng);
+                //             case "need": return L.marker(latlng, {icon: needIcon});
+                //         }
+                //     }
+                // }).addTo(beer_map);
             } else {
                 console.error(xhr.statusText);
             }
