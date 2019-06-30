@@ -8,12 +8,16 @@ crossorigin=""></script>
 <div class="map" id="beer_map"></div>
 
 <script>
-    var beer_map = L.map('beer_map').setView([54.428845, -3.727167], 5);
-    beer_map.setMinZoom(4);
 
     var bounds = new L.LatLngBounds(new L.LatLng(62.817051, -18.191596), new L.LatLng(49.954767, 4.1683453))
-    beer_map.setMaxBounds(bounds);
-    beer_map.setMaxBoundsViscosity(1.0);
+    var beer_map = L.Map('beer_map', {
+        center: [54.428845, -3.727167],
+        zoom: 5,
+        maxBounds: bounds,
+        maxBoundsViscosity: 1.0
+    });
+
+    beer_map.setMinZoom(4);
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
