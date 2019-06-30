@@ -9,9 +9,9 @@ crossorigin=""></script>
 
 <script>
 
-    var bounds = new L.LatLngBounds(new L.LatLng(60.529964, -22.296527), new L.LatLng(46.320436, 12.186136))
+    var bounds = new L.LatLngBounds(new L.LatLng(60.529964, -30.296527), new L.LatLng(46.320436, 12.186136))
     var beer_map = new L.Map('beer_map', {
-        center: [54.428845, -3.727167],
+        center: bounds.getCenter(),
         zoom: 5,
         maxBounds: bounds,
         maxBoundsViscosity: 1.0
