@@ -9,7 +9,7 @@ crossorigin=""></script>
 
 <script>
     var beer_map = L.map('beer_map').setView([54.428845, -3.727167], 5);
-    beer_map.setMaxZoom(6);
+    beer_map.setMinZoom(3);
     beer_map.setMaxBounds([54.428845, -3.727167], [54.428845, -3.727167]);
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
