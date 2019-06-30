@@ -49,6 +49,12 @@ crossorigin=""></script>
                     onEachFeature: onEachFeature,
                     filter: function (feature) {
                         return feature.properties.status == "got";
+                    },
+                    pointToLayer: function(feature, latlng) {
+                        switch (feature.properties.status) {
+                            case "got": return L.marker(latlng);
+                            case "need": return L.marker(latlng, {icon: needIcon});
+                        }
                     }
                 });
 
@@ -62,8 +68,7 @@ crossorigin=""></script>
                     }
                 });
 
-                beer_map.addLayer(got);
-                beer_map.addLayer(need);
+                beer_map.addLayer(all);
 
                 var overlayMaps = {
                     "All": all,
