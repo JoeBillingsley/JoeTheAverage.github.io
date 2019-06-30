@@ -9,17 +9,11 @@ crossorigin=""></script>
 
 <script>
     var beer_map = L.map('beer_map').setView([54.428845, -3.727167], 5);
-
-    // var bounds = [
-    //     [54.428845, -3.727167], // Southwest coordinates
-    //     [54.428845, -3.727167]  // Northeast coordinates
-    // ];
-
-    // beer_map.setMaxBounds(bounds);
+    beer_map.setMaxZoom(6);
+    beer_map.setMaxBounds([54.428845, -3.727167], [54.428845, -3.727167]);
 
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        maxZoom: 8,
         id: 'mapbox.streets',
         accessToken: 'pk.eyJ1Ijoiam9lYmlsbGluZ3NsZXkiLCJhIjoiY2o5djYzdDNnMWhxMjJ2cG9iYzZmZzl5MyJ9.hOoHCtzze8-YCBodh8tkFQ'
     }).addTo(beer_map);
