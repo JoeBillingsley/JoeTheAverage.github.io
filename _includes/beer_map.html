@@ -66,17 +66,7 @@ crossorigin=""></script>
                     "Need": need,
                 };
 
-                L.control.layers(overlayMaps).addTo(beer_map);
-
-                // L.geoJSON(beers,{
-                //     onEachFeature: onEachFeature,
-                //     pointToLayer: function (feature, latlng) {
-                //         switch (feature.properties.status) {
-                //             case "got": return L.marker(latlng);
-                //             case "need": return L.marker(latlng, {icon: needIcon});
-                //         }
-                //     }
-                // }).addTo(beer_map);
+                L.control.layers(null, overlayMaps).addTo(beer_map);
             } else {
                 console.error(xhr.statusText);
             }
