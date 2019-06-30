@@ -41,6 +41,10 @@ crossorigin=""></script>
             if (xhr.status === 200) {
                 var beers = JSON.parse(xhr.responseText);
 
+                var all = L.geoJSON(beers, {
+                    onEachFeature: onEachFeature,
+                });
+
                 var got = L.geoJSON(beers, {
                     onEachFeature: onEachFeature,
                     filter: function (feature) {
@@ -62,9 +66,9 @@ crossorigin=""></script>
                 beer_map.addLayer(need);
 
                 var overlayMaps = {
+                    "All": all,
                     "Got": got,
                     "Need": need,
-                    "Both": [got, need]
                 };
 
                 L.control.layers(overlayMaps).addTo(beer_map);
