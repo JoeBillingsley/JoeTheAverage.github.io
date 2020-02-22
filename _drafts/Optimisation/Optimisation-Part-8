@@ -1,0 +1,41 @@
+In the last post we studied ant colony optimisation where virtual ants explore solution graphs and generate progressively better solutions by changing the probabilty of an ant choosing an edge. The nature of graphs then allows us to model dependencies between individual variables. It's worth noting that we've been kind of doing this already, in a very roundabout way. Algorithms such as EA and PSO have some implicit model where the set of solutions 
+
+[ FIGURE OF EA and PSO probability distributions ]
+
+Once we realise this we can do things very differently. Estimation of distribution algorithms (EDAs) maintain an explict model of the problem from which we can sample solutions such that sampling from a perfect model will only produce optimal solutions. This fundamentally changes the problem from finding a good solution, to finding a good model. This model is usually a collection of *random variables* with some dependencies on each other.
+
+To clarify a random variable is a probability distribution over some range of numbers or items. When we sample from a random variable we get some firm value in this range. In the simplest case, if we are considering a binary string then our random variable would be defined by the probability of getting a 0 or a 1 if we sampled from it (Fig. 1). For a real valued problem it might be easier to represent the problem as a Gaussian random variable (Fig. 2). If a variable A is dependent on another variable B it means that the probability distribution of A changes based on the setting of B. We denote this P(A|B), the probability of A given B. If two variables are independent it means that the setting of one variable has no effect on the setting of another.
+
+Given a probabilistic model, we can find a solution by sampling from it. Many of the ideas we've discussed so far become explicit under this model. When we start a problem we have no idea what a good looks like, hence we are equally likely to sample any solution. As we grow more confident we want to increase the probability of sampling solutions in a certain region. In population based algorithms we usually did this by placing more solutions around good areas, with a model based approach we directly alter the probability of sampling solutions in that area. What makes this approach unique is the idea of dependent variables. With a model based approach we can learn how different variables interact and use these to make intelligent decisions about how to proceed.
+
+Like all metaheuristics, EDA algorithms follow a simple cycle of selection, variation and evaluation. Only now rather than varying solutions, we are varying the probability distribution that generates them \footnote{In fact we always were...}. How we change that probability distribution depends on how we think about the problem.
+
+## Univariate Models
+In the ideal case the problem would be completely seperable such that we could solve the problem one variable at a time and simply bring everything together at the end. In this case all of the variables would be independent. If we assume this to be true then it's very easy to derive a model and an update strategy.
+
+Consider a problem like OneMax where we can represent solutions as a binary string. If we generated $N$ solutions and evaluated them, we would expect the top $X$ solutions would be more descriptive of what a good solution looks like than remaining $N-X$. If we assume that each variable is independent we can learn a model by calculating the probability of each variable taking a 0 or a 1 in the selected population:
+
+P(X_i) = \frac{1}{\frac{1}{X} \cdot N)} \sum_{}
+
+This very simple algorithm is called the Univariate Marginal Distribution Algorithm (UMDA) \footnote{Univariate because we are assuming the variables are independent, marginal distribution because we are forming a distribution out of only some of the solutions}. If you're convinced your problem is separable then this is a very efficient way of solving the problem \footnote{[Were it so easy...]{https://www.youtube.com/watch?v=ubKUMlEppAs}}.
+
+Things can go wrong if we try and apply a univariate algorithm to a multivariate problem. Consider this particularly deceptive problem:
+
+TODO: trap5
+
+Running a univariate algorithm on this problem will cause it to collapse on the deceptive optimum with very little hope of finding the global optimum. We can illustrate the problem with some rough maths: 5 variables with equal chance of taking a 1 or 0 gives (1/2)^5 = 1/32 chance of an initial solution landing on the global optima. So if we generate 100 solutions we can expect roughly 3 of them will be optimal.  
+
+## Bivariate Model
+
+
+## Population Sizes
+The population size is an important metric for all algorithms but even more so in EDA algorithms. Consider the  
+
+http://staff.fmi.uvt.ro/~daniela.zaharie/ma2018/projects/biblio/techniques/compactEA/compactEA4.pdf
+eCGA#57
+
+Exercises:
+1. Design an EDA for:
+A) Real valued seperable problems
+B) Combinatorial seperable problems 
+C) 
