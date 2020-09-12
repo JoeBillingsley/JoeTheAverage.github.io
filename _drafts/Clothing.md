@@ -1,47 +1,41 @@
-Optimising for:
-    - Impact
-    - Comfort
-    - Value
+During the lockdown many people looked about themselves and realised they could not live comfortably surrounded by all of their stuff, all of the time. I instead experienced the opposite. As a student for a long, long time I've never had the money, or the space or the stability to accumulate much more than a ridiculous number of pint glasses. However, with nothing else to do, and the prospect of steep sales on the horizon, I started to think about changing that. It started with a rain coat. Before, when it rained - I just got wet. Now I had options. And this got me thinking: what else do I need - *actually need* - in my wardrobe?
 
-Constraints
-    - Clothing cannot be too formal or too casual
+Objective: To be well dressed for all situations
 
-- The more formal you go the stricter the rules become
-- Similarily, there is an expectation that your more formal clothing will be better quality and well maintained
+Well dressed:
+    - Appropriate for the situation
+        - Comfortable and practical 
+        - but that also communicate the intended message (i.e. respectful, professional, approachable, practical etc)
+        - With an eye for aesthetics
 
-    - Clothing is a means for others to identify you as one group or another
+Formulation: Find the minimum number of items that allow for appropriate dress in all expected situations
+- Constrained by budget, 
+
+I did consider building a tool to help solve this problem. There are existing tools such as Thread \cite{}, _ \cite{} which intend to help solve the problem of being 'well dressed' (and make you buy things) but I have only ever found these to be suitable for idea generation. Clothing only has meaning in context. For a computer to understand the value of an item of clothing or the suitability of it for a certain situation, more or less requires it to learn a culture. I'm not interested in creating an artificial general intelligence at the moment, I'd just like a nice looking wardrobe. 
+
+With an automated approach being nearly impossible I chose to solve this the old fashioned way. First, I learned everything I could about the topic. Then, I considered all of the different situations I can reasonably expect to encounter in the short term future. Finally, I picked out the minimum set of items I felt can be formed into appropriate outfits for the expected situations. This post is formulated in the same way. Section 1 brings together all of my notes on mens fashion aggregated from across the web. Section 2 briefly considers the expected situations and broadly categorises them. Finally, in Section 3 I select some clothing to form a target V1.0 of my wardrobe. 
+
+Finally, before we begin it's worth pointing out that all of the information contained here has already been filtered through my own personal taste. If some piece of advice or information was intolerable to me (like oversized fits which I just don't understand) it will not be included in here. Hence, the output of this process is already tailored to me and my own interests and ambitions. Additionally, I am not an expert on the topic and whilst I have made an effort to find and reference authoritative sources wherever possible, I also have much more important things I should be doing. So TLDR: Take everything herein with a pinch of salt.
+
+##     
+- Items
+    - Formality, fit and construction
+- Fabric/Materials
+    - Weaves, designs, quality
+    - Leather grades, cuts
+- Colour
+    - Colour coordination and associations
+- Communication
+    - Intent, context, benefits
+    - Range of acceptable outfits
+    - In group and outgroup
+    - Signalling, Veblen goods, conspicuous consumptions
+        - This is how we end up with things such as watches costing millions (https://www.ablogtowatch.com/rarest-expensive-patek-philippe-watches/)
     - 
+    - In practice, buying things is a very bad way of getting rich
 
-- At the other end of this you have workwear wherein its better if your clothes have been worn and tell their own story
-- Workwear  sets of clothing are trying to communicate something different
 
-- Fashion is an interesting mix of culture and something a bit more primal
-    - Much of it is learned and culturally we can unlearn some of our lower level thinking also
-
-- In terms of primal:
-    - We communicate through facial expressions
-        - Its disconcerting not to be able to see someones face or eyes
-        - Shirts, jackets, tend to lead the gaze up to the face and frame it
-    - Clothes tend to be designed so as to display the best parts of the person and hide or cover up the others 
-        - Padded shoulders on blazers leading to a narrower
-    - Not contrasting with our body
-
-- Clothes don't make the man but they do introduce you.
-
-- There was two things that were bugging me
-    - I often didn't have the right outfit for a situation
-    - I'd often run out of outfits whilst still having lots of clothes
-
-- Visual interest
-    - Contrast
-
-- Proportion
-    - 
-
-- Skin colour
-    - Indicates health
-
-# Research
+### Items
 
 ## Fit
 - Clothing should 'outline the body without telling too many secrets, offering a flattering figure without emphasizing every curve and crevice'
@@ -83,6 +77,112 @@ Oversized and undersized fits
 - Since its probably going to swap again at some point or otherwise head in some over strange direction
 - Sod all of that. I don't want to spend any more time thinking about clothing than I have to.
 
+#### Belts
+Belts are fairly easy. There are only a few 'rules' to know:
+- https://www.ties.com/blog/everything-you-need-to-know-about-belts
+- https://www.realmenrealstyle.com/mans-guide-belts/
+- https://www.fashionbeans.com/article/best-men-belts-guide/
+
+- Match leathers and match metals
+    - The leather of the belt should be near to any other leathers you are wearing e.g. shoes. Quality shoe companies tend to also sell belts for this exact reason.
+    - The metal of the belt should be the same metal as any other metals e.g. watch.
+
+- More formal belts are:
+    - Around 1.25" wide 
+    - Leather
+    - Plainer
+    - Glossier
+    - Thinner
+
+- In the opposite direction, casual belts are:
+    - 1.5" - 1.75"
+    - Leather still \aside{Fabric belts look stupid. This is a hill I'm willing to die on.} 
+    - More decorative
+    - Matte 
+    - Thicker
+
+#### Watches
+- Types of movement:
+    - Quartz
+        - Solar, battery
+    - Manual
+    - Automatic
+
+- Water resistance:
+30m / 3 bar - Splash proof
+50m / 5 bar - Swim proof
+100m / 10 bar - Water activities proof
+200m+ / 20 bar - Serious diving watch
+
+- Magnetic resistance
+If a mechanical watch is exposed to a magnetic field, parts can become magnetised that can intefere with the accuracy of the movement. This can be avoided by buying a cheap quartz watch or an anti-magnetic watch. Magnetic field  strength is measured in guass. 1000 gauss or above is effectively resistant to all magnetic fields you will encounter but watches are available with up to 15,000 gauss resistance (Omega Aqua Terra). In 2016 an Omega prototype (https://monochrome-watches.com/the-prototype-seamaster-that-omega-tested-at-insane-160000-gauss/) was shown to remain accurate after being exposed to 160,000 gauss. If for some reason you want to take your watch into the large hadron collider, give them a call.
+
+- Shock resistance
+Most watches are not designed to handle abuse and will require a bit of coddling. This includes any activities with sudden movements i.e. sports. Many watches are at least shock resistant, specifically they can be dropped from a metre onto a hardwood floor and still remain functional and accurate (https://www.iso.org/standard/62753.html). For more intense activities, watches in the Casio G-Shock series and some Timex and Luminox watches are designed to be all but indestructable.
+
+- Sizing
+    - Lug to lug width
+    - Case height
+
+- Maintenance costs
+    - A quartz watch requires minimal maintenance outside of battery replacement
+        - For watches with a high water resistance this requires specialist tools to ensure that the seal has been formed correctly
+    - Mechanical watches require regular maintenance
+        - https://blog.toolwatch.io/watch-tips/watch-servicing-guide/
+        - Over time, parts wear away and damage each other. To prevent the internal parts from accruing too much damage, watches need to be serviced regularly
+        - A watch service requires complete dissambly, then cleaning and reoiling each component and replacing any worn components
+        - Obviously this can get very expensive         
+            - For luxury watches this cost can be on the order of £500-1000
+            - For cheaper watches it may be cheaper to replace them
+        - Typically a watch should be serviced every 3 - 5 years
+
+- Overall:
+    - Quartz watches are by far the most cost efficient and practical
+    - However, there is something special about having such an intricate mechanism on your wrist
+        - Some mechanical and automatic watches are beautiful
+        - Moreso, the movement on a watch is a human scale level of complexity
+        - A simple casio watch with multiple functions is orders of magnitude more complex than a mechanical watch but it happens on a level that we cannot really appreciate it
+    - Heritage and story
+
+    - The second thing to consider is the signalling quality of an expensive watch
+        - Luxury watch brands such as Omega and Rolex are a Veblen good, they are valuable because they are expensive and because others know they are expensive
+        - A luxury watch implies the wearer has attained some level of success in the past
+        - If you're trying to convince others that you will be succesful in the future as well then this could be a useful tool 
+
+#### Glasses/Sunglasses
+
+
+### Communication
+- The more formal you go the stricter the rules become
+- Similarily, there is an expectation that your more formal clothing will be better quality and well maintained
+
+    - Clothing is a means for others to identify you as one group or another
+    - 
+
+- At the other end of this you have workwear wherein its better if your clothes have been worn and tell their own story
+- Workwear  sets of clothing are trying to communicate something different
+
+- Fashion is an interesting mix of culture and something a bit more primal
+    - Much of it is learned and culturally we can unlearn some of our lower level thinking also
+
+- In terms of primal:
+    - We communicate through facial expressions
+        - Its disconcerting not to be able to see someones face or eyes
+        - Shirts, jackets, tend to lead the gaze up to the face and frame it
+    - Clothes tend to be designed so as to display the best parts of the person and hide or cover up the others 
+        - Padded shoulders on blazers leading to a narrower
+    - Not contrasting with our body
+
+- Visual interest
+    - Contrast
+
+- Proportion
+    - 
+
+- Skin colour
+    - Indicates health
+
+# Research
 ## Fabric
 Fit may be king but fabric is where the true complexity lies
 
@@ -297,8 +397,16 @@ The way the warp and weft yarns are threaded defines the weave.
 ## Colour
 - Typically darker is more formal
 
-## Situation
+# Situations
+Smart: Funerals, wedddings, interviews, important work situations
+Smart casual: Conferences/business events, posh nights out, posh meals, day to day work, work drinks
+Casual: Every day uniform, standard nights out, holiday clothing, beach trips, heavy nights out, 'invisible' outfit, handle anything outfit, lounging
+Active wear: Swimming, running, cycling
+Hobbies: Horse riding, hiking, travelling, labouring
+
 # TODO: Discuss contrast in terms of formality e.g. suit jacket and shorts. 
+
+https://www.reddit.com/r/malefashionadvice/comments/ihnf80/clothing_as_communication_context_and/
 
 ## Other concerns
 - Activities / Hobbies
@@ -315,6 +423,12 @@ The way the warp and weft yarns are threaded defines the weave.
 
 - Emotional attachment / meaning
 https://dieworkwear.com/2020/08/01/on-emotional-durability/
+
+- Layering guide
+    https://www.youtube.com/watch?v=7CjWct7-3Ww
+    - Dark colours outside, lighter inside
+    - Lower weight to heavier weights
+
 
 # Black Tie / Funeral
 - Plain black suit
@@ -362,12 +476,15 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
 - The suit for anything thats doesn't require the most formal outfit I own
 
 - Dark navy suit
-
     Jacket
     - As above
+    - Either a plain weave or a simple textured weave that appears solid across a room
+        - e.g. birdseye, houndstooth, pin and pull (?)
 
     Shirt:
     - White twill shirt
+        - Nice to introduce a little pattern in
+        - Most job interviews will be for more casual places so need to dress up but not customer facing
     - The white poplin would also be fine
     - Probably spread collar
 
@@ -393,15 +510,37 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
 
     Watch:
     - Dress
-        - Rectangular, steel
+        - Rectangular
+        - Steel
         - Thin enough to slip under a shirt cuff
         - Ideally mechanical or automatic
-        
-        - Jaeger-LeCoultre Reverso, Cartier Tank
+
+        - Orient Bambino
+        - Junghans Max Bill
+        - Jaeger-LeCoultre Reverso
         - I have no intention of buying this watch anytime soon
 
-    - Sports
-        - 
+    - Quartz
+        - A fancy dress or sports watch attempts to communicate success
+        - When I graduate I will be applying to graduate positions so this just comes across as presumptuous or possibly foolish
+        - The image I will be trying to communicate is of efficient professionalism
+        - A simple metal quartz watch such as the Casio A158W seems much more in line with this presentation
+            - It helps that it reads as a bit nerdy as well
+        - For higher level positions it makes more sense to have a fancier sports watch
+
+# Smart Casual
+- 
+
+- Sports
+    - Blue or black dial
+    - Round
+    - Steel
+    - Ideally automatic
+    - 100m+ water resistance
+
+    - Casio Edifice
+    - Seiko SARX045, Omega Seamaster, Rolex Explorer
+
 
 # Picks
 - Accessories
@@ -418,31 +557,6 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
 
         - Timefactors 
             - 'Smiths' Everest PRS-25
-
-        - Christophe Ward
-            - 
-
-        - Tissot 
-            - Gentleman Powermatic 80 Silicium
-
-        - Seiko
-            - SARX045
-
-        - Longines
-            - Several variants in two collections
-                - Record collection
-                    - COSC certified
-                - Master Collection
-            
-        - Omega
-            - Speedmaster
-            - Seamaster
-
-        - Rolex 
-            - Explorer 2
-
-        - Bremont
-            - MB 2
 
     - Dress
         - Jaquet Droz
