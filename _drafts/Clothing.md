@@ -34,27 +34,22 @@ Finally, before we begin it's worth pointing out that all of the information con
     - 
     - In practice, buying things is a very bad way of getting rich
 
-
 ### Items
+- There are many 'rules' about how a certain item of clothing should fit or be worn. Probably these should only be taken as guiding heuristics and instead we should instead consider the fundamentals of proportionality, colour, texture, drape etc. Frankly though these are really hard things to learn so heuristics are fine for now.
 
-## Fit
-- Clothing should 'outline the body without telling too many secrets, offering a flattering figure without emphasizing every curve and crevice'
-    - From primer 
-    https://www.primermagazine.com/2012/spend/how-a-shirt-should-fit-the-principles-of-fit
+Along the same line I should mention oversized/skinny fits. A while back the trend was towards progressively skinner clothes. Now I am told the wind is heading in the other direction, towards relaxed and oversized clothes. No doubt someone is making a lot of money from the apparently fickle nature of fashion. The most stable advice I can find seems to be the happy medium, tailored but not skin tight. Put nicely: 'Clothing should 'outline the body without telling too many secrets, offering a flattering figure without emphasizing every curve and crevice'
+    - https://www.primermagazine.com/2012/spend/how-a-shirt-should-fit-the-principles-of-fit
 
-- Clothes look best when they echo the shape of the body underneath. When there’s too much fabric – or not enough – an outfit looks like it’s fighting the man inside, rather than flattering him
-    - From Thread
-    https://www.thread.com/gb/tips/men/issues/getting-clothes-mended-or-tailored/how-get-perfect-fit/
-
-In all instances there should be some freedom of movement. You should be able to cross your arms, reach above your head, drop into a slavic squat etc without feeling constricted.
-
-# TODO: Need to add notes on how styling affects formality
-# TODO: Need references for this section.
+Finally, I personally value freedom of movement in my clothes. So for more casual clothing I'll tolerate a larger fit than ideal if it means I can ~~get away in a hurry~~ move comfortably.
 
 - Blazer/Sports Jacket/Suit Jacket:
     The jacket should hug the body gently. Collar should rest against the shirt not press against it. The jacket should fasten just above the belly button. The hem should make it around halfway down your buttocks. A suit jacket should have sufficiently large sleeves to accomodate a shirt cuff with cufflinks. A jacket will almost always need tailoring. 
 
 - Shirt:
+    - https://www.heddels.com/2019/07/shirt-anatomy-101-every-part-shirt/
+    - https://hespokestyle.com/dress-shirt-parts-terminology/
+    - https://www.burton.co.uk/blog/anatomy-of-a-shirt/
+
     Seam should sit where the shoulder meets the arm. Should be able to fit about two fingers in the collar. Arm should reach just a little after the wrist on a formal shirt, shorter on a casual shirt. Anything else can be tailored.
 
 - T-Shirt: 
@@ -67,15 +62,12 @@ In all instances there should be some freedom of movement. You should be able to
     As with trousers but ending at the knee or a little higher.
 
 - Outerwear
+    - Raglan vs set in sleeve
+        - https://www.cherrytreecountryclothing.com/expert-advice/difference-between-raglan-sleeve-and-set-in-sleeve/
+
     Varies depending on the item. Shoulder should sit on the shoulder seam formed by the other layers. Sleeves should typically be long enough that they protect the underlying clothing
 
 Finally clothes should be picked such that the fits approximately match with each other i.e. not a baggy shirt and slim fit trousers. On me that works out as slim/regular fit shirts and slim/straight fit trousers.
-
-Oversized and undersized fits
-- Not long ago the trend was towards progressively skinner clothes
-- Now fashion seems to be heading in the other direction, towards relaxed and oversized clothes
-- Since its probably going to swap again at some point or otherwise head in some over strange direction
-- Sod all of that. I don't want to spend any more time thinking about clothing than I have to.
 
 #### Belts
 Belts are fairly easy. There are only a few 'rules' to know:
@@ -101,6 +93,8 @@ Belts are fairly easy. There are only a few 'rules' to know:
     - Matte 
     - Thicker
 
+- The ideal belt will be cut such that the spare leather is only long enough to tuck through the first belt loop or so
+
 #### Watches
 - Types of movement:
     - Quartz
@@ -121,6 +115,7 @@ If a mechanical watch is exposed to a magnetic field, parts can become magnetise
 Most watches are not designed to handle abuse and will require a bit of coddling. This includes any activities with sudden movements i.e. sports. Many watches are at least shock resistant, specifically they can be dropped from a metre onto a hardwood floor and still remain functional and accurate (https://www.iso.org/standard/62753.html). For more intense activities, watches in the Casio G-Shock series and some Timex and Luminox watches are designed to be all but indestructable.
 
 - Sizing
+    TODO
     - Lug to lug width
     - Case height
 
@@ -429,7 +424,6 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
     - Dark colours outside, lighter inside
     - Lower weight to heavier weights
 
-
 # Black Tie / Funeral
 - Plain black suit
     - Super 100s worsted wool
@@ -450,65 +444,72 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
     - Ideally dark, rayon (Bemberg silk) lining
     - Ideally functional buttons
 
-    Shirt:
-    - White poplin cotton shirt
-    - Most likely a spread collar but depends on the proportion of the suit
-
     Trousers:
     - Plain, matching jacket
     - Half break
+    - Undecided on belt loops vs side adjusters
+        - I've only ever owned a suit with belt loops
+        - Side adjusters seems almost *too* fancy
 
-    Shoes:
+- Shirt:
+    - White poplin cotton shirt
+    - Most likely a spread collar but depends on the proportion of the suit
+
+- Shoes:
     - Ideally, black plain fronted whole-cut oxford
     - Less detailing the better
         - https://www.crockettandjones.com/collections/mens/oxfords/alex-black-calf/
 
-    - The more flexible alternative is a black toe-cap oxford
-        - Just a smidge less formal, more suitable for interviews
-        - No broguing though
-
-    - I'm tending towards the latter but I can afford to wait a little longer to get a bit more insight into things to come
-
-    Tie:
+- Tie:
     - Black silk tie
+
+- Outerwear:
+    Overcoat
+    - Plain black/charcoal
+    - Non-worsted wool, most likely twill weave again
+    - Single breasted, two slit pockets, single vent, ideally cotton or wool lined pockets for a bit of warmth
+    - Length to around the knee or a little higher, roomy enough to fit over a suit
 
 # Interviews / Weddings
 - The suit for anything thats doesn't require the most formal outfit I own
 
-- Dark navy suit
+- Dark navy three piece suit
     Jacket
     - As above
     - Either a plain weave or a simple textured weave that appears solid across a room
-        - e.g. birdseye, houndstooth, pin and pull (?)
+        - Currently considering a simple twill
+        - Other options: birdseye, pick + pick, a subtle herringbone or houndstooth
 
-    Shirt:
-    - White twill shirt
-        - Nice to introduce a little pattern in
-        - Most job interviews will be for more casual places so need to dress up but not customer facing
-    - The white poplin would also be fine
-    - Probably spread collar
+    Trousers
+    - As above but matching suit
 
-    Shoes:
-    - Black toe cap oxford
-        - Good interview shoe
-        - So ubiquitous that they don't say anything at all
+    Waistcoat
+    - Single breasted, probably five buttons, no lapel
+    - Length should cover waistband
+    - This will only be turning up at weddings so could potentially introduce some contrast here to tone down the formality of the outfit a little
+        - Contrasting colour (dark grey?) or a simple pattern possibly
 
-    - Dark brown derby
-        - Already less formal so avoid brouging again
-        - Good wedding shoe
-        - Ideally rubber soled so that I don't have to worry about falling over on the dance floor at the after party
+Shirt
+- White twill shirt
+    - Nice to introduce a little pattern in
+    - Most job interviews will be for more casual places so need to dress up but not customer facing
+- The white poplin would also be fine
+- Probably spread collar
 
-    Trousers:
-    - As above
+Shoes
+- Black toe cap oxford
+    - Good interview shoe
+    - So ubiquitous that they don't say anything at all
 
-    Belt:
-    - Either black or brown, ideally matching the shoes
-    - Silver/steel metal
+- Dark brown derby
+    - Light or no brouging
+    - Good wedding shoe
+    - Ideally rubber soled so that I don't have to worry about falling over on the dance floor at the after party
 
-    Tie:
+- Tie
     - Navy grenadine tie
 
-    Watch:
+- Watch
     - Dress
         - Rectangular
         - Steel
@@ -529,7 +530,8 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
         - For higher level positions it makes more sense to have a fancier sports watch
 
 # Smart Casual
-- 
+- Two options in terms of 'business casual'
+    - Sports jacket and trousers or suit, no tie and v neck
 
 - Sports
     - Blue or black dial
@@ -540,6 +542,39 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
 
     - Casio Edifice
     - Seiko SARX045, Omega Seamaster, Rolex Explorer
+
+- Smart jacket
+    - Car coat (Hudson Wool Car Coat), peacoat, bridge coat, donegal overcoat
+
+- Trousers
+    - One trade off of a sports coat, the trousers must not match otherwise it looks like a poorly prepared suit
+    - The advantage is that each of the trousers can be worn in far more casual situations as well
+
+    - Belt loops, mid rise, plain
+
+    - Chinos
+        - Colour wise, need to contrast with the jackets well
+        
+        - Gant Regular Twill Chino?
+
+        - Stone/Wheat/Khaki chinos
+            - For the summer jacket
+            - Linen or summer weight cotton
+
+        - Grey/Charcoal chinos
+            - For the main jacket
+            - Cotton
+                - Wool would be the traditional recommendation but I'd prefer something a bit more flexible 
+
+        - Navy chinos
+            - For the winter jacket
+            - Cotton
+                - Again, wool is probably warmer but these are a very flexible pair of trousers 
+
+    - Dark jeans
+        - 
+
+# Casual
 
 
 # Picks
@@ -602,7 +637,9 @@ Shoes
 
     - Chelsea
         - RM Williams Craftsman/Signature Craftsman
-        - Bexley Enfield, 
+        - Bexley Enfield,
+
+        - Flat rubber sole, ideally dainite or similar, leather upper
 
     - Country boot
         - Trickers
