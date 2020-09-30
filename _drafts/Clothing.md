@@ -424,110 +424,141 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
     - Dark colours outside, lighter inside
     - Lower weight to heavier weights
 
-# Black Tie / Funeral
-- Plain black suit
-    - Super 100s worsted wool
-        - Supposedly 120-160s is a good range for smart suits
-            - https://www.montagio.com.au/cms/picking-the-perfect-suit-fabric-weave
-        - Really depends on price
-    - Plain weave
+# Formal
+## Essential
+Formal dress, to my mind, means a suit. A more general description would be anything were the clothes you are wearing are meant to imply a certain degree of respect for the event you are attending. There are four events you absolutely need a suit for. In decreasing order of enjoyability these go: weddings, interviews, funerals, black tie events. Fortunately, it seems like you only really need two suits to cover these four very specific situations. 
 
-    Jacket:
-    - Single breasted
-    - Two button
-    - Double vent
-    - Flap pockets
-    - Notched lapel
-    - Probably a natural/neutral button stance
-        - Has the top button sit at the thinnest part of the waist
-        - Pretty much at the belly button
-    - Ideally dark, rayon (Bemberg silk) lining
-    - Ideally functional buttons
+By definition a suit has low contrast between components so instead it derives visual interest from the pattern, texture and the sharp contrast between the colour of the suit and the typically white shirt. To my mind, most patterns come across as either business suits or, for lack of a better word, a bit wankery, so I've not considered those in my selection. 
 
-    Trousers:
-    - Plain, matching jacket
-    - Half break
-    - Undecided on belt loops vs side adjusters
-        - I've only ever owned a suit with belt loops
-        - Side adjusters seems almost *too* fancy
+For very formal events, funerals and black tie events, there is an unwritten dress code that simplifies things greatly. For the lower end of formality, the weddings and interview, I'm opting to introduce some visual interest through simple textures. In all instances I'm looking for classic English details and fairly basic choices. That is: If I'm wearing a suit to an event, I'm probably not looking to stand out.
 
-- Shirt:
-    - White poplin cotton shirt
-    - Most likely a spread collar but depends on the proportion of the suit
+In total I'm after two suits and a few extra details:
 
-- Shoes:
-    - Ideally, black plain fronted whole-cut oxford
-    - Less detailing the better
-        - https://www.crockettandjones.com/collections/mens/oxfords/alex-black-calf/
+# TODO: Do all items first and then outfits
 
-- Tie:
-    - Black silk tie
+### Dark Navy Suit
+- Either a plain weave or a simple textured weave that appears solid across a room
+    - e.g. twill, birdseye, houndstooth, pin and pull (?)
+- This keeps the suit a little less formal but still sharp enough that it is suitable for job interviews
 
-- Outerwear:
-    Overcoat
-    - Plain black/charcoal
-    - Non-worsted wool, most likely twill weave again
-    - Single breasted, two slit pockets, single vent, ideally cotton or wool lined pockets for a bit of warmth
-    - Length to around the knee or a little higher, roomy enough to fit over a suit
+- Super 100s worsted wool
+    - Supposedly 120-160s is a good range for smart suits
+        - https://www.montagio.com.au/cms/picking-the-perfect-suit-fabric-weave
+    - Really depends on price
 
-# Interviews / Weddings
-- The suit for anything thats doesn't require the most formal outfit I own
+Jacket:
+- Single breasted
+- Two button
+- Double vent
+- Flap pockets
+- Notched lapel
+- Probably a natural/neutral button stance
+    - Has the top button sit at the thinnest part of the waist
+    - Pretty much at the belly button
+- Ideally dark, rayon (Bemberg silk) lining
+- Ideally functional buttons
 
-- Dark navy three piece suit
-    Jacket
-    - As above
-    - Either a plain weave or a simple textured weave that appears solid across a room
-        - Currently considering a simple twill
-        - Other options: birdseye, pick + pick, a subtle herringbone or houndstooth
-
-    Trousers
-    - As above but matching suit
-
-    Waistcoat
-    - Single breasted, probably five buttons, no lapel
-    - Length should cover waistband
-    - This will only be turning up at weddings so could potentially introduce some contrast here to tone down the formality of the outfit a little
-        - Contrasting colour (dark grey?) or a simple pattern possibly
-
-Shirt
-- White twill shirt
-    - Nice to introduce a little pattern in
-    - Most job interviews will be for more casual places so need to dress up but not customer facing
-- The white poplin would also be fine
+White twill shirt
+- Nice to introduce a little pattern in
+- A white poplin would also be fine and works with both suits
 - Probably spread collar
 
-Shoes
-- Black toe cap oxford
-    - Good interview shoe
-    - So ubiquitous that they don't say anything at all
+Trousers:
+- Matching jacket
+- Half break
+- Side adjusters
 
-- Dark brown derby
-    - Light or no brouging
-    - Good wedding shoe
-    - Ideally rubber soled so that I don't have to worry about falling over on the dance floor at the after party
+Tie
+- Navy grenadine tie
 
-- Tie
-    - Navy grenadine tie
+### Black Suit
+- Plain weave
 
-- Watch
-    - Dress
-        - Rectangular
-        - Steel
-        - Thin enough to slip under a shirt cuff
-        - Ideally mechanical or automatic
+Jacket + Trousers
+- As above
 
-        - Orient Bambino
-        - Junghans Max Bill
-        - Jaeger-LeCoultre Reverso
-        - I have no intention of buying this watch anytime soon
+Shirt:
+- White poplin cotton shirt
+- Most likely a spread collar but depends on the proportion of the suit
 
-    - Quartz
-        - A fancy dress or sports watch attempts to communicate success
-        - When I graduate I will be applying to graduate positions so this just comes across as presumptuous or possibly foolish
-        - The image I will be trying to communicate is of efficient professionalism
-        - A simple metal quartz watch such as the Casio A158W seems much more in line with this presentation
-            - It helps that it reads as a bit nerdy as well
-        - For higher level positions it makes more sense to have a fancier sports watch
+These two core suits can then be modified slightly to be tailored more specifically to each event:
+
+### Weddings
+Navy suit + Waistcoat + Derby shoes
+
+Waistcoat
+- Single breasted, probably five buttons, no lapel
+- This will only be turning up at weddings so could potentially introduce some contrast here to tone down the formality of the outfit a little
+    - Contrasting colour (dark grey?) or a simple pattern possibly
+
+Dark brown derby
+- Light or no brouging
+- Rubber soled so that I don't have to worry about falling over on the dance floor at the after party
+
+- I wouldn't want to wear a nice watch to an event which usually turns into a very dressed up night club
+
+### Interviews
+Navy suit + No Waistcoat + Black Toe Cap Oxfords
+
+Black toe cap oxford
+- So ubiquitous that they don't say anything at all
+
+Cheap quartz Watch
+- I like wearing a watch as a rule and an interview is one situation where its very useful to know the time
+
+- A fancy dress or sports watch attempts to communicate success
+- When I graduate I will be applying to graduate positions so this just comes across as presumptuous or possibly foolish
+- The image I will be trying to communicate is of efficient professionalism
+- A simple metal quartz watch such as the Casio A158W seems much more in line with this presentation
+    - It helps that it reads as a bit nerdy as well
+- For higher level positions it makes more sense to have a fancier sports watch
+
+### Funeral
+Black suit + Black silk tie + Oxfords
+
+Black oxfords
+- Ideally, black plain fronted whole-cut oxford
+- Otherwise toe cap is also fine
+- Less detailing the better
+    - https://www.crockettandjones.com/collections/mens/oxfords/alex-black-calf/
+
+Black silk tie
+
+### Black tie
+Technically this is an outfit for a black tie *optional* event but given the number of times I expect to be invited to one of these I don't think its worth putting too much thought into it.
+
+Black suit + Navy tie + Dress watch + Oxfords
+
+Black oxfords
+- As for the funeral shoes but well shined
+
+Tie
+- Navy grenadine tie
+
+Dress Watch
+- That said there are some really nice dress watches about... 
+    - Steel
+    - Thin enough to slip under a shirt cuff
+    - Ideally rectangular
+    - Ideally mechanical or automatic
+
+- £ Orient Bambino
+- £ Seiko SUP880P1
+
+- ££ Junghans Max Bill
+- ££ Longines DolceVita
+
+- £££ Jaquet Droz
+    - Ceramic, automaton bloke
+- £££ Grand Seiko, Hermes
+- £££ Jaeger-LeCoultre
+    - Reverso
+- £££ Cartier Tank
+
+For wet/cold situations:
+- Black umbrella
+- Black wool overcoat
+# TODO: Details
 
 # Smart Casual
 - Two options in terms of 'business casual'
