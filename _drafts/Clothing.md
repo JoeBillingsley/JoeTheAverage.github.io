@@ -432,9 +432,12 @@ By definition a suit has low contrast between components so instead it derives v
 
 For very formal events, funerals and black tie events, there is an unwritten dress code that simplifies things greatly. For the lower end of formality, the weddings and interview, I'm opting to introduce some visual interest through simple textures. In all instances I'm looking for classic English details and fairly basic choices. That is: If I'm wearing a suit to an event, I'm probably not looking to stand out.
 
-In total I'm after two suits and a few extra details:
+In total I'm after two suits and a few extra details.
 
-# TODO: Do all items first and then outfits
+# TODO: Do outfits first then items
+# e.g. Interview: dark navy suit + white twill shirt + quartz watch + black toe cap oxfords
+# ... The weather is also changeable in the UK so it is important to have some additional items for cold and wet weather: an umbrella and an overcoat. 
+# then go into details on each item
 
 ### Dark Navy Suit
 - Either a plain weave or a simple textured weave that appears solid across a room
@@ -558,102 +561,215 @@ Dress Watch
 For wet/cold situations:
 - Black umbrella
 - Black wool overcoat
-# TODO: Details
+    # TODO: Details
 
 # Smart Casual
-- Two options in terms of 'business casual'
-    - Sports jacket and trousers or suit, no tie and v neck
+Smart-casual is for those slightly confusing transitional events where its not quite a suit but something more than jeans and a t-shirt. This category can accommodate some nicer items that need a bit more looking after. This is already a much less prescriptive area than properly smart clothing so there is an opportunity to introduce a bit more variety. 
 
-- Sports
+The level of formality I am aiming for here is that everything could go with a pair of dark indigo jeans.
+
+From the formal section I'm stealing the brown derbies and the black overcoat. The suits and ties are far too smart for this category.
+
+For more formal situations the sports jackets will carry the outfit.
+
+## Tailoring
+- Navy sports jacket
+    - Wool or a cotton/wool mix
+        - A thicker wool adds some texture and stops it from looking like a lost suit jacket
+    - Flap pockets
+    - Single breasted
+    - Lined
+
+- Linen sports jacket
+    - Bright blue or cream
+    - Hopsack weave
+    - Quarter lined or fully unlined
+    - Patch pockets
+    - Single breasted
+
+    - Hopsack has an nice open weave that works well with the linen to keep cool in hot weather. There's no point having a breathable outer if there is a layer of lining covering it up so unlined is essential.
+
+## Shirts
+- White + Sky blue + Pale pink oxford cloth button down
+    - Generic workhorse shirts that complement the other colours
+    - Have to be careful with the pink as my skin will burn even when exposed to particularly bright lamps
+    - Informal details
+        - # TODO
+    - Should be untuckable for when not wearing a jacket
+
+- Summer shirts
+    - Long sleeve
+    - Linen or seersucker
+    - So far I've found seersucker to be a better material
+        - Interesting texture by default
+    - Linen shirts are often cut quite loose which looks a bit too informal
+
+## Trousers
+- Stone/Wheat chinos
+    - Colour wise I'm looking for something cooler / more towards the grey end 
+        - I considered grey itself but it tends to look too washed out in the pictures I've seen so far
+    - Linen or light weight cotton
+    - Belt loops, mid rise, plain, twill weave
+    
+    - Gant Regular Twill Chino
+
+- Dark indigo jeans
+    - Not too similar in colour to the navy jacket
+    - Possibly selvedge
+        - Selvedge denim requires a fair bit of work to wear properly
+        - Formal clothing means it can't be too faded
+
+## Shoes
+- Chelsea boots
+    - Tricky one
+    - Probably brown
+        - Black seems a little hard to fit into the more casual outfits
+        - Redder tones look good but are a bit limiting
+    - Maybe suede
+        - Suede requires a bit more care to look after and doesn't age very well
+    - Flat rubber sole, ideally dainite or similar, leather upper
+
+    - ££ Thursday boots
+    - £££ Bexley Enfield
+    - £££ RM Williams Craftsman/Signature Craftsman
+
+## Outerwear
+- Wool v-neck jumpers
+    - V-neck jumpers present the shirt collar better than crew neck ones  
+        - Fairly shallow v though still
+    - Colours are a bit tricky but I think a black or dark grey would work in most situations
+
+- Peacoat / Bridge coat
+    - 
+
+## Accessories
+- Sports watch
     - Blue or black dial
     - Round
     - Steel
     - Ideally automatic
     - 100m+ water resistance
 
-    - Casio Edifice
-    - Seiko SARX045, Omega Seamaster, Rolex Explorer
+    - £ Casio Edifice
+    - ££ Seiko SARX045
+    - ££££ Omega Seamaster
+    - ££££ Rolex Explorer
 
-- Smart jacket
-    - Car coat (Hudson Wool Car Coat), peacoat, bridge coat, donegal overcoat
+- Dark brown belt
+    - Leather matching the derby shoes and/or the chelsea boots
 
-- Trousers
-    - One trade off of a sports coat, the trousers must not match otherwise it looks like a poorly prepared suit
-    - The advantage is that each of the trousers can be worn in far more casual situations as well
+## The 'maybe' pile
+- Tan oxford brogues
+    - Dark brown derbies might look be a bit too formal for some situations
+    - Can only find out once I've picked up some more important parts
 
-    - Belt loops, mid rise, plain
+- Specialised chinos
+    - Stone/Wheat goes well with both jackets but its a mid weight cotton isn't perfectly comfortable in either hot or cold conditions
 
-    - Chinos
-        - Colour wise, need to contrast with the jackets well
-        
-        - Gant Regular Twill Chino?
+    - Grey wool trousers
+        - Seem popular on the internet, never noticed them in the wild
 
-        - Stone/Wheat/Khaki chinos
-            - For the summer jacket
-            - Linen or summer weight cotton
-
-        - Grey/Charcoal chinos
-            - For the main jacket
-            - Cotton
-                - Wool would be the traditional recommendation but I'd prefer something a bit more flexible 
-
-        - Navy chinos
-            - For the winter jacket
-            - Cotton
-                - Again, wool is probably warmer but these are a very flexible pair of trousers 
-
-    - Dark jeans
-        - 
+    - Stone/Wheat/White chinos
+        - Lightweight cotton or linen
 
 # Casual
 
+## Normal situations
 
-# Picks
-- Accessories
-    - I tend to wear a watch whilst I am working. I like to have something that reminds me I'm on the clock.
-    - A watch that reflects science and the ability for technology to push humanity forward
+### Shirts
+- x6 t-shirts
+    - 3x White
+    - Black
+    - Olive
+    - Navy
 
-    - Casual
-        - Lorus Titanium RXD425L8
+- 2x polo shirts
+    - Keeping colour variants
+    - Charcoal
+    - Burgundy
 
-        - Hamilton Khaki Field
+## Trousers
+- Well worn jeans
+    - ???
 
-    - Everyday
-        - Thing to consider is servicing costs
+- Chinos
+    - Navy / Olive / British Khaki
+    
+## Shoes
+- Beater boots
+    - Vibram sole
+    - Vegetable tan leather upper and lining
+    - Ideally (flesh out heel)
+    - Goodyear welt
 
+- Trainers / Sneakers
+    - Brown/blue/neutral leather
+    - White sole
+    - Ideally leather upper, replaceable cup sole
+
+## Outerwear
+- Daily jacket
+    - All purpose jacket that you grab by default
+
+- Boozing jacket
+    - Perhaps not as necessary in the future as it is now
+    - A second layer for when the beer jacket is not enough
+    - Cheap, preferably beer resistant or easily washable 
+
+## Fundamentals
+- Underwear
+    - Not heat seekers
+    - Calvin Klein
+
+- Socks
+    - Black
+        - 14x 
+
+    - 6x White trainer socks
+        - Enough for an unusually hot week
+
+## Accessories
+    - Field watch
         - Timefactors 
-            - 'Smiths' Everest PRS-25
-
-    - Dress
-        - Jaquet Droz
-            - Ceramic, automaton bloke
-
-        - Longines DolceVita
-
-        - Orient 
-            - Bambino
-
-        - Seiko 
-            - SUP880P1
-
-        - Grand Seiko, Hermes
-
-        - Jaeger-LeCoultre
-            - Reverso
-
-        - Cartier Tank
-
-        - Junghans Max Bill
+        - 'Smiths' Everest PRS-25
 
     - Beater
         - Casio F91W
         - Casio A158W/A168W
+        - Casio W86 
+            - Better light, water resistance
 
-    - Adventure watch
-        - Old Casio Pro Trek (maybe a PAG240T-7)
-        - Only downside is it's bigger than you'd want to wear when in normal situations
+## Hot weather
+- 2x chino shorts
+    - Stone + Wheat
+    - Light grey / White
 
-        - Casio G-Shock watches are probably the next best thing 
+- 2x linen short sleeve shirts
+    - For beach trips with a pub component
+    - White + Sky blue
+
+- Navy swimming shorts
+    - Simple, smart, ideally tapered / tailored fit
+    - Something you can wear out of the sea and into a bar or restaurant
+
+- Espadrilles
+    - Beach shoes
+
+## Cold weather
+
+- Overshirt
+
+- Heavy weather jacket
+
+## Wet weather
+- Rain jacket
+
+# Picks
+- Adventure watch
+    - Old Casio Pro Trek (maybe a PAG240T-7)
+    - Only downside is it's bigger than you'd want to wear when in normal situations
+
+    - Casio G-Shock watches are probably the next best thing 
 
 Shoes
     I'm not in a hurry for any of these shoes so I'm picking out more aspirational shoes that I can save towards but will get a lot of use from. In a hurry, any high street stockist will sell most of these designs. 
@@ -665,12 +781,6 @@ Shoes
     - Smart/Casual: Brown derby shoe preferably brogued
         - Barker Bailey
         - Loake 1880 Wembley, Trickers Bourton
-
-    - Chelsea
-        - RM Williams Craftsman/Signature Craftsman
-        - Bexley Enfield,
-
-        - Flat rubber sole, ideally dainite or similar, leather upper
 
     - Country boot
         - Trickers
@@ -887,3 +997,14 @@ Ties
 - Christmas jumper
     - Every year I buy a novelty Christmas jumper, wear it out to a few parties realise its pretty much impossible to wash and god awful quality and then chuck it out
     -  
+
+
+# Grail items
+- Tweed sports jacket
+    - Completely unnecessary but looks nice
+
+- True camel coat
+
+- Omega Seamaster Aqua Terra
+
+- Trickers Country Stow boots
