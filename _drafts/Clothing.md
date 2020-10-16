@@ -495,16 +495,26 @@ Waistcoat
     - Contrasting colour (dark grey?) or a simple pattern possibly
 
 Dark brown derby
-- Light or no brouging
+- Light brouging
 - Rubber soled so that I don't have to worry about falling over on the dance floor at the after party
 
+- Barker Bailey
+- Loake 1880 Wembley
+
 - I wouldn't want to wear a nice watch to an event which usually turns into a very dressed up night club
+
+- Black socks
+    - Silk ideally
+    - At least one pair of solid black socks
 
 ### Interviews
 Navy suit + No Waistcoat + Black Toe Cap Oxfords
 
 Black toe cap oxford
 - So ubiquitous that they don't say anything at all
+
+- Clarks Oliver Limit / Jones's Goodyear Welted Oxford
+- Crockett & Jones Audley, Edward Green Chelsea
 
 Cheap quartz Watch
 - I like wearing a watch as a rule and an interview is one situation where its very useful to know the time
@@ -593,9 +603,14 @@ For more formal situations the sports jackets will carry the outfit.
 - White + Sky blue + Pale pink oxford cloth button down
     - Generic workhorse shirts that complement the other colours
     - Have to be careful with the pink as my skin will burn even when exposed to particularly bright lamps
+
+    - Preferably soft collar rather than fused
+    - Box pleat down the back for movement
     - Informal details
         - # TODO
     - Should be untuckable for when not wearing a jacket
+
+    - Charles Tyrwhitt, TM Lewin, PINK Shirtmakers, Brooks brothers (absurd prices)
 
 - Summer shirts
     - Long sleeve
@@ -634,10 +649,12 @@ For more formal situations the sports jackets will carry the outfit.
     - £££ RM Williams Craftsman/Signature Craftsman
 
 ## Outerwear
-- Wool v-neck jumpers
-    - V-neck jumpers present the shirt collar better than crew neck ones  
+- V-neck jumpers
+    - Ideally high quality wool
+    - V-neck jumpers present the shirt collar better than crew neck ones
         - Fairly shallow v though still
-    - Colours are a bit tricky but I think a black or dark grey would work in most situations
+    - Fairly neutral colours that can work under any outfits
+        - Bright blue and dark grey
 
 - Peacoat / Bridge coat
     - 
@@ -665,12 +682,10 @@ For more formal situations the sports jackets will carry the outfit.
 
 - Specialised chinos
     - Stone/Wheat goes well with both jackets but its a mid weight cotton isn't perfectly comfortable in either hot or cold conditions
-
-    - Grey wool trousers
-        - Seem popular on the internet, never noticed them in the wild
-
-    - Stone/Wheat/White chinos
-        - Lightweight cotton or linen
+        - Grey wool trousers
+            - Seem popular on the internet, never noticed them in the wild
+        - Stone/Wheat/White chinos
+            - Lightweight cotton or linen
 
 # Casual
 
@@ -688,13 +703,36 @@ For more formal situations the sports jackets will carry the outfit.
     - Charcoal
     - Burgundy
 
+- 2x casual shirts
+    - Simple patterns or textures
+    - Blue
+    - White? Chambray?
+
+- 2x linen short sleeve shirts
+    - For beach trips with a pub component
+    - White + Sky blue
+
+- Overshirt / Thick shirt
+    - Autumn / Early Spring
+        - Winter with a jacket
+    - Flannel and plaid
+    - Ideally wool
+
 ## Trousers
 - Well worn jeans
     - ???
 
 - Chinos
-    - Navy / Olive / British Khaki
-    
+    - Olive or British Khaki
+
+- Navy swimming shorts
+    - Simple, smart, ideally tapered / tailored fit
+    - Something you can wear out of the sea and into a bar or restaurant
+
+- 2x chino shorts
+    - Stone + Wheat
+    - Light grey / White
+
 ## Shoes
 - Beater boots
     - Vibram sole
@@ -707,6 +745,13 @@ For more formal situations the sports jackets will carry the outfit.
     - White sole
     - Ideally leather upper, replaceable cup sole
 
+    - Barkers Hawk
+    - Barkers Axel
+    - Crown Northampton Overstone Derby
+
+- Espadrilles
+    - Beach shoes
+
 ## Outerwear
 - Daily jacket
     - All purpose jacket that you grab by default
@@ -716,288 +761,120 @@ For more formal situations the sports jackets will carry the outfit.
     - A second layer for when the beer jacket is not enough
     - Cheap, preferably beer resistant or easily washable 
 
-## Fundamentals
-- Underwear
+- 2x crew neck jumper
+    - https://imgur.com/a/QpVCTRM
+    - Still casual but a bit more dressed up than an over shirt
+    - Early Spring / Autumn
+        - Winter with a jacket
+    - The step up in warmth after a thick shirt
+    - Dark green and mustard yellow
+
+- Thick grey/black ribbed turtleneck
+    - Deep winter
+    
+- Rain jacket
+    - Relaxed fit, hooded, waterproof
+
+- Heavy weather jacket
+    - Seriously cold or wet days
+    - Relaxed fit, hooded, waterproof and padded
+
+## Underwear
+- 14x Boxer briefs
     - Not heat seekers
     - Calvin Klein
 
-- Socks
-    - Black
-        - 14x 
+- 14x socks
+    - Anything at all, just lots of them
 
-    - 6x White trainer socks
-        - Enough for an unusually hot week
+- 6x white invisible socks
+    - Enough for an unusually hot week
+
+- Wool socks
+    - Not too thick
+    - The aim is to trap the air around the foot
 
 ## Accessories
-    - Field watch
-        - Timefactors 
+- Field watch
+    - Timefactors 
         - 'Smiths' Everest PRS-25
 
-    - Beater
-        - Casio F91W
-        - Casio A158W/A168W
-        - Casio W86 
-            - Better light, water resistance
+- Sunglasses
+    - Cheap, metal frames
+    - £10 or £200, anything in between is pointless
+        - £200 is ridiculously overpriced but at least signals something
 
-## Hot weather
-- 2x chino shorts
-    - Stone + Wheat
-    - Light grey / White
+- Thermal base trousers
+    - Not many options in terms of layering trousers
 
-- 2x linen short sleeve shirts
-    - For beach trips with a pub component
-    - White + Sky blue
+- Wooly hat
 
-- Navy swimming shorts
-    - Simple, smart, ideally tapered / tailored fit
-    - Something you can wear out of the sea and into a bar or restaurant
+# Hobbies / Activities
+- Horse riding
+- Farm work
+- Travel
+- Exercise
 
-- Espadrilles
-    - Beach shoes
+## Shirts
+- 2x hiking shirts 
 
-## Cold weather
+- 2x running tops
 
-- Overshirt
+## Bottoms
+- 2x hiking trousers
 
-- Heavy weather jacket
+## Underwear
+- 2x white trainer socks
 
-## Wet weather
-- Rain jacket
+## Outerwear
+- 3x hi-vis jacket
+    - Winter riding jacket 
+    - Summer riding gilet
+        - Royal mail
+    - Hi-vis cycling jacket
 
-# Picks
-- Adventure watch
+- Hiking jacket
+
+- Fleece midlayer
+
+- Armor jacket
+    - Tough leather jacket
+    - Sometimes I need a jacket that can take half hearted attacks by large animals
+    - I bought a !Solid leather jacket several years ago
+    - I bought a size larger so I could layer some softer clothes underneath and it serves this function very well
+    - Its grown up into a very tough and reliable leather jacket 
+
+## Shoes / Boots
+- Work boot
+    - Mountain Horse mountain rider
+    - William Lennon 110R Steel Toe Cap (but with a vibram sole)
+
+- Hiking boots
+
+- Running trainers
+
+## Accessories
+- Beater
+    - Casio W86 
+        - Better light, water resistance
+    - Casio F91W
+
+- Tank watch
     - Old Casio Pro Trek (maybe a PAG240T-7)
     - Only downside is it's bigger than you'd want to wear when in normal situations
 
     - Casio G-Shock watches are probably the next best thing 
 
-Shoes
-    I'm not in a hurry for any of these shoes so I'm picking out more aspirational shoes that I can save towards but will get a lot of use from. In a hurry, any high street stockist will sell most of these designs. 
+- Fingerless gloves
+    - Merino wool
 
-    - Smart: Black toe cap oxford
-        - Clarks Oliver Limit / Jones's Goodyear Welted Oxford
-        - Crockett & Jones Audley, Edward Green Chelsea
+- Waterproof thick gloves
 
-    - Smart/Casual: Brown derby shoe preferably brogued
-        - Barker Bailey
-        - Loake 1880 Wembley, Trickers Bourton
+# The like but don't need
+- Half zip jumper
+    - Doesn't really fill a niche but looks nice
 
-    - Country boot
-        - Trickers
-        - William Lenonn 178, Sanders Aintree
-
-    - Casual (Nice)
-        - Barkers Hawk
-        - Clarks Atticus Lace
-        - Barkers Axel, Crown Northampton Overstone Derby,
-
-    - Casual (Cheap)
-        - Any TK Maxx canvas shoe
-
-    - All purpose boot / beater
-        - Timberlands?
-        - William Lenon, Field Boot
-            - Made to order, incredibly high value boot
-
-    - Work boot
-        - Mountain Horse mountain rider
-        - Timberland Premium 6 inch heel, Danner Bull Run, William Lenonn 110R Steel Toe Cap (but with a vibram sole), Red Wing Iron Ranger, Wolverine 1000 mile
-
-Jackets
-    - Summer rain jacket
-    
-    - Field jacket
-    
-    - Casual jacket
-    
-    - Winter jacket
-
-    - Tough leather jacket
-        - Sometimes I need a jacket that can take half hearted attacks by large animals
-        - I bought a !Solid leather jacket several years ago
-        - I bought a size larger so I could layer some softer clothes underneath and it serves this function very well
-        - Its grown up into a very tough and reliable leather jacket
-
-    - Sports jacket/Blazer
-        - Tend to be on the casual end
-
-        - Summer sports jacket
-            - Unlined, linen hopsack, patch pockets
-            - Pale blue or neutal colour like cream or stone
-
-        - Winter sports jacket
-            - Thick, textured, wool, flap pockets
-            - Brown, dark grey region
-
-        - Standard blazer?
-            - Hopsack cotton, black, dark grey or brown
-
-Suit 
-    - If I am wearing a suit it is for a very specific purpose: either a wedding, funeral or interview
-    - I'm not interested in taking any risks with my suit
-
-    - In all cases:
-        - Two button, single breasted, flap pockets, plain trousers, double vent, notched lapel
-        - Ideally wool, working buttons, rayon (Bemberg silk) lining
-        - Probably matching lining
-        - Tailored -> Classic/Regular fit
-
-    - Black suit
-        - Some simple plain or twill weave seems to be the standard
-        - Very formal
-        - Funerals
-
-    - Dark Navy
-        - Ideally a birdseye weave or something else with a little more texture
-            - Avoid hopsack on trousers
-        - Formal but just that little less, probably better for an interview/wedding
-        - Two button, single breasted, flap pockets, plain trousers, double vent
-
-    - Marks & Spencers, Hackett, Oliver Brown, Husbands
-
-Jumpers
-    - I prefer v-necks for shirts and crew neck for t-shirts
-    - Ideally high quality wool (merino, cashmere) but considering its mostly for layering cotton is fine
-
-    - Two v-neck
-        - The colours are difficult here
-        - Might actually be possible to just have v-neck jumpers so long as the neck isn't too deep
-
-    - Two crew neck
-        - Light grey and black 
-
-    - Half zip
-        - Dark navy
-        - Step up in warmth from v-neck/crew neck in terms of warmth
-
-Shirts
-    - White poplin smart shirt
-        - For my purposes one is enough
-
-    - Three oxford cloth button downs
-        - Too much of a meme not to try it
-        - White, sky blue and a pale pink/salmon
-
-        - Preferably soft collar rather than fused
-        - Box pleat down the back for movement
-
-        - Charles Tyrwhitt, TM Lewin, PINK Shirtmakers, Brooks brothers (absurd prices)
-
-    - Two summer shirts
-        - Oxford cloth is a bit heavier weight than ideal
-        - I tend to run a bit hot
-
-        - Both long sleeve
-        - Linen / Seersucker shirts in relaxed colours
-        
-        - The classics are:
-            - White linen
-            - Blue and white striped seersucker
-
-        - I grabbed both of these from John Lewis at steep discounts
-        - They are both great in different ways.
-            - If I'm stuck at a desk the seersucker seems to do a good job of absorbing sweat and keeping me comfortable
-            - If I'm moving about the wind filters through the linen and seems somehow cooler than it should 
-
-    - Two winter shirts
-        - Ideally wool, flannel plaid shirts
-            - Personally I like the 
-        - Double up as an overshirt in autumn
-        - Turns out that wool flannel shirts are very hard to find. Will be keeping an eye out for these.
-
-        Varusteleka Särmä Wool Flannel Shirt,  
-
-    - Two short sleeved shirts
-        - Linen short sleeve
-            - Linen blends just don't work as well
-        - White and either sky blue or navy
-
-        - Next seem perfectly fine for this
-
-    - Maybe:
-        - Chambray shirt
-            - You don't see these around very often but I like it
-
-T-Shirts (x10)
-    - Crew neck always
-    - Ideally supima cotton
-        - You pay 2-3x as much for knowing the cotton but considering plain t-shirts retail at around £5 its not the worst
-    - The essential colours seem to be white, black, and navy
-    - I'm overweighting white since I get a lot of wear from it
-
-    - 3 white, 2 navy, 1 black
-    - 1 green, 1 burgundy
-    - Some others
-
-Polo shirts (x3)
-    - White and black
-    - Either light blue or green/khaki
-
-Chinos (x3)
-    - Stone, tan, olive/forest green
-
-Jeans (x2)
-    - Mid blue, dark indigo
-
-Shorts (x2)
-    - Stone
-    - Maybe off white or navy
-    - Possibly just stone x2 
-
-Swim shorts (x1)
-    - Need to be something simple that you can in theory wear just as well in the sea as to a pub or bar afterwards 
-    - Navy
-
-    - Orlebar Brown do some very nice swim shorts for people who have too much money
-
-Underwear (x10)
-    - Boxer briefs 
-    - Something with a bit of elastic
-
-    - Calvin Klein seem comfortable but very expensive
-
-Socks 
-    - Standard (x10)
-        - Not picky in terms of colour
-        - Cotton is fine
-        - At least one pair of solid black
-
-    - Invisible socks (x3, ideally x6)
-        - White small socks
-        - We rarely get 3 sunny days a week in the UK but it does happen
-
-Belt
-    - Matching metals
-        - Steel/Silver
-    - Close matching the shoes
-    - https://www.realmenrealstyle.com/mans-guide-belts/
-
-    - Formal
-        - Black, ideally exactly same black as the Oxford toe caps
-        - Thinner end, 1 - 1.5 inches 
-        - Calfskin
-
-        - All high end shoe companies, Church's, Joseph Cheaney & Sons, 
-
-    - Smart/Casual
-        - Brown, ideally near to the brown of the derbies
-        - Cow leather is fine
-        - Subtle decoration
-
-    - Casual
-        - Cheap
-        - Something that can have the shit kicked out of it
-        - Next
-
-Ties
-    - Black bow tie
-    - Black tie
-    - Navy grenadine tie
-
-- Christmas jumper
-    - Every year I buy a novelty Christmas jumper, wear it out to a few parties realise its pretty much impossible to wash and god awful quality and then chuck it out
-    -  
-
+- Chambray shirt?
 
 # Grail items
 - Tweed sports jacket
@@ -1008,3 +885,5 @@ Ties
 - Omega Seamaster Aqua Terra
 
 - Trickers Country Stow boots
+
+- High quality leather jacket
