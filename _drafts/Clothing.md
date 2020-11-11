@@ -42,8 +42,132 @@ Along the same line I should mention oversized/skinny fits. A while back the tre
 
 Finally, I personally value freedom of movement in my clothes. So for more casual clothing I'll tolerate a larger fit than ideal if it means I can ~~get away in a hurry~~ move comfortably.
 
-- Blazer/Sports Jacket/Suit Jacket:
-    The jacket should hug the body gently. Collar should rest against the shirt not press against it. The jacket should fasten just above the belly button. The hem should make it around halfway down your buttocks. A suit jacket should have sufficiently large sleeves to accomodate a shirt cuff with cufflinks. A jacket will almost always need tailoring. 
+
+
+- Blazer/Sports Jacket/Suit Jacket
+- Shirt
+- T-Shirts
+- Trousers
+- Shorts
+- Outerwear
+- Belts
+- Watches
+- Sunglasses
+
+
+#### Blazer/Sports Jacket/Suit Jacket
+##### Fit:
+The jacket should hug the body gently. Collar should rest against the shirt not press against it. The jacket should fasten just above the belly button. The hem should make it around halfway down your buttocks. A suit jacket should have sufficiently large sleeves to accommodate a shirt cuff with cufflinks. A jacket will almost always need tailoring. 
+
+
+##### Construction
+
+- Far more thought has gone into suit construction that I care to know. These are the most important parts I've come across:
+    - Canvas / fusible inner
+    - Shoulder padding
+    - Interior lining
+    - Lapel
+    - Pockets
+    - Buttons
+    - Double / single breasted
+
+- Canvassed / Fusible inner
+    - Suit jackets need an interlining to provide the structure and shape of the jacket
+
+    - Fused
+        - Some fusible interfacing is glued to the suit fabric 
+
+    - Full canvassed
+        - Layer of horse hair/wool that is stitched loosely to the fabric and so can move fairly independently and move better with the user
+
+    - Half canvassed
+        - Canvassing is used in the important parts (chest/lapel) and the rest is fused
+
+    Canvassed jackets vs Fusible:
+        - Canvas lasts longer
+        - Canvas drapes better
+        - Canvas molds to the wearer over time
+        - Canvas costs more
+        - Canvas is heavier
+
+    - Half canvassed is a fine compromise, compared to fully canvassed it is: 
+        - Lighter
+        - Cheaper
+        - Won't drape quite as well
+
+    In short, some form of canvassing is better.
+
+    https://blacklapel.com/thecompass/anatomy-of-a-suit-jacket-fused-vs-canvassed/
+    https://www.oliverwicks.com/article/half-vs-full-canvas
+
+    Note: Canvas / Floating canvas are the same thing
+
+- Shoulder padding
+    - Shoulders are usually slightly padded to define the shoulders
+    - Aim is usually to make the wearer look more traditionally masculine
+
+    - Very broadly there are three weights:
+        - Unstructured
+            - Thin or no padding
+            - Jacket sits naturally on shoulder
+            - Works best on people with strong shoulders
+            - Casual 
+
+        - Light padding
+            - The typical level of padding these days
+            - Jacket follows shoulder but structures it neatly
+            - Formal
+
+        - Heavy padding
+            - Rare, apparently a bit retro
+
+    - If you already have big shoulders, you might want less padding so as to appear balanced and vice versa if you have smaller shoulders
+
+    - Shoulder roping
+        - The arm is attached slightly higher on to the suit to create a more defined/dramatic shoulder
+
+    - Far more detail about suit shoulders is available online:
+        https://parisiangentleman.co.uk/academy/signals-of-a-handmade-suit-a-shoulder-that-sings/
+        https://www.michaelandrews.com/journal/shoulder-styles-guide
+
+    - Note: good photo of british suit with straight shoulders 
+    - Personally I like the classic british straight shoulder, very bond like
+    - Adds just enough padding to follow the shoulder line 
+
+- Lined/Unlined
+    - The interior lining
+    - Helps with putting the suit on and off
+    
+    - Traditionally silk but usually some form of synthetic these days. 'Bemberg Silk' is the cheaper and tougher alternative. 
+        https://www.rampleyandco.com/blogs/the-journal/complete-guide-suit-jacket-linings
+
+    - Can get suits without lining or only with some lining
+        - Lined: Typical suit construction. Lining on all interior surfaces.
+        - Half lined: No lining on the lower back
+        - Quarter-Lined: No lining on the lower back or sides. 
+        - Skeleton lined: No lining but with taped seams.
+        - Unlined: No lining and folded and stitched seams
+        https://dieworkwear.com/2016/03/16/different-ways-to-go-unlined/
+
+    - Unlined jackets:
+        - Are more casual
+            - An unlined and un-padded jacket is closer to a shirt
+                - About as casual as suits can go
+                - Don't get any help from the suit anymore so may not suit everyone
+        - Breath better making them better for hot weather
+        - Can rub and catch on the shirt preventing it from sitting comfortably
+            - As a result, even unlined suits will have lining in the sleeves so you can get your arm in and out without it catching on the shirt
+            https://www.permanentstyle.com/2010/05/half-lined-and-unlined-jackets.html
+        - Lose some of the important weight and structure given by the lining
+            https://www.rampleyandco.com/blogs/the-journal/complete-guide-suit-jacket-linings
+        - Cost more to do properly
+        - May fail earlier without the protection of the lining
+                https://www.realmenrealstyle.com/jacket-lining/
+
+    - Quarter/Half lined jackets are more practical
+
+- Pockets
+    - 
 
 - Shirt:
     - https://www.heddels.com/2019/07/shirt-anatomy-101-every-part-shirt/
@@ -149,7 +273,7 @@ Most watches are not designed to handle abuse and will require a bit of coddling
 
 ### Communication
 - The more formal you go the stricter the rules become
-- Similarily, there is an expectation that your more formal clothing will be better quality and well maintained
+- Similarly, there is an expectation that your more formal clothing will be better quality and well maintained
 
     - Clothing is a means for others to identify you as one group or another
     - 
@@ -179,8 +303,6 @@ Most watches are not designed to handle abuse and will require a bit of coddling
 
 # Research
 ## Fabric
-Fit may be king but fabric is where the true complexity lies
-
 Best resource:
 https://www.permanentstyle.com/the-guide-to-cloth
 
@@ -212,6 +334,8 @@ https://www.permanentstyle.com/the-guide-to-cloth
 
     - Wool 
         - Great for cooler weather 
+            - Moisture wicking so can be made appropriate for the summer if not too thick
+                - www.baavet.co.uk/benefits-of-wool
         - Can be made to be incredibly warm
         - The classic suit material
         
@@ -271,7 +395,7 @@ https://www.permanentstyle.com/the-guide-to-cloth
 
 - Synthetics
     - I don't care much about synthetic fibres outside of technical clothing
-    - besides there are far too many of them to research it in depth. This link provids a decent guide:
+    - besides there are far too many of them to research it in depth. This link provides a decent guide:
         - https://sewguide.com/synthetic-fabrics-fibers/
 
     - The problem with synthetics is that it is hard to say if they are being included for their properties or as a cost saving measure
@@ -282,7 +406,7 @@ https://www.permanentstyle.com/the-guide-to-cloth
 - This isn't very helpful to know when you are browsing clothing.
 - Satin weaves are so niche that I'm skipping them.
 
-- Warp: Lengthways yarns. Stretched out on a loom.
+- Warp: Length ways yarns. Stretched out on a loom.
 - Weft: Top-to-bottom yarn. Threads in and out of the warp yarn.
 
 https://en.wikipedia.org/wiki/Warp_and_weft
@@ -304,7 +428,7 @@ The way the warp and weft yarns are threaded defines the weave.
     - Since texture and formality are closely linked it seems safer to go for similar textures/sheens so as not to have too much contrast overall
 
 #### Plain
-- Flat or checkboard appearance
+- Flat or check board appearance
 - Simple in-and-out weave
 - Generally heavier and warmer but not necessarily
 
@@ -343,7 +467,7 @@ The way the warp and weft yarns are threaded defines the weave.
 
 - Chambray
     - Heavier thread twill weave
-    - Workwear (summer/autumn)
+    - Work wear (summer/autumn)
     - Coloured warp yarn and white weft one
     
     https://www.batchmens.com/pages/dress-shirt-fundamentals-shirt-fabrics-and-weaves-guide
@@ -508,7 +632,7 @@ Dark brown derby
     - At least one pair of solid black socks
 
 ### Interviews
-Navy suit + No Waistcoat + Black Toe Cap Oxfords
+Navy suit + No Waistcoat + Black Toe Cap Oxfords + Business / Navy Grenadine tie
 
 Black toe cap oxford
 - So ubiquitous that they don't say anything at all
@@ -525,6 +649,9 @@ Cheap quartz Watch
 - A simple metal quartz watch such as the Casio A158W seems much more in line with this presentation
     - It helps that it reads as a bit nerdy as well
 - For higher level positions it makes more sense to have a fancier sports watch
+
+Business tie
+- Simple navy or red diagonal tie
 
 ### Funeral
 Black suit + Black silk tie + Oxfords
@@ -689,9 +816,7 @@ For more formal situations the sports jackets will carry the outfit.
 
 # Casual
 
-## Normal situations
-
-### Shirts
+## Shirts
 - x6 t-shirts
     - 3x White
     - Black
@@ -712,7 +837,7 @@ For more formal situations the sports jackets will carry the outfit.
     - For beach trips with a pub component
     - White + Sky blue
 
-- Overshirt / Thick shirt
+- Over shirt / Thick shirt
     - Autumn / Early Spring
         - Winter with a jacket
     - Flannel and plaid
@@ -732,6 +857,9 @@ For more formal situations the sports jackets will carry the outfit.
 - 2x chino shorts
     - Stone + Wheat
     - Light grey / White
+
+- Thermal base trousers
+    - Not many options in terms of layering trousers
 
 ## Shoes
 - Beater boots
@@ -753,13 +881,12 @@ For more formal situations the sports jackets will carry the outfit.
     - Beach shoes
 
 ## Outerwear
-- Daily jacket
-    - All purpose jacket that you grab by default
-
 - Boozing jacket
     - Perhaps not as necessary in the future as it is now
     - A second layer for when the beer jacket is not enough
     - Cheap, preferably beer resistant or easily washable 
+
+    - Quilted Jacket
 
 - 2x crew neck jumper
     - https://imgur.com/a/QpVCTRM
@@ -777,7 +904,11 @@ For more formal situations the sports jackets will carry the outfit.
 
 - Heavy weather jacket
     - Seriously cold or wet days
-    - Relaxed fit, hooded, waterproof and padded
+    - Relaxed fit, hooded, waterproof and insulated
+
+- Grey cotton hoodie
+    - Mid layer for under jackets that don't have a hood
+    - Also serves as a good gym jacket 
 
 ## Underwear
 - 14x Boxer briefs
@@ -794,6 +925,9 @@ For more formal situations the sports jackets will carry the outfit.
     - Not too thick
     - The aim is to trap the air around the foot
 
+- Cotton pyjamas
+    - T-shirt and trousers
+
 ## Accessories
 - Field watch
     - Timefactors 
@@ -803,9 +937,6 @@ For more formal situations the sports jackets will carry the outfit.
     - Cheap, metal frames
     - £10 or £200, anything in between is pointless
         - £200 is ridiculously overpriced but at least signals something
-
-- Thermal base trousers
-    - Not many options in terms of layering trousers
 
 - Wooly hat
 
@@ -822,6 +953,8 @@ For more formal situations the sports jackets will carry the outfit.
 
 ## Bottoms
 - 2x hiking trousers
+
+- 1x running trousers
 
 ## Underwear
 - 2x white trainer socks
