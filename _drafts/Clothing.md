@@ -68,8 +68,9 @@ The jacket should hug the body gently. Collar should rest against the shirt not 
     - Interior lining
     - Lapel
     - Pockets
-    - Buttons
+    - Button + button stance
     - Double / single breasted
+    - Venting
 
 - Canvassed / Fusible inner
     - Suit jackets need an interlining to provide the structure and shape of the jacket
@@ -577,12 +578,13 @@ Jacket:
 - Single breasted
 - Two button
 - Double vent
+- Straight shoulder
 - Flap pockets
 - Notched lapel
 - Probably a natural/neutral button stance
     - Has the top button sit at the thinnest part of the waist
     - Pretty much at the belly button
-- Ideally dark, rayon (Bemberg silk) lining
+- Ideally dark, Bemberg silk lining
 - Ideally functional buttons
 
 White twill shirt
@@ -621,6 +623,10 @@ Waistcoat
 Dark brown derby
 - Light brouging
 - Rubber soled so that I don't have to worry about falling over on the dance floor at the after party
+- $$$ https://www.trickers.com/uk/mens/town-shoes/wiltshire-5630
+- $$$ https://www.crockettandjones.com/collections/mens/main-collection/lanark-3-darkbrown-calf/
+- $$$$ https://www.johnlobb.com/en_gb/mens-shoes/croft-double-leather-sole
+
 
 - Barker Bailey
 - Loake 1880 Wembley
@@ -635,6 +641,7 @@ Dark brown derby
 Navy suit + No Waistcoat + Black Toe Cap Oxfords + Business / Navy Grenadine tie
 
 Black toe cap oxford
+- Its plain toe or toe cap and plain toe would just not get enough wear
 - So ubiquitous that they don't say anything at all
 
 - Clarks Oliver Limit / Jones's Goodyear Welted Oxford
@@ -862,20 +869,27 @@ For more formal situations the sports jackets will carry the outfit.
     - Not many options in terms of layering trousers
 
 ## Shoes
+Need a rotation of two shoes to let them dry out. A leather trainer works in both winter and summer and a boot and a simple canvas trainer are necessary for winter and summer respectively. The espadrilles are just good light beach shoes.
+
 - Beater boots
     - Vibram sole
     - Vegetable tan leather upper and lining
     - Ideally (flesh out heel)
     - Goodyear welt
 
-- Trainers / Sneakers
-    - Brown/blue/neutral leather
+- Leather trainer
+    - Brown/neutral leather
     - White sole
-    - Ideally leather upper, replaceable cup sole
+    - Ideally replaceable sole
 
     - Barkers Hawk
     - Barkers Axel
     - Crown Northampton Overstone Derby
+
+- Canvas trainer
+    - Either cheap or a replaceable sole
+    - Sole wears out in a year or two on these usually
+    - Ideally steel blue / grey blue 
 
 - Espadrilles
     - Beach shoes
