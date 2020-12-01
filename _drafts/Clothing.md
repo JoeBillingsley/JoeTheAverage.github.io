@@ -40,28 +40,15 @@ Finally, before we begin it's worth pointing out that all of the information con
 Along the same line I should mention oversized/skinny fits. A while back the trend was towards progressively skinner clothes. Now I am told the wind is heading in the other direction, towards relaxed and oversized clothes. No doubt someone is making a lot of money from the apparently fickle nature of fashion. The most stable advice I can find seems to be the happy medium, tailored but not skin tight. Put nicely: 'Clothing should 'outline the body without telling too many secrets, offering a flattering figure without emphasizing every curve and crevice'
     - https://www.primermagazine.com/2012/spend/how-a-shirt-should-fit-the-principles-of-fit
 
-Finally, I personally value freedom of movement in my clothes. So for more casual clothing I'll tolerate a larger fit than ideal if it means I can ~~get away in a hurry~~ move comfortably.
+The 'fits' I'm listing here are the most commonly recommended ones that I've come across. About as average as I can find on the internet. For expensive items like a suit or sports jacket it would make sense to work with a tailor (i.e. someone who knows what they are doing) to make sure it fits properly.
 
-
-
-- Blazer/Sports Jacket/Suit Jacket
-- Shirt
-- T-Shirts
-- Trousers
-- Shorts
-- Outerwear
-- Belts
-- Watches
-- Sunglasses
-
+Finally, consider how clothes are going to look with each other. A baggy shirt and slim fit trousers can easily look like you've forgotten to do any washing. I prefer clothes that match my body shape, so on me that works out as slim/regular fit shirts and tapered/straight fit trousers.
 
 #### Blazer/Sports Jacket/Suit Jacket
 ##### Fit:
 The jacket should hug the body gently. Collar should rest against the shirt not press against it. The jacket should fasten just above the belly button. The hem should make it around halfway down your buttocks. A suit jacket should have sufficiently large sleeves to accommodate a shirt cuff with cufflinks. A jacket will almost always need tailoring. 
 
-
 ##### Construction
-
 - Far more thought has gone into suit construction that I care to know. These are the most important parts I've come across:
     - Canvas / fusible inner
     - Shoulder padding
@@ -168,31 +155,256 @@ The jacket should hug the body gently. Collar should rest against the shirt not 
     - Quarter/Half lined jackets are more practical
 
 - Pockets
-    - 
+    There are three that matter. In increasing orders of formality:
 
+    https://blacklapel.com/thecompass/types-of-suit-pockets/
+
+    - Patch pockets
+        - A parch stitched on the side of the jacket for a pocket
+        - As casual as a suit jacket can go
+
+    - Flap pockets
+        - Most common suit pocket
+        - A pocket hidden inside the construction of the suit with a pocket flap covering it
+        - Can tuck in the pocket flap to create something approximately like a welted pocket
+
+    - Welted / Jetted pocket
+        - Most formal
+        - A flap pocket without the flap
+
+    - Can get pockets cut straight or slanted
+        - Straight is typical
+        - Slanted was for easy access when horse riding
+            - Not a common problem for most people these days
+            - Apparently can help if want to appear a bit taller
+                - https://blacklapel.com/thecompass/types-of-suit-pockets/
+
+    Other things:
+    - Breast pocket is usually welted but can get a patched version.
+    - Can get a third pocket above one of the main pockets thats intended for carrying train tickets
+        - More of a country than a business thing
+    - If the pockets are sewn shut, cut them open
+    - Don't put anything too heavy / sharp in the outside pockets. Apparently they aren't really meant to be used
+        - https://blacklapel.com/thecompass/types-of-suit-pockets/
+        - This seems pretty stupid to me but whatever
+
+#### Shirt
+##### Fit:
 - Shirt:
+    Best resource: https://hespokestyle.com/dress-shirt-parts-terminology/
+
     - https://www.heddels.com/2019/07/shirt-anatomy-101-every-part-shirt/
-    - https://hespokestyle.com/dress-shirt-parts-terminology/
     - https://www.burton.co.uk/blog/anatomy-of-a-shirt/
+    - https://www.gentlemansgazette.com/the-shirt-style-guide/
 
-    Seam should sit where the shoulder meets the arm. Should be able to fit about two fingers in the collar. Arm should reach just a little after the wrist on a formal shirt, shorter on a casual shirt. Anything else can be tailored.
+# TODO: this needs citations
+    Seam should sit where the shoulder meets the arm. Should be able to fit about two fingers in the collar. Arm should reach just a little after the wrist on a formal shirt, shorter on a casual shirt. Anything else can be tailored,
 
+    Length depends on purpose
+    https://hespokestyle.com/dress-shirt-parts-terminology/
+    https://propercloth.com/reference/the-perfect-dress-shirt/
+        - Formal shirts are longer at the front and back to stay tucked in
+        - Casual shirts are shorter and straighter 
+
+    Off the rack shirts are made to fit as many people as possible which means the shirt can billow out a bit. Ideal shirt should minimise the excess fabric around the arm holes and the midsection.
+    https://hespokestyle.com/dress-shirt-parts-terminology/
+    https://propercloth.com/reference/the-perfect-dress-shirt/
+    
+
+##### Construction:
+
+- Types of shirt size
+    - Skinny, Slim,Tailored,Regular,Classic  
+
+- Collar
+    - Most shirt collars consist of a collar and a collar stand which supports the collar and is stitched to the shirt itself.
+    - https://www.craftsy.com/post/sew-shirt-collar/
+    - On more formal collars an interlining is added to give the collar some stiffness
+        - The stiffness of this interlining determines the stiffness of the collar
+
+    - Fused or stitched interlining
+        - https://hespokestyle.com/dress-shirt-parts-terminology/
+        - https://www.deoveritas.com/blog/fused-and-non-fused-sewn-collars/        
+        - https://mensflair.com/fused-or-unfused-collars/ 
+        - https://propercloth.com/reference/the-perfect-dress-shirt/
+
+        - Fused collars are stiffer
+        - Stitched is softer, usually more comfortable, may last longer
+            - (more English apparently)
+                - https://mensflair.com/fused-or-unfused-collars/
+            - "The ironer needs to begin at the points and iron to the backside of the collar."
+                - https://www.mytailor.com/manual/fused-vs-non-fused-collars-cuffs/
+
+        - There are some conflicting ideas on which is more formal:
+            - Fused is formal: 
+                - https://propercloth.com/reference/the-perfect-dress-shirt/
+                - https://www.deoveritas.com/blog/fused-and-non-fused-sewn-collars/
+            - Stitched is formal:
+                - https://mensflair.com/fused-or-unfused-collars/ 
+
+        - All fused outside of made to measure / bespoke shirts
+
+    - There are a many types of collar
+            - http://hespokestyle.com/dress-shirt-collars-guide/
+        - Largely determined by the distance between the two points of the collar
+
+        Formal:
+            - UK/Europe tend to be spread collars with a larger space between points 
+            - Whilst in America its a point collar with points close to the tie
+            - Key is just to keep it in proportion with yourself and the rest of the outfit
+        
+        - Casual shirts:
+            - Button down collar 
+            - Softer collars generally
+
+- Yoke
+    - The part on the back of the shirt, right under the collar
+
+    - Two options:
+        - Single yoke: All one piece of fabric
+        - Split yoke: Two pieces of fabric joined at the middle
+
+        - Material on the internet is confusing on this topic but split yoke generally wins
+        
+        - The obvious: A split yoke means you can make patterns on the shirt line up properly on the back of the shirt
+        
+        - Cutting on the bias means to cut fabric at 45 degrees to the grain
+            - As best as I can tell: without the reinforcing structure of the warp/weft this allows the fabric to drape and stretch better 
+
+        - https://propercloth.com/reference/ say:
+            - A split yoke lets you stitch the yoke of the shirt on at an angle giving you better stretch across the back of the shirt
+                - Think tying shoes
+
+        - https://www.permanentstyle.com/2008/07/the-split-yoke.html say:
+            - The front of the shirt will always be on the bias
+            - If both the shoulder and the front are cut on the bias the seam between the two will be weak
+            - A split yoke lets the tailor cut the front of the shirt and the shoulders at a different angle 
+        
+        - The strength argument makes some sense to me but I don't fully understand it. Its not clear to me why you need a split yoke to cut the yoke at an angle however as implied in the first argument.
+
+- Placket
+    - The front part the buttons go on
+
+    https://propercloth.com/reference/dress-shirt-front-placket-types/
+
+    - Plain placket:
+        - The standard folded back placket you see on most shirts
+        - Can be made with a fusible interlining
+    
+    - French placket
+        - No placket, buttons just connect the two parts of the shirt
+
+    - Covered placket / Fly front:
+        - Like a plain placket with another piece of fabric that covers up the buttons
+
+- Cuffs
+    - Like the placket and collar, can be made stiff or soft depending on if its fused or stitched 
+    
+    - Few different kinds of cuff:
+        - Barrel cuff
+            - The basic shirt cuff
+
+            - One button is standard
+            - Two button is either:
+                - more formal (apparently)
+                https://propercloth.com/reference/dress-shirt-cuff-styles/
+            
+                - more casual and should only be worn with one button undone
+                https://www.apposta.com/sp/guides/types-of-cuff.3sp
+
+            - Available in rounded, straight or mitred cuts
+                - Straight and rounded are general purpose
+                    https://www.apposta.com/sp/guides/types-of-cuff.3sp
+                    https://bespokeunit.com/suits/shirts/cuffs/
+                    https://propercloth.com/reference/dress-shirt-cuff-styles/
+
+                - Mitred is more formal
+                    https://bespokeunit.com/suits/shirts/cuffs/
+                    https://www.apposta.com/sp/guides/types-of-cuff.3sp
+                    https://propercloth.com/reference/dress-shirt-cuff-styles/
+
+        - French cuff
+            - Cufflinks cuff
+            - Most formal
+
+        - Convertible cuffs
+            - French cuffs and barrel cuffs combined
+            - Very flexible
+
+- Hem
+    - Finishing along the bottom of the shirt
+    - Good quality shirts will have a little triangle bit of reinforcing fabric (a gusset) to strengthen the side seams
+
+- Pleats / Darts
+    - Pleats
+        - Add and hide excess material to improve the wearers range of movement
+        - In particular movements that stretch the back
+            - Think doing up shoe laces
+        - Adds extra material to the waist
+            https://www.burton.co.uk/blog/anatomy-of-a-shirt/
+
+        - Box pleats
+            - Casual
+            - Folded box on the back of the shirt
+
+            https://www.burton.co.uk/blog/anatomy-of-a-shirt/
+            https://artofstyle.club/pleats-on-dress-shirts/
+
+        - Side pleats / knife pleats
+            - More formal pleat
+            - Subtle pleats near the shoulder blades below the yoke
+
+                https://www.burton.co.uk/blog/anatomy-of-a-shirt/
+                https://artofstyle.club/pleats-on-dress-shirts/
+                
+        - No pleats
+            - Most flexible but hardest to achieve
+            - According to some sources, a well fitted shirt shouldn't need pleats
+                https://www.realmenrealstyle.com/mens-dress-shirts/
+                https://artofstyle.club/pleats-on-dress-shirts/
+
+    - Darts
+        - Fold and stitch in part of the shirt to remove excess fabric and tailor it slimmer to the wearers body
+        - Done at a tailors
+        - Wouldn't usually have darts and pleats in the same shirt
+
+        https://www.burton.co.uk/blog/anatomy-of-a-shirt/
+        https://www.gentlemansgazette.com/the-shirt-style-guide/
+
+#### T-Shirts
+##### Fit:
 - T-Shirt: 
     Same shoulder placement as the shirt. Length should finish around the middle of the trouser fly. Sleeve should end around the mid of the bicep.
 
+##### Construction:
+
+#### Trousers
+##### Fit:
+Sit comfortable around the waist with no belt. Should sit right on the actual waist (mid rise). On smart trousers the trousers should just touch the top of the shoe (no break) or a little lower (half break). Jeans/casual trousers should tend to sit a little higher (no break). Shorter lengths require more tapering to stay balanced.
+
+#### Construction
 - Trousers
-    Sit comfortable around the waist with no belt. Should sit right on the actual waist (mid rise). On smart trousers the trousers should just touch the top of the shoe (no break) or a little lower (half break). Jeans/casual trousers should tend to sit a little higher (no break). Shorter lengths require more tapering to stay balanced.
+
+    Trouser pockets:
+    https://www.gentlemansgazette.com/pockets-complete-guide/
+
+#### Shorts
+##### Fit:
 
 - Shorts
     As with trousers but ending at the knee or a little higher.
 
+#### Construction:
+
+#### Outerwear
+##### Fit:
+Varies depending on the item. Shoulder should sit on the shoulder seam formed by the other layers. Sleeves should typically be long enough that they protect the underlying clothing
+
+#### Construction:
 - Outerwear
     - Raglan vs set in sleeve
         - https://www.cherrytreecountryclothing.com/expert-advice/difference-between-raglan-sleeve-and-set-in-sleeve/
 
-    Varies depending on the item. Shoulder should sit on the shoulder seam formed by the other layers. Sleeves should typically be long enough that they protect the underlying clothing
-
-Finally clothes should be picked such that the fits approximately match with each other i.e. not a baggy shirt and slim fit trousers. On me that works out as slim/regular fit shirts and slim/straight fit trousers.
 
 #### Belts
 Belts are fairly easy. There are only a few 'rules' to know:
@@ -203,6 +415,7 @@ Belts are fairly easy. There are only a few 'rules' to know:
 - Match leathers and match metals
     - The leather of the belt should be near to any other leathers you are wearing e.g. shoes. Quality shoe companies tend to also sell belts for this exact reason.
     - The metal of the belt should be the same metal as any other metals e.g. watch.
+        - But break this rule if you want to
 
 - More formal belts are:
     - Around 1.25" wide 

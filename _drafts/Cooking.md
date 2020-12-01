@@ -3,11 +3,17 @@ Materials:
 Stainless steel
     - Stays pristine
     - Adapts to heat changes
-    - Doesn't develop non-stick surface very well
+    - Doesn't develop non-stick surface but is non-stick if heated to the right temperature
+		- https://www.youtube.com/watch?v=w3laDpr4kvw
     - Not all stainless steel is magnetic, have to make sure it will cook on an induction hob
     - Will cook anything
+    - Poor heat distribution (?)
+        - https://foodal.com/kitchen/pots-pots-skillets-guides-reviews/guides/the-best-roasting-pan/
 
     - Sauce pans, utensils
+
+Multi-ply stainless steel / aluminium
+- All the benefits of stainless plus better heat distribution
 
 Cast iron
     - Develops a patina over time
@@ -44,25 +50,53 @@ Glass
 Silicone
     - ???
 
+Cast aluminum
+
+Enamel
+
 Hob:
-- Enamel cast iron casserole dish 
+- Enamel cast iron dutch oven or casserole dish
+    - Rings on top of lid to collect evaporation
+    https://www.youtube.com/watch?v=oUf8U2zJDQ0
     - Le creuset
 - Cast iron griddle
 - Stainless steel saute pan
+    - Large
     - With lid
-- Stainless steel pot 
+- Stainless steel stock pot 
     - With glass lid and steamer or two
 - Saucepan
     - Copper ideally but induction compatible 
     - Stainless steel lined
 - Wok
     - Carbon steel
+        - Not too thick. Aim is to heat up fast and cool down fast
     - 14 inch with helper handle
-    - Heat resistant rubber handles
+    - Heat resistant handles
 
 Oven:
 - Baking sheet
-- Roasting tray
+- Roasting tray + roasting rack
+    - https://foodal.com/kitchen/pots-pots-skillets-guides-reviews/guides/the-best-roasting-pan/
+    - Large enough that a join shouldn't touch the sides
+        - If its too large the sauces can burn
+        - 'Small' roaster: 14 x 10 x 3”
+            - Enough for a turkey for 8 people
+    - Sloped sided
+        - Apparently helps the bottom heat?
+        - Circulation?
+        - https://www.youtube.com/watch?v=oUf8U2zJDQ0
+    - Not too high
+        - 3-4"
+        - "They encourage hot air to rise to the top, with the potential for undercooked meat on the bottom."
+    - Rectangular with rounded sides
+    - Either multi-ply stainless steel + aluminium
+        https://foodal.com/kitchen/pots-pots-skillets-guides-reviews/guides/the-best-roasting-pan/
+    - Or thick gauge stainless steel:
+        https://www.youtube.com/watch?v=oUf8U2zJDQ0
+    - Should come with roasting rack that fits it well
+    - Easy carry handles even with oven gloves on
+
 - Wire tray
 - Pie dish
 
@@ -88,6 +122,9 @@ Tools:
 - Corkscrew
 - Bottle opener
 - Thermometer probe
+- Mortar and pestle
+    - Heavy stone
+    - Large
 
 Baking:
 - Kitchen scale
