@@ -210,12 +210,11 @@ The jacket should hug the body gently. Collar should rest against the shirt not 
     https://hespokestyle.com/dress-shirt-parts-terminology/
     https://propercloth.com/reference/the-perfect-dress-shirt/
     
+# TODO:
+    - Types of shirt size
+        - Skinny, Slim, Tailored, Regular, Classic  
 
 ##### Construction:
-
-- Types of shirt size
-    - Skinny, Slim,Tailored,Regular,Classic  
-
 - Collar
     - Most shirt collars consist of a collar and a collar stand which supports the collar and is stitched to the shirt itself.
     - https://www.craftsy.com/post/sew-shirt-collar/
@@ -371,30 +370,96 @@ The jacket should hug the body gently. Collar should rest against the shirt not 
         https://www.burton.co.uk/blog/anatomy-of-a-shirt/
         https://www.gentlemansgazette.com/the-shirt-style-guide/
 
+- Pockets:
+    - None: Casual -> Formal
+    - One: Casual -> Business formal
+    - Two: Casual
+
+    https://www.gentlemansgazette.com/the-shirt-style-guide/
+
 #### T-Shirts
 ##### Fit:
 - T-Shirt: 
     Same shoulder placement as the shirt. Length should finish around the middle of the trouser fly. Sleeve should end around the mid of the bicep.
 
-##### Construction:
+- I usually prefer a little shorter than this.
+
+##### Construction
+Far fewer things to think about with t-shirts
+
+- Style:
+    - Crew neck
+        - Default t-shirt design
+        - Works for any casual situation
+
+    - V-neck
+        - More casual neck line
+        - Looks fine if its not *too* deep
+        - https://sanvt.com/journal/how-should-a-t-shirt-fit/
+
+    - Polo
+        - Slightly more formal neck line
+        - High quality polo shirts are often made of pique cotton which adds a subtle texture to the cloth.
 
 #### Trousers
 ##### Fit:
 Sit comfortable around the waist with no belt. Should sit right on the actual waist (mid rise). On smart trousers the trousers should just touch the top of the shoe (no break) or a little lower (half break). Jeans/casual trousers should tend to sit a little higher (no break). Shorter lengths require more tapering to stay balanced.
 
+- Shorts
+    - Just short trousers
+    - Down to the knee or so
+
 #### Construction
 - Trousers
 
+https://www.permanentstyle.com/2018/04/trouser-measurements-style-and-proportions.html
+https://www.permanentstyle.com/2020/08/what-are-low-medium-and-high-rise-trousers.html
+https://hespokestyle.com/pant-breaks-length-guide/
+
+- Belt loops or side adjusters
+    - Side adjusters let you pull in the cloth of the waistband tighter
+        - Either buttons or a buckle pulley system
+        - Buckles are more adjustable since buttons only have a few set placements
+        https://kingandallen.co.uk/journal/2016/belt-loops-vs-side-adjusters/
+
+    - Belt loops are belt loops
+
+    - Side adjusters are smarter
+    - Belt loop is an extra accessory to do interesting things with
+
+- Pockets
+    - Pockets on trousers come in all shapes and sizes
+    - Important difference is whether they are insert or stitched on
+
+    - Inset pockets have an opening with pocket bags stitched into them
+        - Usually smarter
+
+    - Stitched on pockets are a separate piece of material thats stitched onto the trouser
+        - Usually more casual
+
+- Tailored trousers
+
+- Chinos
+    - Smart / Casual
+    - Two angled inset pockets at the sides
+    - One or two rear horizontal inset pockets
+
+    - Traditionally cotton twill and tapered fit
+            https://westernrise.com/blogs/journal/garment-study-chino-pants
+
+- Jeans
+    - Casual but darker jeans can be dressed up.
+    - Five pockets. Usually two curved inset pockets plus two stitched on rear pockets and a small coin pocket in one of the front pockets.
+    - Reinforced at stress points with rivets and extra stitching
+
+    https://denimhunters.com/denim-wiki/jeans-anatomy/
+
+    - One unusual jeans feature you will find on jeans is the yoke
+    - This allows jeans to sit on the waist and expand around the hips
+        https://denimhunters.com/denim-wiki/jeans-anatomy/yoke/
+
     Trouser pockets:
     https://www.gentlemansgazette.com/pockets-complete-guide/
-
-#### Shorts
-##### Fit:
-
-- Shorts
-    As with trousers but ending at the knee or a little higher.
-
-#### Construction:
 
 #### Outerwear
 ##### Fit:
@@ -404,6 +469,11 @@ Varies depending on the item. Shoulder should sit on the shoulder seam formed by
 - Outerwear
     - Raglan vs set in sleeve
         - https://www.cherrytreecountryclothing.com/expert-advice/difference-between-raglan-sleeve-and-set-in-sleeve/
+
+
+
+#### Shoes
+
 
 
 #### Belts

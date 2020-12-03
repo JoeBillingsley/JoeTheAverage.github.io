@@ -63,6 +63,10 @@ Hob:
 - Stainless steel saute pan
     - Large
     - With lid
+
+    Samuel Groves
+    - Get lid separately
+
 - Stainless steel stock pot 
     - With glass lid and steamer or two
 - Saucepan
@@ -78,6 +82,10 @@ Oven:
 - Baking sheet
 - Roasting tray + roasting rack
     - https://foodal.com/kitchen/pots-pots-skillets-guides-reviews/guides/the-best-roasting-pan/
+
+
+    https://www.seriouseats.com/2015/12/equipment-you-dont-need-an-expensive-roasting-pan.html
+
     - Large enough that a join shouldn't touch the sides
         - If its too large the sauces can burn
         - 'Small' roaster: 14 x 10 x 3”
@@ -104,6 +112,8 @@ Knives:
 - Bread knife
 - Chefs knife
 - Paring knife
+
+    samuel staniforth
 
 Tools:
 - Wooden chopping board
@@ -138,6 +148,8 @@ Gadgets
 - Rice cooker
 - Blender
 - Kitchen aid
+- Toaster
+    Dualit
 
 Cutlery:
 - Teaspoon (x6)
@@ -169,6 +181,9 @@ Maintenance:
 
 Storage
 - 3x glass + food safe meal containers
+
+- Magnetic knife rack
+    bisbellmagnets
 
 Cleaning:
 - Linen dish towels
