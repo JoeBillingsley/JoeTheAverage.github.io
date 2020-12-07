@@ -463,18 +463,45 @@ https://hespokestyle.com/pant-breaks-length-guide/
 
 #### Outerwear
 ##### Fit:
-Varies depending on the item. Shoulder should sit on the shoulder seam formed by the other layers. Sleeves should typically be long enough that they protect the underlying clothing
+Varies depending on the item. Shoulder should sit on the shoulder seam formed by the other layers. Sleeves should typically be long enough that they protect the underlying clothing.
 
 #### Construction:
 - Outerwear
-    - Raglan vs set in sleeve
-        - https://www.cherrytreecountryclothing.com/expert-advice/difference-between-raglan-sleeve-and-set-in-sleeve/
+    - Set in sleeve
+        - Default sleeve on most jackets
+        - Sleeve joins at the shoulder making a seam around the shoulder and the underarm
 
+    - Raglan sleeve
+        - A sleeve that extends in one piece from the underarm to the collar
+        - Increases freedom of movement 
+        - More casual / country
 
+        https://www.cherrytreecountryclothing.com/expert-advice/difference-between-raglan-sleeve-and-set-in-sleeve/
+
+    - Articulated sleeve
+        - Has more fabric around the underarm so that you can move your arms freely without the sleeves riding up
+        https://www.bestinthecountry.co.uk/clothing-terms-glossary
+
+    - Storm cuff
+        - A tight inner cuff that keeps wind and rain out
+
+    - Bellows pocket    
+        - Pockets with pleats that stay flat against the jacket but can expand when required
 
 #### Shoes
 
+##### Fit:
+Should be comfortable.
 
+- I usually prefer a chunkier rather than longer shoe
+
+##### Construction:
+
+###### Soles
+
+###### Welts
+
+###### Details
 
 #### Belts
 Belts are fairly easy. There are only a few 'rules' to know:
@@ -520,7 +547,7 @@ Belts are fairly easy. There are only a few 'rules' to know:
 If a mechanical watch is exposed to a magnetic field, parts can become magnetised that can intefere with the accuracy of the movement. This can be avoided by buying a cheap quartz watch or an anti-magnetic watch. Magnetic field  strength is measured in guass. 1000 gauss or above is effectively resistant to all magnetic fields you will encounter but watches are available with up to 15,000 gauss resistance (Omega Aqua Terra). In 2016 an Omega prototype (https://monochrome-watches.com/the-prototype-seamaster-that-omega-tested-at-insane-160000-gauss/) was shown to remain accurate after being exposed to 160,000 gauss. If for some reason you want to take your watch into the large hadron collider, give them a call.
 
 - Shock resistance
-Most watches are not designed to handle abuse and will require a bit of coddling. This includes any activities with sudden movements i.e. sports. Many watches are at least shock resistant, specifically they can be dropped from a metre onto a hardwood floor and still remain functional and accurate (https://www.iso.org/standard/62753.html). For more intense activities, watches in the Casio G-Shock series and some Timex and Luminox watches are designed to be all but indestructable.
+Most watches are not designed to handle abuse and will require a bit of coddling. This includes any activities with sudden movements i.e. sports. Many watches are at least shock resistant, specifically they can be dropped from a metre onto a hardwood floor and still remain functional and accurate (https://www.iso.org/standard/62753.html). For more intense activities, watches in the Casio G-Shock series and some Timex and Luminox watches are designed to be all but indestructible.
 
 - Sizing
     TODO
@@ -533,7 +560,7 @@ Most watches are not designed to handle abuse and will require a bit of coddling
     - Mechanical watches require regular maintenance
         - https://blog.toolwatch.io/watch-tips/watch-servicing-guide/
         - Over time, parts wear away and damage each other. To prevent the internal parts from accruing too much damage, watches need to be serviced regularly
-        - A watch service requires complete dissambly, then cleaning and reoiling each component and replacing any worn components
+        - A watch service requires complete disassembly, then cleaning and re-oiling each component and replacing any worn components
         - Obviously this can get very expensive         
             - For luxury watches this cost can be on the order of £500-1000
             - For cheaper watches it may be cheaper to replace them
@@ -550,7 +577,7 @@ Most watches are not designed to handle abuse and will require a bit of coddling
     - The second thing to consider is the signalling quality of an expensive watch
         - Luxury watch brands such as Omega and Rolex are a Veblen good, they are valuable because they are expensive and because others know they are expensive
         - A luxury watch implies the wearer has attained some level of success in the past
-        - If you're trying to convince others that you will be succesful in the future as well then this could be a useful tool 
+        - If you're trying to convince others that you will be successful in the future as well then this could be a useful tool 
 
 #### Glasses/Sunglasses
 
@@ -562,8 +589,8 @@ Most watches are not designed to handle abuse and will require a bit of coddling
     - Clothing is a means for others to identify you as one group or another
     - 
 
-- At the other end of this you have workwear wherein its better if your clothes have been worn and tell their own story
-- Workwear  sets of clothing are trying to communicate something different
+- At the other end of this you have work wear wherein its better if your clothes have been worn and tell their own story
+- Work wear sets of clothing are trying to communicate something different
 
 - Fashion is an interesting mix of culture and something a bit more primal
     - Much of it is learned and culturally we can unlearn some of our lower level thinking also
@@ -801,7 +828,7 @@ The way the warp and weft yarns are threaded defines the weave.
 - Typically darker is more formal
 
 # Situations
-Smart: Funerals, wedddings, interviews, important work situations
+Smart: Funerals, weddings, interviews, important work situations
 Smart casual: Conferences/business events, posh nights out, posh meals, day to day work, work drinks
 Casual: Every day uniform, standard nights out, holiday clothing, beach trips, heavy nights out, 'invisible' outfit, handle anything outfit, lounging
 Active wear: Swimming, running, cycling
@@ -831,489 +858,3 @@ https://dieworkwear.com/2020/08/01/on-emotional-durability/
     https://www.youtube.com/watch?v=7CjWct7-3Ww
     - Dark colours outside, lighter inside
     - Lower weight to heavier weights
-
-# Formal
-## Essential
-Formal dress, to my mind, means a suit. A more general description would be anything were the clothes you are wearing are meant to imply a certain degree of respect for the event you are attending. There are four events you absolutely need a suit for. In decreasing order of enjoyability these go: weddings, interviews, funerals, black tie events. Fortunately, it seems like you only really need two suits to cover these four very specific situations. 
-
-By definition a suit has low contrast between components so instead it derives visual interest from the pattern, texture and the sharp contrast between the colour of the suit and the typically white shirt. To my mind, most patterns come across as either business suits or, for lack of a better word, a bit wankery, so I've not considered those in my selection. 
-
-For very formal events, funerals and black tie events, there is an unwritten dress code that simplifies things greatly. For the lower end of formality, the weddings and interview, I'm opting to introduce some visual interest through simple textures. In all instances I'm looking for classic English details and fairly basic choices. That is: If I'm wearing a suit to an event, I'm probably not looking to stand out.
-
-In total I'm after two suits and a few extra details.
-
-# TODO: Do outfits first then items
-# e.g. Interview: dark navy suit + white twill shirt + quartz watch + black toe cap oxfords
-# ... The weather is also changeable in the UK so it is important to have some additional items for cold and wet weather: an umbrella and an overcoat. 
-# then go into details on each item
-
-### Dark Navy Suit
-- Either a plain weave or a simple textured weave that appears solid across a room
-    - e.g. twill, birdseye, houndstooth, pin and pull (?)
-- This keeps the suit a little less formal but still sharp enough that it is suitable for job interviews
-
-- Super 100s worsted wool
-    - Supposedly 120-160s is a good range for smart suits
-        - https://www.montagio.com.au/cms/picking-the-perfect-suit-fabric-weave
-    - Really depends on price
-
-Jacket:
-- Single breasted
-- Two button
-- Double vent
-- Straight shoulder
-- Flap pockets
-- Notched lapel
-- Probably a natural/neutral button stance
-    - Has the top button sit at the thinnest part of the waist
-    - Pretty much at the belly button
-- Ideally dark, Bemberg silk lining
-- Ideally functional buttons
-
-White twill shirt
-- Nice to introduce a little pattern in
-- A white poplin would also be fine and works with both suits
-- Probably spread collar
-
-Trousers:
-- Matching jacket
-- Half break
-- Side adjusters
-
-Tie
-- Navy grenadine tie
-
-### Black Suit
-- Plain weave
-
-Jacket + Trousers
-- As above
-
-Shirt:
-- White poplin cotton shirt
-- Most likely a spread collar but depends on the proportion of the suit
-
-These two core suits can then be modified slightly to be tailored more specifically to each event:
-
-### Weddings
-Navy suit + Waistcoat + Derby shoes
-
-Waistcoat
-- Single breasted, probably five buttons, no lapel
-- This will only be turning up at weddings so could potentially introduce some contrast here to tone down the formality of the outfit a little
-    - Contrasting colour (dark grey?) or a simple pattern possibly
-
-Dark brown derby
-- Light brouging
-- Rubber soled so that I don't have to worry about falling over on the dance floor at the after party
-- $$$ https://www.trickers.com/uk/mens/town-shoes/wiltshire-5630
-- $$$ https://www.crockettandjones.com/collections/mens/main-collection/lanark-3-darkbrown-calf/
-- $$$$ https://www.johnlobb.com/en_gb/mens-shoes/croft-double-leather-sole
-
-
-- Barker Bailey
-- Loake 1880 Wembley
-
-- I wouldn't want to wear a nice watch to an event which usually turns into a very dressed up night club
-
-- Black socks
-    - Silk ideally
-    - At least one pair of solid black socks
-
-### Interviews
-Navy suit + No Waistcoat + Black Toe Cap Oxfords + Business / Navy Grenadine tie
-
-Black toe cap oxford
-- Its plain toe or toe cap and plain toe would just not get enough wear
-- So ubiquitous that they don't say anything at all
-
-- Clarks Oliver Limit / Jones's Goodyear Welted Oxford
-- Crockett & Jones Audley, Edward Green Chelsea
-
-Cheap quartz Watch
-- I like wearing a watch as a rule and an interview is one situation where its very useful to know the time
-
-- A fancy dress or sports watch attempts to communicate success
-- When I graduate I will be applying to graduate positions so this just comes across as presumptuous or possibly foolish
-- The image I will be trying to communicate is of efficient professionalism
-- A simple metal quartz watch such as the Casio A158W seems much more in line with this presentation
-    - It helps that it reads as a bit nerdy as well
-- For higher level positions it makes more sense to have a fancier sports watch
-
-Business tie
-- Simple navy or red diagonal tie
-
-### Funeral
-Black suit + Black silk tie + Oxfords
-
-Black oxfords
-- Ideally, black plain fronted whole-cut oxford
-- Otherwise toe cap is also fine
-- Less detailing the better
-    - https://www.crockettandjones.com/collections/mens/oxfords/alex-black-calf/
-
-Black silk tie
-
-### Black tie
-Technically this is an outfit for a black tie *optional* event but given the number of times I expect to be invited to one of these I don't think its worth putting too much thought into it.
-
-Black suit + Navy tie + Dress watch + Oxfords
-
-Black oxfords
-- As for the funeral shoes but well shined
-
-Tie
-- Navy grenadine tie
-
-Dress Watch
-- That said there are some really nice dress watches about... 
-    - Steel
-    - Thin enough to slip under a shirt cuff
-    - Ideally rectangular
-    - Ideally mechanical or automatic
-
-- £ Orient Bambino
-- £ Seiko SUP880P1
-
-- ££ Junghans Max Bill
-- ££ Longines DolceVita
-
-- £££ Jaquet Droz
-    - Ceramic, automaton bloke
-- £££ Grand Seiko, Hermes
-- £££ Jaeger-LeCoultre
-    - Reverso
-- £££ Cartier Tank
-
-For wet/cold situations:
-- Black umbrella
-- Black wool overcoat
-    # TODO: Details
-
-# Smart Casual
-Smart-casual is for those slightly confusing transitional events where its not quite a suit but something more than jeans and a t-shirt. This category can accommodate some nicer items that need a bit more looking after. This is already a much less prescriptive area than properly smart clothing so there is an opportunity to introduce a bit more variety. 
-
-The level of formality I am aiming for here is that everything could go with a pair of dark indigo jeans.
-
-From the formal section I'm stealing the brown derbies and the black overcoat. The suits and ties are far too smart for this category.
-
-For more formal situations the sports jackets will carry the outfit.
-
-## Tailoring
-- Navy sports jacket
-    - Wool or a cotton/wool mix
-        - A thicker wool adds some texture and stops it from looking like a lost suit jacket
-    - Flap pockets
-    - Single breasted
-    - Lined
-
-- Linen sports jacket
-    - Bright blue or cream
-    - Hopsack weave
-    - Quarter lined or fully unlined
-    - Patch pockets
-    - Single breasted
-
-    - Hopsack has an nice open weave that works well with the linen to keep cool in hot weather. There's no point having a breathable outer if there is a layer of lining covering it up so unlined is essential.
-
-## Shirts
-- White + Sky blue + Pale pink oxford cloth button down
-    - Generic workhorse shirts that complement the other colours
-    - Have to be careful with the pink as my skin will burn even when exposed to particularly bright lamps
-
-    - Preferably soft collar rather than fused
-    - Box pleat down the back for movement
-    - Informal details
-        - # TODO
-    - Should be untuckable for when not wearing a jacket
-
-    - Charles Tyrwhitt, TM Lewin, PINK Shirtmakers, Brooks brothers (absurd prices)
-
-- Summer shirts
-    - Long sleeve
-    - Linen or seersucker
-    - So far I've found seersucker to be a better material
-        - Interesting texture by default
-    - Linen shirts are often cut quite loose which looks a bit too informal
-
-## Trousers
-- Stone/Wheat chinos
-    - Colour wise I'm looking for something cooler / more towards the grey end 
-        - I considered grey itself but it tends to look too washed out in the pictures I've seen so far
-    - Linen or light weight cotton
-    - Belt loops, mid rise, plain, twill weave
-    
-    - Gant Regular Twill Chino
-
-- Dark indigo jeans
-    - Not too similar in colour to the navy jacket
-    - Possibly selvedge
-        - Selvedge denim requires a fair bit of work to wear properly
-        - Formal clothing means it can't be too faded
-
-## Shoes
-- Chelsea boots
-    - Tricky one
-    - Probably brown
-        - Black seems a little hard to fit into the more casual outfits
-        - Redder tones look good but are a bit limiting
-    - Maybe suede
-        - Suede requires a bit more care to look after and doesn't age very well
-    - Flat rubber sole, ideally dainite or similar, leather upper
-
-    - ££ Thursday boots
-    - £££ Bexley Enfield
-    - £££ RM Williams Craftsman/Signature Craftsman
-
-## Outerwear
-- V-neck jumpers
-    - Ideally high quality wool
-    - V-neck jumpers present the shirt collar better than crew neck ones
-        - Fairly shallow v though still
-    - Fairly neutral colours that can work under any outfits
-        - Bright blue and dark grey
-
-- Peacoat / Bridge coat
-    - 
-
-## Accessories
-- Sports watch
-    - Blue or black dial
-    - Round
-    - Steel
-    - Ideally automatic
-    - 100m+ water resistance
-
-    - £ Casio Edifice
-    - ££ Seiko SARX045
-    - ££££ Omega Seamaster
-    - ££££ Rolex Explorer
-
-- Dark brown belt
-    - Leather matching the derby shoes and/or the chelsea boots
-
-## The 'maybe' pile
-- Tan oxford brogues
-    - Dark brown derbies might look be a bit too formal for some situations
-    - Can only find out once I've picked up some more important parts
-
-- Specialised chinos
-    - Stone/Wheat goes well with both jackets but its a mid weight cotton isn't perfectly comfortable in either hot or cold conditions
-        - Grey wool trousers
-            - Seem popular on the internet, never noticed them in the wild
-        - Stone/Wheat/White chinos
-            - Lightweight cotton or linen
-
-# Casual
-
-## Shirts
-- x6 t-shirts
-    - 3x White
-    - Black
-    - Olive
-    - Navy
-
-- 2x polo shirts
-    - Keeping colour variants
-    - Charcoal
-    - Burgundy
-
-- 2x casual shirts
-    - Simple patterns or textures
-    - Blue
-    - White? Chambray?
-
-- 2x linen short sleeve shirts
-    - For beach trips with a pub component
-    - White + Sky blue
-
-- Over shirt / Thick shirt
-    - Autumn / Early Spring
-        - Winter with a jacket
-    - Flannel and plaid
-    - Ideally wool
-
-## Trousers
-- Well worn jeans
-    - ???
-
-- Chinos
-    - Olive or British Khaki
-
-- Navy swimming shorts
-    - Simple, smart, ideally tapered / tailored fit
-    - Something you can wear out of the sea and into a bar or restaurant
-
-- 2x chino shorts
-    - Stone + Wheat
-    - Light grey / White
-
-- Thermal base trousers
-    - Not many options in terms of layering trousers
-
-## Shoes
-Need a rotation of two shoes to let them dry out. A leather trainer works in both winter and summer and a boot and a simple canvas trainer are necessary for winter and summer respectively. The espadrilles are just good light beach shoes.
-
-- Beater boots
-    - Vibram sole
-    - Vegetable tan leather upper and lining
-    - Ideally (flesh out heel)
-    - Goodyear welt
-
-- Leather trainer
-    - Brown/neutral leather
-    - White sole
-    - Ideally replaceable sole
-
-    - Barkers Hawk
-    - Barkers Axel
-    - Crown Northampton Overstone Derby
-
-- Canvas trainer
-    - Either cheap or a replaceable sole
-    - Sole wears out in a year or two on these usually
-    - Ideally steel blue / grey blue 
-
-- Espadrilles
-    - Beach shoes
-
-## Outerwear
-- Boozing jacket
-    - Perhaps not as necessary in the future as it is now
-    - A second layer for when the beer jacket is not enough
-    - Cheap, preferably beer resistant or easily washable 
-
-    - Quilted Jacket
-
-- 2x crew neck jumper
-    - https://imgur.com/a/QpVCTRM
-    - Still casual but a bit more dressed up than an over shirt
-    - Early Spring / Autumn
-        - Winter with a jacket
-    - The step up in warmth after a thick shirt
-    - Dark green and mustard yellow
-
-- Thick grey/black ribbed turtleneck
-    - Deep winter
-    
-- Rain jacket
-    - Relaxed fit, hooded, waterproof
-
-- Heavy weather jacket
-    - Seriously cold or wet days
-    - Relaxed fit, hooded, waterproof and insulated
-
-- Grey cotton hoodie
-    - Mid layer for under jackets that don't have a hood
-    - Also serves as a good gym jacket 
-
-## Underwear
-- 14x Boxer briefs
-    - Not heat seekers
-    - Calvin Klein
-
-- 14x socks
-    - Anything at all, just lots of them
-
-- 6x white invisible socks
-    - Enough for an unusually hot week
-
-- Wool socks
-    - Not too thick
-    - The aim is to trap the air around the foot
-
-- Cotton pyjamas
-    - T-shirt and trousers
-
-## Accessories
-- Field watch
-    - Timefactors 
-        - 'Smiths' Everest PRS-25
-
-- Sunglasses
-    - Cheap, metal frames
-    - £10 or £200, anything in between is pointless
-        - £200 is ridiculously overpriced but at least signals something
-
-- Wooly hat
-
-# Hobbies / Activities
-- Horse riding
-- Farm work
-- Travel
-- Exercise
-
-## Shirts
-- 2x hiking shirts 
-
-- 2x running tops
-
-## Bottoms
-- 2x hiking trousers
-
-- 1x running trousers
-
-## Underwear
-- 2x white trainer socks
-
-## Outerwear
-- 3x hi-vis jacket
-    - Winter riding jacket 
-    - Summer riding gilet
-        - Royal mail
-    - Hi-vis cycling jacket
-
-- Hiking jacket
-
-- Fleece midlayer
-
-- Armor jacket
-    - Tough leather jacket
-    - Sometimes I need a jacket that can take half hearted attacks by large animals
-    - I bought a !Solid leather jacket several years ago
-    - I bought a size larger so I could layer some softer clothes underneath and it serves this function very well
-    - Its grown up into a very tough and reliable leather jacket 
-
-## Shoes / Boots
-- Work boot
-    - Mountain Horse mountain rider
-    - William Lennon 110R Steel Toe Cap (but with a vibram sole)
-
-- Hiking boots
-
-- Running trainers
-
-## Accessories
-- Beater
-    - Casio W86 
-        - Better light, water resistance
-    - Casio F91W
-
-- Tank watch
-    - Old Casio Pro Trek (maybe a PAG240T-7)
-    - Only downside is it's bigger than you'd want to wear when in normal situations
-
-    - Casio G-Shock watches are probably the next best thing 
-
-- Fingerless gloves
-    - Merino wool
-
-- Waterproof thick gloves
-
-# The like but don't need
-- Half zip jumper
-    - Doesn't really fill a niche but looks nice
-
-- Chambray shirt?
-
-# Grail items
-- Tweed sports jacket
-    - Completely unnecessary but looks nice
-
-- True camel coat
-
-- Omega Seamaster Aqua Terra
-
-- Trickers Country Stow boots
-
-- High quality leather jacket
