@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-crossorigin=""/>
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin="" />
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-crossorigin=""></script>
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
 
 <div class="map" id="beer_map"></div>
 
@@ -19,9 +19,12 @@ crossorigin=""></script>
 
     beer_map.setMinZoom(4);
 
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        id: 'mapbox.streets',
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+        tileSize: 512,
+        maxZoom: 18,
+        zoomOffset: -1,
+        id: 'mapbox/streets-v11',
         accessToken: 'pk.eyJ1Ijoiam9lYmlsbGluZ3NsZXkiLCJhIjoiY2o5djYzdDNnMWhxMjJ2cG9iYzZmZzl5MyJ9.hOoHCtzze8-YCBodh8tkFQ'
     }).addTo(beer_map);
 
@@ -43,18 +46,18 @@ crossorigin=""></script>
     });
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET",src,true);
-    xhr.onload = function(e) {    
+    xhr.open("GET", src, true);
+    xhr.onload = function (e) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var beers = JSON.parse(xhr.responseText);
 
                 var all = L.geoJSON(beers, {
                     onEachFeature: onEachFeature,
-                    pointToLayer: function(feature, latlng) {
+                    pointToLayer: function (feature, latlng) {
                         switch (feature.properties.status) {
                             case "got": return L.marker(latlng);
-                            case "need": return L.marker(latlng, {icon: needIcon});
+                            case "need": return L.marker(latlng, { icon: needIcon });
                         }
                     }
                 });
@@ -71,8 +74,8 @@ crossorigin=""></script>
                     filter: function (feature) {
                         return feature.properties.status == "need";
                     },
-                    pointToLayer: function(feature, latlng) {
-                        return L.marker(latlng, {icon: needIcon});
+                    pointToLayer: function (feature, latlng) {
+                        return L.marker(latlng, { icon: needIcon });
                     }
                 });
 
